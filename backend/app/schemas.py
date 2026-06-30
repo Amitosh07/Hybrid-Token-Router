@@ -8,10 +8,10 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     answer: str
     model: str
-    latency: float
-    tokens: int
-    confidence: float
-    cost: float
+    latency: float = 0
+    tokens: int = 0
+    confidence: float = 0
+    cost: float = 0
 
 
 class HealthResponse(BaseModel):

@@ -1,18 +1,31 @@
-# frontend
+# -------------------------
+# Frontend
+# -------------------------
 node_modules/
 dist/
 .env
 .env.local
-*.log
 
-# Backend / Python additions
+# -------------------------
+# Backend Secrets
+# -------------------------
 backend/.env
+
+# -------------------------
+# Python
+# -------------------------
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
 .venv/
 venv/
 
+# -------------------------
+# Logs
+# -------------------------
+*.log
+
+# -------------------------
 # Editor & OS
+# -------------------------
 .vscode/
 .DS_Store
