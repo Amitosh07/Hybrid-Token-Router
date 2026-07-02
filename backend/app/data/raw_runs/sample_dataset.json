@@ -1,0 +1,26 @@
+[
+  {
+    "prompt": "Explain RAG",
+    "metadata": {
+      "prompt_length": 11,
+      "word_count": 2,
+      "category": null,
+      "difficulty": null
+    },
+    "local": {
+      "model": "qwen2.5:3b",
+      "response": "RAG, or retrieval augmented generation, combines document search with a language model so answers can use relevant external context.",
+      "latency_ms": 830,
+      "estimated_input_tokens": 3,
+      "estimated_output_tokens": 31
+    },
+    "remote": {
+      "model": "llama-3.1-8b-instant",
+      "response": "Retrieval augmented generation is an approach where a system first retrieves useful source material, then asks a language model to answer with that context.",
+      "latency_ms": 1540,
+      "estimated_input_tokens": 3,
+      "estimated_output_tokens": 34
+    },
+    "created_at": "2026-07-03T10:15:00+00:00"
+  }
+]
