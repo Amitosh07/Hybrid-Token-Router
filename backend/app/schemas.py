@@ -7,11 +7,12 @@ class ChatRequest(BaseModel):
 
 class ChatResponse(BaseModel):
     answer: str
-    model: str
-    latency: float = 0
-    tokens: int = 0
+    provider: str
+    routing_score: int = 0
     confidence: float = 0
-    cost: float = 0
+    reason: list[str] = Field(default_factory=list)
+    latency: float = 0
+    features: dict = Field(default_factory=dict)
 
 
 class HealthResponse(BaseModel):

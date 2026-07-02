@@ -1,0 +1,2 @@
+# This directory stores training datasets, label files, and trained model artefacts.
+# Files placed here are consumed by ML training pipelines and the routing model loader.

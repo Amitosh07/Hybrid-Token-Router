@@ -1,0 +1,142 @@
+[
+  {
+    "id": "reasoning_001",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "All mammals are warm-blooded. Dolphins are mammals. Are dolphins warm-blooded? Explain your answer."
+  },
+  {
+    "id": "reasoning_002",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "A room has four walls. Each wall has one window. Each window has one cat sitting on the sill. How many cats are in the room?"
+  },
+  {
+    "id": "reasoning_003",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "If you go to sleep at 8pm and set an alarm for 9am, how many hours of sleep will you get?"
+  },
+  {
+    "id": "reasoning_004",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "A shop has 40 apples. It sells half of them in the morning. In the afternoon it sells a quarter of the remaining apples. How many apples are left?"
+  },
+  {
+    "id": "reasoning_005",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "If all Blops are Flips, and some Flips are Grips, can you conclude that some Blops are Grips? Explain why or why not."
+  },
+  {
+    "id": "reasoning_006",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "A farmer has 17 sheep. All but 9 die. How many sheep are left?"
+  },
+  {
+    "id": "reasoning_007",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Three boxes each contain either only red balls, only blue balls, or both. All labels on the boxes are wrong. You may draw one ball from one box. Which box should you pick from and why?"
+  },
+  {
+    "id": "reasoning_008",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A company can produce 120 units per day with 6 workers. If they hire 2 more workers at the same productivity rate, how many units can they produce in a 5-day work week? Show your reasoning step by step."
+  },
+  {
+    "id": "reasoning_009",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A clock shows 3:15. What is the angle between the hour hand and the minute hand? Reason through the position of each hand carefully."
+  },
+  {
+    "id": "reasoning_010",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "You have two ropes. Each rope takes exactly 60 minutes to burn from end to end, but they burn unevenly. How can you measure exactly 45 minutes using only these two ropes and a lighter?"
+  },
+  {
+    "id": "reasoning_011",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Five houses in a row are each painted a different colour. Each house is occupied by a person of a different nationality who drinks a different beverage. Given: The red house is immediately to the left of the green house. The Norwegian lives in the first house. The person in the blue house drinks tea. Who drinks coffee if we know the Norwegian lives next to the blue house?"
+  },
+  {
+    "id": "reasoning_012",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A bank robber robs a bank and escapes with $100,000 in cash. A week later he is found dead in a locked room with no windows or other exits, the money is still in the room untouched, and there are no signs of struggle. The door was locked from the inside. How could this have happened? List at least three plausible explanations."
+  },
+  {
+    "id": "reasoning_013",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A manager must choose between two employees for a promotion. Employee A has a 90% task completion rate but works slowly. Employee B has a 75% task completion rate but works quickly. Reason through the factors a manager should consider and explain which employee you would promote and why."
+  },
+  {
+    "id": "reasoning_014",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "If you have 8 balls that all look identical, and one is slightly heavier than the rest, how can you find the heavier ball in exactly two uses of a balance scale?"
+  },
+  {
+    "id": "reasoning_015",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "You are the operations manager of a hospital. You have one ventilator available and two patients who both need it immediately. Patient A is 45 years old with a 70% survival chance on the ventilator. Patient B is 70 years old with a 55% survival chance. Reason through the ethical frameworks (utilitarian, rights-based, clinical) and explain how each would guide your decision."
+  },
+  {
+    "id": "reasoning_016",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "A fast-food chain wants to launch in a new city. They have data showing high foot traffic near universities but low purchasing power among students, and moderate foot traffic in business districts with high purchasing power. Reason through the trade-offs and recommend a location strategy with justification for each factor considered."
+  },
+  {
+    "id": "reasoning_017",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Given the following claims: (1) If it rains, the ground gets wet. (2) The ground is wet. (3) Therefore it rained. Identify the logical fallacy in this argument, name it, provide a counter-example that disproves the conclusion, and suggest how the argument could be made logically valid."
+  },
+  {
+    "id": "reasoning_018",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "A startup has a runway of 8 months and three strategic options: (A) pivot the product and extend runway by 6 months but risk losing current users, (B) raise a bridge round at unfavourable terms to gain 4 more months, or (C) cut 40% of the team to extend runway by 5 months. Reason through each option's risks and second-order consequences and recommend the best course of action."
+  },
+  {
+    "id": "reasoning_019",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "You are given a 4-gallon jug and a 3-gallon jug with no measurement markings, and an unlimited water source. You need to measure exactly 2 gallons. Describe the step-by-step reasoning and the sequence of pourings to achieve this."
+  },
+  {
+    "id": "reasoning_020",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Three suspects A, B, and C are questioned about a robbery. A says: 'I didn't do it.' B says: 'A is lying.' C says: 'B is lying.' If exactly one of the three is telling the truth, determine who committed the robbery and verify your answer is consistent with all three statements."
+  }
+]

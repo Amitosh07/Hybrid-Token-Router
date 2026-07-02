@@ -1,0 +1,142 @@
+[
+  {
+    "id": "planning_001",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Create a simple daily schedule for a remote worker who wants to exercise in the morning, work from 9am to 5pm, and have a dedicated reading hour in the evening."
+  },
+  {
+    "id": "planning_002",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a checklist for packing a carry-on bag for a 3-day business trip."
+  },
+  {
+    "id": "planning_003",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Create a 7-day beginner workout plan for someone who wants to exercise at home using only body weight."
+  },
+  {
+    "id": "planning_004",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Outline a simple weekly meal prep plan for a person cooking for one, targeting healthy and affordable meals."
+  },
+  {
+    "id": "planning_005",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Create a basic two-day study plan for someone learning Python for the first time, starting from scratch."
+  },
+  {
+    "id": "planning_006",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "List the steps needed to plan a birthday dinner for 8 people at home, from invitations to cleanup."
+  },
+  {
+    "id": "planning_007",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Create a morning routine checklist for a college student who has an 8am class, covering everything from wake-up to arrival at campus."
+  },
+  {
+    "id": "planning_008",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Design a 30-day self-study plan for someone preparing for a Python developer job interview. Include daily topics, practice resources, and a mock interview schedule."
+  },
+  {
+    "id": "planning_009",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Create a project plan for a small team of three developers building a web application over 8 weeks. Include phases, milestones, and weekly deliverables."
+  },
+  {
+    "id": "planning_010",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Outline a 6-month career transition plan for a teacher who wants to move into UX design. Include skill gaps, learning resources, portfolio goals, and networking steps."
+  },
+  {
+    "id": "planning_011",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Plan a 5-day trip to Kyoto, Japan for two adults who are interested in history and food. Include a day-by-day itinerary with activities, meals, and travel logistics."
+  },
+  {
+    "id": "planning_012",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Create a content marketing plan for a new SaaS product launching in 3 months. Include content types, publishing frequency, target audience, and distribution channels."
+  },
+  {
+    "id": "planning_013",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Design a 90-day onboarding plan for a new backend software engineer joining a medium-sized tech company. Include week-by-week goals and key checkpoints."
+  },
+  {
+    "id": "planning_014",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Create a financial savings plan for someone earning $3,000 per month who wants to save $10,000 in 12 months. Break down monthly budget categories and identify areas to cut spending."
+  },
+  {
+    "id": "planning_015",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a comprehensive go-to-market strategy for a B2B SaaS startup entering a competitive CRM market. Include target segment analysis, pricing strategy, sales motion, key metrics, and a 6-month milestone roadmap."
+  },
+  {
+    "id": "planning_016",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Create a detailed disaster recovery and business continuity plan for a fintech company that processes payment transactions. Cover RTO/RPO targets, data backup strategy, failover procedures, communication protocols, and testing cadence."
+  },
+  {
+    "id": "planning_017",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a phased migration plan for a company moving a monolithic e-commerce application to a microservices architecture. Address service decomposition strategy, data migration, rollback procedures, team structure, and a timeline with risk mitigation steps."
+  },
+  {
+    "id": "planning_018",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Develop a 12-month product roadmap for a mobile fitness app that currently has 50,000 active users and wants to reach 200,000 users. Include feature prioritisation using a scoring framework, growth experiments, technical infrastructure requirements, and success metrics."
+  },
+  {
+    "id": "planning_019",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Create a hiring and team scaling plan for a startup that needs to grow its engineering team from 4 to 20 engineers over 18 months while maintaining code quality and team culture. Address role sequencing, interview process design, onboarding structure, and engineering culture initiatives."
+  },
+  {
+    "id": "planning_020",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a comprehensive OKR framework for a 50-person technology company for the next fiscal year. Define company-level objectives, cascade them to department level, specify key results with measurable targets, and outline a quarterly review cadence with scoring criteria."
+  }
+]

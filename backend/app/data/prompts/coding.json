@@ -1,0 +1,142 @@
+[
+  {
+    "id": "coding_001",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Python function that takes a list of integers and returns the sum of all even numbers."
+  },
+  {
+    "id": "coding_002",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a SQL query to select all rows from a table named 'employees' where the department is 'Engineering'."
+  },
+  {
+    "id": "coding_003",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Python function that reverses a string without using the built-in reverse method."
+  },
+  {
+    "id": "coding_004",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a JavaScript function that checks whether a given number is prime."
+  },
+  {
+    "id": "coding_005",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Python function that counts the number of vowels in a given string."
+  },
+  {
+    "id": "coding_006",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a SQL query that returns the total number of orders placed by each customer, ordered by order count descending."
+  },
+  {
+    "id": "coding_007",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Python function that returns the factorial of a non-negative integer using a loop."
+  },
+  {
+    "id": "coding_008",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Implement a binary search algorithm in Python that works on a sorted list of integers and returns the index of the target, or -1 if not found."
+  },
+  {
+    "id": "coding_009",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Python class that implements a stack data structure using a list, with push, pop, peek, and is_empty methods."
+  },
+  {
+    "id": "coding_010",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a SQL query that finds all customers who placed more than three orders in the last 90 days, returning their name and order count."
+  },
+  {
+    "id": "coding_011",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Debug the following Python function that is meant to flatten a nested list but raises a RecursionError for deeply nested inputs. Provide a fix using an iterative approach."
+  },
+  {
+    "id": "coding_012",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Python decorator that measures and prints the execution time of any function it wraps."
+  },
+  {
+    "id": "coding_013",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Implement a basic LRU cache in Python with a fixed capacity, supporting get and put operations in O(1) time using an OrderedDict."
+  },
+  {
+    "id": "coding_014",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Python function that accepts a list of dictionaries representing students with 'name' and 'score' fields, and returns the top 3 students sorted by score descending."
+  },
+  {
+    "id": "coding_015",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a Python class that implements a thread-safe producer-consumer queue using threading.Condition, supporting multiple producers and consumers without deadlock."
+  },
+  {
+    "id": "coding_016",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Implement Dijkstra's shortest path algorithm in Python for a weighted directed graph represented as an adjacency list, returning the shortest distance from a source node to all other nodes."
+  },
+  {
+    "id": "coding_017",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a RESTful API schema in Python using FastAPI for a task management system with users, projects, and tasks. Include authentication endpoints, dependency injection, and appropriate HTTP status codes."
+  },
+  {
+    "id": "coding_018",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Python function that parses a mathematical expression given as a string (supporting +, -, *, /, and parentheses) and evaluates it correctly without using eval()."
+  },
+  {
+    "id": "coding_019",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a database schema for a multi-tenant SaaS application where each tenant has isolated data. Write the SQL DDL statements and explain the row-level security approach."
+  },
+  {
+    "id": "coding_020",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Implement a generic retry mechanism in Python as a context manager that supports configurable max attempts, exponential backoff with jitter, and a list of retryable exception types."
+  }
+]

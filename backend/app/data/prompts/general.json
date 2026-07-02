@@ -1,0 +1,142 @@
+[
+  {
+    "id": "general_001",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "What is photosynthesis? Explain it as you would to a 12-year-old student."
+  },
+  {
+    "id": "general_002",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "What is the difference between a virus and a bacterium?"
+  },
+  {
+    "id": "general_003",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain the difference between RAM and SSD storage in simple terms."
+  },
+  {
+    "id": "general_004",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "What causes rainbows to appear in the sky?"
+  },
+  {
+    "id": "general_005",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "What is the capital of Australia, and why is it not Sydney?"
+  },
+  {
+    "id": "general_006",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "What is the difference between a calorie and a kilocalorie?"
+  },
+  {
+    "id": "general_007",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "How does a vaccine work to protect the body from disease?"
+  },
+  {
+    "id": "general_008",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain the concept of compound interest and how it differs from simple interest. Include an example showing why starting to save early makes a significant financial difference."
+  },
+  {
+    "id": "general_009",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "What caused the 2008 global financial crisis? Explain the main contributing factors and the chain of events that led to the collapse of Lehman Brothers."
+  },
+  {
+    "id": "general_010",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain what the Internet of Things (IoT) is, give three real-world examples of IoT devices, and describe one privacy risk associated with their widespread use."
+  },
+  {
+    "id": "general_011",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "How does the human immune system distinguish between self and non-self cells? Explain the role of T cells and B cells in this process."
+  },
+  {
+    "id": "general_012",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "What is the scientific method and how does it differ from other ways of acquiring knowledge? Describe each step with a concrete example."
+  },
+  {
+    "id": "general_013",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "What is blockchain technology and how does it work? Explain the concepts of blocks, chains, and distributed consensus without assuming any technical background."
+  },
+  {
+    "id": "general_014",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain the difference between renewable and non-renewable energy sources, give two examples of each, and describe one advantage and one disadvantage of solar energy specifically."
+  },
+  {
+    "id": "general_015",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Explain the theory of general relativity in plain language. Cover the core ideas of spacetime curvature, the equivalence principle, and how it differs from Newtonian gravity. Conclude with one real-world application that depends on accounting for relativistic effects."
+  },
+  {
+    "id": "general_016",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Analyse the causes and long-term consequences of the Industrial Revolution in Britain. Consider the economic, social, environmental, and technological dimensions, and explain why historians debate whether the net effect was positive or negative for the working class."
+  },
+  {
+    "id": "general_017",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Explain the concept of CRISPR-Cas9 gene editing technology. How does it work at the molecular level, what are its most promising medical applications, and what are the primary ethical concerns raised by scientists and bioethicists?"
+  },
+  {
+    "id": "general_018",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Compare and contrast three major economic systems — capitalism, socialism, and mixed economy — across four dimensions: resource allocation, the role of government, incentive structures, and their historical track records. Conclude with a balanced assessment of which dimensions each system handles most effectively."
+  },
+  {
+    "id": "general_019",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Explain the concept of consciousness from three different disciplinary perspectives: neuroscience, philosophy of mind, and computer science. Identify where these perspectives agree, where they conflict, and what the hard problem of consciousness is."
+  },
+  {
+    "id": "general_020",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Explain how large language models work, from tokenisation and transformer architecture to training on next-token prediction and the role of RLHF. Discuss two fundamental limitations of current LLMs that persist despite scale, and explain why they are difficult to solve."
+  }
+]

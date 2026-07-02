@@ -1,0 +1,142 @@
+[
+  {
+    "id": "translation_001",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate the following sentence into French: 'The meeting has been rescheduled to Monday morning.'"
+  },
+  {
+    "id": "translation_002",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate the following sentence into Spanish: 'Please send the updated report by the end of the day.'"
+  },
+  {
+    "id": "translation_003",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate the following sentence into German: 'We are looking for a software engineer with experience in Python and cloud services.'"
+  },
+  {
+    "id": "translation_004",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate the following sentence into Portuguese: 'Thank you for attending today's workshop. Your feedback is very valuable to us.'"
+  },
+  {
+    "id": "translation_005",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate the following sentence into Italian: 'The customer support team is available from Monday to Friday, 9am to 6pm.'"
+  },
+  {
+    "id": "translation_006",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate the following sentence into Hindi: 'Could you please confirm your attendance at the upcoming conference?'"
+  },
+  {
+    "id": "translation_007",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate the following sentence into Japanese: 'Our office will be closed on public holidays. Please check the schedule on our website.'"
+  },
+  {
+    "id": "translation_008",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate the following business email paragraph into French, preserving formal tone: 'We regret to inform you that the delivery of your order has been delayed due to unforeseen logistical issues. We sincerely apologise for any inconvenience this may cause and will provide an updated delivery estimate within 48 hours.'"
+  },
+  {
+    "id": "translation_009",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate the following technical description into Spanish: 'The API uses token-based authentication. Each request must include a valid bearer token in the Authorization header. Tokens expire after 24 hours and must be refreshed using the refresh endpoint.'"
+  },
+  {
+    "id": "translation_010",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate the following paragraph from French to English: 'Le développement logiciel agile repose sur des principes de collaboration, de flexibilité et de livraison continue de valeur. Les équipes se réunissent régulièrement pour évaluer les progrès et adapter les priorités en fonction des retours des utilisateurs.'"
+  },
+  {
+    "id": "translation_011",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate the following product description into German, maintaining a marketing tone: 'Introducing NovaMind — the AI-powered productivity assistant that learns your work habits and helps you focus on what matters most. Available on iOS and Android, NovaMind integrates with your calendar, email, and task manager for a seamless experience.'"
+  },
+  {
+    "id": "translation_012",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate the following legal notice into Spanish: 'By using this service, you agree to our Terms of Service and Privacy Policy. We reserve the right to suspend accounts that violate our community guidelines without prior notice.'"
+  },
+  {
+    "id": "translation_013",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate the following paragraph from Spanish to English: 'La inteligencia artificial está transformando la forma en que las empresas gestionan sus datos y toman decisiones estratégicas. Gracias a los avances en el aprendizaje automático, ahora es posible analizar grandes volúmenes de información en tiempo real.'"
+  },
+  {
+    "id": "translation_014",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate the following instructions into Italian, maintaining clarity and precision: 'To reset your password, click the Forgot Password link on the login page. Enter your registered email address and click Submit. You will receive a password reset link within 5 minutes. The link is valid for 30 minutes.'"
+  },
+  {
+    "id": "translation_015",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate the following academic abstract from English into French, preserving precise technical vocabulary: 'This paper presents a novel architecture for distributed neural network training using asynchronous gradient aggregation. Our approach reduces communication overhead by 38% while maintaining model accuracy within 0.5% of synchronous baselines. We evaluate our method on three large-scale benchmarks and demonstrate consistent improvements in training throughput across heterogeneous hardware configurations.'"
+  },
+  {
+    "id": "translation_016",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate the following legal contract clause from English into German, preserving all legal terminology and formal register: 'Neither party shall be liable to the other for any indirect, incidental, consequential, special, or exemplary damages arising out of or related to this Agreement, including but not limited to loss of revenue, loss of profits, loss of business, or loss of data, even if advised of the possibility of such damages.'"
+  },
+  {
+    "id": "translation_017",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate the following medical information paragraph into Spanish, ensuring accuracy of all clinical terminology: 'The patient was administered a loading dose of 75 mg clopidogrel followed by a maintenance dose of 75 mg daily. Antiplatelet therapy was initiated in conjunction with aspirin 100 mg to reduce the risk of recurrent thrombotic events following percutaneous coronary intervention.'"
+  },
+  {
+    "id": "translation_018",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate the following from German to English, then explain two translation choices you made and why: 'Die Datenschutz-Grundverordnung verpflichtet Unternehmen dazu, personenbezogene Daten nur für festgelegte, eindeutige und legitime Zwecke zu erheben und sie nicht in einer mit diesen Zwecken nicht zu vereinbarenden Weise weiter zu verarbeiten.'"
+  },
+  {
+    "id": "translation_019",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate the following financial report excerpt from English into Portuguese (Brazilian), maintaining formal register and financial terminology: 'The consolidated net revenue for the fiscal year reached $2.4 billion, representing a 14% year-over-year increase. Operating expenses were partially offset by efficiency gains in supply chain management, resulting in an EBITDA margin improvement of 2.3 percentage points compared to the prior year.'"
+  },
+  {
+    "id": "translation_020",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate the following software localisation string set from English into French and Japanese simultaneously. For each string, provide both translations: ['Account settings', 'Manage your subscription', 'Billing history', 'Cancel plan', 'Upgrade to Pro', 'Two-factor authentication', 'Connected devices', 'Privacy preferences']."
+  }
+]

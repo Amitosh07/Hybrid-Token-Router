@@ -1,0 +1,142 @@
+[
+  {
+    "id": "mathematics_001",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Solve for x: 5x - 12 = 28."
+  },
+  {
+    "id": "mathematics_002",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "A rectangle has a length of 14 cm and a width of 9 cm. Calculate its area and perimeter."
+  },
+  {
+    "id": "mathematics_003",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "What is the probability of flipping a fair coin three times and getting exactly two heads?"
+  },
+  {
+    "id": "mathematics_004",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Convert 3/8 to a decimal and then to a percentage."
+  },
+  {
+    "id": "mathematics_005",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "A train travels 240 km in 3 hours. What is its average speed in kilometres per hour?"
+  },
+  {
+    "id": "mathematics_006",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Find the greatest common divisor (GCD) of 48 and 180."
+  },
+  {
+    "id": "mathematics_007",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "A store offers a 30% discount on an item originally priced at $85. What is the final price after the discount?"
+  },
+  {
+    "id": "mathematics_008",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Solve the quadratic equation 2x² - 5x - 3 = 0 using the quadratic formula. Show all working steps."
+  },
+  {
+    "id": "mathematics_009",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A bag contains 5 red balls, 4 blue balls, and 3 green balls. If two balls are drawn at random without replacement, what is the probability that both are red?"
+  },
+  {
+    "id": "mathematics_010",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Find the derivative of f(x) = 3x³ - 7x² + 4x - 2 and determine the x-values where the function has local maxima or minima."
+  },
+  {
+    "id": "mathematics_011",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A geometric series has a first term of 4 and a common ratio of 1/3. Calculate the sum of the first 6 terms and the sum to infinity."
+  },
+  {
+    "id": "mathematics_012",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "In a right triangle, the hypotenuse is 13 cm and one leg is 5 cm. Find the length of the other leg and all three trigonometric ratios for the smallest angle."
+  },
+  {
+    "id": "mathematics_013",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A dataset has values: 12, 15, 14, 10, 18, 22, 9, 17. Calculate the mean, median, mode, and standard deviation."
+  },
+  {
+    "id": "mathematics_014",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Solve the system of linear equations: 3x + 2y = 16 and 5x - 4y = 2 using the substitution method."
+  },
+  {
+    "id": "mathematics_015",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Evaluate the definite integral of f(x) = x² · ln(x) from x = 1 to x = e. Show all integration by parts steps."
+  },
+  {
+    "id": "mathematics_016",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Prove by mathematical induction that the sum of the first n positive integers equals n(n+1)/2. State the base case, inductive hypothesis, and inductive step clearly."
+  },
+  {
+    "id": "mathematics_017",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "A 3×3 matrix A has rows [2, 1, 0], [1, 3, 1], [0, 1, 2]. Find the determinant, the inverse of A, and verify the result by computing A · A⁻¹."
+  },
+  {
+    "id": "mathematics_018",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Using the Bayes theorem, solve the following: A factory has two machines. Machine A produces 60% of items and has a 4% defect rate. Machine B produces 40% of items and has a 6% defect rate. If a randomly selected item is defective, what is the probability it came from Machine A?"
+  },
+  {
+    "id": "mathematics_019",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Find all real solutions to the equation |2x - 5| + |x + 1| = 10, considering all cases for the absolute value expressions."
+  },
+  {
+    "id": "mathematics_020",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "A curve is defined parametrically by x(t) = t² - 1 and y(t) = t³ - 3t. Find all points where the tangent to the curve is horizontal or vertical, and determine the Cartesian equation of the curve."
+  }
+]

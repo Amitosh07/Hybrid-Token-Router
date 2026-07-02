@@ -1,0 +1,3 @@
+# Benchmark results are stored here.
+# Each file is named: benchmark_YYYY-MM-DDTHH-MM-SS.json
+# Each file contains a JSON array of BenchmarkRecord objects.

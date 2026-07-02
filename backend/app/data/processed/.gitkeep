@@ -1,0 +1,2 @@
+# This directory stores feature-extracted, normalised, and ML-ready prompt datasets.
+# Files placed here are produced by preprocessing pipelines and consumed by the training module.

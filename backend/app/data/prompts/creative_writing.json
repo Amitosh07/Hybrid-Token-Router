@@ -1,0 +1,142 @@
+[
+  {
+    "id": "creative_writing_001",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a haiku about debugging code late at night."
+  },
+  {
+    "id": "creative_writing_002",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short two-sentence horror story."
+  },
+  {
+    "id": "creative_writing_003",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a limerick about a programmer who loves coffee."
+  },
+  {
+    "id": "creative_writing_004",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a friendly product launch announcement for a new note-taking app called 'Leaf'."
+  },
+  {
+    "id": "creative_writing_005",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short poem about the feeling of finishing a difficult project."
+  },
+  {
+    "id": "creative_writing_006",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a brief motivational paragraph for a team that is about to launch their first product."
+  },
+  {
+    "id": "creative_writing_007",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a one-paragraph children's story about a curious robot who learns to make friends."
+  },
+  {
+    "id": "creative_writing_008",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a 200-word short story about a scientist who discovers an anomaly in a dataset that changes everything she thought she knew about her research."
+  },
+  {
+    "id": "creative_writing_009",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a tense 150-word dialogue between two astronauts who disagree about whether to abort a mission after an unexpected system failure."
+  },
+  {
+    "id": "creative_writing_010",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a 200-word first-person narrative from the perspective of the last tree in a city that has been entirely paved over."
+  },
+  {
+    "id": "creative_writing_011",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a 150-word product description for a fictional AI-powered writing assistant called 'Quill', targeting professional writers. Use vivid, persuasive language."
+  },
+  {
+    "id": "creative_writing_012",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a 200-word scene where a chef is teaching an apprentice a secret family recipe. Focus on sensory detail and the emotional tension between tradition and the apprentice's desire to innovate."
+  },
+  {
+    "id": "creative_writing_013",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write the opening 200 words of a science fiction novel set in a city where all citizens have their memories backed up to the cloud, and the protagonist discovers that their memories have been edited."
+  },
+  {
+    "id": "creative_writing_014",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a 150-word spoken word poem about the relationship between humans and technology, exploring both dependency and liberation."
+  },
+  {
+    "id": "creative_writing_015",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a 400-word short story told from two alternating perspectives — a doctor and a patient — in the same hospital room, revealing through their private thoughts that each is hiding the same secret. The story must end with an ambiguous final line that works for both perspectives."
+  },
+  {
+    "id": "creative_writing_016",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write the first act of a three-act screenplay outline for a psychological thriller in which a data analyst at a surveillance company discovers the company is being used to monitor the analyst's own family. Include scene descriptions, character motivations, and the act's inciting incident and turning point."
+  },
+  {
+    "id": "creative_writing_017",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a 350-word literary short story using an unreliable narrator who is describing a childhood memory. The reader must be able to detect through subtle clues in the narration that the memory has been significantly distorted. Avoid revealing the distortion explicitly — show it only through contradiction and omission."
+  },
+  {
+    "id": "creative_writing_018",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a 400-word short story set entirely inside a text message conversation between two old friends who have not spoken in ten years. The story must convey the history of their friendship, a conflict that separated them, and a resolution, using only dialogue and the metadata visible in a chat interface (timestamps, read receipts, typing indicators)."
+  },
+  {
+    "id": "creative_writing_019",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a 300-word prose poem that explores the concept of entropy through three extended metaphors: a library, a relationship, and a star. The poem must maintain a consistent second-person voice and move from the intimate to the cosmic scale across its three sections."
+  },
+  {
+    "id": "creative_writing_020",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a 400-word satirical essay in the style of Jonathan Swift's 'A Modest Proposal', proposing a deliberately absurd solution to the problem of software engineers spending too much time in meetings. The essay must maintain a deadpan, formal tone throughout and include at least one fake statistic and one ironic citation."
+  }
+]

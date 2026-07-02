@@ -1,0 +1,142 @@
+[
+  {
+    "id": "summarization_001",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarise the following sentence in 5 words or fewer: 'The quarterly earnings report showed that the company's net profit increased by 22% compared to the same period last year, driven primarily by strong performance in its cloud services division.'"
+  },
+  {
+    "id": "summarization_002",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarise the following meeting note in one sentence: 'The team discussed the upcoming product launch scheduled for next Friday. John will handle the press release, Sarah will update the website, and Mike will coordinate with the sales team. Everyone agreed to meet again on Wednesday for a final check.'"
+  },
+  {
+    "id": "summarization_003",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a TL;DR (one to two sentences) for the following: 'Retrieval-augmented generation (RAG) is a technique that improves the accuracy of AI-generated responses by allowing the model to search an external knowledge base before generating a response. Instead of relying solely on patterns learned during training, the model retrieves relevant documents and uses them as context.'"
+  },
+  {
+    "id": "summarization_004",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarise this email in three bullet points: 'Hi team, just a reminder that the office will be closed on Friday for the public holiday. Please ensure that all pending tasks are completed by Thursday end of day. If you need to access the building on Friday, please contact facilities at least 24 hours in advance. Have a great long weekend!'"
+  },
+  {
+    "id": "summarization_005",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Condense the following into one short paragraph: 'Water is essential for all known life forms. It regulates body temperature, transports nutrients, and removes waste products from cells. The human body is approximately 60% water by weight. Dehydration, even mild, can impair cognitive function and physical performance.'"
+  },
+  {
+    "id": "summarization_006",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarise the following instruction in a single sentence: 'To create a new project in the app, click the New Project button in the top right corner of the dashboard. Enter the project name and select a template from the dropdown list. Add collaborators by typing their email addresses. Click Save to create the project.'"
+  },
+  {
+    "id": "summarization_007",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a one-sentence executive summary of the following: 'The team spent Q3 reducing manual review time by 35% through automation, improving error detection rates by introducing a new QA pipeline, and publishing weekly metrics reports to increase transparency with stakeholders.'"
+  },
+  {
+    "id": "summarization_008",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarise the following research abstract in 3 to 4 sentences for a non-technical audience: 'We propose a self-supervised contrastive learning method for learning visual representations from unlabelled video data. Our approach leverages temporal consistency across video frames as a supervisory signal, outperforming existing methods on downstream classification tasks by 4.7% on Kinetics-400. The model requires no human annotations during pre-training and scales effectively with dataset size.'"
+  },
+  {
+    "id": "summarization_009",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarise the following product requirements document section into a concise list of three acceptance criteria: 'The user authentication system must allow users to register with an email address and a password of at least 8 characters, including one number and one special character. Upon registration, users must receive a verification email. The system must lock accounts after 5 consecutive failed login attempts and send an unlock link to the registered email.'"
+  },
+  {
+    "id": "summarization_010",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarise the following article excerpt in 2 to 3 sentences, preserving all key facts: 'Global electric vehicle sales reached 14 million units in 2023, representing 18% of all new car sales worldwide. China accounted for 60% of global EV sales, followed by Europe at 25% and the United States at 10%. Battery prices fell to an average of $139 per kWh, a 14% decline from the previous year, driven by improved manufacturing efficiency and raw material supply increases.'"
+  },
+  {
+    "id": "summarization_011",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Read the following performance review excerpt and produce a concise 2-sentence summary highlighting strengths and development areas: 'Alex has consistently delivered projects on time and demonstrates strong technical knowledge, particularly in backend development. However, communication with cross-functional teams remains an area for growth, as stakeholders have noted delays in receiving status updates. Alex has shown willingness to improve and has started attending bi-weekly sync meetings.'"
+  },
+  {
+    "id": "summarization_012",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarise the following incident report into a brief root cause statement and two corrective actions: 'On the evening of March 14th, the payment processing service experienced 47 minutes of downtime. Logs indicate that a database connection pool was exhausted after an unexpected traffic spike caused by a marketing campaign. The engineering team manually restarted the connection pool to restore service. A post-incident review was held the following day.'"
+  },
+  {
+    "id": "summarization_013",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarise the following book synopsis in 2 sentences: 'The book explores how small habits, compounded over time, produce remarkable results. The author argues that a 1% improvement each day leads to a 37-fold improvement over a year. He introduces frameworks for habit formation, breaking habits into cue, craving, response, and reward, and explains how to design environments that make good habits easier and bad habits harder.'"
+  },
+  {
+    "id": "summarization_014",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarise the following HR policy update into three clear points that employees need to know: 'Effective from the first of next month, all employees working remotely must log their work hours using the new time-tracking system. Remote workers are expected to be available on Slack during core hours of 10am to 3pm in their local time zone. Employees who require exceptions to these hours due to childcare or medical needs must submit a request to HR at least two weeks in advance.'"
+  },
+  {
+    "id": "summarization_015",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarise the following dense technical paper section into a clear 4-sentence explanation suitable for a software engineering blog post, preserving technical accuracy: 'We introduce a novel attention mechanism, Sparse Factored Attention (SFA), that reduces the quadratic computational complexity of standard self-attention to O(n log n) by decomposing the attention matrix into a product of sparse lower-rank factors. SFA maintains 97.3% of the model quality on GLUE benchmarks while reducing peak GPU memory consumption by 42% on sequences of length 4096. The factorisation is learned end-to-end during training without requiring hand-crafted sparsity patterns.'"
+  },
+  {
+    "id": "summarization_016",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "You are given the minutes from a 90-minute board meeting covering five agenda items: Q2 financial results, a proposed acquisition, a regulatory compliance update, a headcount review, and ESG reporting. The minutes are 1,200 words. Produce a structured executive summary of no more than 150 words covering the key decision reached, one open question, and one action item from each agenda item."
+  },
+  {
+    "id": "summarization_017",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarise and synthesise the following three conflicting expert opinions on remote work productivity into a balanced 3-sentence paragraph that acknowledges the strongest point of each view: View 1 — Remote workers are 13% more productive due to fewer interruptions. View 2 — Collaboration and innovation suffer significantly without in-person contact. View 3 — Productivity outcomes depend almost entirely on the nature of the work and the individual, rendering broad generalisations meaningless."
+  },
+  {
+    "id": "summarization_018",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarise the following 5-paragraph technical design document into a structured one-page overview with sections for Problem Statement, Proposed Solution, Technical Trade-offs, and Open Questions: 'The current monolithic architecture handles 10,000 requests per second at peak and is approaching its scaling ceiling. Horizontal scaling is blocked by a shared database connection pool and a single-threaded event loop. The proposal is to extract the authentication service into a standalone microservice with its own data store, allowing independent scaling. However, this introduces latency for cross-service calls and requires a distributed session management strategy. Key open questions include token expiry policy and cross-service authorisation enforcement.'"
+  },
+  {
+    "id": "summarization_019",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Read the following earnings call transcript excerpt and produce a 100-word investor-ready summary highlighting revenue performance, key growth drivers, risks mentioned, and forward guidance: 'Revenue grew 18% year-over-year to $1.2 billion, driven by a 31% increase in cloud segment revenue, which now accounts for 44% of total revenue. The CFO noted that while gross margins expanded 1.8 points to 72.4%, operating expenses rose 22% due to aggressive hiring. The CEO highlighted AI integration across product lines as the primary growth driver for the next two years but flagged macroeconomic uncertainty and potential enterprise spending slowdowns as key risks. Full-year revenue guidance was raised to $4.8 to $5.0 billion.'"
+  },
+  {
+    "id": "summarization_020",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarise the following multi-source information into a single coherent 150-word briefing document: Source A: A new European regulation requires all companies processing personal data of EU citizens to appoint a Data Protection Officer by January next year. Source B: Our legal team estimates the compliance cost at $120,000 in the first year, including hiring and tooling. Source C: Our engineering team has flagged that 3 of our 7 data pipelines do not yet meet the new anonymisation requirements. Source D: A competitor was fined €2.4 million last quarter for non-compliance with a similar regulation."
+  }
+]
