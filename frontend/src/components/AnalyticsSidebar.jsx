@@ -1,19 +1,46 @@
-import { FiActivity, FiClock, FiCpu, FiDollarSign, FiHash, FiTarget, FiZap } from 'react-icons/fi';
+import {
+  FiClock,
+  FiCpu,
+  FiTarget,
+  FiZap,
+} from 'react-icons/fi';
 import AnalyticsCard from './AnalyticsCard.jsx';
 import LoadingSpinner from './LoadingSpinner.jsx';
-import { formatCurrency, formatModel, formatMs, formatNumber, formatPercent, formatSeconds } from '../services/formatters.js';
+import {
+  formatModel,
+  formatMs,
+  formatPercent,
+} from '../services/formatters.js';
 
 export default function AnalyticsSidebar({ analytics, isLoading }) {
-  const model = analytics?.model;
-  const modelTone = model === 'fireworks' ? 'warning' : model ? 'success' : 'default';
+  const provider = analytics?.provider;
+  const modelTone = provider === 'local' ? 'success' : provider === 'remote' ? 'warning' : 'default';
+
   const items = [
-    { icon: FiCpu, label: 'Current Model', value: formatModel(model), tone: modelTone },
-    { icon: FiClock, label: 'Latency', value: formatMs(analytics?.latency), tone: 'accent' },
-    { icon: FiHash, label: 'Token Count', value: formatNumber(analytics?.tokens) },
-    { icon: FiDollarSign, label: 'Estimated Cost', value: formatCurrency(analytics?.cost), tone: analytics?.cost > 0 ? 'warning' : 'success' },
-    { icon: FiZap, label: 'Routing Decision', value: analytics?.decision || 'No route yet' },
-    { icon: FiTarget, label: 'Confidence Score', value: formatPercent(analytics?.confidence), tone: 'success' },
-    { icon: FiActivity, label: 'Processing Time', value: formatSeconds(analytics?.processingTime), tone: 'accent' }
+    {
+      icon: FiCpu,
+      label: 'Current Model',
+      value: formatModel(provider),
+      tone: modelTone,
+    },
+    {
+      icon: FiClock,
+      label: 'Latency',
+      value: formatMs(analytics?.latency),
+      tone: 'accent',
+    },
+    {
+      icon: FiTarget,
+      label: 'Confidence',
+      value: formatPercent(analytics?.confidence),
+      tone: 'success',
+    },
+    {
+      icon: FiZap,
+      label: 'Routing Decision',
+      value: analytics?.decision || 'No route yet',
+      tone: provider === 'local' ? 'success' : provider === 'remote' ? 'warning' : 'default',
+    },
   ];
 
   return (

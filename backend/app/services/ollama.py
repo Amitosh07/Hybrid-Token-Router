@@ -1,6 +1,42 @@
+"""Ollama local LLM client with pipeline instrumentation.
+
+Client strategy:
+  - A single persistent AsyncClient is created at module level and reused
+    across all requests. This avoids the per-request TCP connection setup
+    (~20-200 ms overhead) that exists when using `async with AsyncClient()`.
+  - Timeout is 20 s per attempt. One attempt only — if Ollama is not
+    responding within 20 s it will not recover on a retry; the caller
+    should fall back to remote immediately.
+  - The caller (chat.py) handles the fallback; this module only raises
+    TimeoutError when the model is genuinely unavailable.
+"""
+
+from __future__ import annotations
+
 import httpx
 
 from app.config import get_settings
+
+# ---------------------------------------------------------------------------
+# Persistent client — created once, reused for all requests.
+# Connection pooling eliminates per-request TCP setup (~20-200 ms saved).
+# ---------------------------------------------------------------------------
+_TIMEOUT_SECONDS: float = 20.0
+
+# Lazy singleton — initialised on first use so settings are available.
+_client: httpx.AsyncClient | None = None
+
+
+def _get_client() -> httpx.AsyncClient:
+    """Return the module-level persistent AsyncClient, creating it if needed."""
+    global _client
+    if _client is None or _client.is_closed:
+        _client = httpx.AsyncClient(
+            timeout=_TIMEOUT_SECONDS,
+            # Keep connections alive between requests.
+            limits=httpx.Limits(max_keepalive_connections=5, max_connections=10),
+        )
+    return _client
 
 
 async def generate(prompt: str) -> str:
@@ -19,10 +55,10 @@ async def generate(prompt: str) -> str:
         "stream": False,
     }
 
+    client = _get_client()
     try:
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            response = await client.post(url, json=payload)
-            response.raise_for_status()
+        response = await client.post(url, json=payload)
+        response.raise_for_status()
     except httpx.ConnectError as exc:
         raise ConnectionError("Could not connect to Ollama.") from exc
     except httpx.TimeoutException as exc:

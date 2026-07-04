@@ -1,6 +1,44 @@
+"""Remote LLM client with persistent connection pooling.
+
+Client strategy:
+  - A single persistent AsyncClient is created at module level and reused
+    across all requests. This avoids the per-request TCP + TLS handshake
+    overhead (~50-300 ms) that the previous `async with AsyncClient()` pattern
+    incurred on every call.
+  - Headers (including Authorization) are set at client creation time so
+    they don't need to be reconstructed per request.
+  - Timeout: 30 s — sufficient for any cloud LLM under normal conditions.
+"""
+
+from __future__ import annotations
+
 import httpx
 
 from app.config import get_settings
+
+# ---------------------------------------------------------------------------
+# Persistent client — created on first use, reused for all requests.
+# ---------------------------------------------------------------------------
+_TIMEOUT_SECONDS: float = 30.0
+
+_client: httpx.AsyncClient | None = None
+
+
+def _get_client() -> httpx.AsyncClient:
+    """Return the persistent AsyncClient, creating it when first needed."""
+    global _client
+    if _client is None or _client.is_closed:
+        settings = get_settings()
+        _client = httpx.AsyncClient(
+            base_url=settings.REMOTE_BASE_URL.rstrip("/") if settings.REMOTE_BASE_URL else "",
+            headers={
+                "Authorization": f"Bearer {settings.REMOTE_API_KEY}",
+                "Content-Type": "application/json",
+            },
+            timeout=_TIMEOUT_SECONDS,
+            limits=httpx.Limits(max_keepalive_connections=5, max_connections=10),
+        )
+    return _client
 
 
 async def generate(prompt: str) -> str:
@@ -15,21 +53,16 @@ async def generate(prompt: str) -> str:
     if not settings.REMOTE_MODEL:
         raise ValueError("REMOTE_MODEL is not configured.")
 
-    url = f"{settings.REMOTE_BASE_URL.rstrip('/')}/chat/completions"
-    headers = {
-        "Authorization": f"Bearer {settings.REMOTE_API_KEY}",
-        "Content-Type": "application/json",
-    }
     payload = {
         "model": settings.REMOTE_MODEL,
         "messages": [{"role": "user", "content": prompt}],
         "temperature": 0.2,
     }
 
+    client = _get_client()
     try:
-        async with httpx.AsyncClient(timeout=30.0) as client:
-            response = await client.post(url, headers=headers, json=payload)
-            response.raise_for_status()
+        response = await client.post("/chat/completions", json=payload)
+        response.raise_for_status()
     except httpx.ConnectError as exc:
         raise ConnectionError("Could not connect to Remote LLM provider.") from exc
     except httpx.TimeoutException as exc:

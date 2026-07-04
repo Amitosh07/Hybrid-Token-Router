@@ -41,9 +41,12 @@ from app.config import get_settings
 
 ROUTER_VERSION: str = "v1.0"
 
-_DEFAULT_PROMPTS_DIR = Path(__file__).resolve().parents[2] / "data" / "prompts"
-_DEFAULT_RESULTS_DIR = Path(__file__).resolve().parents[2] / "data" / "benchmarks" / "results"
-_DEFAULT_SUMMARIES_DIR = Path(__file__).resolve().parents[2] / "data" / "benchmarks" / "summaries"
+_PROJECT_ROOT = Path(__file__).resolve().parents[2]
+_CANONICAL_DATA_DIR = _PROJECT_ROOT / "app" / "data"
+
+_DEFAULT_PROMPTS_DIR = _CANONICAL_DATA_DIR / "prompts"
+_DEFAULT_RESULTS_DIR = _CANONICAL_DATA_DIR / "benchmarks" / "results"
+_DEFAULT_SUMMARIES_DIR = _CANONICAL_DATA_DIR / "benchmarks" / "summaries"
 
 
 # ---------------------------------------------------------------------------

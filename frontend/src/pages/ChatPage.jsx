@@ -4,7 +4,7 @@ import ChatWindow from '../components/ChatWindow.jsx';
 import EmptyState from '../components/EmptyState.jsx';
 import PromptInput from '../components/PromptInput.jsx';
 import AnalyticsCard from '../components/AnalyticsCard.jsx';
-import { formatCurrency, formatModel, formatMs, formatNumber, formatPercent, formatSeconds } from '../services/formatters.js';
+import { formatModel, formatMs, formatNumber, formatPercent, formatCurrency } from '../services/formatters.js';
 
 export default function ChatPage({ chat }) {
   const [draft, setDraft] = useState('');
@@ -15,12 +15,14 @@ export default function ChatPage({ chat }) {
   }, []);
 
   const mobileAnalytics = [
-    ['Model', formatModel(chat.analytics?.model)],
+    ['Model', formatModel(chat.analytics?.provider)],
     ['Latency', formatMs(chat.analytics?.latency)],
-    ['Tokens', formatNumber(chat.analytics?.tokens)],
-    ['Cost', formatCurrency(chat.analytics?.cost)],
+    ['Tokens', formatNumber(chat.analytics?.estimated_input_tokens)],
+    ['Cost Saved', formatCurrency(chat.analytics?.estimated_cost_saved)],
     ['Confidence', formatPercent(chat.analytics?.confidence)],
-    ['Processing', formatSeconds(chat.analytics?.processingTime)]
+    ['Complexity', chat.analytics?.complexity
+      ? chat.analytics.complexity.charAt(0).toUpperCase() + chat.analytics.complexity.slice(1)
+      : '--']
   ];
 
   return (
@@ -28,7 +30,6 @@ export default function ChatPage({ chat }) {
       <div className="flex items-center justify-between gap-4">
         <div>
           <h2 className="text-2xl font-semibold tracking-normal text-zinc-50">AI Routing Console</h2>
-          <p className="mt-1 text-sm text-ink-400">Prompt once, inspect model choice, latency, tokens, and cost.</p>
         </div>
         <button
           type="button"
@@ -47,7 +48,7 @@ export default function ChatPage({ chat }) {
         </div>
       </div>
       <section className="flex min-h-0 flex-1 flex-col rounded-xl border border-ink-800 bg-ink-950 p-4 md:p-5">
-        {!hasConversation ? <EmptyState onPrompt={usePrompt} /> : <ChatWindow messages={chat.messages} isLoading={chat.isLoading} />}
+        {!hasConversation ? <EmptyState /> : <ChatWindow messages={chat.messages} isLoading={chat.isLoading} />}
       </section>
       <PromptInput
         onSend={chat.sendMessage}

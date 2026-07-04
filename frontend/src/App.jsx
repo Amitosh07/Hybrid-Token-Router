@@ -20,8 +20,8 @@ const pages = {
 export default function App() {
   const [activePage, setActivePage] = useState('chat');
   const toasts = useToasts();
-  const chat = useChat({ onToast: toasts.addToast });
   const stats = useStats({ onToast: toasts.addToast });
+  const chat = useChat({ onToast: toasts.addToast, onSuccess: stats.silentRefresh });
 
   const activeMeta = useMemo(() => pages[activePage], [activePage]);
 

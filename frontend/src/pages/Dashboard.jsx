@@ -1,21 +1,60 @@
-import { FiClock, FiCloud, FiCpu, FiDollarSign, FiHash, FiRefreshCw, FiSend } from 'react-icons/fi';
+import {
+  FiClock,
+  FiCloud,
+  FiCpu,
+  FiRefreshCw,
+  FiSend,
+  FiTarget,
+} from 'react-icons/fi';
 import MetricCard from '../components/MetricCard.jsx';
 import StatsSkeleton from '../components/StatsSkeleton.jsx';
-import { formatCurrency, formatMs, formatNumber } from '../services/formatters.js';
+import { formatMs, formatNumber, formatPercent } from '../services/formatters.js';
 
 export default function Dashboard({ stats, onRefresh }) {
   const data = stats.stats;
-  const averageTokens = data.tokens || Math.round((data.requests || 0) * 142 / Math.max(data.requests || 1, 1));
-  const localShare = data.requests ? Math.round((data.local / data.requests) * 100) : 0;
-  const fireworksShare = data.requests ? Math.round((data.fireworks / data.requests) * 100) : 0;
+
+  const totalReqs = data.total_requests ?? 0;
+  const localReqs = data.local_requests ?? 0;
+  const remoteReqs = data.remote_requests ?? 0;
+  const localShare = totalReqs ? Math.round((localReqs / totalReqs) * 100) : 0;
+  const remoteShare = totalReqs ? Math.round((remoteReqs / totalReqs) * 100) : 0;
 
   const metrics = [
-    { icon: FiSend, label: 'Total Requests', value: formatNumber(data.requests), sublabel: 'Prompts routed through the system', tone: 'accent' },
-    { icon: FiCpu, label: 'Local Requests', value: formatNumber(data.local), sublabel: `${localShare}% of traffic handled locally`, tone: 'success' },
-    { icon: FiCloud, label: 'Fireworks Requests', value: formatNumber(data.fireworks), sublabel: `${fireworksShare}% escalated to cloud`, tone: 'warning' },
-    { icon: FiDollarSign, label: 'Money Saved', value: formatCurrency(data.money_saved), sublabel: 'Estimated cloud cost avoided', tone: 'success' },
-    { icon: FiClock, label: 'Average Latency', value: formatMs(data.latency), sublabel: 'Mean response latency', tone: 'accent' },
-    { icon: FiHash, label: 'Average Tokens', value: formatNumber(averageTokens), sublabel: 'Estimated token usage per request' }
+    {
+      icon: FiSend,
+      label: 'Total Requests',
+      value: formatNumber(totalReqs),
+      sublabel: 'Prompts routed through the system',
+      tone: 'accent',
+    },
+    {
+      icon: FiCpu,
+      label: 'Local Requests',
+      value: formatNumber(localReqs),
+      sublabel: `${localShare}% of traffic handled locally`,
+      tone: 'success',
+    },
+    {
+      icon: FiCloud,
+      label: 'Remote Requests',
+      value: formatNumber(remoteReqs),
+      sublabel: `${remoteShare}% escalated to remote`,
+      tone: 'warning',
+    },
+    {
+      icon: FiClock,
+      label: 'Average Latency',
+      value: formatMs(data.average_latency_ms ?? 0),
+      sublabel: 'Mean end-to-end response latency',
+      tone: 'accent',
+    },
+    {
+      icon: FiTarget,
+      label: 'Average Confidence',
+      value: formatPercent(data.average_confidence ?? 0),
+      sublabel: 'Mean router confidence across all requests',
+      tone: 'success',
+    },
   ];
 
   return (
@@ -23,7 +62,7 @@ export default function Dashboard({ stats, onRefresh }) {
       <div className="mb-6 flex flex-col justify-between gap-4 md:flex-row md:items-end">
         <div>
           <h2 className="text-2xl font-semibold tracking-normal text-zinc-50">Router Dashboard</h2>
-          <p className="mt-1 text-sm text-ink-400">Operational metrics for local/cloud model routing.</p>
+          <p className="mt-1 text-sm text-ink-400">Live operational metrics for the Hybrid Token Router.</p>
         </div>
         <button
           type="button"
@@ -45,7 +84,7 @@ export default function Dashboard({ stats, onRefresh }) {
       )}
       {stats.error && (
         <div className="mt-6 rounded-xl border border-danger bg-ink-900 p-4 text-sm text-zinc-100">
-          Dashboard data could not be loaded. The frontend is ready; start the backend and refresh.
+          Dashboard data could not be loaded. Make sure the backend is running, then click Refresh.
         </div>
       )}
     </div>

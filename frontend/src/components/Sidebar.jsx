@@ -22,14 +22,7 @@ export default function Sidebar({ activePage, pages, onPageChange }) {
           );
         })}
       </nav>
-      <div className="mt-6 rounded-xl border border-ink-800 bg-ink-900 p-4">
-        <p className="text-xs font-medium uppercase text-ink-500">Shortcuts</p>
-        <div className="mt-3 space-y-2 text-sm text-ink-300">
-          <p>Ctrl/⌘ 1 opens Chat</p>
-          <p>Ctrl/⌘ 2 opens Dashboard</p>
-          <p>Enter sends prompts</p>
-        </div>
-      </div>
+
     </aside>
   );
 }

@@ -4,12 +4,12 @@ import { sendChatMessage } from '../services/api.js';
 const welcomeMessage = {
   id: 'welcome',
   role: 'assistant',
-  content: 'Send a prompt to route it between the Local LLM and Fireworks AI. The response and routing analytics will appear here.',
+  content: 'Send a prompt to get started. The router will decide whether to use the local model or the remote model and show live analytics.',
   createdAt: new Date().toISOString(),
   analytics: null
 };
 
-export function useChat({ onToast }) {
+export function useChat({ onToast, onSuccess }) {
   const [messages, setMessages] = useState([welcomeMessage]);
   const [analytics, setAnalytics] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +19,6 @@ export function useChat({ onToast }) {
     const cleanPrompt = prompt.trim();
     if (!cleanPrompt || isLoading) return;
 
-    const startedAt = performance.now();
     const userMessage = {
       id: crypto.randomUUID(),
       role: 'user',
@@ -33,15 +32,36 @@ export function useChat({ onToast }) {
 
     try {
       const response = await sendChatMessage(cleanPrompt);
-      const processingTime = (performance.now() - startedAt) / 1000;
+
+      // Determine routing decision label from provider
+      const provider = response.provider || 'unknown';
+      const decisionLabel =
+        provider === 'local'
+          ? 'Local route selected'
+          : provider === 'remote'
+          ? 'Remote route selected'
+          : `${provider} route selected`;
+
       const routingAnalytics = {
-        model: response.model,
+        // Core identity
+        provider,
+        model: provider,
+        // Latency — backend already sends milliseconds
         latency: response.latency,
-        tokens: response.tokens,
+        // Confidence in [0,1]
         confidence: response.confidence,
-        cost: response.cost,
-        processingTime,
-        decision: response.model === 'fireworks' ? 'Cloud route selected' : 'Local route selected'
+        // Routing engine output
+        routing_score: response.routing_score,
+        reason: response.reason,
+        // Feature-extractor output
+        task_type: response.task_type,
+        complexity: response.complexity,
+        estimated_input_tokens: response.estimated_input_tokens,
+        // Decision label
+        decision: decisionLabel,
+        // Flags
+        fallback_used: response.fallback_used,
+        prompt_id: response.prompt_id,
       };
 
       setAnalytics(routingAnalytics);
@@ -55,6 +75,8 @@ export function useChat({ onToast }) {
           analytics: routingAnalytics
         }
       ]);
+      // Notify parent so dashboard stats can be refreshed without polling
+      onSuccess?.();
     } catch (err) {
       setError(err);
       onToast?.('Routing request failed. Check the backend and try again.', 'error');
@@ -71,7 +93,7 @@ export function useChat({ onToast }) {
     } finally {
       setIsLoading(false);
     }
-  }, [isLoading, onToast]);
+  }, [isLoading, onToast, onSuccess]);
 
   const clearMessages = useCallback(() => {
     setMessages([welcomeMessage]);
