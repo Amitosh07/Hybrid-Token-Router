@@ -1,0 +1,606 @@
+
+════════════════════════════════════════════════════════════════════════
+══════ HYBRID TOKEN ROUTER — FEATURE EXTRACTOR CALIBRATION REPORT ══════
+════════════════════════════════════════════════════════════════════════
+
+  Total prompts : 160
+  Categories    : coding, creative_writing, general, mathematics, planning, reasoning, summarization, translation
+  Seed (sample) : 42
+
+────────────────────────────────────────────────────────────────────────
+  1. V1 vs V2 — Overall Routing Distribution
+────────────────────────────────────────────────────────────────────────
+
+  Metric                                      V1         V2
+  ─────────────────────────────────── ────────── ──────────
+  Routed → LOCAL                             159        133
+  Routed → REMOTE                              1         27
+  Remote %                                    0%        16%
+  Average routing score                      8.5       15.2
+  Average complexity score (V2)                —     0.1980
+
+────────────────────────────────────────────────────────────────────────
+  2. Complexity Score Distribution by Difficulty (V2)
+────────────────────────────────────────────────────────────────────────
+
+  Difficulty    N    Min    Avg    Max  REMOTE  Distribution (0→1)
+  ────────── ──── ────── ────── ────── ───────  ────────────────────────────────
+  easy         56  0.054  0.127  0.448    2/56  ████░░░░░░░░░░░░░░░░░░░░░░░░░░
+  medium       56  0.058  0.186  0.434    7/56  ██████░░░░░░░░░░░░░░░░░░░░░░░░
+  hard         48  0.086  0.294  0.632   18/48  █████████░░░░░░░░░░░░░░░░░░░░░
+
+────────────────────────────────────────────────────────────────────────
+  3. Difficulty Separation (Cohen's d)
+────────────────────────────────────────────────────────────────────────
+
+  Cohen's d measures the separation between difficulty groups.
+  |d| > 0.8 = large effect (good separation).
+  |d| > 0.5 = medium effect.
+  |d| < 0.2 = poor separation.
+
+  Easy   vs Hard   : d = 1.326  [LARGE ✓]
+  Easy   vs Medium : d = 0.590  [MEDIUM]
+  Medium vs Hard   : d = 0.825  [LARGE ✓]
+
+────────────────────────────────────────────────────────────────────────
+  4. Routing Summary by Category
+────────────────────────────────────────────────────────────────────────
+
+  Category               N  Avg Cmplx  REMOTE  Group weights contributing most
+  ──────────────────── ─── ────────── ───────  ──────────────────────────────
+  coding                20     0.2312    3/20  task
+  creative_writing      20     0.1036    0/20  task
+  general               20     0.2114    3/20  task
+  mathematics           20     0.2417    5/20  task
+  planning              20     0.1637    2/20  task
+  reasoning             20     0.1981    4/20  task
+  summarization         20     0.2730    7/20  task
+  translation           20     0.1610    3/20  task
+
+────────────────────────────────────────────────────────────────────────
+  5. Potential Misrouting — Hard→LOCAL / Easy→REMOTE
+────────────────────────────────────────────────────────────────────────
+
+  Hard prompts routed LOCAL (30):
+    [creative_writing_015] cs=0.086  rs=  8  Write a 400-word short story told from two alternating persp…
+    [creative_writing_017] cs=0.086  rs=  8  Write a 350-word literary short story using an unreliable na…
+    [planning_019        ] cs=0.097  rs=  9  Create a hiring and team scaling plan for a startup that nee…
+    [creative_writing_016] cs=0.097  rs=  9  Write the first act of a three-act screenplay outline for a …
+    [creative_writing_019] cs=0.111  rs=  9  Write a 300-word prose poem that explores the concept of ent…
+    [creative_writing_018] cs=0.116  rs=  8  Write a 400-word short story set entirely inside a text mess…
+    [translation_016     ] cs=0.151  rs= 12  Translate the following legal contract clause from English i…
+    [summarization_017   ] cs=0.152  rs= 13  Summarise and synthesise the following three conflicting exp…
+    [translation_017     ] cs=0.158  rs= 12  Translate the following medical information paragraph into S…
+    [summarization_020   ] cs=0.163  rs= 13  Summarise the following multi-source information into a sing…
+
+  Easy prompts routed REMOTE (2):
+    [summarization_003   ] cs=0.448  rs= 25  Write a TL;DR (one to two sentences) for the following: 'Ret…
+    [summarization_001   ] cs=0.404  rs= 28  Summarise the following sentence in 5 words or fewer: 'The q…
+
+────────────────────────────────────────────────────────────────────────
+  6. Feature Group Importance (average scores across all prompts)
+────────────────────────────────────────────────────────────────────────
+
+  Group             Weight  AvgScore  WtdContrib  Bar
+  ─────────────── ──────── ───────── ───────────  ──────────────────────────────
+  technical           0.30    0.1798      0.0539  █████░░░░░░░░░░░░░░░░░░░░░░░░░
+  reasoning           0.25    0.0799      0.0200  ██░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  task                0.25    0.4501      0.1125  ██████████████░░░░░░░░░░░░░░░░
+  constraint          0.12    0.0307      0.0037  █░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  context             0.08    0.0980      0.0078  ███░░░░░░░░░░░░░░░░░░░░░░░░░░░
+
+────────────────────────────────────────────────────────────────────────
+  7. Detailed Routing Traces — 20 Sampled Prompts
+────────────────────────────────────────────────────────────────────────
+
+  ── [01/20] translation_004  (category=translation, difficulty=easy)
+  Prompt: Translate the following sentence into Portuguese: 'Thank you for attending today's workshop. Your fe…
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.200   ████░░░░░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.068   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.0555
+  Complexity label         : easy
+  reasoning_score (bridge) : 1/10
+  V2 routing_score         : 7
+  V1 routing_score         : 2
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Task group               : transform_format (base=0.2, mods=0.0)
+  Context                  : tokens=33 concept_hits=0 density=0.000
+
+  ── [02/20] creative_writing_003  (category=creative_writing, difficulty=easy)
+  Prompt: Write a limerick about a programmer who loves coffee.
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.250   █████░░░░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.038   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.0656
+  Complexity label         : easy
+  reasoning_score (bridge) : 1/10
+  V2 routing_score         : 8
+  V1 routing_score         : 3
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Task group               : default (base=0.25, mods=0.0)
+  Context                  : tokens=14 concept_hits=0 density=0.000
+
+  ── [03/20] creative_writing_004  (category=creative_writing, difficulty=easy)
+  Prompt: Write a friendly product launch announcement for a new note-taking app called 'Leaf'.
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.250   █████░░░░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.052   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.0667
+  Complexity label         : easy
+  reasoning_score (bridge) : 1/10
+  V2 routing_score         : 5
+  V1 routing_score         : 0
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Task group               : default (base=0.25, mods=0.0)
+  Context                  : tokens=22 concept_hits=0 density=0.000
+
+  ── [04/20] coding_007  (category=coding, difficulty=easy)
+  Prompt: Write a Python function that returns the factorial of a non-negative integer using a loop.
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.250   █████░░░░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.053   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.0668
+  Complexity label         : easy
+  reasoning_score (bridge) : 1/10
+  V2 routing_score         : 13
+  V1 routing_score         : 23
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Task group               : default (base=0.25, mods=0.0)
+  Context                  : tokens=23 concept_hits=0 density=0.000
+
+  ── [05/20] creative_writing_007  (category=creative_writing, difficulty=easy)
+  Prompt: Write a one-paragraph children's story about a curious robot who learns to make friends.
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.300   ██████░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.250   █████░░░░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.052   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.1567
+  Complexity label         : easy
+  reasoning_score (bridge) : 2/10
+  V2 routing_score         : 10
+  V1 routing_score         : 0
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Technical domains hit    : data_structures=0.30
+  Task group               : default (base=0.25, mods=0.0)
+  Context                  : tokens=22 concept_hits=0 density=0.000
+
+  ── [06/20] mathematics_003  (category=mathematics, difficulty=easy)
+  Prompt: What is the probability of flipping a fair coin three times and getting exactly two heads?
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.315   ██████░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.400   ████████░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.100   ██░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.053   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.1950
+  Complexity label         : easy
+  reasoning_score (bridge) : 2/10
+  V2 routing_score         : 18
+  V1 routing_score         : 9
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Reasoning groups hit     : logical_deduction=0.32
+  Task group               : explain_teach (base=0.4, mods=0.0)
+  Constraint patterns      : exact-count
+  Context                  : tokens=23 concept_hits=0 density=0.000
+
+  ── [07/20] translation_012  (category=translation, difficulty=medium)
+  Prompt: Translate the following legal notice into Spanish: 'By using this service, you agree to our Terms of…
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.200   ████░░░░░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.099   ██░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.0579
+  Complexity label         : easy
+  reasoning_score (bridge) : 1/10
+  V2 routing_score         : 7
+  V1 routing_score         : 12
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Task group               : transform_format (base=0.2, mods=0.0)
+  Context                  : tokens=58 concept_hits=0 density=0.000
+
+  ── [08/20] creative_writing_009  (category=creative_writing, difficulty=medium)
+  Prompt: Write a tense 150-word dialogue between two astronauts who disagree about whether to abort a mission…
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.250   █████░░░░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.070   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.0681
+  Complexity label         : easy
+  reasoning_score (bridge) : 1/10
+  V2 routing_score         : 8
+  V1 routing_score         : 3
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Task group               : default (base=0.25, mods=0.0)
+  Context                  : tokens=34 concept_hits=0 density=0.000
+
+  ── [09/20] general_011  (category=general, difficulty=medium)
+  Prompt: How does the human immune system distinguish between self and non-self cells? Explain the role of T …
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.580   ████████████░░░░░░░░  (wt=0.25)
+  constraint         0.080   ██░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.070   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.1602
+  Complexity label         : easy
+  reasoning_score (bridge) : 2/10
+  V2 routing_score         : 15
+  V1 routing_score         : 5
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Task group               : explain_teach (base=0.4, mods=0.18)
+  Task modifiers           : multiple-deliverables, explain-plus-implement
+  Constraint patterns      : explain-deliverable
+  Context                  : tokens=34 concept_hits=0 density=0.000
+
+  ── [10/20] mathematics_011  (category=mathematics, difficulty=medium)
+  Prompt: A geometric series has a first term of 4 and a common ratio of 1/3. Calculate the sum of the first 6…
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.880   ██████████████████░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.066   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.2253
+  Complexity label         : easy
+  reasoning_score (bridge) : 2/10
+  V2 routing_score         : 18
+  V1 routing_score         : 13
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Task group               : determine_solve (base=0.78, mods=0.1)
+  Task modifiers           : multiple-deliverables
+  Context                  : tokens=33 concept_hits=0 density=0.000
+
+  ── [11/20] coding_009  (category=coding, difficulty=medium)
+  Prompt: Write a Python class that implements a stack data structure using a list, with push, pop, peek, and …
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.600   ████████████░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.250   █████░░░░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.064   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.2476
+  Complexity label         : easy
+  reasoning_score (bridge) : 2/10
+  V2 routing_score         : 19
+  V1 routing_score         : 14
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Technical domains hit    : data_structures=0.60
+  Task group               : default (base=0.25, mods=0.0)
+  Context                  : tokens=30 concept_hits=0 density=0.000
+
+  ── [12/20] reasoning_009  (category=reasoning, difficulty=medium)
+  Prompt: A clock shows 3:15. What is the angle between the hour hand and the minute hand? Reason through the …
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.380   ████████░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.263   █████░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.400   ████████░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.068   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.2850
+  Complexity label         : easy
+  reasoning_score (bridge) : 3/10
+  V2 routing_score         : 20
+  V1 routing_score         : 10
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Technical domains hit    : concurrency=0.38
+  Reasoning groups hit     : multi_step_reasoning=0.26
+  Task group               : explain_teach (base=0.4, mods=0.0)
+  Context                  : tokens=33 concept_hits=0 density=0.000
+
+  ── [13/20] summarization_010  (category=summarization, difficulty=medium)
+  Prompt: Summarise the following article excerpt in 2 to 3 sentences, preserving all key facts: 'Global elect…
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.315   ██████░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.780   ████████████████░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.149   ███░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.2857
+  Complexity label         : easy
+  reasoning_score (bridge) : 3/10
+  V2 routing_score         : 18
+  V1 routing_score         : 8
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Reasoning groups hit     : logical_deduction=0.32
+  Task group               : determine_solve (base=0.78, mods=0.0)
+  Context                  : tokens=118 concept_hits=0 density=0.000
+
+  ── [14/20] coding_008  (category=coding, difficulty=medium)
+  Prompt: Implement a binary search algorithm in Python that works on a sorted list of integers and returns th…
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.720   ██████████████░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.850   █████████████████░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.072   █░░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.4343
+  Complexity label         : medium
+  reasoning_score (bridge) : 4/10
+  V2 routing_score         : 29
+  V1 routing_score         : 4
+  Decision                 : REMOTE  (threshold=25)
+  V1 decision              : LOCAL
+  Technical domains hit    : algorithms=0.72
+  Task group               : implement_complex (base=0.85, mods=0.0)
+  Context                  : tokens=36 concept_hits=0 density=0.000
+
+  ── [15/20] creative_writing_016  (category=creative_writing, difficulty=hard)
+  Prompt: Write the first act of a three-act screenplay outline for a psychological thriller in which a data a…
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.350   ███████░░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.117   ██░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.0968
+  Complexity label         : easy
+  reasoning_score (bridge) : 1/10
+  V2 routing_score         : 9
+  V1 routing_score         : 9
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Task group               : default (base=0.25, mods=0.1)
+  Task modifiers           : multiple-deliverables
+  Context                  : tokens=77 concept_hits=0 density=0.000
+
+  ⚠ MISROUTING ANALYSIS: Hard prompt routed LOCAL.
+    complexity_score=0.097 is below the effective threshold (~0.50).
+    Dominant group: task = 0.350
+    This prompt may lack explicit technical keywords despite being hard.
+    Recommendation: verify the prompt relies on knowledge rather than reasoning.
+
+  ── [16/20] summarization_020  (category=summarization, difficulty=hard)
+  Prompt: Summarise the following multi-source information into a single coherent 150-word briefing document: …
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.313   ██████░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.200   ████░░░░░░░░░░░░░░░░  (wt=0.25)
+  constraint         0.060   █░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.149   ███░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.1631
+  Complexity label         : easy
+  reasoning_score (bridge) : 2/10
+  V2 routing_score         : 13
+  V1 routing_score         : 18
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Technical domains hit    : database=0.30, cloud_devops=0.28
+  Task group               : transform_format (base=0.2, mods=0.0)
+  Constraint patterns      : negation
+  Context                  : tokens=151 concept_hits=0 density=0.000
+
+  ⚠ MISROUTING ANALYSIS: Hard prompt routed LOCAL.
+    complexity_score=0.163 is below the effective threshold (~0.50).
+    Dominant group: technical = 0.313
+    This prompt may lack explicit technical keywords despite being hard.
+    Recommendation: verify the prompt relies on knowledge rather than reasoning.
+
+  ── [17/20] general_016  (category=general, difficulty=hard)
+  Prompt: Analyse the causes and long-term consequences of the Industrial Revolution in Britain. Consider the …
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.294   ██████░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.830   █████████████████░░░  (wt=0.25)
+  constraint         0.080   ██░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.108   ██░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.2992
+  Complexity label         : easy
+  reasoning_score (bridge) : 3/10
+  V2 routing_score         : 19
+  V1 routing_score         : 19
+  Decision                 : LOCAL  (threshold=25)
+  V1 decision              : LOCAL
+  Reasoning groups hit     : analytical=0.24, causal_systemic=0.24, comparative_assessment=0.24
+  Task group               : analyze_evaluate (base=0.65, mods=0.18)
+  Task modifiers           : multiple-deliverables, explain-plus-implement
+  Constraint patterns      : explain-deliverable
+  Context                  : tokens=67 concept_hits=0 density=0.000
+
+  ⚠ MISROUTING ANALYSIS: Hard prompt routed LOCAL.
+    complexity_score=0.299 is below the effective threshold (~0.50).
+    Dominant group: task = 0.830
+    This prompt may lack explicit technical keywords despite being hard.
+    Recommendation: verify the prompt relies on knowledge rather than reasoning.
+
+  ── [18/20] general_018  (category=general, difficulty=hard)
+  Prompt: Compare and contrast three major economic systems — capitalism, socialism, and mixed economy — acros…
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.260   █████░░░░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.686   ██████████████░░░░░░  (wt=0.25)
+  task               0.750   ███████████████░░░░░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.119   ██░░░░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.4465
+  Complexity label         : medium
+  reasoning_score (bridge) : 4/10
+  V2 routing_score         : 30
+  V1 routing_score         : 20
+  Decision                 : REMOTE  (threshold=25)
+  V1 decision              : LOCAL
+  Technical domains hit    : api_networking=0.26
+  Reasoning groups hit     : analytical=0.70, logical_deduction=0.32, comparative_assessment=0.70
+  Task group               : analyze_evaluate (base=0.65, mods=0.1)
+  Task modifiers           : multiple-deliverables
+  Context                  : tokens=79 concept_hits=0 density=0.000
+
+  ── [19/20] general_020  (category=general, difficulty=hard)
+  Prompt: Explain how large language models work, from tokenisation and transformer architecture to training o…
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.576   ████████████░░░░░░░░  (wt=0.30)
+  reasoning          0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.25)
+  task               1.000   ████████████████████  (wt=0.25)
+  constraint         0.080   ██░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.234   █████░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.4512
+  Complexity label         : medium
+  reasoning_score (bridge) : 5/10
+  V2 routing_score         : 34
+  V1 routing_score         : 23
+  Decision                 : REMOTE  (threshold=25)
+  V1 decision              : LOCAL
+  Technical domains hit    : database=0.30, security=0.34, machine_learning=0.85
+  Task group               : architect (base=0.95, mods=0.18)
+  Task modifiers           : multiple-deliverables, explain-plus-implement
+  Constraint patterns      : explain-deliverable
+  Context                  : tokens=68 concept_hits=2 density=0.057
+
+  ── [20/20] translation_015  (category=translation, difficulty=hard)
+  Prompt: Translate the following academic abstract from English into French, preserving precise technical voc…
+
+  Group              Score   Bar
+  ───────────────── ──────   ────────────────────────────────
+  technical          0.418   ████████░░░░░░░░░░░░  (wt=0.30)
+  reasoning          0.308   ██████░░░░░░░░░░░░░░  (wt=0.25)
+  task               0.950   ███████████████████░  (wt=0.25)
+  constraint         0.000   ░░░░░░░░░░░░░░░░░░░░  (wt=0.12)
+  context            0.262   █████░░░░░░░░░░░░░░░  (wt=0.08)
+
+  Overall complexity_score : 0.4607
+  Complexity label         : medium
+  reasoning_score (bridge) : 5/10
+  V2 routing_score         : 34
+  V1 routing_score         : 20
+  Decision                 : REMOTE  (threshold=25)
+  V1 decision              : LOCAL
+  Technical domains hit    : concurrency=0.38, system_design=0.36, machine_learning=0.34
+  Reasoning groups hit     : analytical=0.24, logical_deduction=0.32
+  Task group               : architect (base=0.95, mods=0.0)
+  Context                  : tokens=130 concept_hits=3 density=0.051
+
+────────────────────────────────────────────────────────────────────────
+  8. ML Compatibility & Recommendations
+────────────────────────────────────────────────────────────────────────
+
+  Feature design for supervised ML training:
+
+  RECOMMENDED INPUT FEATURES (low collinearity)
+  ─────────────────────────────────────────────
+  technical_complexity   — domain-specific engineering depth [0, 1]
+  reasoning_complexity   — analytical / logical demands      [0, 1]
+  task_complexity        — verb-driven task ambition         [0, 1]
+  constraint_complexity  — explicit requirements density     [0, 1]
+  context_complexity     — concept density + token load      [0, 1]
+  estimated_input_tokens — raw token count                   [int]
+  contains_code          — structural code presence          [bool]
+  contains_math          — math notation presence            [bool]
+
+  AVOID AS DIRECT FEATURES (derived / redundant)
+  ──────────────────────────────────────────────
+  reasoning_score        — is round(complexity_score × 10); purely derived
+  complexity             — is a bucketing of complexity_score; use score directly
+  complexity_score       — is a weighted avg of the five group scores; use groups
+  routing_score          — is computed by the router; this IS the label
+
+  RECOMMENDED TARGET VARIABLE
+  ───────────────────────────
+  provider               — "local" | "remote"  (binary classification)
+  OR
+  complexity_score       — [0, 1]  (regression → threshold to classify)
+
+  TRAINING DATA NOTES
+  ───────────────────
+  • The five group scores are designed to be orthogonal.  Run a correlation
+    matrix before training and drop any pair with |r| > 0.85.
+  • task_complexity and technical_complexity will correlate for coding tasks;
+    monitor this during feature selection.
+  • context_complexity has intentionally low variance (weight 0.08); it may
+    not add predictive power beyond token count alone.
+  • Difficulty labels in the current dataset serve as WEAK ground truth;
+    prefer expert-annotated routing labels if available.
+
+════════════════════════════════════════════════════════════════════════
+  V1 routing: 159 LOCAL / 1 REMOTE  (remote=0%)
+  V2 routing: 133 LOCAL / 27 REMOTE  (remote=16%)
+  Hard prompts correctly routed REMOTE: 18/48
+  Easy prompts correctly routed LOCAL : 54/56
+  Easy→Hard separation (Cohen's d)    : 1.326
+════════════════════════════════════════════════════════════════════════
