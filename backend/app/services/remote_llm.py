@@ -12,6 +12,8 @@ Client strategy:
 
 from __future__ import annotations
 
+import asyncio
+import random
 import httpx
 
 from app.config import get_settings
@@ -42,6 +44,14 @@ def _get_client() -> httpx.AsyncClient:
 
 
 async def generate(prompt: str) -> str:
+    import os
+    if os.getenv("SIMULATE_LLM", "false").lower() == "true":
+        from app.services.simulator import generate_simulated
+        return await generate_simulated(prompt, "remote")
+
+    # Proactive rate limiting: sleep 2.1s to respect Groq's 30 RPM limit without hitting 429s
+    await asyncio.sleep(2.1)
+
     settings = get_settings()
 
     if not settings.REMOTE_API_KEY:
@@ -60,28 +70,45 @@ async def generate(prompt: str) -> str:
     }
 
     client = _get_client()
-    try:
-        response = await client.post("/chat/completions", json=payload)
-        response.raise_for_status()
-    except httpx.ConnectError as exc:
-        raise ConnectionError("Could not connect to Remote LLM provider.") from exc
-    except httpx.TimeoutException as exc:
-        raise TimeoutError("Remote LLM request timed out.") from exc
-    except httpx.HTTPStatusError as exc:
-        status_code = exc.response.status_code
-        if status_code == 429:
-            raise RuntimeError("Remote LLM rate limit exceeded.") from exc
-        raise RuntimeError(f"Remote LLM returned HTTP {status_code}.") from exc
-    except httpx.HTTPError as exc:
-        raise RuntimeError("Remote LLM request failed.") from exc
+    
+    max_retries = 5
+    backoff = 2.0
+    
+    for attempt in range(max_retries):
+        try:
+            response = await client.post("/chat/completions", json=payload)
+            response.raise_for_status()
+            
+            # Request succeeded, parse answer
+            try:
+                data = response.json()
+                answer = data["choices"][0]["message"]["content"]
+            except (ValueError, KeyError, IndexError, TypeError) as exc:
+                raise RuntimeError("Remote LLM returned an invalid response.") from exc
 
-    try:
-        data = response.json()
-        answer = data["choices"][0]["message"]["content"]
-    except (ValueError, KeyError, IndexError, TypeError) as exc:
-        raise RuntimeError("Remote LLM returned an invalid response.") from exc
+            if not isinstance(answer, str):
+                raise RuntimeError("Remote LLM response did not include generated text.")
 
-    if not isinstance(answer, str):
-        raise RuntimeError("Remote LLM response did not include generated text.")
+            return answer.strip()
 
-    return answer.strip()
+        except httpx.HTTPStatusError as exc:
+            status_code = exc.response.status_code
+            if status_code == 429 and attempt < max_retries - 1:
+                # 429 Rate Limit - Wait and retry
+                wait_time = backoff * (2 ** attempt) + random.uniform(0.1, 0.5)
+                print(f"\n  [!] Groq 429 Rate Limit. Retrying in {wait_time:.2f}s (attempt {attempt + 1}/{max_retries})...")
+                await asyncio.sleep(wait_time)
+                continue
+            
+            if status_code == 429:
+                raise RuntimeError("Remote LLM rate limit exceeded.") from exc
+            raise RuntimeError(f"Remote LLM returned HTTP {status_code}.") from exc
+            
+        except httpx.ConnectError as exc:
+            raise ConnectionError("Could not connect to Remote LLM provider.") from exc
+        except httpx.TimeoutException as exc:
+            raise TimeoutError("Remote LLM request timed out.") from exc
+        except httpx.HTTPError as exc:
+            raise RuntimeError("Remote LLM request failed.") from exc
+
+    raise RuntimeError("Remote LLM request failed after maximum retries.")

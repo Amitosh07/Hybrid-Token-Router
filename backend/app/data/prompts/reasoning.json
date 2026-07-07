@@ -138,5 +138,425 @@
     "difficulty": "hard",
     "expected_reasoning": "high",
     "prompt": "Three suspects A, B, and C are questioned about a robbery. A says: 'I didn't do it.' B says: 'A is lying.' C says: 'B is lying.' If exactly one of the three is telling the truth, determine who committed the robbery and verify your answer is consistent with all three statements."
+  },
+  {
+    "id": "reasoning_021",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Identify the logical fallacy in this statement: 'Our team lost the match because it rained. Every time it rains during our match, we lose.'"
+  },
+  {
+    "id": "reasoning_022",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "If a card contains a vowel on one side, it must have an even number on the other side. A card has 'E' on one side. What should be on the other side to satisfy the rule?"
+  },
+  {
+    "id": "reasoning_023",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Compare the advantages and disadvantages of taking public transit versus driving a private vehicle in a major city."
+  },
+  {
+    "id": "reasoning_024",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain the difference between inductive reasoning and deductive reasoning with simple examples for both."
+  },
+  {
+    "id": "reasoning_025",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Read the following scenario: A, B, and C are standing in a line. A is taller than B. B is taller than C. Who is the shortest? Explain."
+  },
+  {
+    "id": "reasoning_026",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Determine the next pattern in the sequence: Circle, Square, Circle, Circle, Square, Circle, Circle, Circle, Square, ... Explain why."
+  },
+  {
+    "id": "reasoning_027",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain why correlation does not imply causation using the example of ice cream sales and sunburn rates."
+  },
+  {
+    "id": "reasoning_028",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "A shopkeeper says, 'All shirts are discounted, but no pants are.' If a customer buys a pair of pants, is it discounted? Explain the logic."
+  },
+  {
+    "id": "reasoning_029",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "If all dogs are mammals and all mammals are warm-blooded animals, does it follow that all dogs are warm-blooded? State the syllogism logic."
+  },
+  {
+    "id": "reasoning_030",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Identify the missing word: Light is to Dark as Knowledge is to ____. Explain the reasoning behind your choice."
+  },
+  {
+    "id": "reasoning_031",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Analyze the pros and cons of implementing a four-day work week for employees in a corporate office setting."
+  },
+  {
+    "id": "reasoning_032",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "If some apples are red and all red fruits are sweet, is it logical to conclude that all apples are sweet? Explain why or why not."
+  },
+  {
+    "id": "reasoning_033",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain the cause-and-effect relationship between rising global temperatures and rising sea levels in simple terms."
+  },
+  {
+    "id": "reasoning_034",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Determine if this argument is valid: 'If you study hard, you pass tests. You passed the test, therefore you studied hard.'"
+  },
+  {
+    "id": "reasoning_035",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "If a train leaves Station A heading east at 60 mph, and another leaves Station B heading west at 80 mph, explain the logical steps to find where they meet."
+  },
+  {
+    "id": "reasoning_036",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain the reasoning behind why traffic lights use red, yellow, and green colors worldwide."
+  },
+  {
+    "id": "reasoning_037",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Analyze why companies collect user feedback after releasing a new product features list."
+  },
+  {
+    "id": "reasoning_038",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "If A is north of B, and B is west of C, what direction is C relative to A? Explain the spatial reasoning step-by-step."
+  },
+  {
+    "id": "reasoning_039",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Analyze the potential consequences of skipping regular software updates on a personal computer."
+  },
+  {
+    "id": "reasoning_040",
+    "category": "reasoning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "A person has to cross a river with a wolf, a goat, and a cabbage. If left alone, wolf eats goat, goat eats cabbage. Explain the logical constraints."
+  },
+  {
+    "id": "reasoning_041",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A detective examines a crime scene where exactly one of three suspects (John, Alice, and Bob) is guilty. John says: 'Alice did it.' Alice says: 'I did not do it.' Bob says: 'I did not do it.' If exactly one statement is true, who is guilty? Reason step-by-step."
+  },
+  {
+    "id": "reasoning_042",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Analyze the second-order economic and social implications if a major city decides to make all public transportation completely free of charge."
+  },
+  {
+    "id": "reasoning_043",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Compare and contrast the utilitarian ethical framework with the deontological framework. How would each resolve a scenario where a self-driving car must choose between saving passengers or pedestrians?"
+  },
+  {
+    "id": "reasoning_044",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Evaluate the trade-offs of using a monolithic architecture versus a microservices architecture for a scaling startup with a team of 15 engineers."
+  },
+  {
+    "id": "reasoning_045",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A box contains three cards: one red on both sides, one black on both sides, and one red on one side and black on the other. You draw a card and see it has a red face. What is the probability that the other side is also red? Explain."
+  },
+  {
+    "id": "reasoning_046",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Analyze the root causes of the 2008 global financial crisis, focusing on the feedback loops created by mortgage-backed securities and credit default swaps."
+  },
+  {
+    "id": "reasoning_047",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Evaluate the argument that artificial intelligence will create more jobs than it displaces. What are the key assumptions, and what counterfactual scenarios should be considered?"
+  },
+  {
+    "id": "reasoning_048",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain the tragedy of the commons using the example of overfishing in international waters. Suggest two policy interventions that could mitigate this problem based on game theory."
+  },
+  {
+    "id": "reasoning_049",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "In a certain town, 80% of cabs are Blue and 20% are Green. A witness identifies a cab in a hit-and-run as Green. Under identical lighting, the witness correctly identifies colors 85% of the time. What is the probability the cab was Green?"
+  },
+  {
+    "id": "reasoning_050",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain the concept of opportunity cost in personal finance decisions, using the choice between buying a house and investing the down payment in the stock market."
+  },
+  {
+    "id": "reasoning_051",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Analyze the potential unintended consequences of implementing rent control policies in a highly populated urban area. Trace the effects on housing supply and quality."
+  },
+  {
+    "id": "reasoning_052",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Evaluate the logical consistency of this statement: 'No one goes to that restaurant anymore because it is always too crowded.' Under what definitions could it make sense?"
+  },
+  {
+    "id": "reasoning_053",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Compare the effectiveness of carbon taxation versus cap-and-trade systems for reducing industrial carbon emissions. Analyze the incentives created for innovation."
+  },
+  {
+    "id": "reasoning_054",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain how the prisoner's dilemma applies to advertising spend decisions between two competing smartphone brands. What is the Nash equilibrium?"
+  },
+  {
+    "id": "reasoning_055",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A puzzle states: Alice's father has five daughters: Nana, Nene, Nini, Nono. What is the name of the fifth daughter? Explain the cognitive trap in this riddle."
+  },
+  {
+    "id": "reasoning_056",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Evaluate the trade-offs of switching from password-based authentication to passwordless (biometrics and passkeys) for an enterprise organization with 5000 employees."
+  },
+  {
+    "id": "reasoning_057",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Analyze the systemic feedback loops involved in the 'wage-price spiral' inflation scenario. How do consumer expectations affect the duration of inflation?"
+  },
+  {
+    "id": "reasoning_058",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "If a card has a number on one side and a color on the other. Rule: 'If a card has an even number, the other side is Red.' You see four cards: '8', '5', 'Red', 'Blue'. Which cards must you flip to test the rule?"
+  },
+  {
+    "id": "reasoning_059",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Analyze the arguments for and against raising the federal minimum wage to $15 per hour, considering local purchasing power differences across states."
+  },
+  {
+    "id": "reasoning_060",
+    "category": "reasoning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain the Lindy effect and how it applies to estimating the future lifespan of technologies, books, and institutions compared to biological organisms."
+  },
+  {
+    "id": "reasoning_061",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "In a complex murder investigation, three suspects are interviewed. Alice says: 'Bob is guilty and Charlie is innocent.' Bob says: 'If Alice is guilty, then Charlie is guilty.' Charlie says: 'I am innocent, but at least one of the others is guilty.' If the innocent always tell the truth and the guilty always lie, determine who is guilty and who is innocent. Reason step-by-step."
+  },
+  {
+    "id": "reasoning_062",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Analyze the systemic risks of a centralized vs decentralized database architecture for managing health records across 50 independent hospital systems. Detail the trade-offs in write performance, consensus latency, network partition tolerance (CAP theorem), and compliance (HIPAA)."
+  },
+  {
+    "id": "reasoning_063",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Critically evaluate the Newcomb's Paradox in decision theory. Contrast the arguments of the one-boxer (expected utility maximization) with the two-boxer (causal decision theory). Which strategy is optimal under perfect predictor assumptions?"
+  },
+  {
+    "id": "reasoning_064",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Evaluate the second-order geopolitical and macroeconomic consequences of transitioning the global reserve currency from USD to a decentralized basket of digital assets, tracking effects on debt pricing and trade balances."
+  },
+  {
+    "id": "reasoning_065",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "A logic grid puzzle contains 5 houses of different colors, inhabited by men of different nationalities, who drink different beverages, smoke different cigars, and keep different pets. One house owner drinks tea; the Swede keeps dogs. Solve for who owns the fish, showing complete steps."
+  },
+  {
+    "id": "reasoning_066",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Analyze the ethical, legal, and systemic safety implications of deploying autonomous weapons systems equipped with computer vision for target selection. Address accountability gaps and human-in-the-loop overrides."
+  },
+  {
+    "id": "reasoning_067",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Critically analyze the trolley problem variants (fat man, loop variant) through the lens of Double Effect Principle and Utilitarian calculus. Explain the cognitive dissonance that arises between scenarios."
+  },
+  {
+    "id": "reasoning_068",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Explain the mathematical and logical structures of Godel's First Incompleteness Theorem. Detail the diagonal lemma, the construction of the Godel sentence, and explain why consistency implies unprovability within formal arithmetic."
+  },
+  {
+    "id": "reasoning_069",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Evaluate the impact of high-frequency trading (HFT) algorithms on financial market liquidity and price discovery. Does HFT increase systemic volatility during market stress? Analyze feedback loops and flash crashes."
+  },
+  {
+    "id": "reasoning_070",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "A puzzle states: You are at a fork in the road where one path leads to safety and the other to danger. Two guards stand there: one always lies, the other always tells the truth. You don't know who is who. You can ask exactly one question to one guard. What is the question?"
+  },
+  {
+    "id": "reasoning_071",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Analyze the mechanisms of the 'tragedy of the horizon' regarding long-term climate change mitigation within democratic political systems. Trace the incentives of short election cycles on long-term capital allocation."
+  },
+  {
+    "id": "reasoning_072",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Evaluate the causal claims in the debate between inflation being caused by corporate profit-seeking ('greedflation') versus expansionary monetary policy. Trace how supply-side shocks and demand-pull mechanisms interact."
+  },
+  {
+    "id": "reasoning_073",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Explain the difference between causal inference and correlation using structural causal models (SCMs) and Pearl's do-calculus. Show how adjusting for a confounder differs from adjusting for a mediator or collider."
+  },
+  {
+    "id": "reasoning_074",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Evaluate the implications of the halting problem in computer science on the feasibility of writing a perfect static analysis tool that guarantees memory safety and deadlock absence in arbitrary multi-threaded programs."
+  },
+  {
+    "id": "reasoning_075",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Analyze the systemic feedback loops between algorithmically curated news feeds, confirmation bias, polarization, and social instability. Detail how optimization metrics (engagement) drive systemic behavior."
+  },
+  {
+    "id": "reasoning_076",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "A game of Russian Roulette is played with a 6-chamber revolver containing 2 consecutive bullets. The first player spins, pulls the trigger, and survives. Should the second player pull the trigger directly or spin the chamber first? Calculate probabilities."
+  },
+  {
+    "id": "reasoning_077",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Critically analyze the arguments surrounding the 'simulation hypothesis'. Evaluate Bostrom's trilemma and explain the physical, computing, and logical assumptions required for the probability of us living in a simulation to be high."
+  },
+  {
+    "id": "reasoning_078",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Analyze the legal and constitutional implications of utilizing machine learning risk assessment tools (like COMPAS) in bail and sentencing decisions. Discuss equal protection, transparency, and bias definition trade-offs."
+  },
+  {
+    "id": "reasoning_079",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "A group of 100 logical prisoners are placed in a circle, each wearing a red or blue hat. They cannot see their own hat, but see all others. They must guess their hat color simultaneously. If at least one guesses correctly, they are freed. What is the team strategy?"
+  },
+  {
+    "id": "reasoning_080",
+    "category": "reasoning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Analyze the structural stability and systemic risks of decentralized finance (DeFi) lending protocols during market liquidation cascades. Track how oracle latency, gas spikes, and liquidator capital constraints feed back."
   }
 ]

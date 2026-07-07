@@ -138,5 +138,425 @@
     "difficulty": "hard",
     "expected_reasoning": "high",
     "prompt": "Translate the following software localisation string set from English into French and Japanese simultaneously. For each string, provide both translations: ['Account settings', 'Manage your subscription', 'Billing history', 'Cancel plan', 'Upgrade to Pro', 'Two-factor authentication', 'Connected devices', 'Privacy preferences']."
+  },
+  {
+    "id": "translation_021",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this sentence into French, Spanish, and German: 'Thank you for your inquiry. A representative will contact you shortly.'"
+  },
+  {
+    "id": "translation_022",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this simple recipe card into Italian: 'Boil water, add a pinch of salt, cook pasta for 9 minutes, drain and mix with tomato sauce.'"
+  },
+  {
+    "id": "translation_023",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate these user interface labels from English to Japanese: 'Home', 'Settings', 'Profile', 'Edit Account', 'Cancel', 'Submit Changes'."
+  },
+  {
+    "id": "translation_024",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this greeting email from English to Portuguese: 'Dear client, we are excited to invite you to our annual conference next month. Please RSVP.'"
+  },
+  {
+    "id": "translation_025",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this warning sign into German: 'Danger: High voltage. Do not touch. Authorized personnel only.'"
+  },
+  {
+    "id": "translation_026",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this simple sentence into Chinese: 'Where is the nearest subway station? I need to catch a train at 5 PM.'"
+  },
+  {
+    "id": "translation_027",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this customer feedback comment from Spanish to English: 'El servicio fue excelente, pero la comida tardo demasiado en llegar a la mesa.'"
+  },
+  {
+    "id": "translation_028",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this welcome message into Arabic: 'Welcome to our hotel. We hope you enjoy your stay with us. Let us know if you need anything.'"
+  },
+  {
+    "id": "translation_029",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this simple sentence from French to English: 'S'il vous plaît, apportez-moi l'addition quand vous aurez un moment.'"
+  },
+  {
+    "id": "translation_030",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate these common business idioms into Spanish: 'Touch base', 'Keep me in the loop', 'Get the ball rolling'."
+  },
+  {
+    "id": "translation_031",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this instruction list into Korean: '1. Unpack the box. 2. Connect the power cord. 3. Turn on the device. 4. Follow the setup assistant.'"
+  },
+  {
+    "id": "translation_032",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this brief status message into Russian: 'Server maintenance is currently in progress. Please try again in 30 minutes.'"
+  },
+  {
+    "id": "translation_033",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this short text from Portuguese to English: 'Gostaria de agendar uma reuniao para discutir o novo projeto na proxima segunda-feira.'"
+  },
+  {
+    "id": "translation_034",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this question into Hindi: 'What is the price of this book and does it include a CD?'"
+  },
+  {
+    "id": "translation_035",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this status update from English to Italian: 'Your order has been shipped and will arrive by Thursday.'"
+  },
+  {
+    "id": "translation_036",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this simple notification into Turkish: 'Password reset successful. You can now log in with your new credentials.'"
+  },
+  {
+    "id": "translation_037",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this short paragraph from Spanish to English: 'Nuestra empresa se dedica a la creacion de soluciones de software de alta calidad para empresas de todo el mundo.'"
+  },
+  {
+    "id": "translation_038",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this simple warning into Japanese: 'Caution: Wet floor. Walk slowly.'"
+  },
+  {
+    "id": "translation_039",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this simple phrase into Swedish: 'Merry Christmas and a Happy New Year to you and your family!'"
+  },
+  {
+    "id": "translation_040",
+    "category": "translation",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Translate this customer greeting from French to German: 'Bonjour, comment puis-je vous aider aujourd'hui?'"
+  },
+  {
+    "id": "translation_041",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this B2B SaaS licensing agreement clause from English to Japanese, maintaining formal legal terminology (Keigo) and exact legal definitions: 'The licensee is granted a non-transferable, non-exclusive license to utilize the software in accordance with the terms herein.'"
+  },
+  {
+    "id": "translation_042",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this technical API documentation snippet from English to French, ensuring standard tech terms (like 'endpoints', 'rate limiting', 'payload') are localized correctly for French developers: 'Each endpoint requires authentication. Rate limiting is enforced at 100 requests per minute. The payload must be JSON formatted.'"
+  },
+  {
+    "id": "translation_043",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this medical discharge summary from Spanish to English, preserving technical pathology and clinical vocabulary: 'Paciente masculino presenta cuadro de colecistitis aguda. Se realiza colecistectomia laparoscopica sin complicaciones. Se indica reposo absoluto y dieta blanda.'"
+  },
+  {
+    "id": "translation_044",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this corporate policy regarding whistleblower protection from English to Portuguese, adapting formatting to fit local labor conventions: 'All employees may report violations anonymously without fear of retaliation or adverse employment action.'"
+  },
+  {
+    "id": "translation_045",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this historical letter from German to English, preserving the archaic tone, formatting, and complex syntax of the original 19th-century text: 'Es ist mir ein dringendes Bedürfnis, Ihnen meine tiefempfundene Dankbarkeit für Ihre fortwährende Unterstützung in diesen schwierigen Zeiten auszudrücken.'"
+  },
+  {
+    "id": "translation_046",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this financial balance sheet commentary from English to Simplified Chinese, using accurate Chinese banking terminology for assets, liabilities, and equity: 'The company's liquid assets increased by 15%, offset by long-term liabilities, leading to a net equity growth.'"
+  },
+  {
+    "id": "translation_047",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this user guide for a complex mechanical assembly from English to Spanish, ensuring terms for parts ('gasket', 'washer', 'tensioner bolt') are translated with technical accuracy: 'Ensure the gasket is seated flat before tightening the tensioner bolt to 25 Nm.'"
+  },
+  {
+    "id": "translation_048",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this poem by Charles Baudelaire from French to English, attempting to maintain both the rhyme scheme (AABB) and the melancholy tone: 'La sottise, l'erreur, le péché, la lésine, / Occupent nos esprits et travaillent nos corps, / Et nous alimentons nos aimables remords, / Comme les mendiants nourrissent leur vermine.'"
+  },
+  {
+    "id": "translation_049",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this legal non-disclosure agreement (NDA) clause from English to German, ensuring German civil code terms for breaches ('Vertragsstrafe') are referenced accurately: 'Any breach of confidentiality will subject the receiving party to immediate injunctive relief and liquidated damages.'"
+  },
+  {
+    "id": "translation_050",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this product safety data sheet (MSDS) from English to Korean, preserving safety warnings, chemical notations, and emergency handling protocols: 'In case of contact with eyes, rinse immediately with plenty of water and seek medical advice. Do not breathe gas/fumes/vapor/spray.'"
+  },
+  {
+    "id": "translation_051",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this marketing brochure for a luxury hotel from English to Italian, adapting idioms and metaphors to evoke a sense of elegance in Italian: 'Indulge your senses in our sun-drenched terrace overlooking the rolling Tuscan hills, where time stands still.'"
+  },
+  {
+    "id": "translation_052",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this scientific abstract about gene editing from English to Russian, using standard academic terminology for CRISPR, double-strand breaks, and homology-directed repair."
+  },
+  {
+    "id": "translation_053",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this diplomatic statement from French to English, preserving the nuanced, formal register and deliberate ambiguities: 'Nous restons engagés dans la recherche d'une solution pacifique, tout en restant vigilants face aux développements récents sur le terrain.'"
+  },
+  {
+    "id": "translation_054",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this system administration guide from English to Japanese, ensuring command line arguments and network config variables remain untranslated: 'Edit /etc/network/interfaces and append the following static IP configuration, then run systemctl restart networking.'"
+  },
+  {
+    "id": "translation_055",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this customer agreement from Spanish to English, ensuring accuracy in legal terms regarding jurisdiction: 'Para cualquier disputa derivada del presente contrato, las partes se someten expresamente a la jurisdiccion de los tribunales de Madrid.'"
+  },
+  {
+    "id": "translation_056",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this clinical trial protocol summary from English to Traditional Chinese, focusing on eligibility criteria and primary outcome measures: 'Eligible participants must be aged 18 to 65 with a documented history of chronic hypertension. Primary endpoint is reduction in systolic blood pressure.'"
+  },
+  {
+    "id": "translation_057",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this software license from German to English, ensuring terms like 'Gewährleistung' (warranty) and 'Haftungsausschluss' (disclaimer of liability) are rendered correctly according to US common law."
+  },
+  {
+    "id": "translation_058",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this travel blog post from Portuguese to English, maintaining the casual, enthusiastic tone and local terms for regional foods and cultural customs."
+  },
+  {
+    "id": "translation_059",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this patent claim regarding a battery structure from English to Japanese, using precise patent terminology: 'An electrode assembly comprising a positive electrode plate, a negative electrode plate, and a separator interposed therebetween.'"
+  },
+  {
+    "id": "translation_060",
+    "category": "translation",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Translate this university curriculum description from French to English, using equivalent academic terms for course credits, prerequisites, and semesters."
+  },
+  {
+    "id": "translation_061",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this multi-jurisdictional commercial software master services agreement (MSA) clause from English to German. The translation must align precisely with the German Civil Code (BGB) terminology for contract breach, limitation of liability (Haftungsbeschränkung), indemnification (Freistellung), and consequential damages (Folgeschäden). Text: 'Except for breach of confidentiality, in no event shall either party be liable to the other for any indirect, incidental, special, exemplary, or consequential damages, including lost profits, arising out of this agreement, whether in contract, tort, or under any other theory of liability.'"
+  },
+  {
+    "id": "translation_062",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this highly technical scientific paper extract about semiconductor fabrication from English to Japanese. The translation must utilize the exact academic and industry terminology for physical vapor deposition, photolithography, sub-nanometer etching, and gate-all-around transistor structures, maintaining formal academic style (De arimasu)."
+  },
+  {
+    "id": "translation_063",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this clinical trial pathology report detailing a complex oncological diagnosis from Spanish to English. The translation must preserve the precise nomenclature for histopathological markers, tumor grading systems, staging classifications, immunohistochemical stains, and genetic sequencing mutations without ambiguity."
+  },
+  {
+    "id": "translation_064",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this philosophical excerpt by Immanuel Kant from German to English. The translation must preserve the complex sentence structures, exact philosophical terms (e.g. 'Ding an sich', 'a priori', 'transzendentale Ästhetik'), and the rigorous argumentative flow. Text: 'Daß unsere gesamte Erkenntnis mit der Erfahrung anfange, daran ist kein Zweifel; aber ob sie auch alle aus der Erfahrung entspringe, ist eine andere Frage.'"
+  },
+  {
+    "id": "translation_065",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this financial audit and compliance report detailing anti-money laundering (AML) controls from English to Simplified Chinese. The translation must conform to the regulatory definitions and banking terms utilized by the People's Bank of China (PBOC) regarding suspicious activity reporting, customer due diligence, and capital adequacy ratios."
+  },
+  {
+    "id": "translation_066",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this patent application describing a decentralized blockchain consensus mechanism from English to Japanese, utilizing precise patent-office terminology. The translation must define claims regarding cryptographic hashing, network nodes, validator stakes, and fault-tolerant replication with technical precision."
+  },
+  {
+    "id": "translation_067",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this legal document regarding maritime shipping liability (Hague-Visby Rules) from French to English. The translation must preserve the exact legal definitions of seaworthiness, due diligence, carriage of goods by sea, and limitation of liability per package."
+  },
+  {
+    "id": "translation_068",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this academic text discussing structuralist linguistics and semiotics from French to English, preserving Saussurean concepts like 'signifiant', 'signifié', 'langue', and 'parole', maintaining the dense scholarly tone and elaborate phrasing."
+  },
+  {
+    "id": "translation_069",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this cloud infrastructure security audit checklist from English to French, preserving the exact cybersecurity terminology for zero-trust architecture, identity providers (IdP), role-based access control (RBAC), multi-factor authentication (MFA), and perimeter network segmentation."
+  },
+  {
+    "id": "translation_070",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this complex system assembly instruction manual for an industrial gas turbine from English to Spanish, ensuring mechanical engineering terms ('housing', 'rotor blades', 'clearance', 'torque specification') are translated with exact technical equivalents."
+  },
+  {
+    "id": "translation_071",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this corporate bylaws section regarding shareholder voting rights from English to Traditional Chinese, using exact corporate law terms for proxy voting, quorum requirements, supermajority, and board resolutions."
+  },
+  {
+    "id": "translation_072",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this medical research article detailing the mechanisms of mRNA vaccine delivery from English to Russian, using standard academic terms for lipid nanoparticles, cellular uptake, endosomal escape, and translation efficiency."
+  },
+  {
+    "id": "translation_073",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this reinsurance agreement treaty clause from German to English, ensuring insurance law terms ('Selbstbehalt', 'Schadenexzedent', 'Rückversicherer') are translated into equivalent commercial reinsurance terms."
+  },
+  {
+    "id": "translation_074",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this user agreement for a global social media platform from English to Korean, ensuring compliance definitions for data privacy standards matching the Korean Personal Information Protection Act (PIPA)."
+  },
+  {
+    "id": "translation_075",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this quantum computing research paper extract from English to Simplified Chinese, using exact Chinese physics terms for quantum superposition, entanglement, decoherence, and superconducting qubits."
+  },
+  {
+    "id": "translation_076",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this environmental impact assessment report from French to Spanish, using exact scientific terms for biodiversity index, soil erosion, runoff contamination, and carbon sequestration capacity."
+  },
+  {
+    "id": "translation_077",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this software cryptography library documentation from English to German, ensuring terms like 'symmetric encryption', 'public key infrastructure', 'nonces', and 'authenticated decryption' are rendered with exact tech equivalents."
+  },
+  {
+    "id": "translation_078",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this complex literary dialogue from Portuguese to English, maintaining the regional dialect, subtle cultural idioms, emotional nuances, and the rhythm of speech of the characters."
+  },
+  {
+    "id": "translation_079",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this patent claim for a digital signal processing chip from English to Japanese, using precise technical terms for frequency modulation, noise filtering, analog-to-digital converter (ADC), and sample-and-hold circuit."
+  },
+  {
+    "id": "translation_080",
+    "category": "translation",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Translate this government regulatory policy regarding antitrust compliance and mergers from English to German, using equivalent EU competition law terms for market share, dominance, barriers to entry, and horizontal mergers."
   }
 ]

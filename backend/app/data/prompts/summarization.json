@@ -138,5 +138,425 @@
     "difficulty": "hard",
     "expected_reasoning": "high",
     "prompt": "Summarise the following multi-source information into a single coherent 150-word briefing document: Source A: A new European regulation requires all companies processing personal data of EU citizens to appoint a Data Protection Officer by January next year. Source B: Our legal team estimates the compliance cost at $120,000 in the first year, including hiring and tooling. Source C: Our engineering team has flagged that 3 of our 7 data pipelines do not yet meet the new anonymisation requirements. Source D: A competitor was fined €2.4 million last quarter for non-compliance with a similar regulation."
+  },
+  {
+    "id": "summarization_021",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarize this email exchange between a client and a customer service representative, identifying the main complaint and the agreed resolution: 'Client: My order arrived damaged. Rep: Sorry, we will send a replacement free of charge. Client: Perfect, thanks.'"
+  },
+  {
+    "id": "summarization_022",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short summary (3-4 sentences) of this brief news article about a new public transit line opening in a city next month."
+  },
+  {
+    "id": "summarization_023",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Condense this meeting transcript into a bulleted list of action items: 'Alice will update slides. Bob will send budget. Charlie to confirm the calendar by Friday.'"
+  },
+  {
+    "id": "summarization_024",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Provide a quick overview (TL;DR) of this instruction manual for setting up a smart home thermostat in under 50 words."
+  },
+  {
+    "id": "summarization_025",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarize this product description, highlighting the key features and target audience of a new fitness tracker."
+  },
+  {
+    "id": "summarization_026",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a brief synopsis of this paragraph discussing the life cycle of a butterfly, explaining the four stages: egg, larva, pupa, and adult."
+  },
+  {
+    "id": "summarization_027",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarize this memo regarding the new office security protocol, listing the three steps employees must take when entering after hours."
+  },
+  {
+    "id": "summarization_028",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Condense this customer feedback report into a single paragraph outlining the main areas of satisfaction and dissatisfaction with a new vacuum cleaner."
+  },
+  {
+    "id": "summarization_029",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarize this text describing the rules of soccer, focusing on team size, game duration, and the primary objective."
+  },
+  {
+    "id": "summarization_030",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Provide a summary of this recipe, listing the main preparation steps and cooking times for making a lasagna."
+  },
+  {
+    "id": "summarization_031",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short summary (2-3 sentences) of this historical paragraph about the construction of the Great Wall of China."
+  },
+  {
+    "id": "summarization_032",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarize this short paragraph describing the water cycle, focusing on evaporation, condensation, and precipitation."
+  },
+  {
+    "id": "summarization_033",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Condense this employee onboarding email into a checklist of the first-day requirements, such as ID collection, IT setup, and HR signoffs."
+  },
+  {
+    "id": "summarization_034",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarize this announcement from a school principal regarding the rescheduled sports day events, listing new dates and times."
+  },
+  {
+    "id": "summarization_035",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Provide a brief overview of this article discussing the benefits of drinking water daily, highlighting the effects on energy levels and skin health."
+  },
+  {
+    "id": "summarization_036",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarize this short paragraph explaining how a solar panel converts sunlight into electricity using photovoltaic cells."
+  },
+  {
+    "id": "summarization_037",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Condense this user review of a hotel into a list of pros and cons, focusing on location, room size, and customer service quality."
+  },
+  {
+    "id": "summarization_038",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarize this text outlining the safety rules for a swimming pool, highlighting diving restrictions and adult supervision requirements."
+  },
+  {
+    "id": "summarization_039",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short summary of this article about the discovery of a new dinosaur fossil in Argentina, detailing its estimated size and age."
+  },
+  {
+    "id": "summarization_040",
+    "category": "summarization",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Summarize this short text explaining the concept of recycling and its importance in reducing waste in landfill sites."
+  },
+  {
+    "id": "summarization_041",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this 10-page clinical trial research paper abstract, explaining the methodology, sample size, primary endpoints, statistical significance, and clinical implications: 'The trial evaluated a new drug for hypertension on 500 patients over 12 weeks. Systolic pressure decreased significantly (p < 0.01) compared to the placebo group.'"
+  },
+  {
+    "id": "summarization_042",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this corporate software security policy regarding remote access, highlighting the requirements for VPN usage, multi-factor authentication (MFA), password complexity rules, session timeouts, and the protocol for reporting a security incident."
+  },
+  {
+    "id": "summarization_043",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this commercial real estate lease agreement, extracting the lease term, monthly rent calculation, maintenance responsibilities, security deposit details, subleasing restrictions, and termination clauses."
+  },
+  {
+    "id": "summarization_044",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this academic literature review on the impact of social media on teenage mental health. Outline the main theories discussed, the conflicting findings, and the suggested areas for future research."
+  },
+  {
+    "id": "summarization_045",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this detailed project status report for a software development team. Identify the completed milestones, active blockages, budget allocation status, and revised target launch dates for the next two quarters."
+  },
+  {
+    "id": "summarization_046",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Provide a structured summary of this regulatory compliance document regarding GDPR guidelines for customer data storage, outlining the definitions of data controller, consent requirements, data retention policies, and fines for non-compliance."
+  },
+  {
+    "id": "summarization_047",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this quarterly earnings call transcript for a public tech firm. Identify the main drivers of revenue growth, the areas of rising operational expenses, and the management's guidance for the upcoming fiscal year."
+  },
+  {
+    "id": "summarization_048",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this document detailing the history of industrial regulations in the United States, tracing the development of labor standards, environmental protection laws, and antitrust policies over the last century."
+  },
+  {
+    "id": "summarization_049",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this system architecture design description for a scalable web application. Outline the data flow from client requests through load balancers, web servers, redis cache, and read-replica databases."
+  },
+  {
+    "id": "summarization_050",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this legal non-disclosure agreement (NDA), extracting the definition of confidential information, the exceptions to confidentiality, the duration of the agreement, and the remedies for breach of contract."
+  },
+  {
+    "id": "summarization_051",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this detailed onboarding guide for a healthcare clinic, outlining patient registration, insurance verification, appointment scheduling, billing workflows, and EHR software usage rules."
+  },
+  {
+    "id": "summarization_052",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this research paper on the effectiveness of carbon taxes, detailing the impact on emissions, economic growth, consumer energy costs, and business competitiveness across developed nations."
+  },
+  {
+    "id": "summarization_053",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this incident report regarding a database outage, detailing the root cause (disk space exhaustion), the timeline of recovery actions, the data loss assessment (zero data lost), and the preventative measures scheduled."
+  },
+  {
+    "id": "summarization_054",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this travel guide for Tokyo, extracting the top tourist attractions, recommended transportation options, tipping etiquette, and cultural guidelines for visiting shrines."
+  },
+  {
+    "id": "summarization_055",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this change management proposal, detailing the reasons for restructuring the customer support team, the timeline of changes, the training plan, and the metrics of success."
+  },
+  {
+    "id": "summarization_056",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this textbook chapter on macroeconomics, explaining the definitions of GDP, inflation, unemployment, monetary policy, fiscal policy, and how they interact in a business cycle."
+  },
+  {
+    "id": "summarization_057",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this product safety report for a smart home lock, outlining the vulnerability discovered (Bluetooth exploit), the firmware patch release, and user instructions for updating the device."
+  },
+  {
+    "id": "summarization_058",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this strategic proposal for transitioning to a 3PL logistics provider, outlining cost savings, transit time reductions, inventory tracking changes, and risk factor mitigation."
+  },
+  {
+    "id": "summarization_059",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this academic paper on the Lindy effect, explaining the mathematical foundations, historical examples, and how it applies to estimating the future lifespan of technologies and institutions."
+  },
+  {
+    "id": "summarization_060",
+    "category": "summarization",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Summarize this corporate travel policy, outlining eligible expenses, hotel booking guidelines, per diem allowances, and the expense reimbursement process."
+  },
+  {
+    "id": "summarization_061",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Read the attached 50-page commercial Software Master Services Agreement (MSA). Provide a highly detailed, structured summary extracting all clauses relating to intellectual property ownership, source code escrow, liability limitations (including consequential and punitive damages caps), indemnification triggers for third-party patent infringements, data breach notification timelines, and governing law/arbitration provisions. Highlight any clauses that represent high business risk for a vendor company."
+  },
+  {
+    "id": "summarization_062",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this comprehensive scientific literature review on CRISPR-Cas9 off-target mutations. Detail the biophysical mechanisms driving mismatch tolerance, the experimental methods used to detect off-target cuts (like GUIDE-seq and Dingo-seq), and the proposed engineering enhancements to the Cas9 protein (like high-fidelity variants) designed to minimize off-target cuts, explaining the trade-offs in editing efficiency."
+  },
+  {
+    "id": "summarization_063",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Analyze and summarize this corporate annual report (SEC Form 10-K) for a multinational manufacturing conglomerate. Extract and synthesize the financial performance metrics (revenue, EBITDA, net debt to equity ratio), the primary risk factors mentioned (including supply chain vulnerabilities, foreign exchange exposures, and pending litigation), the segment-level operational performance, and the capital expenditure plans for the upcoming fiscal year, presenting the results in a tabular format."
+  },
+  {
+    "id": "summarization_064",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this dense regulatory filing regarding banking capital requirements (Basel III framework). Explain the definitions and requirements for Common Equity Tier 1 (CET1) capital, Capital Conservation Buffers, Countercyclical Buffers, Leverage Ratios, and Liquidity Coverage Ratios, detailing the transition timeline and the systemic risks these regulations aim to mitigate."
+  },
+  {
+    "id": "summarization_065",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this complex medical case study of a patient presenting with overlapping symptoms of systemic lupus erythematosus (SLE) and rheumatoid arthritis (rhupus syndrome). Detail the clinical history, laboratory findings (including ANA, anti-dsDNA, RF, and anti-CCP titers), radiological evidence of joint erosion, treatment protocol (including biologics and immunosuppressants), and the patient's longitudinal response, analyzing the diagnostic challenges."
+  },
+  {
+    "id": "summarization_066",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this academic treatise on the development of contract law theory from common law foundations to modern uniform codes (UCC). Synthesize the arguments surrounding the doctrine of consideration, promissory estoppel, the parol evidence rule, and the standards for resolving contract ambiguity, comparing the classical formalist and realist legal perspectives."
+  },
+  {
+    "id": "summarization_067",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this highly technical design specification for a decentralized database engine. Outline the consensus protocol (Raft), the memory storage layout (LSM-tree), the concurrency control mechanism (MVCC), and the network partition recovery strategy, explaining the trade-offs made between read latency, write amplification, and consistency."
+  },
+  {
+    "id": "summarization_068",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this public policy environmental impact assessment report regarding a proposed deep-sea mining project. Outline the environmental baseline data, the projected impact on benthic ecosystems, the sediment plume modeling results, the mitigation strategies proposed by the mining company, and the criticisms raised by independent marine biologists."
+  },
+  {
+    "id": "summarization_069",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this detailed audit of a cloud enterprise infrastructure's security posture. Synthesize the findings regarding IAM role permissions (least privilege violations), network perimeter controls (exposed ports), data encryption status (S3 buckets unencrypted), logging configurations, and specify prioritize remediation steps based on risk score."
+  },
+  {
+    "id": "summarization_070",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this academic research paper on the macroeconomic effects of quantitative easing (QE) programs. Analyze the transmission channels discussed (portfolio balance, signaling, liquidity), the impact on bond yields and asset prices, the criticisms regarding income inequality, and the exit strategies (quantitative tightening)."
+  },
+  {
+    "id": "summarization_071",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this legal appellate court brief regarding a patent infringement case for a smartphone hardware component. Detail the technical claims, the arguments for and against claim construction, the evidence of prior art, the district court's ruling, and the basis for the appeal, analyzing the legal precedents cited."
+  },
+  {
+    "id": "summarization_072",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this clinical protocol for a Phase III trial evaluating an oncology drug. Synthesize the patient inclusion/exclusion criteria, the randomized dosing schedules, the primary endpoints (overall survival, progression-free survival), the secondary safety endpoints, and the statistical power calculations, outlining the schedule of events."
+  },
+  {
+    "id": "summarization_073",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this municipal government report on urban zoning reform. Outline the proposed changes to single-family zoning, the projected impact on housing density and affordability, the infrastructure capacity considerations (water, transit), and the public feedback themes from community hearings."
+  },
+  {
+    "id": "summarization_074",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this academic article on the history of antitrust enforcement against tech monopolies. Synthesize the legal arguments in cases against IBM, Microsoft, and recent platforms, comparing the traditional consumer welfare standard with modern platform-dominance theories."
+  },
+  {
+    "id": "summarization_075",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this detailed technical blueprint for establishing a security operations center (SOC). Synthesize the sections on tool ingestion (SIEM, EDR), incident triage workflows, team scheduling, metrics (MTTD, MTTR), and integration with executive crisis management protocols."
+  },
+  {
+    "id": "summarization_076",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this environmental policy document regarding international carbon offset markets under Article 6 of the Paris Agreement. Detail the mechanisms for transferring mitigation outcomes, the rules to prevent double-counting, the additionality criteria, and the debates surrounding integrity."
+  },
+  {
+    "id": "summarization_077",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this research paper on the physical and computing limitations of silicon scaling (ending of Moore's Law). Synthesize the physical barriers discussed (leakage currents, thermal dissipation), the architectural innovations (chiplets, 3D stacking), and the potential of alternative materials (carbon nanotubes)."
+  },
+  {
+    "id": "summarization_078",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this historical analysis of the fall of the Western Roman Empire. Synthesize the arguments regarding internal economic decay, military recruitment changes, pressure from external migrations, and administrative fragmentation, evaluating the weight assigned to each factor."
+  },
+  {
+    "id": "summarization_079",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this technical specification for a high-frequency trading (HFT) hardware system. Outline the FPGA network interface card configurations, the direct memory access (DMA) protocols, the kernel bypass techniques, and the latency measurement methods (tick-to-trade)."
+  },
+  {
+    "id": "summarization_080",
+    "category": "summarization",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Summarize this government policy report on national cybersecurity strategy. Synthesize the pillars of defending critical infrastructure, disrupting threat actors, shifting liability for insecure software, and investing in resilient technologies, explaining the legislative proposals."
   }
 ]

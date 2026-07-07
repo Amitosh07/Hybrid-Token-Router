@@ -138,5 +138,425 @@
     "difficulty": "hard",
     "expected_reasoning": "high",
     "prompt": "Explain how large language models work, from tokenisation and transformer architecture to training on next-token prediction and the role of RLHF. Discuss two fundamental limitations of current LLMs that persist despite scale, and explain why they are difficult to solve."
+  },
+  {
+    "id": "general_021",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain the difference between weather and climate. Keep the explanation simple enough for a middle school student to understand."
+  },
+  {
+    "id": "general_022",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Draft a professional email requesting a meeting with a professor to discuss a low grade on a recent assignment."
+  },
+  {
+    "id": "general_023",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain how photosynthesis works in plants, listing the main inputs and outputs involved in the chemical process."
+  },
+  {
+    "id": "general_024",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Draft a cover letter for a high school student applying for a part-time job as a cashier at a local grocery store."
+  },
+  {
+    "id": "general_025",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain the difference between a credit card and a debit card, focusing on how transactions are funded and the interest rates."
+  },
+  {
+    "id": "general_026",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Describe three key differences between animal cells and plant cells, focusing on the cell wall, chloroplasts, and vacuole structures."
+  },
+  {
+    "id": "general_027",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a professional email to a landlord notifying them of a leaking faucet in the bathroom and requesting a maintenance visit."
+  },
+  {
+    "id": "general_028",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain the role of red blood cells in the human body, focusing on oxygen transport and iron bindings."
+  },
+  {
+    "id": "general_029",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Draft a congratulations message to a coworker who has just been promoted to a team lead position in the department."
+  },
+  {
+    "id": "general_030",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain what inflation is and how it affects the purchasing power of money over time for general consumers."
+  },
+  {
+    "id": "general_031",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain how a thermos flask keeps hot drinks hot and cold drinks cold, focusing on conduction, convection, and radiation barriers."
+  },
+  {
+    "id": "general_032",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Draft a polite email declining an invitation to a social event due to a prior scheduling conflict."
+  },
+  {
+    "id": "general_033",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Describe the main functions of the roots, stem, and leaves of a flowering plant in simple terms."
+  },
+  {
+    "id": "general_034",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain the difference between absolute humidity and relative humidity in meteorology."
+  },
+  {
+    "id": "general_035",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Draft a simple thank-you note to a client after completing a consulting project for them, expressing hope for future collaboration."
+  },
+  {
+    "id": "general_036",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain how gravity works on Earth compared to the Moon, focusing on mass and weight difference calculations."
+  },
+  {
+    "id": "general_037",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Describe the difference between renewable and non-renewable energy sources, listing three examples of each."
+  },
+  {
+    "id": "general_038",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Draft a professional email requesting a copy of an invoice that was not received after a purchase."
+  },
+  {
+    "id": "general_039",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain the basic water cycle stages: evaporation, condensation, precipitation, and runoff in simple terms."
+  },
+  {
+    "id": "general_040",
+    "category": "general",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Explain what a stock is and how individuals buy and sell them on stock exchanges for beginner investors."
+  },
+  {
+    "id": "general_041",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a professional, detailed explanation of how block allocations are managed in a Unix-like file system (inode structure, direct and indirect block pointers). Compare this with FAT32 cluster mapping."
+  },
+  {
+    "id": "general_042",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain the biological and physiological mechanisms of action of aspirin in the human body. Detail how it inhibits cyclooxygenase (COX) enzymes to reduce pain and inflammation."
+  },
+  {
+    "id": "general_043",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Draft a formal policy draft for a corporate employee handbook detailing guidelines for the ethical use of generative artificial intelligence tools at work, specifying prohibited data inputs and verification requirements."
+  },
+  {
+    "id": "general_044",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Provide a comprehensive explanation of how the Federal Reserve uses monetary policy tools (discount rate, open market operations, reserve requirements) to combat inflation during economic expansions."
+  },
+  {
+    "id": "general_045",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain the physical and thermodynamic principles of how a heat pump extracts heat from cold outdoor air to warm a house in the winter. Detail the refrigerant cycle stages."
+  },
+  {
+    "id": "general_046",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Draft a professional consulting proposal for a mid-sized retailer looking to optimize its inventory management using multi-echelon inventory optimization techniques, outlining the methodology and project milestones."
+  },
+  {
+    "id": "general_047",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain how the internet domain name system (DNS) works. Trace the step-by-step process of resolving a URL from a client browser query to a root name server, TLD server, and authoritative name server."
+  },
+  {
+    "id": "general_048",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Draft a formal business case for a company transitioning its server infrastructure from a single cloud provider to a hybrid, multi-cloud setup. Explain the benefits in risk reduction and the costs in complexity."
+  },
+  {
+    "id": "general_049",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain the mechanism of action of mRNA-based vaccines. Detail how lipid nanoparticles deliver mRNA, how cells express the spike protein, and how the adaptive immune system responds with antibodies and T-cells."
+  },
+  {
+    "id": "general_050",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a professional memo explaining the legal concept of 'fair use' in copyright law, detailing the four factors courts evaluate to determine if a use is fair."
+  },
+  {
+    "id": "general_051",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain how the global shipping container system revolutionized international trade, focusing on standardization, intermodal transport, and logistics efficiency."
+  },
+  {
+    "id": "general_052",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Draft a formal, structured RFP (Request for Proposal) for procurement of a new customer relationship management (CRM) software platform for an sales team of 200 members."
+  },
+  {
+    "id": "general_053",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain the scientific principles of how carbon dating works, detailing the formation of carbon-14, its decay rate (half-life), and the types of materials that can be dated accurately."
+  },
+  {
+    "id": "general_054",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a detailed policy analysis comparing universal basic income (UBI) with targeted welfare programs, evaluating their impact on poverty reduction, labor market incentives, and administrative costs."
+  },
+  {
+    "id": "general_055",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain the mechanics of how a GPS receiver determines its precise location on Earth using trilateration, clock synchronization, and signals from at least four satellites."
+  },
+  {
+    "id": "general_056",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Draft a formal project closure report for a completed software system migration project, detailing the actual vs planned schedule, final budget variance, and lessons learned."
+  },
+  {
+    "id": "general_057",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain the physiological effects of chronic stress on the human endocrine system, tracing the activation of the hypothalamic-pituitary-adrenal (HPA) axis and cortisol release."
+  },
+  {
+    "id": "general_058",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a detailed explanation of the legal doctrine of 'stare decisis' and how it operates in the judicial system, comparing binding precedents with persuasive authority."
+  },
+  {
+    "id": "general_059",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Explain how modern water treatment plants purify raw river water into drinking water, detailing the stages of coagulation, flocculation, sedimentation, filtration, and disinfection."
+  },
+  {
+    "id": "general_060",
+    "category": "general",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Draft a corporate remote work policy document, addressing eligible roles, home office security standards, expense reimbursement guidelines, and communication protocols."
+  },
+  {
+    "id": "general_061",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a comprehensive, professional policy analysis paper evaluating the legal, ethical, and economic implications of implementing a carbon border adjustment mechanism (CBAM) in the European Union. Analyze the compatibility with World Trade Organization (WTO) rules, the impact on developing nation trade partners, the risk of trade retaliation, the systemic challenges of carbon accounting across international supply chains, and specify recommendations for policymakers."
+  },
+  {
+    "id": "general_062",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Provide a detailed, rigorous explanation of the physical and mechanical principles of operation of a multi-stage industrial gas turbine. Detail the thermodynamic transformations (Brayton cycle), the aerodynamic design of the compressor and turbine blades, the combustion chemistry (including NOx emission reduction techniques), and the materials engineering challenges of operating at temperatures exceeding the melting point of the metal blades using film cooling."
+  },
+  {
+    "id": "general_063",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Draft a comprehensive, formal clinical trial protocol for a Phase III study evaluating a new monoclonal antibody targeting the amyloid-beta peptide for the treatment of early-stage Alzheimer's disease. Detail the patient inclusion and exclusion criteria, the randomized double-blind dosing schedules, the primary efficacy endpoints (cognitive scales ADAS-cog), the secondary safety endpoints (ARIA-E monitoring), the statistical power calculations, and the ethical safeguards."
+  },
+  {
+    "id": "general_064",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a professional, structured legal memorandum analyzing the liability exposure of a B2B SaaS company under the EU General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA) following a data breach that exposed sensitive personal data due to an unpatched SQL injection vulnerability. Evaluate the potential fines, class action lawsuit risk under CCPA private right of action, the notification timelines, and recommend immediate remediation steps."
+  },
+  {
+    "id": "general_065",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Provide a detailed, advanced explanation of the macroeconomic transmission mechanisms of quantitative easing (QE) and quantitative tightening (QT) policies implemented by central banks. Analyze the portfolio balance channel, the signaling channel, the liquidity channel, the impact on interest rate term structures, commercial bank credit creation, and the systemic risks associated with central bank balance sheet expansion and contraction, citing empirical evidence."
+  },
+  {
+    "id": "general_066",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a comprehensive technical guide explaining the design and implementation of a Zero Trust Architecture (ZTA) in a multi-cloud enterprise environment. Detail the integration of identity and access management (IAM), device posture checking, micro-segmentation of networks, continuous traffic inspection, and data encryption in transit and at rest, referencing NIST SP 800-207 guidelines."
+  },
+  {
+    "id": "general_067",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Draft a formal, detailed business case and capital allocation proposal for a global manufacturing company transitioning its fleet of 500 delivery vehicles to hydrogen fuel cell electric vehicles (FCEVs). Detail the lifecycle cost analysis (TCO), the refueling infrastructure setup logistics, the carbon credit offsets accrued, the supply chain risks for hydrogen sourcing, and a phased 5-year transition timeline."
+  },
+  {
+    "id": "general_068",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Provide a detailed scientific explanation of the molecular and cellular mechanisms of action of mRNA-LNPs (lipid nanoparticles) used in modern vaccines. Trace the delivery process from intramuscular injection through cellular uptake via endocytosis, endosomal escape, mRNA translation by ribosomes, protein folding, antigen presentation on MHC class I and II molecules, and activation of B and T cell immune responses."
+  },
+  {
+    "id": "general_069",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a professional, structured policy brief evaluating the impact of the US Foreign Account Tax Compliance Act (FATCA) on international banking practices and sovereign tax compliance. Analyze the compliance costs for foreign financial institutions (FFIs), the legal conflicts regarding national privacy laws, the effectiveness in reducing tax evasion, and the potential transition to a multilateral Common Reporting Standard (CRS)."
+  },
+  {
+    "id": "general_070",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Provide a comprehensive, technical explanation of the aerodynamic and fluid dynamics principles governing the design of modern offshore wind turbine rotors. Detail the lift and drag forces acting on the blades, the blade element momentum (BEM) theory, the wake effects in wind farm arrays, the structural load dynamics under turbulent winds, and the materials engineering solutions for preventing blade fatigue over a 25-year lifespan."
+  },
+  {
+    "id": "general_071",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Draft a formal, structured corporate policy document regarding compliance with the US Foreign Corrupt Practices Act (FCPA) and the UK Bribery Act. Detail the prohibitions on bribery of foreign officials, the requirements for keeping accurate books and records, the third-party due diligence protocols, the internal reporting channels, and the training requirements for employees operating in high-risk jurisdictions."
+  },
+  {
+    "id": "general_072",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Provide a detailed scientific explanation of the geological and geophysical processes driving the formation and migration of hydrocarbons in sedimentary basins. Trace the organic matter deposition, thermal maturation (diagenesis, catagenesis, metagenesis) inside the source rock, primary and secondary migration mechanisms, and the structural/stratigraphic trapping conditions required for a commercial reservoir."
+  },
+  {
+    "id": "general_073",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a professional, structured legal memorandum analyzing the antitrust and competition law implications of vertical integration in the digital advertising supply chain. Evaluate the arguments regarding self-preferencing, data aggregation advantages, barriers to entry for independent ad tech firms, and the potential remedies under US Sherman Act Section 2 and EU TFEU Article 102."
+  },
+  {
+    "id": "general_074",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Provide a detailed explanation of the physiological and pathological mechanisms of type 2 diabetes mellitus. Detail the cellular pathways of insulin resistance in skeletal muscle and liver, the progressive beta-cell dysfunction in the pancreas, the systemic effects of chronic hyperglycemia (microvascular and macrovascular complications), and the pharmacological mechanisms of action of metformin and SGLT2 inhibitors."
+  },
+  {
+    "id": "general_075",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Draft a comprehensive, formal project charter for an enterprise-level migration from a legacy ERP system to a cloud-based ERP solution across 10 global subsidiaries. Detail the project scope, the steering committee governance structure, the data migration strategies, the risk mitigation plans for business process disruption, the change management framework, and the budget allocation of $50 million."
+  },
+  {
+    "id": "general_076",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Provide a detailed, rigorous explanation of the physical and chemical principles of modern wastewater treatment and reclamation systems. Detail the biological processes of nutrient removal (nitrification, denitrification, biological phosphorus removal), the membrane filtration technologies (ultrafiltration, reverse osmosis), the advanced oxidation processes (UV/H2O2), and the safety monitoring standards for direct potable reuse."
+  },
+  {
+    "id": "general_077",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a professional, structured policy brief analyzing the implications of sovereign debt defaults on international financial markets and national economic growth. Analyze the role of the International Monetary Fund (IMF) in restructuring plans, the legal battles with holdout creditors (vulture funds) under collective action clauses, the impact on local banking stability, and the long-term borrowing costs for defaulting states."
+  },
+  {
+    "id": "general_078",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Provide a detailed scientific explanation of the neurobiological mechanisms of addiction. Detail the reward pathway in the human brain, focusing on dopamine transmission in the mesolimbic pathway, the neuroadaptations in the nucleus accumbens and prefrontal cortex during chronic substance use, the mechanisms of tolerance and withdrawal, and the genetic and environmental risk factors."
+  },
+  {
+    "id": "general_079",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Draft a formal, structured response to a government inquiry regarding a food safety incident involving contamination of baby formula manufactured at a primary plant. Detail the root cause investigation findings (Cronobacter detection), the recall log logistics, the corrective and preventive actions (CAPA) implemented at the plant, and the customer communication and compensation programs."
+  },
+  {
+    "id": "general_080",
+    "category": "general",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Provide a comprehensive, technical explanation of the design and operation of active suspension systems in modern passenger vehicles. Detail the sensor inputs (accelerometers, camera scanning, ride height sensors), the actuator mechanisms (hydraulic, electromagnetic), the control algorithms (feedback loop tuning, predictive model control), and the trade-offs between ride comfort, vehicle handling, and energy consumption."
   }
 ]

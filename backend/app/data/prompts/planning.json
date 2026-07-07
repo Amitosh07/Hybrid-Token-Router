@@ -138,5 +138,425 @@
     "difficulty": "hard",
     "expected_reasoning": "high",
     "prompt": "Design a comprehensive OKR framework for a 50-person technology company for the next fiscal year. Define company-level objectives, cascade them to department level, specify key results with measurable targets, and outline a quarterly review cadence with scoring criteria."
+  },
+  {
+    "id": "planning_021",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Create a daily study plan for a college student preparing for a final exam in biology next Friday. Suggest specific topics and study hours."
+  },
+  {
+    "id": "planning_022",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Provide a simple packing checklist for a 3-day summer weekend trip to a beach resort, listing essentials, clothing, and toiletries."
+  },
+  {
+    "id": "planning_023",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Outline a checklist for preparing a home for a house sitter who will stay for a week while the owner is traveling."
+  },
+  {
+    "id": "planning_024",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Draft a timeline schedule for a 2-hour birthday party for a 10-year-old child, detailing slots for games, cake, and gifts."
+  },
+  {
+    "id": "planning_025",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Create a step-by-step checklist for cleaning and organizing a kitchen pantry, including sorting, cleaning shelves, and labeling items."
+  },
+  {
+    "id": "planning_026",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Outline a basic schedule for a corporate team-building afternoon, specifying activities, durations, and coffee breaks."
+  },
+  {
+    "id": "planning_027",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Provide a simple weekly meal prep plan for a busy professional who wants to prepare healthy lunches ahead of time on Sunday."
+  },
+  {
+    "id": "planning_028",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Draft a step-by-step plan for a family moving houses, focusing on tasks to complete one week before the moving day."
+  },
+  {
+    "id": "planning_029",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Outline the steps required to organize a garage sale, including pricing, layout, advertising, and safety precautions."
+  },
+  {
+    "id": "planning_030",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Create a checklist for a retail store manager preparing the shop for a holiday weekend sale event."
+  },
+  {
+    "id": "planning_031",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Outline a checklist of tasks to perform before leaving on an international vacation for two weeks, covering mail, security, and banking."
+  },
+  {
+    "id": "planning_032",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Create a daily schedule for a work-from-home parent balancing remote work and childcare for an infant."
+  },
+  {
+    "id": "planning_033",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Provide a step-by-step checklist for launching a basic personal website, covering domain signup, hosting, and content pages."
+  },
+  {
+    "id": "planning_034",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Outline a checklist for planning a corporate lunch meeting for 15 clients, covering catering, tech setup, and seating layout."
+  },
+  {
+    "id": "planning_035",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Draft a simple workout routine schedule for a beginner aiming to exercise 3 days a week, focusing on full-body fitness."
+  },
+  {
+    "id": "planning_036",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Outline a checklist for a community clean-up day in a local park, detailing volunteer roles, materials needed, and trash disposal."
+  },
+  {
+    "id": "planning_037",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Create a checklist for a student organizing their digital files, folders, and emails at the start of a new school semester."
+  },
+  {
+    "id": "planning_038",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Outline the steps for preparing a vegetable garden bed in the spring, including weeding, soil testing, and fertilizing."
+  },
+  {
+    "id": "planning_039",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Draft a simple checklist for planning a baby shower, covering invitations, decorations, games, and catering."
+  },
+  {
+    "id": "planning_040",
+    "category": "planning",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Create a checklist for a homeowner performing annual spring maintenance on the exterior of their house."
+  },
+  {
+    "id": "planning_041",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Design a comprehensive, phased project plan for executing a migration from an on-premise relational database to a cloud-managed database service (e.g. AWS RDS), including testing, verification, and roll-back strategy."
+  },
+  {
+    "id": "planning_042",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Develop a detailed go-to-market (GTM) rollout plan for a new B2B SaaS analytics tool targeting product managers. Specify key activities, timeline, channels, and KPIs across 3 distinct phases."
+  },
+  {
+    "id": "planning_043",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Outline an annual hiring and capacity planning strategy for a growing engineering department expecting to scale from 20 to 50 employees, addressing recruiter pipeline, onboarding, and training bootcamps."
+  },
+  {
+    "id": "planning_044",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Create a week-by-week implementation timeline for planning a regional software developers conference for 500 attendees, covering venue booking, speaker sourcing, sponsor packages, and marketing."
+  },
+  {
+    "id": "planning_045",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Design a disaster recovery and business continuity plan for a customer service organization in the event of a sudden, widespread regional power outage affecting the main offices."
+  },
+  {
+    "id": "planning_046",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Draft a comprehensive onboarding plan for a new remote Senior Product Manager, detailing goals, meetings, and key tasks for their first 30, 60, and 90 days."
+  },
+  {
+    "id": "planning_047",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Outline a strategic proposal for a medium-sized e-commerce business to transition its logistics and fulfillment operations from in-house to a third-party logistics (3PL) provider."
+  },
+  {
+    "id": "planning_048",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Create a structured plan for conducting a corporate security audit across physical premises, digital infrastructure, and employee training programs over a 60-day period."
+  },
+  {
+    "id": "planning_049",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Design a phased rollout plan for introducing a new performance review system in a global company with 1000 employees, addressing manager training, timeline, and feedback loops."
+  },
+  {
+    "id": "planning_050",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Create a week-by-week plan for a political campaign manager setting up local volunteer offices, voter registration drives, and local advertising over a 3-month cycle."
+  },
+  {
+    "id": "planning_051",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Design a budget allocation and project plan for a university department setting up a new data science lab, covering equipment, software licensing, and researcher hiring."
+  },
+  {
+    "id": "planning_052",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Create a structured schedule and timeline for filming a 5-minute promotional video, covering pre-production, casting, location scouting, shooting days, and post-production editing."
+  },
+  {
+    "id": "planning_053",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Outline a change management plan for a healthcare clinic transition from paper records to an Electronic Health Records (EHR) system, minimizing patient scheduling disruption."
+  },
+  {
+    "id": "planning_054",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Draft a business proposal for expanding a local restaurant chain to a new city, covering location analysis, supply chain setup, and marketing strategy."
+  },
+  {
+    "id": "planning_055",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Design a 6-month content marketing calendar and SEO growth plan for an enterprise fintech platform, specifying content types, keywords, and distribution frequency."
+  },
+  {
+    "id": "planning_056",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Create a comprehensive plan for a software company to run a beta test program for 200 external users, including feedback collection channels and bug tracking."
+  },
+  {
+    "id": "planning_057",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Outline a strategy for managing a product recall event for a smart home device manufacturer, addressing customer communication, logistics, and legal compliance."
+  },
+  {
+    "id": "planning_058",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Design a phased rollout plan for transitioning a corporate workforce of 500 employees to a hybrid work model, addressing office layout, scheduling tools, and tech stack."
+  },
+  {
+    "id": "planning_059",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Create a structured timeline for a non-profit organization planning an annual fundraising gala, covering ticket sales, donor outreach, and live auctions."
+  },
+  {
+    "id": "planning_060",
+    "category": "planning",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Outline a marketing and launch plan for an independent book release, covering press releases, book reviews, social media campaigns, and local signing events."
+  },
+  {
+    "id": "planning_061",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Develop a multi-year IT modernization and migration strategy for a national bank operating on legacy COBOL mainframe database systems. Create a phased, risk-mitigated rollout plan that transitions core ledger systems to a microservices architecture in the cloud, detailing data consistency, parallel run validation, regulatory compliance (PCI-DSS), and fallback scenarios."
+  },
+  {
+    "id": "planning_062",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a comprehensive, end-to-end disaster recovery and business continuity plan for a global pharmaceutical manufacturing company with factories across 3 continents. Detail strategies for supply chain disruption, key personnel loss, ransomware attacks on active directory, raw material shortage, and local regulatory shutdowns, specifying RTO and RPO objectives."
+  },
+  {
+    "id": "planning_063",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Create a detailed implementation plan and roadmap for executing a merger between two B2B software companies, each with over 500 employees and separate codebase systems. Structure the integration of engineering teams, database schemas, API compatibility layers, security protocols, customer billing systems, and sales channels over a 12-month timeline."
+  },
+  {
+    "id": "planning_064",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Develop a strategic rollout and capacity scaling plan for a ride-sharing service launching in a new metropolitan city. Address driver supply acquisition, localized marketing, dynamic pricing algorithm calibration, municipal legal challenges, insurance compliance, and localized mapping data optimization over the first 180 days."
+  },
+  {
+    "id": "planning_065",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a comprehensive Go-To-Market (GTM) and scaling plan for a new medical device that tracks vital signs using deep learning algorithms. Create a phased plan covering FDA approval pathways, security certification (HIPAA), clinical validation trials, B2B sales pipelines to hospitals, and scale manufacturing logistics, specifying weekly milestones."
+  },
+  {
+    "id": "planning_066",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Develop an incident response and communication plan for a public company experiencing a major data breach involving the leak of 10 million user records. Detail immediate containment steps, forensic audit timeline, legal disclosure compliance (GDPR/CCPA), PR response strategy, and post-incident system remediation, specifying hour-by-hour milestones for the first 72 hours."
+  },
+  {
+    "id": "planning_067",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a phased rollout and training plan for deploying a decentralized blockchain-based supply chain tracing platform across a network of 50 independent agricultural suppliers, addressing tech hardware setups, offline database synchronization, and local training bootcamps."
+  },
+  {
+    "id": "planning_068",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Create a detailed project charter and execution plan for building a new sustainable data center facility from scratch, covering site selection, power grid connection, cooling infrastructure setup, backup generator configurations, security clearances, and server rack installations over a 24-month timeline."
+  },
+  {
+    "id": "planning_069",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Develop a strategic proposal and rollout roadmap for a national retail chain with 400 stores to transition to a completely automated, cashierless checkout system. Detail integration with inventory management, security systems, labor re-skilling programs, and store-level hardware installation schedules."
+  },
+  {
+    "id": "planning_070",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a comprehensive crisis management and operational continuity plan for a global shipping company in the event that a major maritime canal is blocked for 3 weeks, disrupting international shipping lanes. Address cargo rerouting, cost mitigation, contractual liability (Force Majeure), and client communication protocols."
+  },
+  {
+    "id": "planning_071",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Develop a structured project plan for conducting a clinical trial phase III for a new vaccine, covering hospital site selection, patient recruitment pipelines, data management protocols, cold chain logistics, independent safety monitoring board setup, and regulatory submission timeline."
+  },
+  {
+    "id": "planning_072",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Create a detailed week-by-week roadmap for scaling a cloud video streaming infrastructure to handle a major live sporting event expecting 50 million concurrent viewers, addressing CDN caching policies, load balancer warm-up, database read-replica scaling, and fallback streams."
+  },
+  {
+    "id": "planning_073",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design an organizational restructuring plan for a multi-divisional conglomerate shifting from a functional structure to a product-divisional structure. Detail team realignment, reporting line changes, compensation adjustments, and change management communication for 10,000 employees."
+  },
+  {
+    "id": "planning_074",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Develop a comprehensive research and testing roadmap for developing a new solid-state battery technology, covering material synthesis phase, laboratory cell testing, scaling to pouch cell prototypes, safety validation (thermal runway), and automotive integration testing over 3 years."
+  },
+  {
+    "id": "planning_075",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a strategic plan and checklist for a global food brand to achieve carbon-neutral status across its entire supply chain by 2030, detailing offsets, agricultural transition incentives, transport electrification, and packaging redesign."
+  },
+  {
+    "id": "planning_076",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Create a comprehensive rollout and risk management plan for a state government transitioning its citizen services portal to a decentralized identity verification system (Self-Sovereign Identity), covering accessibility compliance, security audits, database migration, and citizen onboarding campaigns."
+  },
+  {
+    "id": "planning_077",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Develop a detailed operational integration plan for consolidating 4 manufacturing plants under a single unified Enterprise Resource Planning (ERP) platform. Address master data harmonization, inventory code matching, production scheduling tools integration, and local factory training schedules."
+  },
+  {
+    "id": "planning_078",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a comprehensive capacity expansion and capital budgeting plan for an international airline expanding its fleet and route network post-regulatory changes. Address aircraft acquisition, crew hiring, airport gate negotiations, and route profitability forecasting."
+  },
+  {
+    "id": "planning_079",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Create a detailed implementation plan and timeline for a large city to transition its entire public bus fleet from diesel to electric buses, covering charging station infrastructure, power grid upgrades, maintenance worker retraining, and route adjustments."
+  },
+  {
+    "id": "planning_080",
+    "category": "planning",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Develop a strategic proposal and phased implementation plan for a global tech firm to establish its own cybersecurity operations center (SOC). Detail tool procurement (SIEM, SOAR), hiring levels, tier-1/2/3 analyst roles, incident triage workflows, and SLA metrics."
   }
 ]

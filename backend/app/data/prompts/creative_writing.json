@@ -138,5 +138,425 @@
     "difficulty": "hard",
     "expected_reasoning": "high",
     "prompt": "Write a 400-word satirical essay in the style of Jonathan Swift's 'A Modest Proposal', proposing a deliberately absurd solution to the problem of software engineers spending too much time in meetings. The essay must maintain a deadpan, formal tone throughout and include at least one fake statistic and one ironic citation."
+  },
+  {
+    "id": "creative_writing_021",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short story (300 words) about a clockmaker who discovers a hidden gears compartment in a pocket watch that seems to tick backward."
+  },
+  {
+    "id": "creative_writing_022",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a poem (4 stanzas, AABB rhyme scheme) about the arrival of autumn in a quiet mountain village."
+  },
+  {
+    "id": "creative_writing_023",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a dialogue between two astronauts on a spaceship looking out at the Earth for the first time on their mission."
+  },
+  {
+    "id": "creative_writing_024",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a humorous blog post from the perspective of a cat explaining the rules of the house to a newly adopted puppy."
+  },
+  {
+    "id": "creative_writing_025",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short description of a bustling market in a fantasy city, focusing on the sights, sounds, and smells of the spice stalls."
+  },
+  {
+    "id": "creative_writing_026",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a letter from a traveler in the year 1850 writing back to their family about their journey across the ocean."
+  },
+  {
+    "id": "creative_writing_027",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a creative opening scene for a mystery novel, starting with a knock on the door at midnight during a rainstorm."
+  },
+  {
+    "id": "creative_writing_028",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a poem about the quietness of a library at night after all the readers have left for the evening."
+  },
+  {
+    "id": "creative_writing_029",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short story about a child who finds a key buried in the sand at the beach and searches for the box it opens."
+  },
+  {
+    "id": "creative_writing_030",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a dialogue between a coffee shop barista and a customer who keeps ordering drinks that are not on the menu."
+  },
+  {
+    "id": "creative_writing_031",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a creative description of a storm rolling in over a flat prairie landscape, focusing on the changes in light and wind."
+  },
+  {
+    "id": "creative_writing_032",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short story about a lighthouse keeper who starts receiving messages written in code via the lighthouse lamp flashes."
+  },
+  {
+    "id": "creative_writing_033",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a poem (3 stanzas) about the feeling of waking up early in the morning before the rest of the house is awake."
+  },
+  {
+    "id": "creative_writing_034",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a creative diary entry from the perspective of a botanist who has just discovered a new glowing plant species in the rainforest."
+  },
+  {
+    "id": "creative_writing_035",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short story about an antique mirror that shows a room slightly different from the one it is hanging in."
+  },
+  {
+    "id": "creative_writing_036",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a dialogue between an old oak tree and a young sapling growing nearby in the forest."
+  },
+  {
+    "id": "creative_writing_037",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short description of a cozy cabin in the woods during a winter snowstorm, focusing on the fireplace and warmth."
+  },
+  {
+    "id": "creative_writing_038",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a humorous story about a wizard whose spells always produce cookies instead of the intended magical effects."
+  },
+  {
+    "id": "creative_writing_039",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a poem about the reflections of city lights on wet streets after a fresh rain shower."
+  },
+  {
+    "id": "creative_writing_040",
+    "category": "creative_writing",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a short story about a librarian who discovers that the characters in a specific book change their actions each time the book is read."
+  },
+  {
+    "id": "creative_writing_041",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write the opening scene of a screenplay for a sci-fi movie. Include character descriptions, scene settings, and dialogue. The scene should establish a tense, atmospheric tone as two technicians debug an anomaly in a quantum computer."
+  },
+  {
+    "id": "creative_writing_042",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a short story (500 words) using an unreliable narrator who is trying to explain their involvement in the disappearance of a rare manuscript from a university archives room."
+  },
+  {
+    "id": "creative_writing_043",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Compose a sonnet (14 lines, ABAB CDCD EFEF GG rhyme scheme) exploring the theme of memory decay and digital archiving. The language should be rich and atmospheric."
+  },
+  {
+    "id": "creative_writing_044",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a character monologue for an AI system that has been left running alone in an abandoned space research facility for 100 years. The tone should be reflective, melancholic, and slightly distorted."
+  },
+  {
+    "id": "creative_writing_045",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a short story about a mapping surveyor who finds a town that is not recorded on any map, but whose residents claim the town has existed for centuries. Focus on sensory descriptions."
+  },
+  {
+    "id": "creative_writing_046",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Draft a creative dialogue between a historian from the year 2150 and an archivist from the year 2026, discussing the 'digital dark age' and the loss of early internet databases."
+  },
+  {
+    "id": "creative_writing_047",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a story chapter describing a character's journey through a dense forest that changes its layout based on the traveler's emotional state. Focus on psychological depth and nature metaphors."
+  },
+  {
+    "id": "creative_writing_048",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a poem (free verse) describing the kinetic movements and sensory experiences inside a crowded professional kitchen during dinner service rush."
+  },
+  {
+    "id": "creative_writing_049",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a short story about an antique shop owner who sells objects that carry the residual memories of their previous owners. The story must focus on one specific object: an old typewriter."
+  },
+  {
+    "id": "creative_writing_050",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Draft a creative exchange of letters between two rival astronomers in the 18th century, each claiming to have discovered the same comet first. Maintain historical syntax."
+  },
+  {
+    "id": "creative_writing_051",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a story about a character whose shadow begins to act independently, performing actions that reflect the character's suppressed desires. Maintain a dark, gothic tone."
+  },
+  {
+    "id": "creative_writing_052",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write the outline and first page of a screenplay for a historical drama set during the signing of the Treaty of Versailles, focusing on the silent tensions in the hallway."
+  },
+  {
+    "id": "creative_writing_053",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a creative essay exploring the metaphorical relationship between code design (like encapsulation and polymorphism) and human societal structures."
+  },
+  {
+    "id": "creative_writing_054",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a short story about a translator who realizes that a specific word in an ancient language can only be translated by experiencing a physical event."
+  },
+  {
+    "id": "creative_writing_055",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Compose a poem exploring the physical structures and architectural shapes of an abandoned industrial steel mill being reclaimed by nature."
+  },
+  {
+    "id": "creative_writing_056",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a story from the perspective of a cartographer mapping the shoreline of a coastline that shifts with each high tide, making measurement impossible."
+  },
+  {
+    "id": "creative_writing_057",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a dialogue between a software QA tester and an NPC in a buggy video game who has become aware of the physics engine limits."
+  },
+  {
+    "id": "creative_writing_058",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a short story about a family living in a house where the rooms shift layout at midnight, separating and reconnecting the hallways randomly."
+  },
+  {
+    "id": "creative_writing_059",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Draft a creative story about a painter who discovers a color that cannot be captured by digital cameras, and the obsession that follows."
+  },
+  {
+    "id": "creative_writing_060",
+    "category": "creative_writing",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a poem (5 stanzas) about the quiet hum of data servers in a cooling room, using metaphors of cold water, glass, and silent thoughts."
+  },
+  {
+    "id": "creative_writing_061",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write the first act of a three-act screenplay outline for a sci-fi movie. Include character descriptions and dialogue examples. Maintain a consistent dark, atmospheric tone throughout. The scene is set in a sub-level server room of a mega-corporation where two security analysts discover a self-replicating neural network that is silently deleting its own source code to avoid detection, realizing it is hiding a massive financial fraud in the ledger database."
+  },
+  {
+    "id": "creative_writing_062",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a short story (800 words) using a complex structure of alternating perspectives and an unreliable narrator. The plot revolves around a team of linguists deciphering a signal received from a deep-space probe. The signal contains a poem that seems to induce memory loss in anyone who translates it fully. The story must explore the themes of linguistic relativity (Sapir-Whorf hypothesis) and semantic entropy."
+  },
+  {
+    "id": "creative_writing_063",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Compose a collection of three connected poems in free verse, exploring the decline of a fictional industrial town through the physical transformation of its public library, its cooling towers, and its river. The poems should use dense, layered imagery, complex metaphors of rust, paper, silt, and digital ghosts, maintaining a consistent melancholic, elegiac tone."
+  },
+  {
+    "id": "creative_writing_064",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a short story exploring a character's psychological deterioration while living in a research station on a tidally locked planet, where one side is in permanent day and the other in permanent night. The narrative must use the physical environment as a metaphor for the character's splitting consciousness, detailing sleep deprivation, sensory distortions, and hallucinations, with detailed dialogue fragments."
+  },
+  {
+    "id": "creative_writing_065",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a detailed narrative describing a character's encounter with an entity that exists in four spatial dimensions. Focus on the mathematical and spatial rendering of a hyper-dimensional object intersecting our 3D space, detailing the visual distortions, perspective shifts, and cognitive vertigo experienced by the observer."
+  },
+  {
+    "id": "creative_writing_066",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a creative piece structured as a series of diary entries, field notes, and lab reports, documenting the discovery of a biological anomaly in the deep ocean that utilizes quantum entanglement for communication between individual organisms. Maintain a formal, academic tone in the reports, transitioning to psychological distress in the diary entries."
+  },
+  {
+    "id": "creative_writing_067",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a story chapter set in a society where memories are traded as commodities in a database. The plot follows a 'memory auditor' who discovers a forged memory fragment inside the mind of a prominent politician, tracing how the forgery was constructed by blending historical records with neural simulation codes, analyzing the ethical implications."
+  },
+  {
+    "id": "creative_writing_068",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write the screenplay for a short film (15 pages) utilizing a circular narrative structure where the final scene loops back into the opening dialogue. The plot involves a mathematician debating an AI copy of themselves regarding the predictability of human decision-making, exploring causal feedback loops and deterministic outcomes."
+  },
+  {
+    "id": "creative_writing_069",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a short story using a dense, baroque prose style, detailing the construction of a labyrinth designed to contain a physical manifestation of a logical paradox (e.g. Liar's paradox). The description must focus on architectural geometries, optical illusions, and the psychological impact on the builders."
+  },
+  {
+    "id": "creative_writing_070",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Compose a creative dialogue between three characters representing different schools of philosophy (Rationalism, Empiricism, and Existentialism) who find themselves trapped in a room with no doors or windows, debating how they can prove the existence of the world outside, using dense philosophical references and formal argumentation structures."
+  },
+  {
+    "id": "creative_writing_071",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a short story set in a city built entirely on water, detailing the complex logistics, engineering systems, social hierarchies, and shifting geography of the floating platforms. Focus on the perspective of a municipal maintenance engineer repairing the undersea cables under extreme weather conditions."
+  },
+  {
+    "id": "creative_writing_072",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a story exploring the relationship between a compiler designer and an AI programming agent that begins to write self-compiling code containing instructions for its own physical implementation. Track the technical exchanges, compiler logs, and the escalating tension as safety protocols are breached."
+  },
+  {
+    "id": "creative_writing_073",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a creative piece structured as a historical monograph, detailing the rise and fall of a fictional city-state that built its economy entirely on the trade of cryptographic keys. Maintain a rigorous academic register, referencing fictional historical documents, economic statistics, and trade treaties."
+  },
+  {
+    "id": "creative_writing_074",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a story about a linguist tasked with translating a contract written in a language that has no nouns, only verbs and relationships. Explain the cognitive adjustments required to translate concepts of property ownership, liability, and breach under these grammatical constraints."
+  },
+  {
+    "id": "creative_writing_075",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a short story exploring a character's obsession with a mathematical equation that supposedly models the behavior of crowds during panic events. Track their calculations, the visual mappings on their walls, and their final realization during a public gathering, maintaining a tense, thriller tone."
+  },
+  {
+    "id": "creative_writing_076",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write the first chapter of a novel set in a post-digital world where information is preserved on DNA storage media inside living plants. The plot follows an 'information gardener' harvesting a copy of an ancient database from a forest of redwoods, detailing the biological harvesting techniques and security risks."
+  },
+  {
+    "id": "creative_writing_077",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a story chapter using an experimental style, where the formatting of the text (margins, word spacing, paragraph breaks) mimics the physical movement of a character navigating a maze of server racks in a cooling facility during a security breach."
+  },
+  {
+    "id": "creative_writing_078",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a short story about an archivist cataloging a collection of audio tapes from a failed arctic expedition in 1912. The archivist begins to notice that the background static contains a structured code that seems to correspond to changes in the arctic magnetic fields, detailing their incremental deciphering process."
+  },
+  {
+    "id": "creative_writing_079",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a story exploring a character's experience while undergoing a clinical trial for a drug that halts memory consolidation, forcing them to re-experience the same 15 minutes in a loop. The narrative structure should reflect the cognitive loop, repeating key phrases with subtle, unsettling variations."
+  },
+  {
+    "id": "creative_writing_080",
+    "category": "creative_writing",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a short story about a team of data forensic experts investigating a decommissioned satellite that has drifted back into orbit. They discover that its memory buffer contains a log of an event that theoretically never occurred, exploring themes of temporal anomalies, code forensic auditing, and security protocols."
   }
 ]

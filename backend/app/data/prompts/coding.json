@@ -138,5 +138,425 @@
     "difficulty": "hard",
     "expected_reasoning": "high",
     "prompt": "Implement a generic retry mechanism in Python as a context manager that supports configurable max attempts, exponential backoff with jitter, and a list of retryable exception types."
+  },
+  {
+    "id": "coding_021",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Python function to check if a dictionary contains a specific key and return its value, defaulting to None if missing."
+  },
+  {
+    "id": "coding_022",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a CSS rule to center a div horizontally and vertically inside a container with a flexbox layout."
+  },
+  {
+    "id": "coding_023",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a bash command to find and list all files ending with '.log' in a directory that were modified in the last 24 hours."
+  },
+  {
+    "id": "coding_024",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a SQL query to update the 'status' column of the 'orders' table to 'delivered' for all orders placed before June 1st, 2026."
+  },
+  {
+    "id": "coding_025",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a JavaScript function to format a datetime string into a user-friendly format like 'MM/DD/YYYY HH:MM'."
+  },
+  {
+    "id": "coding_026",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Python script to read a CSV file of contacts and extract all email addresses matching the 'gmail.com' domain."
+  },
+  {
+    "id": "coding_027",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a TypeScript interface definition for a User object containing id, username, email, active status, and optional profile fields."
+  },
+  {
+    "id": "coding_028",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a SQL statement to create an index on the 'email' column of the 'users' table to improve lookup performance."
+  },
+  {
+    "id": "coding_029",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Go function that accepts a slice of strings and returns the string that has the maximum character length."
+  },
+  {
+    "id": "coding_030",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Python snippet using requests to fetch the JSON body from a public API endpoint and print the status code."
+  },
+  {
+    "id": "coding_031",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a JavaScript event listener that changes the background color of a button when the user hovers over it."
+  },
+  {
+    "id": "coding_032",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a SQL query to count the number of active subscriptions in the 'users' database grouped by subscription plan."
+  },
+  {
+    "id": "coding_033",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Dockerfile that sets up a Node.js runtime, copies package.json, runs npm install, and starts the index.js server."
+  },
+  {
+    "id": "coding_034",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Python function that takes a list of dictionary items representing store products and filters out any product with a price higher than $50."
+  },
+  {
+    "id": "coding_035",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write an HTML form with input fields for name, email, password, and a submit button, styling it with basic inline CSS."
+  },
+  {
+    "id": "coding_036",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Python function to check if a word is a palindrome, ignoring capitalization and non-alphanumeric characters."
+  },
+  {
+    "id": "coding_037",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a SQL query to join the 'orders' and 'customers' tables on customer_id, selecting order_id, purchase_date, and customer name."
+  },
+  {
+    "id": "coding_038",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a shell script to zip up a folder named 'backups' and append the current calendar date to the filename."
+  },
+  {
+    "id": "coding_039",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a Python function to merge two sorted lists of numbers into a single new sorted list without calling sort()."
+  },
+  {
+    "id": "coding_040",
+    "category": "coding",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Write a CSS media query that hides a sidebar element when the viewport width is less than 768 pixels."
+  },
+  {
+    "id": "coding_041",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Python decorator that logs the execution time of a function in milliseconds and records it to a global log list."
+  },
+  {
+    "id": "coding_042",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a SQL query to find the second highest salary from the 'employees' table, handling edge cases where multiple employees share the top salary."
+  },
+  {
+    "id": "coding_043",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Node.js express middleware function that validates a JSON Web Token (JWT) in the Authorization header and attaches the decoded payload to the request object."
+  },
+  {
+    "id": "coding_044",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Python function implementing binary search on a sorted list, returning the index of the target or -1 if not found. Must contain docstrings."
+  },
+  {
+    "id": "coding_045",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a React hook 'useLocalStorage' that synchronizes state with local storage, handling serialization and parsing exceptions gracefully."
+  },
+  {
+    "id": "coding_046",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a SQL query utilizing window functions to calculate the 7-day rolling average of daily user signups in the 'users' table."
+  },
+  {
+    "id": "coding_047",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Go function that implements a worker pool pattern using channels to process a queue of HTTP URLs concurrently with a fixed pool size of 5 workers."
+  },
+  {
+    "id": "coding_048",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Python script that connects to a PostgreSQL database, executes a batch insert of 1000 records using a single transaction, and handles rollbacks on error."
+  },
+  {
+    "id": "coding_049",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Terraform configuration block to provision an AWS EC2 instance inside a custom VPC with a public IP and security groups allowing SSH."
+  },
+  {
+    "id": "coding_050",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Python function that uses a regular expression to validate a complex password requirements list (min 8 chars, 1 uppercase, 1 lowercase, 1 digit, 1 special char)."
+  },
+  {
+    "id": "coding_051",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a SQL query that retrieves all products that have been ordered by customers in New York but have never been ordered by customers in California."
+  },
+  {
+    "id": "coding_052",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a script in Python that uses the pandas library to load a dataset, fill missing values with the column mean, and drop columns with more than 50% null values."
+  },
+  {
+    "id": "coding_053",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a JavaScript function to deep clone a nested object without using JSON.parse(JSON.stringify(x)), supporting arrays and nested objects."
+  },
+  {
+    "id": "coding_054",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Docker Compose file configuring a FastAPI backend service, a React frontend service, and a Redis caching server communicating on a private network."
+  },
+  {
+    "id": "coding_055",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Python implementation of a custom Stack data structure supporting push, pop, peek, and get_minimum operations, all with O(1) time complexity."
+  },
+  {
+    "id": "coding_056",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a shell script that parses a log file line-by-line, counts occurrences of 'ERROR' messages, and sends a summary report via email if the count exceeds 10."
+  },
+  {
+    "id": "coding_057",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a TypeScript class implementing a generic Repository pattern for database CRUD operations, containing get, create, update, and delete methods."
+  },
+  {
+    "id": "coding_058",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a SQL query to detect duplicate entries in a 'users' table based on the combination of first_name, last_name, and birthdate, returning duplicate counts."
+  },
+  {
+    "id": "coding_059",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a Python function that consumes a paginated JSON API using a loop, handling pagination tokens until all data is retrieved."
+  },
+  {
+    "id": "coding_060",
+    "category": "coding",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Write a CSS layout using Grid that creates a responsive grid of cards with auto-fit columns and a minimum column size of 250px."
+  },
+  {
+    "id": "coding_061",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Python class implementing a thread-safe connection pool for a custom protocol. Must use mutexes or semaphores to handle concurrent checkouts and checkins without deadlocks, and raise an exception if the pool is exhausted after a 5-second timeout."
+  },
+  {
+    "id": "coding_062",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Design a relational database schema for an e-commerce platform with multi-tenant isolation, inventory tracking, and transaction ledgers. Provide SQL DDL scripts creating tables, primary and foreign keys, indexes, and a trigger to prevent double-spending of wallet credits."
+  },
+  {
+    "id": "coding_063",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Python implementation of a Trie (Prefix Tree) containing insert, search, and startsWith methods. Optimize the memory layout and provide time complexity analysis for each operation using Big-O notation."
+  },
+  {
+    "id": "coding_064",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Go service that implements a simplified Raft consensus leader election protocol. Include structure definitions for Raft node, State (Follower, Candidate, Leader), election timeouts, RequestVote RPC payloads, and voting logic."
+  },
+  {
+    "id": "coding_065",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Python implementation of Dijkstra's shortest path algorithm utilizing a min-heap priority queue. The function should accept an adjacency list graph and source node, and return shortest paths to all reachable vertices. Analyze time complexity."
+  },
+  {
+    "id": "coding_066",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a SQL query that parses and resolves overlapping datetime booking intervals in a conference room database to find the total minutes each room was occupied, merging contiguous and overlapping intervals."
+  },
+  {
+    "id": "coding_067",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Python class that parses a raw mathematical expression string containing integers, operators (+, -, *, /), and nested parentheses, evaluating the expression mathematical precedence using a two-stack parsing algorithm (Shunting-yard)."
+  },
+  {
+    "id": "coding_068",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a complete Kubernetes manifest configuring a stateful database application (PostgreSQL) with a StatefulSet, PersistentVolumeClaim templates, Headless Service, ConfigMap for initial database configurations, and rolling update strategy."
+  },
+  {
+    "id": "coding_069",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Python implementation of an LSTM (Long Short-Term Memory) cell step forward pass from first principles using numpy. Define equations for forget gate, input gate, candidate cell state, cell update, output gate, and hidden state."
+  },
+  {
+    "id": "coding_070",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Rust program that implements a thread-safe, lock-free ring buffer (circular queue) supporting multiple producers and a single consumer, utilizing atomic read/write indices and memory ordering operations (Acquire/Release)."
+  },
+  {
+    "id": "coding_071",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a SQL query that retrieves the top 3 highest-spending customers for each country inside an e-commerce database, using analytical window functions and resolving ties by registration date."
+  },
+  {
+    "id": "coding_072",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Python script implementing a custom memoization decorator that serializes function arguments into a cache key, stores results in a Redis database with an expiration time, and handles network connection failures gracefully."
+  },
+  {
+    "id": "coding_073",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a TypeScript parser for a subset of Markdown that converts headers, bold text, links, and lists into equivalent HTML strings, handling nested formatting and escaping HTML special characters in code blocks."
+  },
+  {
+    "id": "coding_074",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Python implementation of a dynamic programming solution to the Knapsack problem. Provide both the recursive version with memoization and the bottom-up tabulated version, detailing the time and space complexity of both approaches."
+  },
+  {
+    "id": "coding_075",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Dockerfile and GitHub Actions workflow configuration that builds a multi-architecture docker image, runs static code analysis (linter, security checks), executes unit tests, and pushes the image to Docker Hub on release tags."
+  },
+  {
+    "id": "coding_076",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Python function implementing the Bellman-Ford algorithm to find shortest paths from a source vertex, detecting negative weight cycles in a directed graph. Return path list and cycle presence."
+  },
+  {
+    "id": "coding_077",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a SQL query that performs a multi-dimensional pivot operation, converting monthly sales transactions into a tabular matrix grouped by product category, showing totals, average sales, and year-over-year percentage growth."
+  },
+  {
+    "id": "coding_078",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Python implementation of the A* pathfinding algorithm on a 2D grid containing obstacles. The function must accept grid coordinates, starting node, and target node, using Manhattan distance as the heuristic. Return node coordinate path list."
+  },
+  {
+    "id": "coding_079",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a C++ class implementing a lock-free Compare-and-Swap (CAS) based queue. Define structure for node pointers, atomic operations, enqueue/dequeue methods, and handle memory allocation safety under high concurrency."
+  },
+  {
+    "id": "coding_080",
+    "category": "coding",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Write a Python script that parses a huge JSON dump (10GB) using stream processing techniques (like ijson or generator pipelines) to count frequency of specific nested key values, minimizing memory footprint under 50MB."
   }
 ]

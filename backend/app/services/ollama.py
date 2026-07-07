@@ -40,6 +40,11 @@ def _get_client() -> httpx.AsyncClient:
 
 
 async def generate(prompt: str) -> str:
+    import os
+    if os.getenv("SIMULATE_LLM", "false").lower() == "true":
+        from app.services.simulator import generate_simulated
+        return await generate_simulated(prompt, "local")
+
     settings = get_settings()
 
     if not settings.OLLAMA_BASE_URL:
@@ -53,6 +58,11 @@ async def generate(prompt: str) -> str:
         "model": settings.OLLAMA_MODEL,
         "prompt": prompt,
         "stream": False,
+        "options": {
+            "num_predict": 32,
+            "temperature": 0.0,
+            "num_ctx": 1024
+        }
     }
 
     client = _get_client()

@@ -138,5 +138,425 @@
     "difficulty": "hard",
     "expected_reasoning": "high",
     "prompt": "A curve is defined parametrically by x(t) = t² - 1 and y(t) = t³ - 3t. Find all points where the tangent to the curve is horizontal or vertical, and determine the Cartesian equation of the curve."
+  },
+  {
+    "id": "mathematics_021",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Calculate the area of a circle with a radius of 7 centimeters. Show the steps and round the final answer to two decimal places."
+  },
+  {
+    "id": "mathematics_022",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Solve the linear equation for x: 3x - 12 = 18. Provide a step-by-step calculation."
+  },
+  {
+    "id": "mathematics_023",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Find the greatest common divisor (GCD) of 48 and 72 using prime factorization. List all prime factors."
+  },
+  {
+    "id": "mathematics_024",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Calculate the simple interest on a principal amount of $2,500 at an annual interest rate of 4.5% over a duration of 3 years."
+  },
+  {
+    "id": "mathematics_025",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Determine the slope of the straight line passing through the coordinates (2, 5) and (6, 13) in a 2D Cartesian plane."
+  },
+  {
+    "id": "mathematics_026",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "If a bag contains 5 red marbles, 3 blue marbles, and 2 green marbles, what is the probability of drawing a red marble on the first try?"
+  },
+  {
+    "id": "mathematics_027",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Convert the binary number 110101 into its equivalent base-10 decimal integer. Show your base multiplication steps."
+  },
+  {
+    "id": "mathematics_028",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Calculate the volume of a rectangular prism with a length of 12 meters, width of 4 meters, and height of 5 meters."
+  },
+  {
+    "id": "mathematics_029",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Find the sum of the first 20 positive integers using the arithmetic progression formula. Show the formula and variables used."
+  },
+  {
+    "id": "mathematics_030",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Evaluate the mathematical expression: (8 + 4) * 3 - 16 / 4. Explain the order of operations followed."
+  },
+  {
+    "id": "mathematics_031",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Determine if the number 137 is prime. Explain the steps you took to test its divisibility."
+  },
+  {
+    "id": "mathematics_032",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "A store offers a 15% discount on a jacket priced at $80. What is the final price of the jacket after tax of 8% is applied?"
+  },
+  {
+    "id": "mathematics_033",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Solve the quadratic equation using factoring: x^2 - 5x + 6 = 0. Provide both roots."
+  },
+  {
+    "id": "mathematics_034",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Find the mean, median, and mode of the following set of numbers: 4, 8, 6, 4, 12, 10, 8, 4."
+  },
+  {
+    "id": "mathematics_035",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Calculate the hypotenuse of a right-angled triangle with side lengths of 9 meters and 12 meters using the Pythagorean theorem."
+  },
+  {
+    "id": "mathematics_036",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "What is the ratio of girls to boys in a classroom containing 14 girls and 10 boys? Express the ratio in its simplest form."
+  },
+  {
+    "id": "mathematics_037",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Convert 3/8 into a decimal and a percentage. Show the division process."
+  },
+  {
+    "id": "mathematics_038",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Calculate the perimeter and area of a square with a side length of 5.5 inches."
+  },
+  {
+    "id": "mathematics_039",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Find the next three terms in the geometric sequence: 3, 6, 12, 24, ... and state the common ratio."
+  },
+  {
+    "id": "mathematics_040",
+    "category": "mathematics",
+    "difficulty": "easy",
+    "expected_reasoning": "low",
+    "prompt": "Solve the equation for y: 2(y - 3) + 4 = 10."
+  },
+  {
+    "id": "mathematics_041",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Evaluate the definite integral of the function f(x) = 3x^2 - 2x + 5 from x = 1 to x = 3. Show all integration steps."
+  },
+  {
+    "id": "mathematics_042",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Solve the following system of linear equations using Gaussian elimination or substitution: 2x + 3y = 12 and 5x - y = 13."
+  },
+  {
+    "id": "mathematics_043",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Calculate the standard deviation of the dataset: 12, 15, 18, 10, 22. Show the mean, variance, and final value."
+  },
+  {
+    "id": "mathematics_044",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A pair of fair six-sided dice are rolled. Calculate the probability that the sum of the numbers rolled is a prime number."
+  },
+  {
+    "id": "mathematics_045",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Solve the rational equation for x: 3/(x - 2) + 5/(x + 2) = 8/(x^2 - 4)."
+  },
+  {
+    "id": "mathematics_046",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Find the equation of the line tangent to the curve y = x^3 - 3x + 2 at the coordinate point where x = 2. Provide derivation steps."
+  },
+  {
+    "id": "mathematics_047",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Determine the inverse of the 2x2 matrix A = [[4, 3], [3, 2]]. Verify by showing that A * A^-1 is the identity matrix."
+  },
+  {
+    "id": "mathematics_048",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Calculate the sum of the infinite geometric series: 12 + 4 + 4/3 + 4/9 + ... Verify that the series converges before calculating."
+  },
+  {
+    "id": "mathematics_049",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Solve the exponential equation for x: 5^(2x-1) = 125. Show the step-by-step logarithmic properties used."
+  },
+  {
+    "id": "mathematics_050",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Convert the polar coordinates (r = 5, theta = 5*pi/6) into Cartesian coordinates (x, y). Round values to two decimal places."
+  },
+  {
+    "id": "mathematics_051",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A loan of $10,000 is compounded monthly at an annual interest rate of 6%. Calculate the total balance after 5 years."
+  },
+  {
+    "id": "mathematics_052",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Find the domain and range of the real-valued function f(x) = sqrt(x^2 - 9). Explain the algebraic steps."
+  },
+  {
+    "id": "mathematics_053",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Using Bayes' theorem, calculate the probability that a patient has a disease given a positive test result, where disease prevalence is 1%, test sensitivity is 99%, and false-positive rate is 5%."
+  },
+  {
+    "id": "mathematics_054",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Calculate the dot product and cross product of the two 3D vectors: u = [2, -1, 3] and v = [1, 3, -2]."
+  },
+  {
+    "id": "mathematics_055",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Solve the logarithmic equation for x: log2(x) + log2(x - 3) = 2. Check for extraneous solutions."
+  },
+  {
+    "id": "mathematics_056",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "A box contains 6 white balls and 4 black balls. If 3 balls are drawn at random without replacement, calculate the probability of getting exactly 2 black balls."
+  },
+  {
+    "id": "mathematics_057",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Determine the values of x for which the function f(x) = x^3 - 6x^2 + 9x is increasing and decreasing. Locate relative extrema."
+  },
+  {
+    "id": "mathematics_058",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Solve the trigonometric equation for theta in the interval [0, 2*pi): 2*sin^2(theta) - sin(theta) - 1 = 0."
+  },
+  {
+    "id": "mathematics_059",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Find the limit as x approaches 2 of the rational function f(x) = (x^2 - 4) / (x^2 - x - 2). Show simplification steps."
+  },
+  {
+    "id": "mathematics_060",
+    "category": "mathematics",
+    "difficulty": "medium",
+    "expected_reasoning": "medium",
+    "prompt": "Calculate the area of a triangle with vertices at Cartesian coordinates A(1, 1), B(4, 5), and C(7, 2)."
+  },
+  {
+    "id": "mathematics_061",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Prove by mathematical induction that the sum of the cubes of the first n positive integers is equal to (n(n+1)/2)^2 for all integers n >= 1. Provide clear base case and inductive step."
+  },
+  {
+    "id": "mathematics_062",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Solve the second-order linear homogeneous differential equation: y'' - 4y' + 5y = 0, subject to the initial conditions y(0) = 2 and y'(0) = 5. Detail all steps."
+  },
+  {
+    "id": "mathematics_063",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Calculate the eigenvalues and corresponding eigenvectors of the 3x3 matrix A = [[2, 1, 0], [1, 2, 1], [0, 1, 2]]. Show determinant calculations and characteristic equation."
+  },
+  {
+    "id": "mathematics_064",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Evaluate the double integral of f(x, y) = x^2 * y over the triangular region bounded by coordinates (0,0), (2,0), and (1,2) in the Cartesian plane. Detail limits."
+  },
+  {
+    "id": "mathematics_065",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Find the maximum and minimum values of the function f(x, y) = x^2 + 2y^2 subject to the constraint equation x^2 + y^2 = 1 using Lagrange multipliers. Detail system of equations."
+  },
+  {
+    "id": "mathematics_066",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Determine the Fourier series expansion of the periodic square wave function f(x) with period 2*pi, defined as f(x) = -1 for -pi < x < 0 and f(x) = 1 for 0 < x < pi."
+  },
+  {
+    "id": "mathematics_067",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Derive the probability density function (PDF) of the sum of two independent, identically distributed exponential random variables, each with parameter lambda. Outline convolutions."
+  },
+  {
+    "id": "mathematics_068",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Evaluate the complex contour integral of f(z) = e^(2z) / (z - 1)^3 along the closed path |z| = 2 oriented counterclockwise, using Cauchy's residue theorem."
+  },
+  {
+    "id": "mathematics_069",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Find the general solution to the system of first-order linear differential equations: dx/dt = 3x - y and dy/dt = x + y. Solve for initial values x(0)=1, y(0)=2."
+  },
+  {
+    "id": "mathematics_070",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Evaluate the improper integral of f(x) = 1 / (x^2 + 1)^2 over the interval from x = -infinity to x = +infinity. Detail substitution techniques."
+  },
+  {
+    "id": "mathematics_071",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Determine whether the infinite series sum from n=1 to infinity of n! / n^n converges or diverges using the Ratio Test. Show limit calculations."
+  },
+  {
+    "id": "mathematics_072",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Solve the non-homogeneous second-order differential equation: y'' + 4y = 8*sin(2x) + 3*e^x using the method of undetermined coefficients. List particular and complementary solutions."
+  },
+  {
+    "id": "mathematics_073",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Calculate the volume of the solid of revolution generated by rotating the region bounded by y = x^2 and y = sqrt(x) around the x-axis, using both washer and shell methods."
+  },
+  {
+    "id": "mathematics_074",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Derive the least-squares normal equations for a linear regression model y = beta0 + beta1*x + beta2*x^2, minimizing the sum of squared residuals."
+  },
+  {
+    "id": "mathematics_075",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Find the Taylor series expansion of the function f(x) = ln(x) centered at a = 2. Express the final series in sigma notation and determine the interval of convergence."
+  },
+  {
+    "id": "mathematics_076",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Evaluate the triple integral of f(x, y, z) = z in spherical coordinates over the region inside the sphere x^2 + y^2 + z^2 = 4 and above the cone z = sqrt(x^2 + y^2)."
+  },
+  {
+    "id": "mathematics_077",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Prove that the set of all real numbers is uncountable using Cantor's diagonal argument. Detail assumptions, contradiction, and reasoning steps."
+  },
+  {
+    "id": "mathematics_078",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Find the singular value decomposition (SVD) of the 2x3 matrix A = [[3, 2, 2], [2, 3, -2]]. Show matrices U, Sigma, and V^T."
+  },
+  {
+    "id": "mathematics_079",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Determine the solution to the difference equation y[n] - 0.5*y[n-1] = x[n] subject to initial conditions y[-1] = 0, where input x[n] = (0.2)^n * u[n]."
+  },
+  {
+    "id": "mathematics_080",
+    "category": "mathematics",
+    "difficulty": "hard",
+    "expected_reasoning": "high",
+    "prompt": "Evaluate the line integral of the vector field F = [y^2, x^2 - y] along the boundary path of the region bounded by y = x^2 and y = 1 using Green's Theorem."
   }
 ]

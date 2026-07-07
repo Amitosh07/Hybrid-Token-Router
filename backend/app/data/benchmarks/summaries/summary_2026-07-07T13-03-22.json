@@ -1,0 +1,30 @@
+{
+  "total_prompts": 640,
+  "categories_processed": [
+    "coding",
+    "creative_writing",
+    "general",
+    "mathematics",
+    "planning",
+    "reasoning",
+    "summarization",
+    "translation"
+  ],
+  "difficulty_distribution": {
+    "easy": 216,
+    "medium": 216,
+    "hard": 208
+  },
+  "router_version": "v1.0",
+  "local_selected": 528,
+  "remote_selected": 112,
+  "average_routing_score": 15.91,
+  "average_confidence": 0.58,
+  "average_local_latency_ms": 4104.03,
+  "average_remote_latency_ms": 5853.08,
+  "average_local_tokens": 87.13,
+  "average_remote_tokens": 659.74,
+  "benchmark_duration_seconds": 4428.5,
+  "timestamp": "2026-07-07T13:03:22+00:00",
+  "errors": []
+}

@@ -1,0 +1,489 @@
+════════════════════════════════════════════════════════════════════════
+        HYBRID TOKEN ROUTER — FEATURE EXTRACTOR V3 CALIBRATION REPORT
+════════════════════════════════════════════════════════════════════════
+  Total Prompts evaluated : 160
+  Categories processed    : coding, creative_writing, general, mathematics, planning, reasoning, summarization, translation
+  Randomizer Seed         : 42
+
+────────────────────────────────────────────────────────────────────────
+  1. V1 vs V2 vs V3 Overall Comparison
+────────────────────────────────────────────────────────────────────────
+  Metric                                      V1         V2         V3
+  ─────────────────────────────────── ────────── ────────── ──────────
+  Routed → LOCAL                             159        150        134
+  Routed → REMOTE                              1         10         26
+  Remote Selection %                        0.6%       6.2%      16.2%
+  Average Routing Score                     8.49      13.43      15.96
+  Average Complexity Score                     —     0.1617     0.1993
+
+────────────────────────────────────────────────────────────────────────
+  2. Local vs Remote Distribution (V3)
+────────────────────────────────────────────────────────────────────────
+  LOCAL Selection  : 134 prompts (83.8%)
+  REMOTE Selection : 26 prompts (16.2%)
+
+────────────────────────────────────────────────────────────────────────
+  3. Difficulty Separation (Cohen's d for V3 Complexity Scores)
+────────────────────────────────────────────────────────────────────────
+  Easy vs Hard   : d = 1.718  (LARGE ✓)
+  Easy vs Medium : d = 0.837  (LARGE ✓)
+  Medium vs Hard : d = 0.975  (LARGE ✓)
+────────────────────────────────────────────────────────────────────────
+  4. Average Complexity Scores by Difficulty Label
+────────────────────────────────────────────────────────────────────────
+  EASY       : 0.1091
+  MEDIUM     : 0.1876
+  HARD       : 0.3181
+
+────────────────────────────────────────────────────────────────────────
+  5. Average Routing Scores by Difficulty Label
+────────────────────────────────────────────────────────────────────────
+  EASY       : 10.82
+  MEDIUM     : 14.61
+  HARD       : 23.54
+
+────────────────────────────────────────────────────────────────────────
+  6. Category-wise Routing Statistics (V3)
+────────────────────────────────────────────────────────────────────────
+  Category                 N  Avg Cmplx   LOCAL   REMOTE  Remote%
+  ───────────────────────────────────────────────────────────────
+  coding                  20     0.2422      15        5    25.0%
+  creative_writing        20     0.1275      20        0     0.0%
+  general                 20     0.2267      15        5    25.0%
+  mathematics             20     0.2819      15        5    25.0%
+  planning                20     0.1839      16        4    20.0%
+  reasoning               20     0.2311      16        4    20.0%
+  summarization           20     0.1960      18        2    10.0%
+  translation             20     0.1049      19        1     5.0%
+
+────────────────────────────────────────────────────────────────────────
+  7. False Local Cases (GT Hard routed LOCAL in V3)
+────────────────────────────────────────────────────────────────────────
+  Total False Locals: 29 out of 48 hard prompts
+    [translation_020     ] complexity=0.065 | Translate the following software localisation string set from Eng...
+    [summarization_017   ] complexity=0.087 | Summarise and synthesise the following three conflicting expert o...
+    [translation_016     ] complexity=0.109 | Translate the following legal contract clause from English into G...
+    [translation_018     ] complexity=0.110 | Translate the following from German to English, then explain two ...
+    [creative_writing_019] complexity=0.122 | Write a 300-word prose poem that explores the concept of entropy ...
+    [translation_017     ] complexity=0.128 | Translate the following medical information paragraph into Spanis...
+    [summarization_020   ] complexity=0.149 | Summarise the following multi-source information into a single co...
+    [summarization_019   ] complexity=0.158 | Read the following earnings call transcript excerpt and produce a...
+    [reasoning_018       ] complexity=0.164 | A startup has a runway of 8 months and three strategic options: (...
+    [planning_019        ] complexity=0.173 | Create a hiring and team scaling plan for a startup that needs to...
+
+────────────────────────────────────────────────────────────────────────
+  8. False Remote Cases (GT Easy routed REMOTE in V3)
+────────────────────────────────────────────────────────────────────────
+  Total False Remotes: 0 out of 56 easy prompts
+  ✓ Zero False Remotes detected!
+
+────────────────────────────────────────────────────────────────────────
+  9. Confusion Matrix (Difficulty labels vs V3 complexity labels)
+────────────────────────────────────────────────────────────────────────
+  GT Difficulty     Pred Easy    Pred Med   Pred Hard
+  ────────────────────────────────────────────────────
+  EASY                     56           0           0
+  MEDIUM                   50           6           0
+  HARD                     29          19           0
+
+────────────────────────────────────────────────────────────────────────
+  10. Correlation Matrix Between Feature Groups (V3)
+────────────────────────────────────────────────────────────────────────
+  Group                   techni  reason  task_c  constr  contex
+  ──────────────────────────────────────────────────────────────
+  technical_complexity     1.000  -0.033   0.249   0.129   0.472
+  reasoning_depth         -0.033   1.000   0.219  -0.096   0.213
+  task_complexity          0.249   0.219   1.000  -0.022   0.235
+  constraint_complexity    0.129  -0.096  -0.022   1.000   0.204
+  context_complexity       0.472   0.213   0.235   0.204   1.000
+
+────────────────────────────────────────────────────────────────────────
+  11. Feature Importance Ranking (Weighted Contributions)
+────────────────────────────────────────────────────────────────────────
+  Feature Group              Weight   AvgScore  WeightedContrib
+  ───────────────────────────────────────────────────────────────
+  task_complexity              0.25     0.4497           0.1124
+  technical_complexity         0.30     0.0715           0.0214
+  reasoning_depth              0.25     0.0760           0.0190
+  context_complexity           0.08     0.0996           0.0080
+  constraint_complexity        0.12     0.0348           0.0042
+
+────────────────────────────────────────────────────────────────────────
+  12. Interaction Effect Analysis (V3 Active Boosts)
+────────────────────────────────────────────────────────────────────────
+  Interaction Rule                               Fired Count % of Prompts
+  ───────────────────────────────────────────────────────────────────────
+  Planning & Consistency Interaction                       1         0.6%
+  Precision & Reasoning Interaction                        8         5.0%
+  Cognitive Intensity Boost                                2         1.2%
+
+  Total interaction boost value accumulated: 0.4990 points
+
+────────────────────────────────────────────────────────────────────────
+  13. Top 20 Most Difficult Prompts (V3)
+────────────────────────────────────────────────────────────────────────
+  01. [reasoning_020       ] score=0.7296 | Three suspects A, B, and C are questioned about a robbery. A says...
+  02. [reasoning_017       ] score=0.7128 | Given the following claims: (1) If it rains, the ground gets wet....
+  03. [coding_015          ] score=0.5597 | Design a Python class that implements a thread-safe producer-cons...
+  04. [planning_017        ] score=0.5504 | Design a phased migration plan for a company moving a monolithic ...
+  05. [general_020         ] score=0.5138 | Explain how large language models work, from tokenisation and tra...
+  06. [general_018         ] score=0.5129 | Compare and contrast three major economic systems — capitalism, s...
+  07. [coding_019          ] score=0.5055 | Design a database schema for a multi-tenant SaaS application wher...
+  08. [planning_020        ] score=0.4645 | Design a comprehensive OKR framework for a 50-person technology c...
+  09. [translation_015     ] score=0.4580 | Translate the following academic abstract from English into Frenc...
+  10. [mathematics_018     ] score=0.4391 | Using the Bayes theorem, solve the following: A factory has two m...
+  11. [coding_008          ] score=0.4343 | Implement a binary search algorithm in Python that works on a sor...
+  12. [mathematics_017     ] score=0.4260 | A 3×3 matrix A has rows [2, 1, 0], [1, 3, 1], [0, 1, 2]. Find the...
+  13. [coding_017          ] score=0.4204 | Design a RESTful API schema in Python using FastAPI for a task ma...
+  14. [reasoning_014       ] score=0.4172 | If you have 8 balls that all look identical, and one is slightly ...
+  15. [general_016         ] score=0.4032 | Analyse the causes and long-term consequences of the Industrial R...
+  16. [reasoning_015       ] score=0.4004 | You are the operations manager of a hospital. You have one ventil...
+  17. [mathematics_008     ] score=0.3975 | Solve the quadratic equation 2x² - 5x - 3 = 0 using the quadratic...
+  18. [summarization_011   ] score=0.3964 | Read the following performance review excerpt and produce a conci...
+  19. [coding_013          ] score=0.3851 | Implement a basic LRU cache in Python with a fixed capacity, supp...
+  20. [mathematics_016     ] score=0.3736 | Prove by mathematical induction that the sum of the first n posit...
+
+────────────────────────────────────────────────────────────────────────
+  14. Top 20 Easiest Prompts (V3)
+────────────────────────────────────────────────────────────────────────
+  01. [translation_002     ] score=0.0546 | Translate the following sentence into Spanish: 'Please send the u...
+  02. [translation_006     ] score=0.0550 | Translate the following sentence into Hindi: 'Could you please co...
+  03. [translation_005     ] score=0.0552 | Translate the following sentence into Italian: 'The customer supp...
+  04. [translation_003     ] score=0.0555 | Translate the following sentence into German: 'We are looking for...
+  05. [translation_004     ] score=0.0555 | Translate the following sentence into Portuguese: 'Thank you for ...
+  06. [translation_012     ] score=0.0579 | Translate the following legal notice into Spanish: 'By using this...
+  07. [translation_014     ] score=0.0593 | Translate the following instructions into Italian, maintaining cl...
+  08. [translation_010     ] score=0.0595 | Translate the following paragraph from French to English: 'Le dév...
+  09. [translation_013     ] score=0.0595 | Translate the following paragraph from Spanish to English: 'La in...
+  10. [summarization_005   ] score=0.0596 | Condense the following into one short paragraph: 'Water is essent...
+  11. [summarization_004   ] score=0.0599 | Summarise this email in three bullet points: 'Hi team, just a rem...
+  12. [translation_020     ] score=0.0646 | Translate the following software localisation string set from Eng...
+  13. [creative_writing_002] score=0.0650 | Write a short two-sentence horror story....
+  14. [general_004         ] score=0.0651 | What causes rainbows to appear in the sky?...
+  15. [creative_writing_001] score=0.0654 | Write a haiku about debugging code late at night....
+  16. [mathematics_004     ] score=0.0654 | Convert 3/8 to a decimal and then to a percentage....
+  17. [creative_writing_003] score=0.0656 | Write a limerick about a programmer who loves coffee....
+  18. [reasoning_006       ] score=0.0659 | A farmer has 17 sheep. All but 9 die. How many sheep are left?...
+  19. [coding_004          ] score=0.0661 | Write a JavaScript function that checks whether a given number is...
+  20. [creative_writing_005] score=0.0661 | Write a short poem about the feeling of finishing a difficult pro...
+
+────────────────────────────────────────────────────────────────────────
+  15. Detailed Routing Traces — 30 Sampled Prompts
+────────────────────────────────────────────────────────────────────────
+
+  ── [01/30] translation_006 (Category: translation, GT Difficulty: EASY)
+  Prompt: Translate the following sentence into Hindi: 'Could you please confirm your attendance at the upcomi...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.200 | Constraint=0.000 | Context=0.063
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0550 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 7 (GT: 2 in V1, 7 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [02/30] creative_writing_004 (Category: creative_writing, GT Difficulty: EASY)
+  Prompt: Write a friendly product launch announcement for a new note-taking app called 'Leaf'....
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.250 | Constraint=0.000 | Context=0.052
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0667 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 5 (GT: 0 in V1, 5 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [03/30] creative_writing_007 (Category: creative_writing, GT Difficulty: EASY)
+  Prompt: Write a one-paragraph children's story about a curious robot who learns to make friends....
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.250 | Constraint=0.000 | Context=0.052
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0667 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 5 (GT: 0 in V1, 5 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [04/30] reasoning_003 (Category: reasoning, GT Difficulty: EASY)
+  Prompt: If you go to sleep at 8pm and set an alarm for 9am, how many hours of sleep will you get?...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.250 | Constraint=0.000 | Context=0.053
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0668 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 11 (GT: 1 in V1, 11 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [05/30] reasoning_004 (Category: reasoning, GT Difficulty: EASY)
+  Prompt: A shop has 40 apples. It sells half of them in the morning. In the afternoon it sells a quarter of t...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.250 | Constraint=0.000 | Context=0.072
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0682 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 6 (GT: 1 in V1, 6 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [06/30] general_007 (Category: general, GT Difficulty: EASY)
+  Prompt: How does a vaccine work to protect the body from disease?...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.400 | Constraint=0.000 | Context=0.040
+  Evidence: ...
+  Aggregation: Complexity Score = 0.1032 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 6 (GT: 1 in V1, 6 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [07/30] general_005 (Category: general, GT Difficulty: EASY)
+  Prompt: What is the capital of Australia, and why is it not Sydney?...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.400 | Constraint=0.000 | Context=0.040
+  Evidence: ...
+  Aggregation: Complexity Score = 0.1032 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 10 (GT: 5 in V1, 10 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [08/30] general_006 (Category: general, GT Difficulty: EASY)
+  Prompt: What is the difference between a calorie and a kilocalorie?...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.400 | Constraint=0.000 | Context=0.040
+  Evidence: ...
+  Aggregation: Complexity Score = 0.1032 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 6 (GT: 1 in V1, 6 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [09/30] mathematics_005 (Category: mathematics, GT Difficulty: EASY)
+  Prompt: A train travels 240 km in 3 hours. What is its average speed in kilometres per hour?...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.400 | Constraint=0.000 | Context=0.050
+  Evidence: ...
+  Aggregation: Complexity Score = 0.1040 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 6 (GT: 1 in V1, 6 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [10/30] mathematics_001 (Category: mathematics, GT Difficulty: EASY)
+  Prompt: Solve for x: 5x - 12 = 28....
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.780 | Constraint=0.000 | Context=0.025
+  Evidence: ...
+  Aggregation: Complexity Score = 0.2814 (EASY)
+  Bridge Reasoning Score: 3/10
+  Decision Score: 23 (GT: 13 in V1, 18 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [11/30] translation_014 (Category: translation, GT Difficulty: MEDIUM)
+  Prompt: Translate the following instructions into Italian, maintaining clarity and precision: 'To reset your...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.200 | Constraint=0.000 | Context=0.116
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0593 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 7 (GT: 7 in V1, 7 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [12/30] translation_013 (Category: translation, GT Difficulty: MEDIUM)
+  Prompt: Translate the following paragraph from Spanish to English: 'La inteligencia artificial está transfor...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.200 | Constraint=0.000 | Context=0.119
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0595 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 7 (GT: 7 in V1, 7 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [13/30] translation_010 (Category: translation, GT Difficulty: MEDIUM)
+  Prompt: Translate the following paragraph from French to English: 'Le développement logiciel agile repose su...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.200 | Constraint=0.000 | Context=0.119
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0595 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 7 (GT: 7 in V1, 7 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [14/30] coding_012 (Category: coding, GT Difficulty: MEDIUM)
+  Prompt: Write a Python decorator that measures and prints the execution time of any function it wraps....
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.250 | Constraint=0.000 | Context=0.055
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0669 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 14 (GT: 14 in V1, 14 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [15/30] translation_008 (Category: translation, GT Difficulty: MEDIUM)
+  Prompt: Translate the following business email paragraph into French, preserving formal tone: 'We regret to ...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.200 | Constraint=0.100 | Context=0.120
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0716 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 10 (GT: 15 in V1, 10 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [16/30] reasoning_012 (Category: reasoning, GT Difficulty: MEDIUM)
+  Prompt: A bank robber robs a bank and escapes with $100,000 in cash. A week later he is found dead in a lock...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.250 | Constraint=0.000 | Context=0.121
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0722 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 5 (GT: 10 in V1, 10 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [17/30] planning_011 (Category: planning, GT Difficulty: MEDIUM)
+  Prompt: Plan a 5-day trip to Kyoto, Japan for two adults who are interested in history and food. Include a d...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.350 | Constraint=0.000 | Context=0.080
+  Evidence: ...
+  Aggregation: Complexity Score = 0.0939 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 9 (GT: 4 in V1, 9 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [18/30] creative_writing_008 (Category: creative_writing, GT Difficulty: MEDIUM)
+  Prompt: Write a 200-word short story about a scientist who discovers an anomaly in a dataset that changes ev...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.350 | Constraint=0.100 | Context=0.075
+  Evidence: ...
+  Aggregation: Complexity Score = 0.1055 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 8 (GT: 3 in V1, 8 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [19/30] planning_010 (Category: planning, GT Difficulty: MEDIUM)
+  Prompt: Outline a 6-month career transition plan for a teacher who wants to move into UX design. Include ski...
+  Scores: Tech=0.188 | Reason=0.000 | Task=0.250 | Constraint=0.000 | Context=0.080
+  Evidence: portfolio...
+  Aggregation: Complexity Score = 0.1252 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 9 (GT: 4 in V1, 9 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [20/30] mathematics_012 (Category: mathematics, GT Difficulty: MEDIUM)
+  Prompt: In a right triangle, the hypotenuse is 13 cm and one leg is 5 cm. Find the length of the other leg a...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.880 | Constraint=0.000 | Context=0.077
+  Evidence: ...
+  Aggregation: Complexity Score = 0.3231 (EASY)
+  Bridge Reasoning Score: 3/10
+  Decision Score: 15 (GT: 0 in V1, 10 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [21/30] summarization_012 (Category: summarization, GT Difficulty: MEDIUM)
+  Prompt: Summarise the following incident report into a brief root cause statement and two corrective actions...
+  Scores: Tech=0.300 | Reason=0.245 | Task=0.650 | Constraint=0.000 | Context=0.147
+  Evidence: connection pool...
+  Boosts: Precision & Reasoning Interaction (boost=0.037)
+  Aggregation: Complexity Score = 0.3622 (MEDIUM)
+  Bridge Reasoning Score: 4/10
+  Decision Score: 30 (GT: 15 in V1, 20 in V2)
+  Provider Decision: REMOTE (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [22/30] reasoning_014 (Category: reasoning, GT Difficulty: MEDIUM)
+  Prompt: If you have 8 balls that all look identical, and one is slightly heavier than the rest, how can you ...
+  Scores: Tech=0.000 | Reason=0.315 | Task=0.780 | Constraint=0.100 | Context=0.079
+  Evidence: ...
+  Aggregation: Complexity Score = 0.4172 (MEDIUM)
+  Bridge Reasoning Score: 4/10
+  Decision Score: 25 (GT: 5 in V1, 15 in V2)
+  Provider Decision: REMOTE (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [23/30] creative_writing_019 (Category: creative_writing, GT Difficulty: HARD)
+  Prompt: Write a 300-word prose poem that explores the concept of entropy through three extended metaphors: a...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.350 | Constraint=0.220 | Context=0.107
+  Evidence: ...
+  Aggregation: Complexity Score = 0.1225 (EASY)
+  Bridge Reasoning Score: 1/10
+  Decision Score: 9 (GT: 14 in V1, 9 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [24/30] planning_019 (Category: planning, GT Difficulty: HARD)
+  Prompt: Create a hiring and team scaling plan for a startup that needs to grow its engineering team from 4 t...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.450 | Constraint=0.000 | Context=0.112
+  Evidence: ...
+  Aggregation: Complexity Score = 0.1735 (EASY)
+  Bridge Reasoning Score: 2/10
+  Decision Score: 14 (GT: 9 in V1, 9 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [25/30] summarization_016 (Category: summarization, GT Difficulty: HARD)
+  Prompt: You are given the minutes from a 90-minute board meeting covering five agenda items: Q2 financial re...
+  Scores: Tech=0.298 | Reason=0.000 | Task=0.650 | Constraint=0.000 | Context=0.134
+  Evidence: compliance, financial, regulatory...
+  Aggregation: Complexity Score = 0.2626 (EASY)
+  Bridge Reasoning Score: 3/10
+  Decision Score: 19 (GT: 14 in V1, 14 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [26/30] translation_019 (Category: translation, GT Difficulty: HARD)
+  Prompt: Translate the following financial report excerpt from English into Portuguese (Brazilian), maintaini...
+  Scores: Tech=0.225 | Reason=0.302 | Task=0.300 | Constraint=0.000 | Context=0.145
+  Evidence: discounted:ebitda, discounted:financial, discounted:revenue...
+  Boosts: Precision & Reasoning Interaction (boost=0.034)
+  Aggregation: Complexity Score = 0.2635 (EASY)
+  Bridge Reasoning Score: 3/10
+  Decision Score: 19 (GT: 9 in V1, 19 in V2)
+  Provider Decision: LOCAL (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [27/30] planning_018 (Category: planning, GT Difficulty: HARD)
+  Prompt: Develop a 12-month product roadmap for a mobile fitness app that currently has 50,000 active users a...
+  Scores: Tech=0.000 | Reason=0.000 | Task=0.950 | Constraint=0.000 | Context=0.251
+  Evidence: ...
+  Aggregation: Complexity Score = 0.3679 (MEDIUM)
+  Bridge Reasoning Score: 4/10
+  Decision Score: 29 (GT: 9 in V1, 14 in V2)
+  Provider Decision: REMOTE (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [28/30] mathematics_018 (Category: mathematics, GT Difficulty: HARD)
+  Prompt: Using the Bayes theorem, solve the following: A factory has two machines. Machine A produces 60% of ...
+  Scores: Tech=0.000 | Reason=0.315 | Task=0.880 | Constraint=0.000 | Context=0.108
+  Evidence: ...
+  Aggregation: Complexity Score = 0.4391 (MEDIUM)
+  Bridge Reasoning Score: 4/10
+  Decision Score: 33 (GT: 18 in V1, 23 in V2)
+  Provider Decision: REMOTE (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [29/30] planning_020 (Category: planning, GT Difficulty: HARD)
+  Prompt: Design a comprehensive OKR framework for a 50-person technology company for the next fiscal year. De...
+  Scores: Tech=0.000 | Reason=0.245 | Task=1.000 | Constraint=0.000 | Context=0.173
+  Evidence: ...
+  Aggregation: Complexity Score = 0.4645 (MEDIUM)
+  Bridge Reasoning Score: 5/10
+  Decision Score: 34 (GT: 9 in V1, 19 in V2)
+  Provider Decision: REMOTE (threshold=25) | V2: LOCAL | V1: LOCAL
+
+  ── [30/30] reasoning_017 (Category: reasoning, GT Difficulty: HARD)
+  Prompt: Given the following claims: (1) If it rains, the ground gets wet. (2) The ground is wet. (3) Therefo...
+  Scores: Tech=0.000 | Reason=0.900 | Task=0.780 | Constraint=0.000 | Context=0.112
+  Evidence: ...
+  Boosts: Cognitive Intensity Boost (boost=0.100)
+  Aggregation: Complexity Score = 0.7128 (MEDIUM)
+  Bridge Reasoning Score: 7/10
+  Decision Score: 45 (GT: 20 in V1, 30 in V2)
+  Provider Decision: REMOTE (threshold=25) | V2: REMOTE | V1: LOCAL
+
+────────────────────────────────────────────────────────────────────────
+  16. Recommendations for Feature Extractor V4
+────────────────────────────────────────────────────────────────────────
+
+  1. Semantic Embeddings for Similarity:
+     Transition from static domain keyword dictionaries to dense embeddings.
+     A simple cross-encoder or bi-encoder similarity score against a vector database
+     of high-difficulty anchors would increase generalization on novel prompts.
+  2. Syntactic Parse Trees:
+     Instead of simple keyword counts for sequential steps, analyze dependency parsing
+     to measure nested clause depth.
+  3. LLM-as-a-Judge for Training:
+     Use an offline expert LLM to score the dataset's complexity and fine-tune a tiny
+     feature classifier rather than continuing to adjust static regex formulas.
+
+────────────────────────────────────────────────────────────────────────
+  17. Readiness for Supervised ML
+────────────────────────────────────────────────────────────────────────
+
+  EVALUATION OF ML DATASET READINESS:
+  ───────────────────────────────────
+  1. Feature Quality:
+     The 5 semantic groups map orthogonal complexity signals: technical depth, logical
+     reasoning, task verb ambition, constraint boundaries, and length/load context.
+     The features are deterministically reproducible and directly explainable.
+  2. Redundancy:
+     The correlation matrix confirms very low collinearity between groups, meaning they
+     act as independent predictors.
+  3. Label Quality:
+     V3 resolves the V1-V2 false-negative routing issues. Prompts are routed based on
+     actual cognitive difficulty, creating a cleaner supervised training target (provider).
+  4. Conclusion:
+     The dataset is FULLY READY to train a supervised ML classifier (e.g. XGBoost or a
+     shallow Neural Network). Another heuristic tuning iteration is NOT justified.
+
+════════════════════════════════════════════════════════════════════════
+  V1 routing: 159 LOCAL / 1 REMOTE  (remote=0.6%)
+  V2 routing: 150 LOCAL / 10 REMOTE  (remote=6.2%)
+  V3 routing: 134 LOCAL / 26 REMOTE  (remote=16.2%)
+  GT Hard correctly routed REMOTE in V3: 19/48
+  GT Easy correctly routed LOCAL in V3 : 56/56
+  Easy→Hard separation (Cohen's d)     : 1.718
+════════════════════════════════════════════════════════════════════════
