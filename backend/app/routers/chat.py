@@ -24,7 +24,7 @@ from app.schemas import ChatRequest, ChatResponse
 from app.services import ollama
 from app.services import remote_llm
 from app.services.feature_extractor import extract_features
-from app.services.router import route
+from app.services.ml_router import route
 from app.services.stats_tracker import stats as stats_tracker
 
 logger = logging.getLogger(__name__)
@@ -103,7 +103,8 @@ async def chat(request: ChatRequest) -> ChatResponse:
 
         logger.info(
             f"[{prompt_id}] Provider={provider} | "
-            f"Confidence={route_result['confidence']} | "
+            f"Confidence={route_result['prediction_confidence']} | "
+            f"RoutingMethod={route_result['routing_method']} | "
             f"ProviderMs={provider_ms}ms | TotalMs={total_ms}ms | "
             f"Fallback={fallback_used}"
         )
@@ -114,16 +115,18 @@ async def chat(request: ChatRequest) -> ChatResponse:
         stats_tracker.record(
             provider=provider,
             latency_ms=total_ms,
-            confidence=route_result["confidence"],
+            confidence=route_result["prediction_confidence"],
             estimated_input_tokens=estimated_input_tokens,
             fallback_used=fallback_used,
+            routing_method=route_result["routing_method"],
         )
 
         return ChatResponse(
             answer=answer,
             provider=provider,
+            selected_provider=provider,
             routing_score=route_result["routing_score"],
-            confidence=route_result["confidence"],
+            confidence=route_result["prediction_confidence"],
             reason=route_result["reason"],
             latency=total_ms,
             features=features,
@@ -132,6 +135,10 @@ async def chat(request: ChatRequest) -> ChatResponse:
             estimated_input_tokens=estimated_input_tokens,
             fallback_used=fallback_used,
             prompt_id=prompt_id,
+            prediction_probability=route_result["prediction_probability"],
+            prediction_confidence=route_result["prediction_confidence"],
+            model_version=route_result["model_version"],
+            routing_method=route_result["routing_method"],
         )
 
     except ValueError as exc:

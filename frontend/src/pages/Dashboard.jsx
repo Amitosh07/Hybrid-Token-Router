@@ -2,9 +2,11 @@ import {
   FiClock,
   FiCloud,
   FiCpu,
+  FiGitBranch,
   FiRefreshCw,
   FiSend,
   FiTarget,
+  FiTrendingUp,
 } from 'react-icons/fi';
 import MetricCard from '../components/MetricCard.jsx';
 import StatsSkeleton from '../components/StatsSkeleton.jsx';
@@ -16,15 +18,52 @@ export default function Dashboard({ stats, onRefresh }) {
   const totalReqs = data.total_requests ?? 0;
   const localReqs = data.local_requests ?? 0;
   const remoteReqs = data.remote_requests ?? 0;
+  const mlPredictions = data.ml_predictions ?? 0;
+  const heuristicFallbacks = data.heuristic_fallbacks ?? data.fallback_count ?? 0;
   const localShare = totalReqs ? Math.round((localReqs / totalReqs) * 100) : 0;
   const remoteShare = totalReqs ? Math.round((remoteReqs / totalReqs) * 100) : 0;
 
   const metrics = [
     {
+      icon: FiGitBranch,
+      label: 'Current Router',
+      value: data.current_router || 'ML Router',
+      sublabel: 'Active decision path for the latest request',
+      tone: 'accent',
+    },
+    {
+      icon: FiTarget,
+      label: 'Prediction Confidence',
+      value: formatPercent(data.average_prediction_confidence ?? data.average_confidence ?? 0),
+      sublabel: 'Average confidence from live routing decisions',
+      tone: 'success',
+    },
+    {
+      icon: FiCpu,
+      label: 'Total ML Predictions',
+      value: formatNumber(mlPredictions),
+      sublabel: 'Requests decided by the trained ML router',
+      tone: 'success',
+    },
+    {
+      icon: FiGitBranch,
+      label: 'Heuristic Fallbacks',
+      value: formatNumber(heuristicFallbacks),
+      sublabel: 'Requests protected by fallback routing',
+      tone: 'warning',
+    },
+    {
       icon: FiSend,
       label: 'Total Requests',
       value: formatNumber(totalReqs),
       sublabel: 'Prompts routed through the system',
+      tone: 'accent',
+    },
+    {
+      icon: FiTrendingUp,
+      label: 'Routing Distribution',
+      value: `${localShare}% / ${remoteShare}%`,
+      sublabel: `${formatNumber(localReqs)} local, ${formatNumber(remoteReqs)} remote`,
       tone: 'accent',
     },
     {

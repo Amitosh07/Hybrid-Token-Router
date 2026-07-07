@@ -45,11 +45,16 @@ export function useChat({ onToast, onSuccess }) {
       const routingAnalytics = {
         // Core identity
         provider,
+        selected_provider: response.selected_provider || provider,
         model: provider,
         // Latency — backend already sends milliseconds
         latency: response.latency,
         // Confidence in [0,1]
-        confidence: response.confidence,
+        confidence: response.prediction_confidence ?? response.confidence,
+        prediction_probability: response.prediction_probability,
+        prediction_confidence: response.prediction_confidence ?? response.confidence,
+        model_version: response.model_version,
+        routing_method: response.routing_method,
         // Routing engine output
         routing_score: response.routing_score,
         reason: response.reason,

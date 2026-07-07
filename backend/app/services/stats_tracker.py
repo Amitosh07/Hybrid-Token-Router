@@ -43,6 +43,8 @@ class _StatsTracker:
         self._local_requests: int = 0
         self._remote_requests: int = 0
         self._fallback_count: int = 0
+        self._ml_predictions: int = 0
+        self._heuristic_fallbacks: int = 0
 
         # Running sums (divided by total_requests for averages)
         self._sum_latency_ms: float = 0.0
@@ -50,6 +52,7 @@ class _StatsTracker:
 
         # Current state
         self._last_provider: str = "none"
+        self._last_router: str = "ML Router"
 
     # ------------------------------------------------------------------
     # Write
@@ -63,6 +66,7 @@ class _StatsTracker:
         confidence: float,
         estimated_input_tokens: int = 0,
         fallback_used: bool = False,
+        routing_method: str = "ML",
     ) -> None:
         """Record one completed request.
 
@@ -72,12 +76,14 @@ class _StatsTracker:
             confidence:             Router confidence in [0, 1].
             estimated_input_tokens: Token estimate (stored but not used for cost).
             fallback_used:          True when local timed out and remote was used.
+            routing_method:         "ML" or "Heuristic Fallback".
         """
         with self._lock:
             self._total_requests += 1
             self._sum_latency_ms += latency_ms
             self._sum_confidence += confidence
             self._last_provider = provider
+            self._last_router = "ML Router" if routing_method == "ML" else "Heuristic Fallback"
 
             if provider == "local":
                 self._local_requests += 1
@@ -86,6 +92,11 @@ class _StatsTracker:
 
             if fallback_used:
                 self._fallback_count += 1
+
+            if routing_method == "ML":
+                self._ml_predictions += 1
+            else:
+                self._heuristic_fallbacks += 1
 
     # ------------------------------------------------------------------
     # Read
@@ -101,12 +112,20 @@ class _StatsTracker:
 
             return {
                 "current_provider": self._last_provider,
+                "current_router": self._last_router,
                 "total_requests": total,
                 "local_requests": self._local_requests,
                 "remote_requests": self._remote_requests,
                 "fallback_count": self._fallback_count,
+                "ml_predictions": self._ml_predictions,
+                "heuristic_fallbacks": self._heuristic_fallbacks,
                 "average_latency_ms": avg_latency,
                 "average_confidence": avg_confidence,
+                "average_prediction_confidence": avg_confidence,
+                "routing_distribution": {
+                    "local": self._local_requests,
+                    "remote": self._remote_requests,
+                },
                 "uptime_seconds": uptime,
             }
 

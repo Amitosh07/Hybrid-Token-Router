@@ -8,6 +8,7 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     answer: str
     provider: str
+    selected_provider: str = ""
     routing_score: int = 0
     confidence: float = 0
     reason: list[str] = Field(default_factory=list)
@@ -22,6 +23,10 @@ class ChatResponse(BaseModel):
     # incorrect metric.
     fallback_used: bool = False
     prompt_id: str = ""
+    prediction_probability: float = 0
+    prediction_confidence: float = 0
+    model_version: str = ""
+    routing_method: str = ""
 
 
 class HealthResponse(BaseModel):
@@ -29,14 +34,28 @@ class HealthResponse(BaseModel):
     service: str
 
 
+class PredictResponse(BaseModel):
+    selected_provider: str
+    prediction_probability: float
+    prediction_confidence: float
+    model_version: str
+    routing_method: str
+    feature_contributions: list[dict] = Field(default_factory=list)
+
+
 class StatsResponse(BaseModel):
     current_provider: str
+    current_router: str
     total_requests: int
     local_requests: int
     remote_requests: int
     fallback_count: int
+    ml_predictions: int
+    heuristic_fallbacks: int
     average_latency_ms: float
     average_confidence: float
+    average_prediction_confidence: float
+    routing_distribution: dict[str, int] = Field(default_factory=dict)
     # estimated_cost_saved removed: see ChatResponse note above.
     router_version: str
     uptime_seconds: float

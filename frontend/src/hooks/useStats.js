@@ -3,12 +3,17 @@ import { fetchStats } from '../services/api.js';
 
 const initialStats = {
   current_provider: 'none',
+  current_router: 'ML Router',
   total_requests: 0,
   local_requests: 0,
   remote_requests: 0,
   fallback_count: 0,
+  ml_predictions: 0,
+  heuristic_fallbacks: 0,
   average_latency_ms: 0,
   average_confidence: 0,
+  average_prediction_confidence: 0,
+  routing_distribution: { local: 0, remote: 0 },
   router_version: '--',
   uptime_seconds: 0,
   timestamp: null,
