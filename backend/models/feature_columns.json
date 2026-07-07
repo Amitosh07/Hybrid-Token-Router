@@ -1,0 +1,15 @@
+[
+  "prompt_length",
+  "contains_code",
+  "contains_math",
+  "contains_json",
+  "contains_markdown",
+  "contains_numbers",
+  "contains_question",
+  "reasoning_score",
+  "technical_complexity",
+  "reasoning_depth",
+  "task_complexity",
+  "constraint_complexity",
+  "context_complexity"
+]

@@ -1,0 +1,775 @@
+{
+  "artifact_paths": {
+    "feature_columns": "C:\\Users\\Amitosh Nigam\\Desktop\\Hybrid-Token-Router\\backend\\models\\feature_columns.json",
+    "model": "C:\\Users\\Amitosh Nigam\\Desktop\\Hybrid-Token-Router\\backend\\models\\router_model.pkl",
+    "preprocessor": "C:\\Users\\Amitosh Nigam\\Desktop\\Hybrid-Token-Router\\backend\\models\\preprocessor.pkl"
+  },
+  "best_model": "Gradient Boosting",
+  "best_model_result": {
+    "cross_validation": {
+      "accuracy": {
+        "folds": [
+          0.742188,
+          0.757812,
+          0.695312,
+          0.671875,
+          0.695312
+        ],
+        "mean": 0.7125,
+        "std": 0.032174
+      },
+      "f1": {
+        "folds": [
+          0.839024,
+          0.851675,
+          0.815166,
+          0.79,
+          0.815166
+        ],
+        "mean": 0.822206,
+        "std": 0.02139
+      },
+      "precision": {
+        "folds": [
+          0.788991,
+          0.787611,
+          0.747826,
+          0.759615,
+          0.741379
+        ],
+        "mean": 0.765084,
+        "std": 0.019843
+      },
+      "recall": {
+        "folds": [
+          0.895833,
+          0.927083,
+          0.895833,
+          0.822917,
+          0.905263
+        ],
+        "mean": 0.889386,
+        "std": 0.035141
+      },
+      "roc_auc": {
+        "folds": [
+          0.659831,
+          0.70459,
+          0.630371,
+          0.606934,
+          0.682775
+        ],
+        "mean": 0.6569,
+        "std": 0.03508
+      }
+    },
+    "estimator": "GradientBoostingClassifier",
+    "test_metrics": {
+      "accuracy": 0.703125,
+      "confusion_matrix": [
+        [
+          4,
+          28
+        ],
+        [
+          10,
+          86
+        ]
+      ],
+      "f1": 0.819048,
+      "precision": 0.754386,
+      "prediction_latency_ms_per_sample": 0.017312,
+      "recall": 0.895833,
+      "roc_auc": 0.610677
+    },
+    "train_metrics": {
+      "accuracy": 0.888672,
+      "confusion_matrix": [
+        [
+          77,
+          52
+        ],
+        [
+          5,
+          378
+        ]
+      ],
+      "f1": 0.929889,
+      "precision": 0.87907,
+      "prediction_latency_ms_per_sample": 0.005264,
+      "recall": 0.986945,
+      "roc_auc": 0.942842
+    },
+    "training_seconds": 0.122186
+  },
+  "class_distribution": {
+    "LOCAL": 161,
+    "REMOTE": 479
+  },
+  "dataset_path": "C:\\Users\\Amitosh Nigam\\Desktop\\Hybrid-Token-Router\\backend\\app\\data\\training\\training_dataset.csv",
+  "dataset_rows": 640,
+  "misclassified_examples": [
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.854202,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 1.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.1424,
+        "prompt_length": 435.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 1.0,
+        "task_complexity": 0.31,
+        "technical_complexity": 0.0
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Provide a comprehensive, technical explanation of the aerodynamic and fluid dynamics principles governing the design of modern offshore wind turbine rotors. Detail the lift and drag forces acting on the blades, the blade element momentum (B",
+      "prompt_id": "general_070"
+    },
+    {
+      "actual_label": "REMOTE",
+      "confidence": 0.688231,
+      "features": {
+        "constraint_complexity": 0.12,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 0.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.1267,
+        "prompt_length": 350.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 2.0,
+        "task_complexity": 0.3,
+        "technical_complexity": 0.35
+      },
+      "predicted_label": "LOCAL",
+      "prompt": "Translate this highly technical scientific paper extract about semiconductor fabrication from English to Japanese. The translation must utilize the exact academic and industry terminology for physical vapor deposition, photolithography, sub",
+      "prompt_id": "translation_062"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.855693,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 1.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.0683,
+        "prompt_length": 131.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 1.0,
+        "task_complexity": 0.25,
+        "technical_complexity": 0.0
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Provide a simple packing checklist for a 3-day summer weekend trip to a beach resort, listing essentials, clothing, and toiletries.",
+      "prompt_id": "planning_022"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.982737,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 1.0,
+        "contains_numbers": 1.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.0251,
+        "prompt_length": 26.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 3.0,
+        "task_complexity": 0.78,
+        "technical_complexity": 0.0
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Solve for x: 5x - 12 = 28.",
+      "prompt_id": "mathematics_001"
+    },
+    {
+      "actual_label": "REMOTE",
+      "confidence": 0.564926,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 1.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 0.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.1768,
+        "prompt_length": 218.0,
+        "reasoning_depth": 0.2646,
+        "reasoning_score": 6.0,
+        "task_complexity": 0.65,
+        "technical_complexity": 0.95
+      },
+      "predicted_label": "LOCAL",
+      "prompt": "Evaluate the implications of the halting problem in computer science on the feasibility of writing a perfect static analysis tool that guarantees memory safety and deadlock absence in arbitrary multi-threaded programs.",
+      "prompt_id": "reasoning_074"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.503456,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 0.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.139,
+        "prompt_length": 413.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 2.0,
+        "task_complexity": 0.41,
+        "technical_complexity": 0.175
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Provide a detailed scientific explanation of the geological and geophysical processes driving the formation and migration of hydrocarbons in sedimentary basins. Trace the organic matter deposition, thermal maturation (diagenesis, catagenesi",
+      "prompt_id": "general_072"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.919495,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 0.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.1473,
+        "prompt_length": 465.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 2.0,
+        "task_complexity": 0.41,
+        "technical_complexity": 0.0
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Provide a detailed, rigorous explanation of the physical and mechanical principles of operation of a multi-stage industrial gas turbine. Detail the thermodynamic transformations (Brayton cycle), the aerodynamic design of the compressor and ",
+      "prompt_id": "general_062"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.645027,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 0.0,
+        "contains_question": 1.0,
+        "context_complexity": 0.1693,
+        "prompt_length": 171.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 2.0,
+        "task_complexity": 0.48,
+        "technical_complexity": 0.0
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Explain the mechanics of how a GPS receiver determines its precise location on Earth using trilateration, clock synchronization, and signals from at least four satellites.",
+      "prompt_id": "general_055"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.615463,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 0.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.0813,
+        "prompt_length": 170.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 1.0,
+        "task_complexity": 0.25,
+        "technical_complexity": 0.0
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Draft a creative exchange of letters between two rival astronomers in the 18th century, each claiming to have discovered the same comet first. Maintain historical syntax.",
+      "prompt_id": "creative_writing_050"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.670823,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 0.0,
+        "contains_question": 1.0,
+        "context_complexity": 0.0825,
+        "prompt_length": 176.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 2.0,
+        "task_complexity": 0.48,
+        "technical_complexity": 0.0
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Explain the physiological effects of chronic stress on the human endocrine system, tracing the activation of the hypothalamic-pituitary-adrenal (HPA) axis and cortisol release.",
+      "prompt_id": "general_057"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.903462,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 0.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.0611,
+        "prompt_length": 112.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 1.0,
+        "task_complexity": 0.2,
+        "technical_complexity": 0.0
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Translate this status update from English to Italian: 'Your order has been shipped and will arrive by Thursday.'",
+      "prompt_id": "translation_035"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.545176,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 0.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.0942,
+        "prompt_length": 213.0,
+        "reasoning_depth": 0.291,
+        "reasoning_score": 3.0,
+        "task_complexity": 0.65,
+        "technical_complexity": 0.0
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Analyze the ethical, legal, and systemic safety implications of deploying autonomous weapons systems equipped with computer vision for target selection. Address accountability gaps and human-in-the-loop overrides.",
+      "prompt_id": "reasoning_066"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.910765,
+      "features": {
+        "constraint_complexity": 0.18,
+        "contains_code": 1.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 0.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.1739,
+        "prompt_length": 218.0,
+        "reasoning_depth": 0.245,
+        "reasoning_score": 6.0,
+        "task_complexity": 0.65,
+        "technical_complexity": 0.95
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Write a C++ class implementing a lock-free Compare-and-Swap (CAS) based queue. Define structure for node pointers, atomic operations, enqueue/dequeue methods, and handle memory allocation safety under high concurrency.",
+      "prompt_id": "coding_079"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.632188,
+      "features": {
+        "constraint_complexity": 0.12,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 1.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.1741,
+        "prompt_length": 301.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 1.0,
+        "task_complexity": 0.2,
+        "technical_complexity": 0.1875
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Translate this clinical trial protocol summary from English to Traditional Chinese, focusing on eligibility criteria and primary outcome measures: 'Eligible participants must be aged 18 to 65 with a documented history of chronic hypertensio",
+      "prompt_id": "translation_056"
+    },
+    {
+      "actual_label": "LOCAL",
+      "confidence": 0.785028,
+      "features": {
+        "constraint_complexity": 0.0,
+        "contains_code": 0.0,
+        "contains_json": 0.0,
+        "contains_markdown": 0.0,
+        "contains_math": 0.0,
+        "contains_numbers": 1.0,
+        "contains_question": 0.0,
+        "context_complexity": 0.0776,
+        "prompt_length": 158.0,
+        "reasoning_depth": 0.0,
+        "reasoning_score": 1.0,
+        "task_complexity": 0.31,
+        "technical_complexity": 0.0
+      },
+      "predicted_label": "REMOTE",
+      "prompt": "Create a comprehensive plan for a software company to run a beta test program for 200 external users, including feedback collection channels and bug tracking.",
+      "prompt_id": "planning_056"
+    }
+  ],
+  "model_results": {
+    "Gradient Boosting": {
+      "cross_validation": {
+        "accuracy": {
+          "folds": [
+            0.742188,
+            0.757812,
+            0.695312,
+            0.671875,
+            0.695312
+          ],
+          "mean": 0.7125,
+          "std": 0.032174
+        },
+        "f1": {
+          "folds": [
+            0.839024,
+            0.851675,
+            0.815166,
+            0.79,
+            0.815166
+          ],
+          "mean": 0.822206,
+          "std": 0.02139
+        },
+        "precision": {
+          "folds": [
+            0.788991,
+            0.787611,
+            0.747826,
+            0.759615,
+            0.741379
+          ],
+          "mean": 0.765084,
+          "std": 0.019843
+        },
+        "recall": {
+          "folds": [
+            0.895833,
+            0.927083,
+            0.895833,
+            0.822917,
+            0.905263
+          ],
+          "mean": 0.889386,
+          "std": 0.035141
+        },
+        "roc_auc": {
+          "folds": [
+            0.659831,
+            0.70459,
+            0.630371,
+            0.606934,
+            0.682775
+          ],
+          "mean": 0.6569,
+          "std": 0.03508
+        }
+      },
+      "estimator": "GradientBoostingClassifier",
+      "test_metrics": {
+        "accuracy": 0.703125,
+        "confusion_matrix": [
+          [
+            4,
+            28
+          ],
+          [
+            10,
+            86
+          ]
+        ],
+        "f1": 0.819048,
+        "precision": 0.754386,
+        "prediction_latency_ms_per_sample": 0.017312,
+        "recall": 0.895833,
+        "roc_auc": 0.610677
+      },
+      "train_metrics": {
+        "accuracy": 0.888672,
+        "confusion_matrix": [
+          [
+            77,
+            52
+          ],
+          [
+            5,
+            378
+          ]
+        ],
+        "f1": 0.929889,
+        "precision": 0.87907,
+        "prediction_latency_ms_per_sample": 0.005264,
+        "recall": 0.986945,
+        "roc_auc": 0.942842
+      },
+      "training_seconds": 0.122186
+    },
+    "Logistic Regression": {
+      "cross_validation": {
+        "accuracy": {
+          "folds": [
+            0.546875,
+            0.59375,
+            0.601562,
+            0.59375,
+            0.640625
+          ],
+          "mean": 0.595313,
+          "std": 0.029811
+        },
+        "f1": {
+          "folds": [
+            0.670455,
+            0.704545,
+            0.711864,
+            0.694118,
+            0.741573
+          ],
+          "mean": 0.704511,
+          "std": 0.023219
+        },
+        "precision": {
+          "folds": [
+            0.7375,
+            0.775,
+            0.777778,
+            0.797297,
+            0.795181
+          ],
+          "mean": 0.776551,
+          "std": 0.021477
+        },
+        "recall": {
+          "folds": [
+            0.614583,
+            0.645833,
+            0.65625,
+            0.614583,
+            0.694737
+          ],
+          "mean": 0.645197,
+          "std": 0.029837
+        },
+        "roc_auc": {
+          "folds": [
+            0.587565,
+            0.554036,
+            0.55485,
+            0.560221,
+            0.635088
+          ],
+          "mean": 0.578352,
+          "std": 0.030907
+        }
+      },
+      "estimator": "LogisticRegression",
+      "test_metrics": {
+        "accuracy": 0.554688,
+        "confusion_matrix": [
+          [
+            16,
+            16
+          ],
+          [
+            41,
+            55
+          ]
+        ],
+        "f1": 0.658683,
+        "precision": 0.774648,
+        "prediction_latency_ms_per_sample": 0.023346,
+        "recall": 0.572917,
+        "roc_auc": 0.59082
+      },
+      "train_metrics": {
+        "accuracy": 0.634766,
+        "confusion_matrix": [
+          [
+            72,
+            57
+          ],
+          [
+            130,
+            253
+          ]
+        ],
+        "f1": 0.730159,
+        "precision": 0.816129,
+        "prediction_latency_ms_per_sample": 0.006395,
+        "recall": 0.660574,
+        "roc_auc": 0.646366
+      },
+      "training_seconds": 0.014294
+    },
+    "Random Forest": {
+      "cross_validation": {
+        "accuracy": {
+          "folds": [
+            0.640625,
+            0.671875,
+            0.664062,
+            0.570312,
+            0.710938
+          ],
+          "mean": 0.651563,
+          "std": 0.046509
+        },
+        "f1": {
+          "folds": [
+            0.75,
+            0.764045,
+            0.759777,
+            0.678363,
+            0.793296
+          ],
+          "mean": 0.749096,
+          "std": 0.038197
+        },
+        "precision": {
+          "folds": [
+            0.784091,
+            0.829268,
+            0.819277,
+            0.773333,
+            0.845238
+          ],
+          "mean": 0.810242,
+          "std": 0.027256
+        },
+        "recall": {
+          "folds": [
+            0.71875,
+            0.708333,
+            0.708333,
+            0.604167,
+            0.747368
+          ],
+          "mean": 0.69739,
+          "std": 0.048753
+        },
+        "roc_auc": {
+          "folds": [
+            0.656576,
+            0.661133,
+            0.649577,
+            0.622396,
+            0.701435
+          ],
+          "mean": 0.658223,
+          "std": 0.025443
+        }
+      },
+      "estimator": "RandomForestClassifier",
+      "test_metrics": {
+        "accuracy": 0.609375,
+        "confusion_matrix": [
+          [
+            11,
+            21
+          ],
+          [
+            29,
+            67
+          ]
+        ],
+        "f1": 0.728261,
+        "precision": 0.761364,
+        "prediction_latency_ms_per_sample": 0.832916,
+        "recall": 0.697917,
+        "roc_auc": 0.621419
+      },
+      "train_metrics": {
+        "accuracy": 0.912109,
+        "confusion_matrix": [
+          [
+            124,
+            5
+          ],
+          [
+            40,
+            343
+          ]
+        ],
+        "f1": 0.93844,
+        "precision": 0.985632,
+        "prediction_latency_ms_per_sample": 0.228477,
+        "recall": 0.895561,
+        "roc_auc": 0.98401
+      },
+      "training_seconds": 0.966234
+    }
+  },
+  "pipeline_version": "phase_3_supervised_router_v1",
+  "removed_columns": {
+    "missing_required": [],
+    "non_production_metadata": [
+      "category",
+      "difficulty",
+      "expected_reasoning",
+      "prompt",
+      "prompt_id"
+    ],
+    "target_leakage": [
+      "local_cost",
+      "local_latency_ms",
+      "local_quality_score",
+      "remote_cost",
+      "remote_latency_ms",
+      "remote_quality_score"
+    ]
+  },
+  "removed_model_features": [
+    "complexity_score",
+    "estimated_input_tokens",
+    "word_count"
+  ],
+  "selected_feature_columns": [
+    "prompt_length",
+    "contains_code",
+    "contains_math",
+    "contains_json",
+    "contains_markdown",
+    "contains_numbers",
+    "contains_question",
+    "reasoning_score",
+    "technical_complexity",
+    "reasoning_depth",
+    "task_complexity",
+    "constraint_complexity",
+    "context_complexity"
+  ]
+}

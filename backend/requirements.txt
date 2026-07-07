@@ -1,8 +1,12 @@
 fastapi==0.115.4
 httpx==0.27.2
+joblib==1.5.3
+matplotlib==3.10.5
+pandas==2.3.2
 pydantic==2.9.2
 pytest==8.3.3
 requests==2.32.3
+scikit-learn==1.9.0
+seaborn==0.13.2
 sqlalchemy==2.0.36
 uvicorn==0.32.0
-
