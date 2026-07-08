@@ -4,13 +4,13 @@ The Decision Engine labels in `training_dataset.csv` are treated as the offline 
 
 ## Summary Metrics
 
-- Heuristic Router accuracy vs Decision Engine: 0.3203
-- ML Router accuracy vs Decision Engine: 0.8516
-- Heuristic and ML agreement: 0.2219
-- Heuristic average prediction latency: 1.219870 ms
-- ML average prediction latency: 6.794597 ms
-- Heuristic average confidence: 0.5813
-- ML average confidence: 0.7975
+- Heuristic Router accuracy vs Decision Engine: 0.3212
+- ML Router accuracy vs Decision Engine: 0.9320
+- Heuristic and ML agreement: 0.2668
+- Heuristic average prediction latency: 1.959997 ms
+- ML average prediction latency: 195.197704 ms
+- Heuristic average confidence: 0.4856
+- ML average confidence: 0.8865
 
 ## Strengths
 
@@ -26,29 +26,29 @@ The Decision Engine labels in `training_dataset.csv` are treated as the offline 
 
 ## Heuristic Misclassifications
 
-- `coding_001`: actual `REMOTE`, predicted `LOCAL`. Prompt: Write a Python function that takes a list of integers and returns the sum of all even numbers.
-- `coding_002`: actual `REMOTE`, predicted `LOCAL`. Prompt: Write a SQL query to select all rows from a table named 'employees' where the department is 'Engineering'.
-- `coding_003`: actual `REMOTE`, predicted `LOCAL`. Prompt: Write a Python function that reverses a string without using the built-in reverse method.
-- `coding_004`: actual `REMOTE`, predicted `LOCAL`. Prompt: Write a JavaScript function that checks whether a given number is prime.
-- `coding_005`: actual `REMOTE`, predicted `LOCAL`. Prompt: Write a Python function that counts the number of vowels in a given string.
-- `coding_006`: actual `REMOTE`, predicted `LOCAL`. Prompt: Write a SQL query that returns the total number of orders placed by each customer, ordered by order count descending.
-- `coding_007`: actual `REMOTE`, predicted `LOCAL`. Prompt: Write a Python function that returns the factorial of a non-negative integer using a loop.
-- `coding_009`: actual `REMOTE`, predicted `LOCAL`. Prompt: Write a Python class that implements a stack data structure using a list, with push, pop, peek, and is_empty methods.
-- `coding_010`: actual `REMOTE`, predicted `LOCAL`. Prompt: Write a SQL query that finds all customers who placed more than three orders in the last 90 days, returning their name and order count.
-- `coding_011`: actual `REMOTE`, predicted `LOCAL`. Prompt: Debug the following Python function that is meant to flatten a nested list but raises a RecursionError for deeply nested inputs. Provide a fix using an iterative approach.
+- `gen_000001`: actual `REMOTE`, predicted `LOCAL`. Prompt: Write production-ready code for a clinical operations team that processes a triage protocol involving patient cohort and handles privacy exposure. Format the response as plain paragraphs. Keep the ans
+- `gen_000006`: actual `LOCAL`, predicted `REMOTE`. Prompt: Compose a reflective story in which patient cohort becomes a symbol for changing wait time. Format the response as numbered steps. Compare risks, trade-offs, and mitigations. Return the core result us
+- `gen_000010`: actual `LOCAL`, predicted `REMOTE`. Prompt: Design a phased rollout for appointment workflow adoption across teams that depend on nurse queue. Include a realistic constraint and one exception case. Format the response as markdown table. Address
+- `gen_000011`: actual `LOCAL`, predicted `REMOTE`. Prompt: Analyze whether a patient safety committee should prioritize triage protocol improvements or direct mitigation of audit failure. Include a realistic constraint and one exception case. Format the respo
+- `gen_000018`: actual `LOCAL`, predicted `REMOTE`. Prompt: Design a phased rollout for consent form adoption across teams that depend on specialist referral. Include interacting constraints, uncertainty, and second-order effects. Format the response as YAML b
+- `gen_000019`: actual `LOCAL`, predicted `REMOTE`. Prompt: Analyze whether a patient safety committee should prioritize appointment workflow improvements or direct mitigation of care delay. Include interacting constraints, uncertainty, and second-order effect
+- `gen_000020`: actual `LOCAL`, predicted `REMOTE`. Prompt: Translate this operational notice about care delay into French for stakeholders using appointment workflow. Include interacting constraints, uncertainty, and second-order effects. Format the response 
+- `gen_000022`: actual `LOCAL`, predicted `REMOTE`. Prompt: Compose a reflective story in which EHR record becomes a symbol for changing readmission rate. Include interacting constraints, uncertainty, and second-order effects. Format the response as short exec
+- `gen_000023`: actual `LOCAL`, predicted `REMOTE`. Prompt: Explain how a claims feed affects readmission rate, audit failure, and day-to-day decisions for a patient safety committee. Include interacting constraints, uncertainty, and second-order effects. Form
+- `gen_000024`: actual `LOCAL`, predicted `REMOTE`. Prompt: Compute the break-even threshold for a claims feed when audit failure adds a variable cost to each EHR record. Include interacting constraints, uncertainty, and second-order effects. Format the respon
 
 ## ML Misclassifications
 
-- `coding_021`: actual `LOCAL`, predicted `REMOTE`. Prompt: Write a Python function to check if a dictionary contains a specific key and return its value, defaulting to None if missing.
-- `coding_027`: actual `LOCAL`, predicted `REMOTE`. Prompt: Write a TypeScript interface definition for a User object containing id, username, email, active status, and optional profile fields.
-- `coding_036`: actual `LOCAL`, predicted `REMOTE`. Prompt: Write a Python function to check if a word is a palindrome, ignoring capitalization and non-alphanumeric characters.
-- `coding_079`: actual `LOCAL`, predicted `REMOTE`. Prompt: Write a C++ class implementing a lock-free Compare-and-Swap (CAS) based queue. Define structure for node pointers, atomic operations, enqueue/dequeue methods, and handle memory allocation safety under
-- `coding_080`: actual `LOCAL`, predicted `REMOTE`. Prompt: Write a Python script that parses a huge JSON dump (10GB) using stream processing techniques (like ijson or generator pipelines) to count frequency of specific nested key values, minimizing memory foo
-- `creative_writing_043`: actual `LOCAL`, predicted `REMOTE`. Prompt: Compose a sonnet (14 lines, ABAB CDCD EFEF GG rhyme scheme) exploring the theme of memory decay and digital archiving. The language should be rich and atmospheric.
-- `creative_writing_047`: actual `LOCAL`, predicted `REMOTE`. Prompt: Write a story chapter describing a character's journey through a dense forest that changes its layout based on the traveler's emotional state. Focus on psychological depth and nature metaphors.
-- `creative_writing_050`: actual `LOCAL`, predicted `REMOTE`. Prompt: Draft a creative exchange of letters between two rival astronomers in the 18th century, each claiming to have discovered the same comet first. Maintain historical syntax.
-- `creative_writing_055`: actual `LOCAL`, predicted `REMOTE`. Prompt: Compose a poem exploring the physical structures and architectural shapes of an abandoned industrial steel mill being reclaimed by nature.
-- `creative_writing_056`: actual `LOCAL`, predicted `REMOTE`. Prompt: Write a story from the perspective of a cartographer mapping the shoreline of a coastline that shifts with each high tide, making measurement impossible.
+- `gen_000009`: actual `LOCAL`, predicted `REMOTE`. Prompt: Write production-ready code for a clinical operations team that processes a appointment workflow involving nurse queue and handles care delay. Include a realistic constraint and one exception case. Fo
+- `gen_000017`: actual `LOCAL`, predicted `REMOTE`. Prompt: Write production-ready code for a clinical operations team that processes a consent form involving specialist referral and handles incorrect dosage guidance. Include interacting constraints, uncertain
+- `gen_000021`: actual `LOCAL`, predicted `REMOTE`. Prompt: Summarize a detailed triage protocol for a clinical operations team, highlighting readmission rate, care delay, and impact on specialist referral. Include interacting constraints, uncertainty, and sec
+- `gen_000049`: actual `LOCAL`, predicted `REMOTE`. Prompt: Write production-ready code for a store operations lead that processes a customer review feed involving loyalty segment and handles stockout. Format the response as checklist. Provide enough context f
+- `gen_000073`: actual `LOCAL`, predicted `REMOTE`. Prompt: Write production-ready code for a platform engineer that processes a Terraform module involving autoscaling group and handles regional outage. Format the response as JSON object. Discuss edge cases an
+- `gen_000086`: actual `LOCAL`, predicted `REMOTE`. Prompt: Compose a reflective story in which tenant namespace becomes a symbol for changing error budget. Include a realistic constraint and one exception case. Format the response as annotated code block. Pro
+- `gen_000111`: actual `LOCAL`, predicted `REMOTE`. Prompt: Explain how a SIEM alert affects attack dwell time, privilege escalation, and day-to-day decisions for a security engineer. Include a realistic constraint and one exception case. Format the response a
+- `gen_000126`: actual `REMOTE`, predicted `LOCAL`. Prompt: Compose a reflective story in which classroom becomes a symbol for changing reading level. Format the response as numbered steps. Use enough detail to support a robust answer, including context, assum
+- `gen_000127`: actual `REMOTE`, predicted `LOCAL`. Prompt: Explain how a attendance dataset affects reading level, low engagement, and day-to-day decisions for a teacher coach. Format the response as bullet list. Use enough detail to support a robust answer, 
+- `gen_000130`: actual `REMOTE`, predicted `LOCAL`. Prompt: Design a phased rollout for course outline adoption across teams that depend on online module. Include a realistic constraint and one exception case. Format the response as markdown table. Use enough 
 
 ## Recommendation
 

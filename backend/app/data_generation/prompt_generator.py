@@ -137,9 +137,18 @@ class PromptGenerator:
 def generate_prompt_catalog(size: int, output_path: Path = PROMPT_CATALOG_PATH) -> list[dict[str, object]]:
     """Generate prompts, dedupe, validate, and write reports."""
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    rows = PromptGenerator().generate(size)
+    
+    # Generate 50% synthetic base prompts
+    base_size = max(100, size // 2)
+    base_rows = PromptGenerator().generate(base_size)
 
-    dedupe_result = Deduplicator().deduplicate(rows)
+    # Ingest, deduplicate, balance, and merge public datasets
+    from app.data_generation.dataset_importer import DatasetImporter
+    importer = DatasetImporter()
+    merged_rows = importer.load_and_merge(base_rows, target_size=size)
+
+    # Deduplicate and validate
+    dedupe_result = Deduplicator().deduplicate(merged_rows)
     validation = validate_prompts(dedupe_result.kept)
     final_rows = validation.valid_rows[:size]
 
@@ -226,6 +235,20 @@ async def _run_one(row: dict[str, object], simulate: bool = False) -> dict[str, 
         remote_task = _run_provider(prompt=prompt, provider="remote", model=get_settings().REMOTE_MODEL, generate=remote_llm.generate)
 
     local_result, remote_result = await asyncio.gather(local_task, remote_task)
+    
+    # Run LLM Evaluator
+    from app.services.llm_evaluator import LLMEvaluator
+    evaluator_instance = LLMEvaluator()
+    llm_eval = await evaluator_instance.evaluate(
+        prompt=prompt,
+        category=str(row["category"]),
+        difficulty=str(row["difficulty"]),
+        local_response=local_result.get("response"),
+        remote_response=remote_result.get("response"),
+        local_error=local_result.get("error"),
+        remote_error=remote_result.get("error"),
+    )
+
     record = {
         "id": row["prompt_id"],
         "prompt": prompt,
@@ -240,6 +263,7 @@ async def _run_one(row: dict[str, object], simulate: bool = False) -> dict[str, 
         "router": routing,
         "local": local_result,
         "remote": remote_result,
+        "llm_evaluator": llm_eval,
         "created_at": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
     }
     record["evaluation"] = evaluator.evaluate_run(record)
@@ -289,6 +313,7 @@ def write_training_dataset_large(records: list[dict[str, Any]], output_csv_path:
         "constraint_count",
         "estimated_complexity",
         "output_format",
+        # --- Lexical & Structural ---
         "prompt_length",
         "word_count",
         "estimated_input_tokens",
@@ -298,6 +323,7 @@ def write_training_dataset_large(records: list[dict[str, Any]], output_csv_path:
         "contains_markdown",
         "contains_numbers",
         "contains_question",
+        # --- Aggregation Metrics ---
         "reasoning_score",
         "technical_complexity",
         "reasoning_depth",
@@ -305,12 +331,31 @@ def write_training_dataset_large(records: list[dict[str, Any]], output_csv_path:
         "constraint_complexity",
         "context_complexity",
         "complexity_score",
+        # --- Phase 6 Features ---
+        "constraint_density",
+        "requested_format",
+        "presence_of_tables",
+        "sql_indicators",
+        "api_keywords",
+        "system_design_keywords",
+        "algorithmic_complexity",
+        "dependency_between_subtasks",
+        "multi_turn_context",
+        "code_indicators",
+        "math_indicators",
+        # --- Operational Stats & Quality Details ---
         "local_latency_ms",
         "remote_latency_ms",
         "local_cost",
         "remote_cost",
         "local_quality_score",
         "remote_quality_score",
+        "local_llm_quality",
+        "remote_llm_quality",
+        "local_heuristic_quality",
+        "remote_heuristic_quality",
+        "local_tokens",
+        "remote_tokens",
         "label",
     ]
     with output_csv_path.open("w", encoding="utf-8", newline="") as file:
@@ -347,12 +392,31 @@ def write_training_dataset_large(records: list[dict[str, Any]], output_csv_path:
                 "constraint_complexity": _score(features.get("constraint_complexity")),
                 "context_complexity": _score(features.get("context_complexity")),
                 "complexity_score": float(features.get("complexity_score", 0.0)),
+                # Phase 6 Features
+                "constraint_density": float(features.get("constraint_density", 0.0)),
+                "requested_format": str(features.get("requested_format", "text")),
+                "presence_of_tables": int(features.get("presence_of_tables", 0)),
+                "sql_indicators": int(features.get("sql_indicators", 0)),
+                "api_keywords": int(features.get("api_keywords", 0)),
+                "system_design_keywords": int(features.get("system_design_keywords", 0)),
+                "algorithmic_complexity": int(features.get("algorithmic_complexity", 0)),
+                "dependency_between_subtasks": int(features.get("dependency_between_subtasks", 0)),
+                "multi_turn_context": int(features.get("multi_turn_context", 0)),
+                "code_indicators": int(features.get("code_indicators", 0)),
+                "math_indicators": int(features.get("math_indicators", 0)),
+                # Operational Stats & Decision details
                 "local_latency_ms": int(local.get("latency_ms", 0)),
                 "remote_latency_ms": int(remote.get("latency_ms", 0)),
                 "local_cost": float(decision["local_cost"]),
                 "remote_cost": float(decision["remote_cost"]),
                 "local_quality_score": float(decision["local_quality"]),
                 "remote_quality_score": float(decision["remote_quality"]),
+                "local_llm_quality": float(decision.get("local_llm_quality", 0.0)),
+                "remote_llm_quality": float(decision.get("remote_llm_quality", 0.0)),
+                "local_heuristic_quality": float(decision.get("local_heuristic_quality", 0.0)),
+                "remote_heuristic_quality": float(decision.get("remote_heuristic_quality", 0.0)),
+                "local_tokens": int(decision.get("local_tokens", 0)),
+                "remote_tokens": int(decision.get("remote_tokens", 0)),
                 "label": decision["label"],
             })
 

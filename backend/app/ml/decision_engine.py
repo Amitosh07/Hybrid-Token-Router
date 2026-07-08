@@ -35,18 +35,10 @@ class DecisionEngine:
 
         Args:
             record: A benchmark run record containing 'local', 'remote',
-                    and 'evaluation' dicts.
+                    'evaluation', and optional 'llm_evaluator' dicts.
 
         Returns:
-            A dictionary containing:
-              - "label": "LOCAL" or "REMOTE"
-              - "local_cost": float (USD)
-              - "remote_cost": float (USD)
-              - "local_quality": float [0.0, 1.0]
-              - "remote_quality": float [0.0, 1.0]
-              - "local_utility": float
-              - "remote_utility": float
-              - "reason": str explanation
+            A dictionary containing the final label and all intermediate scores.
         """
         local_data = record.get("local") or {}
         remote_data = record.get("remote") or {}
@@ -60,36 +52,67 @@ class DecisionEngine:
         local_valid = metrics.get("structural_validity", {}).get("local_valid", True) and not local_err
         remote_valid = metrics.get("structural_validity", {}).get("remote_valid", True) and not remote_err
 
-        # Get quality scores
-        local_quality = float(metrics.get("estimated_quality", {}).get("local", {}).get("score", 0.0))
-        remote_quality = float(metrics.get("estimated_quality", {}).get("remote", {}).get("score", 0.0))
+        # Get heuristic quality scores
+        local_heur_quality = float(metrics.get("estimated_quality", {}).get("local", {}).get("score", 0.0))
+        remote_heur_quality = float(metrics.get("estimated_quality", {}).get("remote", {}).get("score", 0.0))
+
+        # Get LLM Evaluator scores
+        llm_eval = record.get("llm_evaluator") or {}
+        local_llm_quality = float(llm_eval.get("local", {}).get("overall", 0.0))
+        remote_llm_quality = float(llm_eval.get("remote", {}).get("overall", 0.0))
+
+        # Check if LLM evaluator is available, otherwise fall back to 100% heuristic quality
+        has_llm = bool(llm_eval.get("local", {}).get("overall"))
+        if has_llm:
+            local_quality = 0.6 * local_llm_quality + 0.4 * local_heur_quality
+            remote_quality = 0.6 * remote_llm_quality + 0.4 * remote_heur_quality
+        else:
+            local_quality = local_heur_quality
+            remote_quality = remote_heur_quality
+
+        # Token usage
+        local_in_tokens = int(local_data.get("estimated_input_tokens", 0))
+        local_out_tokens = int(local_data.get("estimated_output_tokens", 0))
+        remote_in_tokens = int(remote_data.get("estimated_input_tokens", 0))
+        remote_out_tokens = int(remote_data.get("estimated_output_tokens", 0))
+
+        local_total_tokens = local_in_tokens + local_out_tokens
+        remote_total_tokens = remote_in_tokens + remote_out_tokens
 
         # Re-verify error overrides
         if not local_valid and remote_valid:
-            remote_in = remote_data.get("estimated_input_tokens", 0)
-            remote_out = remote_data.get("estimated_output_tokens", 0)
             return self._decision_payload(
                 label="REMOTE",
                 local_cost=0.0,
-                remote_cost=self.calculate_cost(remote_in, remote_out, "remote"),
+                remote_cost=self.calculate_cost(remote_in_tokens, remote_out_tokens, "remote"),
                 local_quality=0.0,
                 remote_quality=remote_quality,
                 local_util=0.0,
                 remote_util=1.0,
+                local_llm=0.0,
+                remote_llm=remote_llm_quality,
+                local_heur=0.0,
+                remote_heur=remote_heur_quality,
+                local_tokens=0,
+                remote_tokens=remote_total_tokens,
                 reason="Local model encountered an error or generated empty text; remote succeeded."
             )
 
         if not remote_valid and local_valid:
-            local_in = local_data.get("estimated_input_tokens", 0)
-            local_out = local_data.get("estimated_output_tokens", 0)
             return self._decision_payload(
                 label="LOCAL",
-                local_cost=self.calculate_cost(local_in, local_out, "local"),
+                local_cost=self.calculate_cost(local_in_tokens, local_out_tokens, "local"),
                 remote_cost=0.0,
                 local_quality=local_quality,
                 remote_quality=0.0,
                 local_util=1.0,
                 remote_util=0.0,
+                local_llm=local_llm_quality,
+                remote_llm=0.0,
+                local_heur=local_heur_quality,
+                remote_heur=0.0,
+                local_tokens=local_total_tokens,
+                remote_tokens=0,
                 reason="Remote model encountered an error or generated empty text; local succeeded."
             )
 
@@ -102,6 +125,12 @@ class DecisionEngine:
                 remote_quality=0.0,
                 local_util=0.0,
                 remote_util=0.0,
+                local_llm=0.0,
+                remote_llm=0.0,
+                local_heur=0.0,
+                remote_heur=0.0,
+                local_tokens=0,
+                remote_tokens=0,
                 reason="Both providers failed or returned invalid responses; defaulting to LOCAL."
             )
 
@@ -109,83 +138,43 @@ class DecisionEngine:
         local_latency = float(local_data.get("latency_ms", 0))
         remote_latency = float(remote_data.get("latency_ms", 0))
 
-        local_in = local_data.get("estimated_input_tokens", 0)
-        local_out = local_data.get("estimated_output_tokens", 0)
-        remote_in = remote_data.get("estimated_input_tokens", 0)
-        remote_out = remote_data.get("estimated_output_tokens", 0)
-
-        local_cost = self.calculate_cost(local_in, local_out, "local")
-        remote_cost = self.calculate_cost(remote_in, remote_out, "remote")
+        local_cost = self.calculate_cost(local_in_tokens, local_out_tokens, "local")
+        remote_cost = self.calculate_cost(remote_in_tokens, remote_out_tokens, "remote")
 
         # 3. Apply expert heuristics (Overriding thresholds)
         quality_delta = remote_quality - local_quality
+        override_reason = None
+        override_label = None
 
-        # Heuristic A: Local is already exceptionally high quality
         if local_quality >= self.config.quality_threshold_high:
-            return self._decision_payload(
-                label="LOCAL",
-                local_cost=local_cost,
-                remote_cost=remote_cost,
-                local_quality=local_quality,
-                remote_quality=remote_quality,
-                local_util=1.0,
-                remote_util=0.0,
-                reason=f"Local model quality is exceptionally high ({local_quality:.3f} >= {self.config.quality_threshold_high:.2f})."
-            )
-
-        # Heuristic B: Quality improvement of Remote is marginal
-        if quality_delta <= self.config.quality_delta_threshold:
-            return self._decision_payload(
-                label="LOCAL",
-                local_cost=local_cost,
-                remote_cost=remote_cost,
-                local_quality=local_quality,
-                remote_quality=remote_quality,
-                local_util=1.0,
-                remote_util=0.0,
-                reason=f"Remote quality improvement is marginal ({quality_delta:.3f} <= {self.config.quality_delta_threshold:.2f})."
-            )
-
-        # Heuristic C: Remote latency is excessive
-        if remote_latency >= self.config.max_remote_latency_ms:
-            return self._decision_payload(
-                label="LOCAL",
-                local_cost=local_cost,
-                remote_cost=remote_cost,
-                local_quality=local_quality,
-                remote_quality=remote_quality,
-                local_util=1.0,
-                remote_util=0.0,
-                reason=f"Remote latency is excessive ({remote_latency}ms >= {self.config.max_remote_latency_ms:.0f}ms)."
-            )
-
-        # Heuristic D: Remote quality is too poor to justify remote routing
-        if remote_quality < self.config.min_remote_quality:
-            return self._decision_payload(
-                label="LOCAL",
-                local_cost=local_cost,
-                remote_cost=remote_cost,
-                local_quality=local_quality,
-                remote_quality=remote_quality,
-                local_util=1.0,
-                remote_util=0.0,
-                reason=f"Remote quality is too poor ({remote_quality:.3f} < {self.config.min_remote_quality:.2f})."
-            )
+            override_label = "LOCAL"
+            override_reason = f"Local model quality is exceptionally high ({local_quality:.3f} >= {self.config.quality_threshold_high:.2f})."
+        elif quality_delta <= self.config.quality_delta_threshold:
+            override_label = "LOCAL"
+            override_reason = f"Remote quality improvement is marginal ({quality_delta:.3f} <= {self.config.quality_delta_threshold:.2f})."
+        elif remote_latency >= self.config.max_remote_latency_ms:
+            override_label = "LOCAL"
+            override_reason = f"Remote latency is excessive ({remote_latency}ms >= {self.config.max_remote_latency_ms:.0f}ms)."
+        elif remote_quality < self.config.min_remote_quality:
+            override_label = "LOCAL"
+            override_reason = f"Remote quality is too poor ({remote_quality:.3f} < {self.config.min_remote_quality:.2f})."
 
         # 4. Calculate Utility scores
-        # Normalize speed in [0.0, 1.0]: 1 / (1 + latency_seconds)
         local_speed = 1.0 / (1.0 + local_latency / 1000.0)
         remote_speed = 1.0 / (1.0 + remote_latency / 1000.0)
 
-        # Normalize cost in [0.0, 1.0] by dividing by $0.01 max cost threshold
         local_cost_norm = min(1.0, local_cost / 0.01)
         remote_cost_norm = min(1.0, remote_cost / 0.01)
 
-        # Compute weighted utility
+        # Token pressure penalty (more tokens penalize utility slightly)
+        local_token_penalty = min(0.05, local_total_tokens / 10000.0)
+        remote_token_penalty = min(0.05, remote_total_tokens / 10000.0)
+
         local_utility = (
             self.config.quality_weight * local_quality
             + self.config.latency_weight * local_speed
             - self.config.cost_weight * local_cost_norm
+            - local_token_penalty
             + self.config.local_preference_bias
         )
 
@@ -193,9 +182,13 @@ class DecisionEngine:
             self.config.quality_weight * remote_quality
             + self.config.latency_weight * remote_speed
             - self.config.cost_weight * remote_cost_norm
+            - remote_token_penalty
         )
 
-        if remote_utility > local_utility:
+        if override_label:
+            label = override_label
+            reason = f"[Override] {override_reason}"
+        elif remote_utility > local_utility:
             label = "REMOTE"
             reason = (
                 f"Remote utility ({remote_utility:.3f}) exceeds Local utility ({local_utility:.3f}). "
@@ -216,6 +209,12 @@ class DecisionEngine:
             remote_quality=remote_quality,
             local_util=local_utility,
             remote_util=remote_utility,
+            local_llm=local_llm_quality,
+            remote_llm=remote_llm_quality,
+            local_heur=local_heur_quality,
+            remote_heur=remote_heur_quality,
+            local_tokens=local_total_tokens,
+            remote_tokens=remote_total_tokens,
             reason=reason
         )
 
@@ -228,6 +227,12 @@ class DecisionEngine:
         remote_quality: float,
         local_util: float,
         remote_util: float,
+        local_llm: float,
+        remote_llm: float,
+        local_heur: float,
+        remote_heur: float,
+        local_tokens: int,
+        remote_tokens: int,
         reason: str
     ) -> dict[str, Any]:
         """Format the output dictionary structure."""
@@ -239,5 +244,11 @@ class DecisionEngine:
             "remote_quality": round(remote_quality, 4),
             "local_utility": round(local_util, 4),
             "remote_utility": round(remote_util, 4),
+            "local_llm_quality": round(local_llm, 4),
+            "remote_llm_quality": round(remote_llm, 4),
+            "local_heuristic_quality": round(local_heur, 4),
+            "remote_heuristic_quality": round(remote_heur, 4),
+            "local_tokens": local_tokens,
+            "remote_tokens": remote_tokens,
             "reason": reason
         }

@@ -24,7 +24,7 @@ from app.schemas import ChatRequest, ChatResponse
 from app.services import ollama
 from app.services import remote_llm
 from app.services.feature_extractor import extract_features
-from app.services.ml_router import route
+from app.services.router_dispatcher import route
 from app.services.stats_tracker import stats as stats_tracker
 
 logger = logging.getLogger(__name__)
@@ -47,7 +47,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
     t1 = time.perf_counter()
 
     # ── T2: routing decision ───────────────────────────────────────────
-    route_result = route(features)
+    route_result = route(features, prompt=request.prompt)
     provider = route_result["provider"]
     t2 = time.perf_counter()
 

@@ -1,8 +1,8 @@
 {
-  "size": 120,
-  "batch_size": 10,
-  "concurrency_limit": 5,
-  "simulate_llm": true,
+  "size": 5000,
+  "batch_size": 100,
+  "concurrency_limit": 50,
+  "simulate_llm": false,
   "prompt_catalog_path": "app/data/generated/generated_prompts.jsonl",
   "checkpoint_path": "app/data/generated/large_benchmark_checkpoint.jsonl",
   "results_path": "app/data/generated/large_benchmark_results.json",

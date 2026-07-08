@@ -938,6 +938,64 @@ def extract_features(prompt: str, debug: bool = False) -> dict[str, Any]:
     else:
         complexity_label = COMPLEXITY_EASY
 
+    # Stage 6: Phase 6 Feature Engineering
+    lower_prompt = norm["lower"]
+    
+    # 1. constraint_density
+    constraint_words = {"must", "should", "constraint", "limit", "rule", "required", "format", "output", "only", "under", "exactly"}
+    constraint_count = sum(1 for w in norm["words"] if w in constraint_words)
+    constraint_density = float(constraint_count / max(1, len(norm["words"])))
+
+    # 2. requested_format
+    requested_format = "text"
+    if "json" in lower_prompt:
+        requested_format = "json"
+    elif "yaml" in lower_prompt:
+        requested_format = "yaml"
+    elif "xml" in lower_prompt:
+        requested_format = "xml"
+    elif "table" in lower_prompt or "csv" in lower_prompt:
+        requested_format = "table"
+    elif "sql" in lower_prompt:
+        requested_format = "sql"
+    elif "code" in lower_prompt or any(lang in lower_prompt for lang in ["python", "golang", "typescript", "rust", "java", "c++"]):
+        requested_format = "code"
+
+    # 3. presence_of_tables
+    presence_of_tables = 1 if "|" in lower_prompt and "-" in lower_prompt else 0
+
+    # 4. sql_indicators
+    sql_keywords = {"select", "insert", "update", "delete", "where", "join", "cte", "schema", "table", "database", "query"}
+    sql_indicators = 1 if any(kw in lower_prompt for kw in sql_keywords) else 0
+
+    # 5. api_keywords
+    api_keywords_set = {"api", "rest", "endpoint", "webhook", "http", "headers", "payload", "json payload", "request", "response"}
+    api_keywords = 1 if any(kw in lower_prompt for kw in api_keywords_set) else 0
+
+    # 6. system_design_keywords
+    sys_design_set = {"microservices", "scaling", "load balancer", "replication", "consistency", "failover", "zero-trust", "cdn", "caching", "architecture"}
+    system_design_keywords = 1 if any(kw in lower_prompt for kw in sys_design_set) else 0
+
+    # 7. algorithmic_complexity
+    algo_keywords = {"o(n)", "o(log n)", "o(n^2)", "recursion", "recursive", "dynamic programming", "sorting", "binary search", "complexity", "time complexity", "space complexity"}
+    algorithmic_complexity = 1 if any(kw in lower_prompt for kw in algo_keywords) else 0
+
+    # 8. dependency_between_subtasks
+    dep_keywords = {"then", "after that", "next step", "subsequently", "followed by", "finally", "first", "second"}
+    dependency_between_subtasks = 1 if any(kw in lower_prompt for kw in dep_keywords) else 0
+
+    # 9. multi_turn_context
+    multi_turn_keywords = {"user:", "assistant:", "system:", "q:", "a:", "dialogue", "conversation"}
+    multi_turn_context = 1 if any(kw in lower_prompt for kw in multi_turn_keywords) else 0
+
+    # 10. code_indicators
+    code_chars = ["{", "}", "=>", "func ", "def ", "class ", "import ", "const ", "let ", "var "]
+    code_indicators = 1 if any(char in lower_prompt for char in code_chars) or structural["contains_code"] else 0
+
+    # 11. math_indicators
+    math_indicators_set = {"\\sum", "\\int", "\\pi", "equation", "formula", "integral", "derivative", "theorem", "calculate", "compute"}
+    math_indicators = 1 if any(kw in lower_prompt for kw in math_indicators_set) or structural["contains_math"] else 0
+
     # Build output dictionary
     output: dict[str, Any] = {
         # --- Backward-compatible V1/V2 keys ---
@@ -966,6 +1024,19 @@ def extract_features(prompt: str, debug: bool = False) -> dict[str, Any]:
         # --- Aggregation Metrics ---
         "complexity_score":       complexity_score,
         "task_labels":            task_labels,
+
+        # --- Phase 6 Features ---
+        "constraint_density":          constraint_density,
+        "requested_format":            requested_format,
+        "presence_of_tables":          presence_of_tables,
+        "sql_indicators":              sql_indicators,
+        "api_keywords":                api_keywords,
+        "system_design_keywords":      system_design_keywords,
+        "algorithmic_complexity":      algorithmic_complexity,
+        "dependency_between_subtasks": dependency_between_subtasks,
+        "multi_turn_context":          multi_turn_context,
+        "code_indicators":             code_indicators,
+        "math_indicators":             math_indicators,
     }
 
     # Debug details

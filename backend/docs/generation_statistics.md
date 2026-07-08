@@ -1,36 +1,36 @@
 # Generation Statistics
 
-- Total prompts: 120
-- Average prompt words: 52.75
-- Prompt word range: 27 to 76
-- Average constraints: 2.77
-- Average estimated complexity: 0.7677
+- Total prompts: 2500
+- Average prompt words: 53.97
+- Prompt word range: 25 to 79
+- Average constraints: 2.87
+- Average estimated complexity: 0.7751
 
 ## Category Distribution
 
 | Bucket | Count |
 |---|---:|
-| coding | 15 |
-| creative_writing | 15 |
-| general | 15 |
-| mathematics | 15 |
-| planning | 15 |
-| reasoning | 15 |
-| summarization | 15 |
-| translation | 15 |
+| coding | 340 |
+| creative_writing | 339 |
+| general | 125 |
+| mathematics | 339 |
+| planning | 340 |
+| reasoning | 339 |
+| summarization | 339 |
+| translation | 339 |
 
 ## Difficulty Distribution
 
 | Bucket | Count |
 |---|---:|
-| easy | 40 |
-| hard | 40 |
-| medium | 40 |
+| easy | 835 |
+| hard | 833 |
+| medium | 832 |
 
 ## Expected Reasoning Distribution
 
 | Bucket | Count |
 |---|---:|
-| high | 61 |
-| low | 37 |
-| medium | 22 |
+| high | 1267 |
+| low | 796 |
+| medium | 437 |

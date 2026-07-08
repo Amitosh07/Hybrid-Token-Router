@@ -1,8 +1,8 @@
 # Dataset Quality Report
 
-- Requested size: 120
-- Final valid unique prompts: 120
-- Invalid prompts removed: 0
+- Requested size: 5000
+- Final valid unique prompts: 2500
+- Invalid prompts removed: 102
 - Exact duplicates removed: 0
 - Near duplicates removed: 0
 
@@ -16,4 +16,104 @@
 
 ## Issues
 
-- domain coverage is missing at least one bucket
+- pub_alpaca_000000: unsupported domain
+- pub_alpaca_000001: unsupported domain
+- pub_alpaca_000002: unsupported domain
+- pub_alpaca_000003: unsupported domain
+- pub_alpaca_000004: unsupported domain
+- pub_alpaca_000005: unsupported domain
+- pub_sharegpt_000006: unsupported domain
+- pub_sharegpt_000007: unsupported domain
+- pub_sharegpt_000008: unsupported domain
+- pub_mt_bench_000009: unsupported domain
+- pub_mt_bench_000010: unsupported domain
+- pub_openhermes_000011: unsupported domain
+- pub_openhermes_000012: unsupported domain
+- pub_ultrachat_000013: unsupported domain
+- pub_ultrachat_000014: unsupported domain
+- pub_lmsys_000015: unsupported domain
+- pub_lmsys_000016: unsupported domain
+- pub_alpaca_000017: unsupported domain
+- pub_alpaca_000018: unsupported domain
+- pub_alpaca_000019: unsupported domain
+- pub_alpaca_000020: unsupported domain
+- pub_alpaca_000021: unsupported domain
+- pub_alpaca_000022: unsupported domain
+- pub_sharegpt_000023: unsupported domain
+- pub_sharegpt_000024: unsupported domain
+- pub_mt_bench_000026: unsupported domain
+- pub_mt_bench_000027: unsupported domain
+- pub_openhermes_000029: unsupported domain
+- pub_ultrachat_000030: unsupported domain
+- pub_ultrachat_000031: unsupported domain
+- pub_lmsys_000032: unsupported domain
+- pub_alpaca_000034: unsupported domain
+- pub_alpaca_000039: unsupported domain
+- pub_sharegpt_000040: unsupported domain
+- pub_sharegpt_000041: unsupported domain
+- pub_sharegpt_000042: unsupported domain
+- pub_mt_bench_000043: unsupported domain
+- pub_mt_bench_000044: unsupported domain
+- pub_openhermes_000045: unsupported domain
+- pub_openhermes_000046: unsupported domain
+- pub_ultrachat_000047: unsupported domain
+- pub_lmsys_000049: unsupported domain
+- pub_lmsys_000050: unsupported domain
+- pub_alpaca_000051: unsupported domain
+- pub_alpaca_000053: unsupported domain
+- pub_sharegpt_000058: unsupported domain
+- pub_sharegpt_000059: unsupported domain
+- pub_mt_bench_000060: unsupported domain
+- pub_mt_bench_000061: unsupported domain
+- pub_ultrachat_000064: unsupported domain
+- pub_ultrachat_000065: unsupported domain
+- pub_lmsys_000067: unsupported domain
+- pub_alpaca_000069: unsupported domain
+- pub_alpaca_000070: unsupported domain
+- pub_alpaca_000071: unsupported domain
+- pub_alpaca_000072: unsupported domain
+- pub_alpaca_000073: unsupported domain
+- pub_sharegpt_000075: unsupported domain
+- pub_sharegpt_000076: unsupported domain
+- pub_mt_bench_000078: unsupported domain
+- pub_openhermes_000079: unsupported domain
+- pub_openhermes_000080: unsupported domain
+- pub_ultrachat_000082: unsupported domain
+- pub_lmsys_000083: unsupported domain
+- pub_alpaca_000086: unsupported domain
+- pub_alpaca_000087: unsupported domain
+- pub_alpaca_000089: unsupported domain
+- pub_alpaca_000090: unsupported domain
+- pub_sharegpt_000091: unsupported domain
+- pub_openhermes_000097: unsupported domain
+- pub_ultrachat_000098: unsupported domain
+- pub_ultrachat_000099: unsupported domain
+- pub_lmsys_000100: unsupported domain
+- pub_lmsys_000101: unsupported domain
+- pub_alpaca_000105: unsupported domain
+- pub_alpaca_000107: unsupported domain
+- pub_sharegpt_000110: unsupported domain
+- pub_mt_bench_000111: unsupported domain
+- pub_openhermes_000113: unsupported domain
+- pub_lmsys_000117: unsupported domain
+- pub_alpaca_000120: unsupported domain
+- pub_sharegpt_000125: unsupported domain
+- pub_sharegpt_000126: unsupported domain
+- pub_openhermes_000130: unsupported domain
+- pub_ultrachat_000132: unsupported domain
+- pub_alpaca_000136: unsupported domain
+- pub_mt_bench_000145: unsupported domain
+- pub_alpaca_000155: unsupported domain
+- pub_alpaca_000156: unsupported domain
+- pub_alpaca_000157: unsupported domain
+- pub_sharegpt_000161: unsupported domain
+- pub_alpaca_000170: unsupported domain
+- pub_alpaca_000190: unsupported domain
+- pub_openhermes_000250: unsupported domain
+- pub_ultrachat_000252: unsupported domain
+- pub_lmsys_000254: unsupported domain
+- pub_alpaca_000310: unsupported domain
+- pub_lmsys_000322: unsupported domain
+- pub_sharegpt_000346: unsupported domain
+- pub_alpaca_000358: unsupported domain
+- ... 3 additional issues omitted

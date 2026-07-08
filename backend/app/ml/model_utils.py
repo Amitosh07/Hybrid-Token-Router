@@ -12,7 +12,8 @@ import joblib
 ML_DIR = Path(__file__).resolve().parent
 APP_DIR = ML_DIR.parent
 BACKEND_DIR = APP_DIR.parent
-DATASET_PATH = APP_DIR / "data" / "training" / "training_dataset.csv"
+DATASET_PATH = APP_DIR / "data" / "training" / "training_dataset_large.csv"
+LOCKED_EVAL_PATH = APP_DIR / "data" / "training" / "locked_evaluation_dataset.csv"
 MODELS_DIR = BACKEND_DIR / "models"
 DOCS_DIR = BACKEND_DIR / "docs"
 PLOTS_DIR = ML_DIR / "plots"
@@ -33,6 +34,12 @@ POST_INFERENCE_COLUMNS = {
     "remote_cost",
     "local_quality_score",
     "remote_quality_score",
+    "local_llm_quality",
+    "remote_llm_quality",
+    "local_heuristic_quality",
+    "remote_heuristic_quality",
+    "local_tokens",
+    "remote_tokens",
 }
 
 NON_PRODUCTION_COLUMNS = {

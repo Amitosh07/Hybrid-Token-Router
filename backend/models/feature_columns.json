@@ -1,9 +1,11 @@
 [
+  "domain",
+  "constraint_count",
+  "estimated_complexity",
+  "output_format",
   "prompt_length",
   "contains_code",
   "contains_math",
-  "contains_json",
-  "contains_markdown",
   "contains_numbers",
   "contains_question",
   "reasoning_score",
@@ -11,5 +13,6 @@
   "reasoning_depth",
   "task_complexity",
   "constraint_complexity",
-  "context_complexity"
+  "context_complexity",
+  "requested_format"
 ]

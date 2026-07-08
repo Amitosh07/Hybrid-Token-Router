@@ -45,6 +45,10 @@ class Settings:
         self.REMOTE_BASE_URL: str = os.getenv("REMOTE_BASE_URL", "")
         self.REMOTE_MODEL: str = os.getenv("REMOTE_MODEL", "")
 
+        # Router and embedding settings
+        self.ROUTER_MODE: str = os.getenv("ROUTER_MODE", "ml")
+        self.EMBEDDING_MODEL_NAME: str = os.getenv("EMBEDDING_MODEL_NAME", "BAAI/bge-small-en-v1.5")
+
     @property
     def ALLOWED_ORIGINS(self) -> list[str]:
         return [self.FRONTEND_URL]

@@ -48,9 +48,13 @@ def route(features: dict[str, Any]) -> dict[str, Any]:
         bundle = _load_bundle()
         model = bundle["model"]
         X = align_features(features, bundle["feature_columns"])
-        prediction = int(model.predict(X)[0])
-        probabilities = model.predict_proba(X)[0] if hasattr(model, "predict_proba") else [1 - prediction, prediction]
+        probabilities = model.predict_proba(X)[0] if hasattr(model, "predict_proba") else [0.5, 0.5]
         remote_probability = float(probabilities[1])
+        
+        # Load optimized threshold
+        threshold = getattr(model, "threshold", 0.5)
+        prediction = 1 if remote_probability >= threshold else 0
+        
         provider = "remote" if prediction == 1 else "local"
         selected_probability = remote_probability if provider == "remote" else 1.0 - remote_probability
         confidence = max(remote_probability, 1.0 - remote_probability)

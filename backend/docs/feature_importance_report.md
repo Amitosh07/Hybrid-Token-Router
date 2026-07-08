@@ -6,11 +6,13 @@ Training excludes all post-inference latency, cost, and quality metrics. These f
 
 ## Retained Features
 
+- `domain`
+- `constraint_count`
+- `estimated_complexity`
+- `output_format`
 - `prompt_length`
 - `contains_code`
 - `contains_math`
-- `contains_json`
-- `contains_markdown`
 - `contains_numbers`
 - `contains_question`
 - `reasoning_score`
@@ -19,56 +21,69 @@ Training excludes all post-inference latency, cost, and quality metrics. These f
 - `task_complexity`
 - `constraint_complexity`
 - `context_complexity`
+- `requested_format`
 
 ## Removed Features
 
+- `algorithmic_complexity`: removed because it is constant.
+- `api_keywords`: removed because it is constant.
+- `code_indicators`: removed because it is constant.
 - `complexity_score`: removed because it is redundant with a highly correlated feature.
+- `constraint_density`: removed because it is constant.
+- `contains_json`: removed because it is constant.
+- `contains_markdown`: removed because it is constant.
+- `dependency_between_subtasks`: removed because it is constant.
 - `estimated_input_tokens`: removed because it is redundant with a highly correlated feature.
+- `math_indicators`: removed because it is constant.
+- `multi_turn_context`: removed because it is constant.
+- `presence_of_tables`: removed because it is constant.
+- `sql_indicators`: removed because it is constant.
+- `system_design_keywords`: removed because it is constant.
 - `word_count`: removed because it is redundant with a highly correlated feature.
 
 ## Low Variance Features
 
-- None detected above the constant-feature threshold.
+- `context_complexity`
 
 ## Highly Correlated Pairs
 
-- `prompt_length` and `word_count`: correlation 0.9601
+- `prompt_length` and `word_count`: correlation 0.9788
 - `prompt_length` and `estimated_input_tokens`: correlation 0.9999
-- `word_count` and `estimated_input_tokens`: correlation 0.9601
-- `reasoning_score` and `complexity_score`: correlation 0.9835
+- `word_count` and `estimated_input_tokens`: correlation 0.9787
+- `reasoning_score` and `complexity_score`: correlation 0.9857
 
 ## Top Feature Importance
 
-- `prompt_length`: 0.163564
-- `context_complexity`: 0.151328
-- `word_count`: 0.147974
-- `complexity_score`: 0.137385
-- `estimated_input_tokens`: 0.120093
-- `task_complexity`: 0.078554
-- `technical_complexity`: 0.033203
-- `reasoning_depth`: 0.033176
-- `constraint_complexity`: 0.032714
-- `reasoning_score`: 0.026426
-- `contains_code`: 0.021356
-- `contains_numbers`: 0.020708
-- `contains_question`: 0.020056
-- `contains_math`: 0.009573
-- `contains_json`: 0.002455
+- `complexity_score`: 0.230544
+- `reasoning_score`: 0.145795
+- `prompt_length`: 0.091744
+- `reasoning_depth`: 0.090066
+- `task_complexity`: 0.087710
+- `context_complexity`: 0.069082
+- `word_count`: 0.066984
+- `estimated_input_tokens`: 0.065221
+- `estimated_complexity`: 0.046373
+- `technical_complexity`: 0.028267
+- `constraint_complexity`: 0.023262
+- `constraint_count`: 0.019154
+- `contains_math`: 0.011143
+- `contains_numbers`: 0.010258
+- `contains_question`: 0.008735
 
 ## Target Correlation
 
-- `context_complexity`: -0.153398
-- `prompt_length`: -0.104264
-- `estimated_input_tokens`: -0.104120
-- `technical_complexity`: -0.093294
-- `reasoning_score`: -0.082208
-- `word_count`: -0.079751
-- `complexity_score`: -0.073429
-- `task_complexity`: -0.062505
-- `constraint_complexity`: 0.047962
-- `contains_numbers`: 0.042015
-- `contains_question`: 0.030208
-- `contains_code`: 0.029737
-- `contains_markdown`: -0.018333
-- `contains_math`: -0.010803
-- `reasoning_depth`: -0.007061
+- `complexity_score`: -0.244117
+- `reasoning_score`: -0.242388
+- `task_complexity`: -0.220969
+- `reasoning_depth`: -0.193343
+- `constraint_count`: -0.105230
+- `estimated_complexity`: -0.075593
+- `estimated_input_tokens`: -0.069716
+- `prompt_length`: -0.069701
+- `constraint_complexity`: -0.054193
+- `word_count`: -0.054000
+- `context_complexity`: -0.053919
+- `contains_math`: -0.038040
+- `contains_numbers`: 0.035480
+- `technical_complexity`: -0.028085
+- `contains_code`: -0.026132
