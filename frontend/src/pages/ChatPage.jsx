@@ -4,7 +4,7 @@ import ChatWindow from '../components/ChatWindow.jsx';
 import EmptyState from '../components/EmptyState.jsx';
 import PromptInput from '../components/PromptInput.jsx';
 import AnalyticsCard from '../components/AnalyticsCard.jsx';
-import { formatModel, formatMs, formatNumber, formatPercent, formatCurrency } from '../services/formatters.js';
+import { formatModel, formatMs, formatNumber, formatCurrency } from '../services/formatters.js';
 
 export default function ChatPage({ chat }) {
   const [draft, setDraft] = useState('');
@@ -19,7 +19,7 @@ export default function ChatPage({ chat }) {
     ['Latency', formatMs(chat.analytics?.latency)],
     ['Tokens', formatNumber(chat.analytics?.estimated_input_tokens)],
     ['Cost Saved', formatCurrency(chat.analytics?.estimated_cost_saved)],
-    ['Confidence', formatPercent(chat.analytics?.confidence)],
+    ['Routing Confidence', chat.analytics?.routing_confidence || '--'],
     ['Complexity', chat.analytics?.complexity
       ? chat.analytics.complexity.charAt(0).toUpperCase() + chat.analytics.complexity.slice(1)
       : '--']

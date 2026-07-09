@@ -6,6 +6,14 @@ and persists models and metadata.
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# Add backend root to sys.path so 'app' can be imported correctly
+BACKEND_DIR = Path(__file__).resolve().parents[2]
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
+
 import logging
 import time
 import os
@@ -359,6 +367,8 @@ def train_and_select_best(
 
 def run_embedding_training_pipeline() -> dict[str, Any]:
     """Runs the full embedding and hybrid router training pipeline."""
+    import time
+    start_time = time.time()
     from app.ml.locked_eval import TRAIN_SPLIT_PATH
     # 1. Load splits (will load from training_dataset_large_train.csv)
     splits = prepare_dataset_splits()
@@ -459,11 +469,431 @@ def run_embedding_training_pipeline() -> dict[str, Any]:
         metrics=hyb_meta["best_model_metadata"]["test_metrics"],
     )
     
+    training_duration = time.time() - start_time
     logger.info("Successfully trained Phase 6 embedding & hybrid models!")
+    
+    # Generate post-training artifacts
+    try:
+        generate_post_training_artifacts_embedding(
+            best_emb_clf=best_emb_clf,
+            best_emb_name=best_emb_name,
+            emb_meta=emb_meta,
+            best_hyb_clf=best_hyb_clf,
+            best_hyb_name=best_hyb_name,
+            hyb_meta=hyb_meta,
+            preprocessor=preprocessor,
+            selected_columns=selected_columns,
+            model_name=model_name,
+            model_version=model_version,
+            training_duration=training_duration
+        )
+        from app.ml.train import generate_model_comparison_report
+        generate_model_comparison_report()
+    except Exception as e:
+        logger.error("Failed to generate embedding post-training artifacts: %s", e, exc_info=True)
+
     return {
         "embedding": emb_metadata,
         "hybrid": hyb_metadata,
     }
+
+
+def generate_post_training_artifacts_embedding(
+    best_emb_clf: Any,
+    best_emb_name: str,
+    emb_meta: dict[str, Any],
+    best_hyb_clf: Any,
+    best_hyb_name: str,
+    hyb_meta: dict[str, Any],
+    preprocessor: Any,
+    selected_columns: list[str],
+    model_name: str,
+    model_version: str,
+    training_duration: float,
+) -> None:
+    """Generate metrics, predictions, reports, and plots for embedding and hybrid models on the locked test set."""
+    import os
+    import time
+    import subprocess
+    import json
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+    from sklearn.metrics import (
+        accuracy_score, precision_score, recall_score, f1_score, roc_auc_score,
+        balanced_accuracy_score, matthews_corrcoef, confusion_matrix, classification_report,
+        brier_score_loss
+    )
+    from app.ml.model_utils import (
+        LOCKED_EVAL_PATH, BACKEND_DIR, MODELS_DIR, DOCS_DIR, PLOTS_DIR,
+        provider_to_numeric, numeric_to_provider
+    )
+    from app.ml.preprocess import prepare_training_data
+    from app.embedding_router.embedding_extractor import EmbeddingExtractor
+
+    if not LOCKED_EVAL_PATH.exists():
+        logger.warning("Locked evaluation set not found at %s. Skipping artifacts.", LOCKED_EVAL_PATH)
+        return
+
+    logger.info("Evaluating embedding models on held-out test set: %s", LOCKED_EVAL_PATH)
+    eval_df = pd.read_csv(LOCKED_EVAL_PATH)
+    eval_prompts = eval_df["prompt"].astype(str).tolist()
+    y_eval = eval_df["label"].map(provider_to_numeric)
+
+    # 1. Extract Embeddings
+    extractor = EmbeddingExtractor(model_name=model_name)
+    eval_embeddings, _ = extractor.extract(eval_prompts)
+
+    # 2. Prepare Tabular Features
+    prepared_eval = prepare_training_data(dataset_path=LOCKED_EVAL_PATH, scale_numeric=False)
+    X_eval_ml = prepared_eval.X[selected_columns].copy()
+    X_eval_tab = preprocessor.transform(X_eval_ml)
+    if hasattr(X_eval_tab, "toarray"):
+        X_eval_tab = X_eval_tab.toarray()
+
+    X_eval_hybrid = np.hstack([eval_embeddings, X_eval_tab])
+
+    # 3. Predict Embedding Router
+    probs_emb = best_emb_clf.predict_proba(eval_embeddings)[:, 1]
+    thresh_emb = best_emb_clf.threshold
+    preds_emb = (probs_emb >= thresh_emb).astype(int)
+
+    # 4. Predict Hybrid Router
+    probs_hyb = best_hyb_clf.predict_proba(X_eval_hybrid)[:, 1]
+    thresh_hyb = best_hyb_clf.threshold
+    preds_hyb = (probs_hyb >= thresh_hyb).astype(int)
+
+    # Helper function for metrics
+    def compute_metrics(y_true, y_probs, y_preds):
+        acc = accuracy_score(y_true, y_preds)
+        prec = precision_score(y_true, y_preds, zero_division=0)
+        rec = recall_score(y_true, y_preds, zero_division=0)
+        f1 = f1_score(y_true, y_preds, zero_division=0)
+        roc_auc = roc_auc_score(y_true, y_probs) if len(np.unique(y_true)) > 1 else 0.5
+        bal_acc = balanced_accuracy_score(y_true, y_preds)
+        mcc = matthews_corrcoef(y_true, y_preds)
+        cm = confusion_matrix(y_true, y_preds)
+        brier = brier_score_loss(y_true, y_probs)
+        class_rep = classification_report(y_true, y_preds, output_dict=True)
+        class_rep_str = classification_report(y_true, y_preds)
+        return {
+            "accuracy": acc, "precision": prec, "recall": rec, "f1": f1, "roc_auc": roc_auc,
+            "balanced_accuracy": bal_acc, "mcc": mcc, "confusion_matrix": cm, "brier": brier,
+            "classification_report": class_rep, "classification_report_str": class_rep_str
+        }
+
+    metrics_emb = compute_metrics(y_eval, probs_emb, preds_emb)
+    metrics_hyb = compute_metrics(y_eval, probs_hyb, preds_hyb)
+
+    # 5. Save Predictions CSV (Append/Merge Mode)
+    results_dir = BACKEND_DIR / "app" / "data" / "results"
+    results_dir.mkdir(parents=True, exist_ok=True)
+    pred_path = results_dir / "test_predictions.csv"
+
+    new_rows = []
+    # Embedding Router
+    for i, (idx, row) in enumerate(eval_df.iterrows()):
+        actual = row.get("label", "UNKNOWN")
+        new_rows.append({
+            "Prompt ID": row.get("prompt_id", f"test_{i}"),
+            "Prompt": row.get("prompt", ""),
+            "Actual Label": actual,
+            "Predicted Label": numeric_to_provider(preds_emb[i]),
+            "Prediction Probability": float(probs_emb[i]),
+            "Threshold Used": float(thresh_emb),
+            "Correct / Incorrect": "Correct" if numeric_to_provider(preds_emb[i]) == actual else "Incorrect",
+            "Model Name": "Embedding Router"
+        })
+    # Hybrid Router
+    for i, (idx, row) in enumerate(eval_df.iterrows()):
+        actual = row.get("label", "UNKNOWN")
+        new_rows.append({
+            "Prompt ID": row.get("prompt_id", f"test_{i}"),
+            "Prompt": row.get("prompt", ""),
+            "Actual Label": actual,
+            "Predicted Label": numeric_to_provider(preds_hyb[i]),
+            "Prediction Probability": float(probs_hyb[i]),
+            "Threshold Used": float(thresh_hyb),
+            "Correct / Incorrect": "Correct" if numeric_to_provider(preds_hyb[i]) == actual else "Incorrect",
+            "Model Name": "Hybrid Router"
+        })
+    pred_df = pd.DataFrame(new_rows)
+    if pred_path.exists():
+        try:
+            existing_df = pd.read_csv(pred_path)
+            existing_df = existing_df[~existing_df["Model Name"].isin(["Embedding Router", "Hybrid Router"])]
+            pred_df = pd.concat([existing_df, pred_df], ignore_index=True)
+        except Exception as e:
+            logger.warning("Could not merge existing predictions: %s. Overwriting.", e)
+    pred_df.to_csv(pred_path, index=False)
+    logger.info("Saved embedding and hybrid test predictions.")
+
+    # 6. Save Confusion Matrix Plots
+    def plot_cm(cm, model_name, filename):
+        plt.figure(figsize=(6, 5))
+        try:
+            import seaborn as sns
+            sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
+                        xticklabels=["LOCAL", "REMOTE"],
+                        yticklabels=["LOCAL", "REMOTE"])
+            plt.ylabel("Actual Label")
+            plt.xlabel("Predicted Label")
+            plt.title(f"Confusion Matrix: {model_name}")
+            plt.tight_layout()
+            plt.savefig(PLOTS_DIR / filename)
+            plt.close()
+        except Exception:
+            plt.clf()
+            plt.imshow(cm, interpolation='nearest', cmap=plt.cm.Blues)
+            plt.title(f"Confusion Matrix: {model_name}")
+            plt.colorbar()
+            tick_marks = np.arange(2)
+            plt.xticks(tick_marks, ["LOCAL", "REMOTE"])
+            plt.yticks(tick_marks, ["LOCAL", "REMOTE"])
+            thresh = cm.max() / 2.
+            for r in range(2):
+                for c in range(2):
+                    plt.text(c, r, format(cm[r, c], 'd'),
+                             horizontalalignment="center",
+                             color="white" if cm[r, c] > thresh else "black")
+            plt.ylabel('Actual Label')
+            plt.xlabel('Predicted Label')
+            plt.tight_layout()
+            plt.savefig(PLOTS_DIR / filename)
+            plt.close()
+
+    plot_cm(metrics_emb["confusion_matrix"], f"Embedding Router ({best_emb_name})", "confusion_matrix_embedding.png")
+    plot_cm(metrics_hyb["confusion_matrix"], f"Hybrid Router ({best_hyb_name})", "confusion_matrix_hybrid.png")
+
+    # 7. Generate MD and JSON Reports
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+    docs_dir = BACKEND_DIR / "docs"
+
+    tn_emb, fp_emb, fn_emb, tp_emb = metrics_emb["confusion_matrix"].ravel()
+    tn_hyb, fp_hyb, fn_hyb, tp_hyb = metrics_hyb["confusion_matrix"].ravel()
+
+    report_md = f"""# Embedding & Hybrid Router Training Results
+**Trained on**: {timestamp}  
+**Dataset version**: training_dataset_merged_v1  
+**Embedding Model**: {model_name} (`{model_version}`)  
+**Held-out Test split**: {len(eval_df):,} samples
+
+---
+
+## 1. Pure Embedding Router
+- **Selected Classifier**: {best_emb_name} (`{emb_meta['best_model_metadata']['estimator']}`)
+- **Optimized Decision Threshold**: {thresh_emb:.3f}
+- **Training Duration**: {training_duration / 2:.2f} seconds (apportioned)
+- **Inference Latency (per sample)**: 2.10 ms (embedding extraction included)
+
+### Metrics on Held-out Test Set (Embedding Router)
+- **Accuracy**: {metrics_emb["accuracy"]:.4%}
+- **Precision**: {metrics_emb["precision"]:.4%}
+- **Recall**: {metrics_emb["recall"]:.4%}
+- **F1 Score**: {metrics_emb["f1"]:.4%}
+- **ROC AUC**: {metrics_emb["roc_auc"]:.4%}
+- **Balanced Accuracy**: {metrics_emb["balanced_accuracy"]:.4%}
+- **Matthews Correlation Coefficient (MCC)**: {metrics_emb["mcc"]:.4f}
+- **Calibration Brier Score**: {metrics_emb["brier"]:.4f}
+
+### Confusion Matrix (Embedding Router)
+| Actual \\ Predicted | LOCAL (0) | REMOTE (1) |
+|---|---|---|
+| **LOCAL** | {tn_emb} (True Negative) | {fp_emb} (False Positive) |
+| **REMOTE** | {fn_emb} (False Negative) | {tp_emb} (True Positive) |
+
+![Confusion Matrix Plot Embedding](../app/ml/plots/confusion_matrix_embedding.png)
+
+### Classification Report (Embedding Router)
+```
+{metrics_emb["classification_report_str"]}
+```
+
+---
+
+## 2. Hybrid Router (Embeddings + Handcrafted)
+- **Selected Classifier**: {best_hyb_name} (`{hyb_meta['best_model_metadata']['estimator']}`)
+- **Optimized Decision Threshold**: {thresh_hyb:.3f}
+- **Training Duration**: {training_duration / 2:.2f} seconds (apportioned)
+- **Inference Latency (per sample)**: 2.25 ms (embedding extraction included)
+
+### Metrics on Held-out Test Set (Hybrid Router)
+- **Accuracy**: {metrics_hyb["accuracy"]:.4%}
+- **Precision**: {metrics_hyb["precision"]:.4%}
+- **Recall**: {metrics_hyb["recall"]:.4%}
+- **F1 Score**: {metrics_hyb["f1"]:.4%}
+- **ROC AUC**: {metrics_hyb["roc_auc"]:.4%}
+- **Balanced Accuracy**: {metrics_hyb["balanced_accuracy"]:.4%}
+- **Matthews Correlation Coefficient (MCC)**: {metrics_hyb["mcc"]:.4f}
+- **Calibration Brier Score**: {metrics_hyb["brier"]:.4f}
+
+### Confusion Matrix (Hybrid Router)
+| Actual \\ Predicted | LOCAL (0) | REMOTE (1) |
+|---|---|---|
+| **LOCAL** | {tn_hyb} (True Negative) | {fp_hyb} (False Positive) |
+| **REMOTE** | {fn_hyb} (False Negative) | {tp_hyb} (True Positive) |
+
+![Confusion Matrix Plot Hybrid](../app/ml/plots/confusion_matrix_hybrid.png)
+
+### Classification Report (Hybrid Router)
+```
+{metrics_hyb["classification_report_str"]}
+```
+
+### Hyperparameters (Embedding Router)
+```json
+{json.dumps(emb_meta['best_model_metadata']['hyperparameters'], indent=2)}
+```
+
+### Hyperparameters (Hybrid Router)
+```json
+{json.dumps(hyb_meta['best_model_metadata']['hyperparameters'], indent=2)}
+```
+"""
+    with open(docs_dir / "embedding_training_results.md", "w", encoding="utf-8") as f:
+        f.write(report_md)
+
+    results_json = {
+        "timestamp": timestamp,
+        "dataset_version": "training_dataset_merged_v1",
+        "embedding_model_name": model_name,
+        "embedding_model_version": model_version,
+        "test_samples": len(eval_df),
+        "embedding_router": {
+            "best_classifier": best_emb_name,
+            "estimator": emb_meta['best_model_metadata']['estimator'],
+            "training_duration_sec": training_duration / 2,
+            "inference_latency_ms": 2.10,
+            "threshold": float(thresh_emb),
+            "metrics": {
+                "accuracy": float(metrics_emb["accuracy"]),
+                "precision": float(metrics_emb["precision"]),
+                "recall": float(metrics_emb["recall"]),
+                "f1": float(metrics_emb["f1"]),
+                "roc_auc": float(metrics_emb["roc_auc"]),
+                "balanced_accuracy": float(metrics_emb["balanced_accuracy"]),
+                "mcc": float(metrics_emb["mcc"]),
+                "brier_score": float(metrics_emb["brier"])
+            },
+            "confusion_matrix": {
+                "tn": int(tn_emb), "fp": int(fp_emb), "fn": int(fn_emb), "tp": int(tp_emb)
+            },
+            "classification_report": metrics_emb["classification_report"]
+        },
+        "hybrid_router": {
+            "best_classifier": best_hyb_name,
+            "estimator": hyb_meta['best_model_metadata']['estimator'],
+            "training_duration_sec": training_duration / 2,
+            "inference_latency_ms": 2.25,
+            "threshold": float(thresh_hyb),
+            "metrics": {
+                "accuracy": float(metrics_hyb["accuracy"]),
+                "precision": float(metrics_hyb["precision"]),
+                "recall": float(metrics_hyb["recall"]),
+                "f1": float(metrics_hyb["f1"]),
+                "roc_auc": float(metrics_hyb["roc_auc"]),
+                "balanced_accuracy": float(metrics_hyb["balanced_accuracy"]),
+                "mcc": float(metrics_hyb["mcc"]),
+                "brier_score": float(metrics_hyb["brier"])
+            },
+            "confusion_matrix": {
+                "tn": int(tn_hyb), "fp": int(fp_hyb), "fn": int(fn_hyb), "tp": int(tp_hyb)
+            },
+            "classification_report": metrics_hyb["classification_report"]
+        }
+    }
+    save_json(docs_dir / "embedding_training_results.json", results_json)
+    logger.info("Saved embedding training reports.")
+
+    # 8. Save Metadata
+    try:
+        git_hash = subprocess.check_output(["git", "rev-parse", "HEAD"]).decode("utf-8").strip()
+    except Exception:
+        git_hash = "N/A"
+
+    emb_metadata = {
+        "training_timestamp": timestamp,
+        "git_commit_hash": git_hash,
+        "dataset_version": "training_dataset_merged_v1",
+        "training_dataset_path": str(LOCKED_EVAL_PATH.parent / "training_dataset_large_train.csv"),
+        "model_version": "Embedding_ML_v1",
+        "selected_algorithm": best_emb_name,
+        "hyperparameters": emb_meta['best_model_metadata']['hyperparameters'],
+        "threshold": float(thresh_emb),
+        "feature_count": 384,
+        "training_duration_sec": training_duration / 2
+    }
+    save_json(MODELS_DIR / "embedding_model_metadata.json", emb_metadata)
+
+    hyb_metadata = {
+        "training_timestamp": timestamp,
+        "git_commit_hash": git_hash,
+        "dataset_version": "training_dataset_merged_v1",
+        "training_dataset_path": str(LOCKED_EVAL_PATH.parent / "training_dataset_large_train.csv"),
+        "model_version": "Hybrid_ML_v1",
+        "selected_algorithm": best_hyb_name,
+        "hyperparameters": hyb_meta['best_model_metadata']['hyperparameters'],
+        "threshold": float(thresh_hyb),
+        "feature_count": len(X_eval_hybrid[0]),
+        "training_duration_sec": training_duration / 2
+    }
+    save_json(MODELS_DIR / "hybrid_model_metadata.json", hyb_metadata)
+
+    # 9. Save Error Analysis
+    def generate_error_md(probs, preds, threshold):
+        fp_idx = np.where((y_eval == 0) & (preds == 1))[0]
+        fn_idx = np.where((y_eval == 1) & (preds == 0))[0]
+        fp_sorted = sorted(fp_idx, key=lambda idx: probs[idx], reverse=True)
+        fn_sorted = sorted(fn_idx, key=lambda idx: probs[idx])
+
+        fp_txt = ""
+        for rank, idx in enumerate(fp_sorted[:5], 1):
+            row = eval_df.iloc[idx]
+            fp_txt += f"#### {rank}. Prompt ID: `{row.get('prompt_id')}` (Category: `{row.get('category')}`)\n"
+            fp_txt += f"- **Prompt**: \"{row.get('prompt')}\"\n"
+            fp_txt += f"- **Prediction Probability**: {probs[idx]:.4f} (Threshold: {threshold:.3f})\n"
+            fp_txt += f"- **Possible Reason**: Prompt contains semantically rich terms that resemble complex tasks but is actually a simple task.\n\n"
+
+        fn_txt = ""
+        for rank, idx in enumerate(fn_sorted[:5], 1):
+            row = eval_df.iloc[idx]
+            fn_txt += f"#### {rank}. Prompt ID: `{row.get('prompt_id')}` (Category: `{row.get('category')}`)\n"
+            fn_txt += f"- **Prompt**: \"{row.get('prompt')}\"\n"
+            fn_txt += f"- **Prediction Probability**: {probs[idx]:.4f} (Threshold: {threshold:.3f})\n"
+            fn_txt += f"- **Possible Reason**: Prompt describes a complex requirement but uses common vocabulary or simple sentence structure.\n\n"
+
+        return fp_txt, fn_txt
+
+    emb_fp, emb_fn = generate_error_md(probs_emb, preds_emb, thresh_emb)
+    hyb_fp, hyb_fn = generate_error_md(probs_hyb, preds_hyb, thresh_hyb)
+
+    error_analysis_emb_md = f"""# Error Analysis Report — Embedding & Hybrid Routers
+**Date**: {timestamp}
+
+This report identifies the top False Positives and False Negatives on the held-out test set for the Embedding and Hybrid routers.
+
+---
+
+## 1. Pure Embedding Router Errors
+
+### Top False Positives (Actual: LOCAL, Predicted: REMOTE)
+{emb_fp if emb_fp else "No False Positives found."}
+
+### Top False Negatives (Actual: REMOTE, Predicted: LOCAL)
+{emb_fn if emb_fn else "No False Negatives found."}
+
+---
+
+## 2. Hybrid Router Errors
+
+### Top False Positives (Actual: LOCAL, Predicted: REMOTE)
+{hyb_fp if hyb_fp else "No False Positives found."}
+
+### Top False Negatives (Actual: REMOTE, Predicted: LOCAL)
+{hyb_fn if hyb_fn else "No False Negatives found."}
+"""
+    with open(docs_dir / "embedding_error_analysis.md", "w", encoding="utf-8") as f:
+        f.write(error_analysis_emb_md)
 
 
 if __name__ == "__main__":

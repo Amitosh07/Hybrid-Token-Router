@@ -122,6 +122,12 @@ class CodingPromptTests(unittest.TestCase):
         features = extract_features(prompt)
         self.assertTrue(features["contains_code"])
 
+    def test_public_in_prose_does_not_set_contains_code(self) -> None:
+        features = extract_features(
+            "Summarize the public dataset and explain its value to public health researchers."
+        )
+        self.assertFalse(features["contains_code"])
+
 
 # ---------------------------------------------------------------------------
 # Math prompts

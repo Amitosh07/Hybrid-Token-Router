@@ -72,7 +72,7 @@ _COMPLEXITY_WEIGHTS: Final[dict[str, float]] = {
 _RE_CODE_PATTERN: Final = re.compile(
     r"```[\s\S]*?```"                           # fenced code block
     r"|`[^`\n]+`"                               # inline code
-    r"|\b(def|class|import|function|return|lambda|async\s+def|await|var|let|const|public|static|void|int|float|bool|struct|interface|func|fn)\b"
+    r"|\b(def|class|import|function|return|lambda|async\s+def|await|var|let|const|static|void|int|float|bool|struct|interface|func|fn)\b"
     r"|\b(python|java|javascript|js|c\+\+|cpp|rust|go|swift|kotlin|typescript|ts|ruby|html|css|sql)\b",
     re.IGNORECASE
 )
@@ -189,6 +189,75 @@ _TECH_DOMAINS: Final[dict[str, tuple[float, list[str], list[str]]]] = {
         ["neural network", "deep learning", "train a model", "model training", "training pipeline",
          "overfitting", "underfitting", "training data", "validation set", "ml model", "llm",
          "large language model", "feature engineering", "hyperparameter tuning", "embedding layer"]
+    ),
+    "operating_systems": (
+        0.90,
+        ["virtual memory", "page replacement", "page fault", "process scheduler", "context switch",
+         "system call", "kernel module", "memory management", "file system", "inode", "copy-on-write",
+         "interrupt handler", "device driver", "process isolation", "cpu scheduling"],
+        ["kernel", "operating system", "process", "scheduler", "paging", "filesystem", "syscall"]
+    ),
+    "networking": (
+        0.88,
+        ["tcp congestion control", "three-way handshake", "domain name system", "bgp", "ospf",
+         "network address translation", "tls handshake", "websocket", "http/2", "http/3",
+         "quic", "reverse proxy", "packet loss", "subnetting", "routing protocol"],
+        ["tcp", "udp", "dns", "http", "https", "socket", "proxy", "firewall", "latency",
+         "bandwidth", "packet", "network protocol"]
+    ),
+    "security": (
+        0.92,
+        ["oauth", "oauth2", "openid connect", "oidc", "jwt", "public key infrastructure",
+         "zero trust", "threat model", "sql injection", "cross-site scripting", "csrf",
+         "remote code execution", "privilege escalation", "key rotation", "certificate pinning",
+         "mutual tls", "rbac", "attribute-based access control"],
+        ["authentication", "authorization", "encryption", "cryptography", "vulnerability",
+         "access token", "refresh token", "password hashing", "security"]
+    ),
+    "cloud": (
+        0.82,
+        ["availability zone", "virtual private cloud", "auto scaling", "serverless architecture",
+         "infrastructure as code", "cloudformation", "cloud run", "lambda function",
+         "managed identity", "object storage", "cloud migration"],
+        ["aws", "azure", "gcp", "cloud", "serverless", "autoscaling", "vpc", "iam"]
+    ),
+    "devops": (
+        0.80,
+        ["continuous integration", "continuous delivery", "deployment pipeline", "blue-green deployment",
+         "canary deployment", "gitops", "service level objective", "error budget",
+         "observability", "distributed tracing", "incident response", "disaster recovery"],
+        ["docker", "kubernetes", "terraform", "ansible", "helm", "prometheus", "grafana",
+         "ci/cd", "pipeline", "deployment", "monitoring"]
+    ),
+    "backend_engineering": (
+        0.82,
+        ["url shortener", "lru cache", "least recently used", "idempotency key", "connection pool",
+         "background job", "job scheduler", "request lifecycle", "dependency injection",
+         "domain-driven design", "clean architecture", "repository pattern"],
+        ["backend", "cache", "queue", "worker", "session", "middleware", "web server",
+         "application server", "pagination"]
+    ),
+    "api_development": (
+        0.78,
+        ["rest api", "graphql", "grpc", "openapi", "webhook", "api versioning",
+         "content negotiation", "rate limit", "api gateway", "service contract"],
+        ["api", "endpoint", "request", "response", "http status", "json payload", "router"]
+    ),
+    "programming_languages": (
+        0.76,
+        ["type system", "borrow checker", "garbage collector", "memory safety", "compiler design",
+         "abstract syntax tree", "intermediate representation", "just-in-time compilation",
+         "functional programming", "metaprogramming", "generics", "language runtime"],
+        ["compiler", "interpreter", "runtime", "typescript", "rust", "golang", "java",
+         "python", "c++", "ownership", "polymorphism"]
+    ),
+    "performance_engineering": (
+        0.88,
+        ["flame graph", "cache locality", "tail latency", "p99 latency", "throughput",
+         "load testing", "stress testing", "memory leak", "cpu profiling", "query plan",
+         "horizontal scaling", "vertical scaling", "backpressure"],
+        ["benchmark", "profiling", "optimize", "bottleneck", "performance", "latency",
+         "throughput", "scalability"]
     )
 }
 
@@ -973,11 +1042,22 @@ def extract_features(prompt: str, debug: bool = False) -> dict[str, Any]:
     api_keywords = 1 if any(kw in lower_prompt for kw in api_keywords_set) else 0
 
     # 6. system_design_keywords
-    sys_design_set = {"microservices", "scaling", "load balancer", "replication", "consistency", "failover", "zero-trust", "cdn", "caching", "architecture"}
+    sys_design_set = {
+        "microservices", "scaling", "load balancer", "replication", "consistency", "failover",
+        "zero-trust", "cdn", "caching", "architecture", "url shortener", "lru cache",
+        "distributed system", "high availability", "fault tolerance", "sharding",
+        "partitioning", "message queue", "event sourcing", "cqrs", "api gateway",
+        "circuit breaker", "consistent hashing", "capacity planning",
+    }
     system_design_keywords = 1 if any(kw in lower_prompt for kw in sys_design_set) else 0
 
     # 7. algorithmic_complexity
-    algo_keywords = {"o(n)", "o(log n)", "o(n^2)", "recursion", "recursive", "dynamic programming", "sorting", "binary search", "complexity", "time complexity", "space complexity"}
+    algo_keywords = {
+        "o(n)", "o(log n)", "o(n^2)", "recursion", "recursive", "dynamic programming",
+        "sorting", "binary search", "complexity", "time complexity", "space complexity",
+        "dijkstra", "shortest path", "graph traversal", "bfs", "dfs", "heap", "trie",
+        "union find", "topological sort", "greedy algorithm", "backtracking",
+    }
     algorithmic_complexity = 1 if any(kw in lower_prompt for kw in algo_keywords) else 0
 
     # 8. dependency_between_subtasks

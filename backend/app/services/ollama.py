@@ -59,9 +59,9 @@ async def generate(prompt: str) -> str:
         "prompt": prompt,
         "stream": False,
         "options": {
-            "num_predict": 32,
+            "num_predict": 2048,
             "temperature": 0.0,
-            "num_ctx": 1024
+            "num_ctx": 4096
         }
     }
 

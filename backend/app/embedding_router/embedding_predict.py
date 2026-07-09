@@ -16,6 +16,7 @@ from app.ml.preprocess import align_features
 from app.ml.model_utils import load_artifact, load_json, numeric_to_provider
 from app.services.feature_extractor import extract_features
 from app.services.router import route as heuristic_route
+from app.services.routing_confidence import probability_confidence
 from app.embedding_router.embedding_utils import (
     EMBEDDING_MODEL_PATH,
     EMBEDDING_METADATA_PATH,
@@ -90,6 +91,9 @@ def route_embedding(prompt: str, features: dict[str, Any] | None = None) -> dict
         provider = "remote" if prediction == 1 else "local"
         selected_probability = remote_probability if provider == "remote" else 1.0 - remote_probability
         confidence = max(remote_probability, 1.0 - remote_probability)
+        confidence_label = probability_confidence(remote_probability, threshold)
+        logger.info("Embedding routing scores local=%.6f remote=%.6f threshold=%.6f confidence=%s",
+                    1.0 - remote_probability, remote_probability, threshold, confidence_label)
         
         version_str = f"emb-{bundle['classifier_name']}-{bundle['embedding_model_name']}"
         
@@ -99,6 +103,9 @@ def route_embedding(prompt: str, features: dict[str, Any] | None = None) -> dict
             "prediction_probability": round(selected_probability, 6),
             "prediction_confidence": round(confidence, 6),
             "confidence": round(confidence, 6),
+            "routing_confidence": confidence_label,
+            "local_score": round(1.0 - remote_probability, 6),
+            "remote_score": round(remote_probability, 6),
             "model_version": version_str,
             "routing_method": ROUTING_METHOD_EMBEDDING,
             "reason": [
@@ -151,6 +158,9 @@ def route_hybrid(prompt: str, features: dict[str, Any] | None = None) -> dict[st
         provider = "remote" if prediction == 1 else "local"
         selected_probability = remote_probability if provider == "remote" else 1.0 - remote_probability
         confidence = max(remote_probability, 1.0 - remote_probability)
+        confidence_label = probability_confidence(remote_probability, threshold)
+        logger.info("Hybrid routing scores local=%.6f remote=%.6f threshold=%.6f confidence=%s",
+                    1.0 - remote_probability, remote_probability, threshold, confidence_label)
         
         version_str = f"hybrid-{bundle['classifier_name']}-{bundle['embedding_model_name']}"
         
@@ -160,6 +170,9 @@ def route_hybrid(prompt: str, features: dict[str, Any] | None = None) -> dict[st
             "prediction_probability": round(selected_probability, 6),
             "prediction_confidence": round(confidence, 6),
             "confidence": round(confidence, 6),
+            "routing_confidence": confidence_label,
+            "local_score": round(1.0 - remote_probability, 6),
+            "remote_score": round(remote_probability, 6),
             "model_version": version_str,
             "routing_method": ROUTING_METHOD_HYBRID,
             "reason": [

@@ -17,6 +17,23 @@ class DecisionEngine:
     def __init__(self, config: DecisionConfig | None = None) -> None:
         self.config = config or DecisionConfig()
 
+    def decide_from_features(self, features: dict[str, Any]) -> dict[str, Any]:
+        """Apply the production pre-routing policy to prompts without provider runs.
+
+        This is the supported labeling path for prompt-only sources: feature
+        extraction remains separate and the decision is delegated to the same
+        deterministic routing policy used as the production fallback.
+        """
+        from app.services.router import route
+
+        result = route(features)
+        return {
+            "label": str(result["provider"]).upper(),
+            "routing_score": int(result["routing_score"]),
+            "routing_confidence": result["routing_confidence"],
+            "reason": result["reason"],
+        }
+
     def calculate_cost(self, input_tokens: int, output_tokens: int, provider: str) -> float:
         """Calculate the estimated execution cost in USD."""
         if provider == "local":

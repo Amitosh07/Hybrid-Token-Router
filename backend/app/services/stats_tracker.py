@@ -53,6 +53,7 @@ class _StatsTracker:
         # Current state
         self._last_provider: str = "none"
         self._last_router: str = "ML Router"
+        self._last_routing_confidence: str = "Low"
 
     # ------------------------------------------------------------------
     # Write
@@ -67,6 +68,7 @@ class _StatsTracker:
         estimated_input_tokens: int = 0,
         fallback_used: bool = False,
         routing_method: str = "ML",
+        routing_confidence: str = "Low",
     ) -> None:
         """Record one completed request.
 
@@ -84,6 +86,7 @@ class _StatsTracker:
             self._sum_confidence += confidence
             self._last_provider = provider
             self._last_router = "ML Router" if routing_method == "ML" else "Heuristic Fallback"
+            self._last_routing_confidence = routing_confidence
 
             if provider == "local":
                 self._local_requests += 1
@@ -122,6 +125,7 @@ class _StatsTracker:
                 "average_latency_ms": avg_latency,
                 "average_confidence": avg_confidence,
                 "average_prediction_confidence": avg_confidence,
+                "current_routing_confidence": self._last_routing_confidence,
                 "routing_distribution": {
                     "local": self._local_requests,
                     "remote": self._remote_requests,

@@ -40,6 +40,7 @@ from app.services.feature_extractor import (
     TASK_TRANSLATION,
     extract_features,
 )
+from app.services.routing_confidence import score_confidence
 
 
 # ---------------------------------------------------------------------------
@@ -108,7 +109,7 @@ class RouterConfig:
         Default: see below.
     """
 
-    threshold: int = 25
+    threshold: int = 23
 
     max_confidence_distance: int = 20
 
@@ -122,6 +123,10 @@ class RouterConfig:
     code_weight: int = 5
     math_weight: int = 4
     json_weight: int = 3
+    technical_complexity_weight: int = 12
+    system_design_weight: int = 7
+    algorithmic_complexity_weight: int = 6
+    api_weight: int = 3
 
     # Complexity
     complexity_weights: dict[str, int] = field(
@@ -257,6 +262,38 @@ def _score_boolean_flags(
     return points, reasons
 
 
+def _score_engineering_signals(features: dict, cfg: RouterConfig) -> tuple[int, list[str]]:
+    """Score existing technical and engineering features without changing architecture."""
+    technical = features.get("technical_complexity", 0.0)
+    if isinstance(technical, dict):
+        technical = technical.get("score", 0.0)
+    technical = max(0.0, min(float(technical or 0.0), 1.0))
+    advanced_signal = any((
+        features.get("system_design_keywords"),
+        features.get("algorithmic_complexity"),
+        features.get("api_keywords"),
+        features.get("reasoning_score", 0) >= 3,
+    ))
+    # A language name alone ("hello world in Python") is not an escalation.
+    points = round(technical * cfg.technical_complexity_weight) if advanced_signal else 0
+    reasons: list[str] = []
+    if points and technical >= 0.65:
+        reasons.append(f"Strong technical-domain signal ({technical:.2f})")
+    elif points and technical >= 0.30:
+        reasons.append(f"Technical-domain signal ({technical:.2f})")
+
+    if features.get("system_design_keywords"):
+        points += cfg.system_design_weight
+        reasons.append("Contains system-design concepts")
+    if features.get("algorithmic_complexity"):
+        points += cfg.algorithmic_complexity_weight
+        reasons.append("Contains algorithmic-complexity concepts")
+    if features.get("api_keywords"):
+        points += cfg.api_weight
+        reasons.append("Contains API engineering concepts")
+    return points, reasons
+
+
 # ---------------------------------------------------------------------------
 # Confidence calculation
 # ---------------------------------------------------------------------------
@@ -345,6 +382,7 @@ def route(features: dict, config: RouterConfig | None = None) -> dict:
         _score_complexity,
         _score_task_type,
         _score_boolean_flags,
+        _score_engineering_signals,
     ):
         pts, rsns = scorer(features, cfg)
         total_score += pts
@@ -372,6 +410,9 @@ def route(features: dict, config: RouterConfig | None = None) -> dict:
         "provider": provider,
         "routing_score": total_score,
         "confidence": confidence,
+        "routing_confidence": score_confidence(total_score, cfg.threshold),
+        "local_score": None,
+        "remote_score": None,
         "reason": all_reasons,
     }
 

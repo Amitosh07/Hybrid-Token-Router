@@ -1,12 +1,12 @@
 import { FiActivity, FiClock, FiCpu, FiHash, FiTarget } from 'react-icons/fi';
-import { formatModel, formatMs, formatNumber, formatPercent } from '../services/formatters.js';
+import { formatModel, formatMs, formatNumber } from '../services/formatters.js';
 
 export default function ResponseFooter({ analytics }) {
   if (!analytics) return null;
 
   const items = [
     { icon: FiCpu, label: `Selected Model: ${formatModel(analytics.selected_provider || analytics.model)}` },
-    { icon: FiTarget, label: `Prediction Confidence: ${formatPercent(analytics.prediction_confidence ?? analytics.confidence)}` },
+    { icon: FiTarget, label: `Routing Confidence: ${analytics.routing_confidence || 'Low'}` },
     { icon: FiActivity, label: `Routing Method: ${analytics.routing_method || 'Heuristic Fallback'}` },
     { icon: FiClock, label: formatMs(analytics.latency) },
     { icon: FiHash, label: `${formatNumber(analytics.tokens)} tokens` }

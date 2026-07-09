@@ -17,6 +17,7 @@ from app.ml.model_utils import (
 from app.ml.preprocess import align_features
 from app.ml.predict import feature_contributions
 from app.services.router import route as heuristic_route
+from app.services.routing_confidence import probability_confidence
 
 logger = logging.getLogger(__name__)
 
@@ -58,6 +59,11 @@ def route(features: dict[str, Any]) -> dict[str, Any]:
         provider = "remote" if prediction == 1 else "local"
         selected_probability = remote_probability if provider == "remote" else 1.0 - remote_probability
         confidence = max(remote_probability, 1.0 - remote_probability)
+        confidence_label = probability_confidence(remote_probability, threshold)
+        logger.info(
+            "ML routing scores local=%.6f remote=%.6f threshold=%.6f confidence=%s",
+            1.0 - remote_probability, remote_probability, threshold, confidence_label,
+        )
 
         return {
             "provider": provider,
@@ -65,6 +71,9 @@ def route(features: dict[str, Any]) -> dict[str, Any]:
             "prediction_probability": round(selected_probability, 6),
             "prediction_confidence": round(confidence, 6),
             "confidence": round(confidence, 6),
+            "routing_confidence": confidence_label,
+            "local_score": round(1.0 - remote_probability, 6),
+            "remote_score": round(remote_probability, 6),
             "model_version": bundle["model_version"],
             "routing_method": ROUTING_METHOD_ML,
             "reason": [

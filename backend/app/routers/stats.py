@@ -29,6 +29,7 @@ def get_stats() -> StatsResponse:
         average_latency_ms=snapshot["average_latency_ms"],
         average_confidence=snapshot["average_confidence"],
         average_prediction_confidence=snapshot["average_prediction_confidence"],
+        current_routing_confidence=snapshot["current_routing_confidence"],
         routing_distribution=snapshot["routing_distribution"],
         router_version=settings.APP_VERSION,
         uptime_seconds=snapshot["uptime_seconds"],

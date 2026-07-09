@@ -12,7 +12,7 @@ import joblib
 ML_DIR = Path(__file__).resolve().parent
 APP_DIR = ML_DIR.parent
 BACKEND_DIR = APP_DIR.parent
-DATASET_PATH = APP_DIR / "data" / "training" / "training_dataset_large.csv"
+DATASET_PATH = APP_DIR / "data" / "training" / "training_dataset_merged.csv"
 LOCKED_EVAL_PATH = APP_DIR / "data" / "training" / "locked_evaluation_dataset.csv"
 MODELS_DIR = BACKEND_DIR / "models"
 DOCS_DIR = BACKEND_DIR / "docs"

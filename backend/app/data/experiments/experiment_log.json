@@ -180,5 +180,36 @@
     },
     "run_id": "exp_1783541626",
     "timestamp": "2026-07-08T20:13:46.723253+00:00"
+  },
+  {
+    "classifier": "Gradient Boosting",
+    "dataset_version": "large_dataset_balanced_v1",
+    "embedding_model": "None (Traditional ML)",
+    "experiment_name": "phase_6_model_search",
+    "feature_version": "V3_expanded_features",
+    "hyperparameters": {
+      "learning_rate": 0.08291490621720529,
+      "n_estimators": 227
+    },
+    "metrics": {
+      "accuracy": 1.0,
+      "confusion_matrix": [
+        [
+          1143,
+          0
+        ],
+        [
+          0,
+          1252
+        ]
+      ],
+      "f1": 1.0,
+      "precision": 1.0,
+      "prediction_latency_ms_per_sample": 0.05,
+      "recall": 1.0,
+      "roc_auc": 1.0
+    },
+    "run_id": "exp_1783556097",
+    "timestamp": "2026-07-09T00:14:57.778378+00:00"
   }
 ]

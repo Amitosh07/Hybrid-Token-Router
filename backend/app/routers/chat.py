@@ -104,6 +104,8 @@ async def chat(request: ChatRequest) -> ChatResponse:
         logger.info(
             f"[{prompt_id}] Provider={provider} | "
             f"Confidence={route_result['prediction_confidence']} | "
+            f"RoutingConfidence={route_result['routing_confidence']} | "
+            f"LocalScore={route_result.get('local_score')} | RemoteScore={route_result.get('remote_score')} | "
             f"RoutingMethod={route_result['routing_method']} | "
             f"ProviderMs={provider_ms}ms | TotalMs={total_ms}ms | "
             f"Fallback={fallback_used}"
@@ -116,6 +118,7 @@ async def chat(request: ChatRequest) -> ChatResponse:
             provider=provider,
             latency_ms=total_ms,
             confidence=route_result["prediction_confidence"],
+            routing_confidence=route_result["routing_confidence"],
             estimated_input_tokens=estimated_input_tokens,
             fallback_used=fallback_used,
             routing_method=route_result["routing_method"],
@@ -137,6 +140,9 @@ async def chat(request: ChatRequest) -> ChatResponse:
             prompt_id=prompt_id,
             prediction_probability=route_result["prediction_probability"],
             prediction_confidence=route_result["prediction_confidence"],
+            routing_confidence=route_result["routing_confidence"],
+            local_score=route_result.get("local_score"),
+            remote_score=route_result.get("remote_score"),
             model_version=route_result["model_version"],
             routing_method=route_result["routing_method"],
         )

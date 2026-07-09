@@ -2,28 +2,28 @@
 
 ## Dataset Overview
 
-- Rows: 4600
-- Columns: 49
-- Trainable pre-routing features: 31
+- Rows: 11973
+- Columns: 53
+- Trainable pre-routing features: 35
 - Post-inference columns reserved for offline evaluation: local_cost, local_heuristic_quality, local_latency_ms, local_llm_quality, local_quality_score, local_tokens, remote_cost, remote_heuristic_quality, remote_latency_ms, remote_llm_quality, remote_quality_score, remote_tokens
 
 ## Class Distribution
 
-- `LOCAL`: 4354
-- `REMOTE`: 246
+- `REMOTE`: 6257
+- `LOCAL`: 5716
 
 ## Feature Statistics
 
-| stat | constraint_count | estimated_complexity | prompt_length | word_count | estimated_input_tokens | contains_code | contains_math | contains_json | contains_markdown | contains_numbers | contains_question | reasoning_score | technical_complexity | reasoning_depth | task_complexity | constraint_complexity | context_complexity | complexity_score | constraint_density | presence_of_tables | sql_indicators | api_keywords | system_design_keywords | algorithmic_complexity | dependency_between_subtasks | multi_turn_context | code_indicators | math_indicators |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| count | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 | 4600.0 |
-| mean | 2.8863 | 0.775 | 389.1554 | 54.0333 | 97.6657 | 0.2291 | 0.1011 | 0.0 | 0.0 | 0.2976 | 0.3339 | 3.7083 | 0.1453 | 0.2681 | 0.6567 | 0.1619 | 0.1454 | 0.3718 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| std | 1.0655 | 0.2301 | 93.0737 | 12.0647 | 23.2696 | 0.4203 | 0.3015 | 0.0 | 0.0 | 0.4573 | 0.4717 | 1.6475 | 0.1944 | 0.2094 | 0.2728 | 0.087 | 0.0312 | 0.162 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| min | 1.0 | 0.345 | 175.0 | 25.0 | 44.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.0 | 0.0 | 0.0 | 0.2 | 0.08 | 0.085 | 0.0791 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| 25% | 2.0 | 0.535 | 317.0 | 45.0 | 80.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 2.0 | 0.0 | 0.0 | 0.35 | 0.08 | 0.1242 | 0.2426 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| 50% | 3.0 | 0.84 | 399.0 | 55.0 | 100.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 4.0 | 0.0 | 0.2929 | 0.75 | 0.18 | 0.1437 | 0.3999 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| 75% | 4.0 | 1.0 | 460.0 | 63.0 | 115.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.0 | 1.0 | 5.0 | 0.1875 | 0.3309 | 0.9 | 0.24 | 0.15 | 0.4761 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
-| max | 5.0 | 1.0 | 598.0 | 80.0 | 150.0 | 1.0 | 1.0 | 0.0 | 0.0 | 1.0 | 1.0 | 9.0 | 0.95 | 0.7 | 1.0 | 0.38 | 0.3204 | 0.9011 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 |
+| stat | constraint_count | estimated_complexity | prompt_length | word_count | estimated_input_tokens | contains_code | contains_math | contains_json | contains_markdown | contains_numbers | contains_question | reasoning_score | technical_complexity | reasoning_depth | task_complexity | constraint_complexity | context_complexity | complexity_score | constraint_density | presence_of_tables | sql_indicators | api_keywords | system_design_keywords | algorithmic_complexity | dependency_between_subtasks | multi_turn_context | code_indicators | math_indicators | routing_score |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| count | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 | 11973.0 |
+| mean | 0.0 | 0.334 | 1415.9652 | 191.202 | 354.3631 | 0.1063 | 0.0412 | 0.0 | 0.0002 | 0.0949 | 0.4863 | 3.4237 | 0.2418 | 0.2076 | 0.576 | 0.0915 | 0.1127 | 0.334 | 0.0102 | 0.0 | 0.2816 | 0.4493 | 0.0592 | 0.0294 | 0.1149 | 0.0043 | 0.1329 | 0.0845 | 31.7779 |
+| std | 0.0 | 0.226 | 2872.0204 | 387.6918 | 718.0065 | 0.3083 | 0.1987 | 0.0 | 0.0129 | 0.2931 | 0.4998 | 2.1915 | 0.2487 | 0.2549 | 0.288 | 0.1296 | 0.0474 | 0.226 | 0.0171 | 0.0 | 0.4498 | 0.4974 | 0.236 | 0.1689 | 0.3189 | 0.0651 | 0.3395 | 0.2782 | 24.3233 |
+| min | 0.0 | 0.054 | 50.0 | 9.0 | 13.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.0 | 0.0 | 0.0 | 0.2 | 0.0 | 0.0366 | 0.054 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 5.0 |
+| 25% | 0.0 | 0.1048 | 110.0 | 16.0 | 28.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.0 | 0.0 | 0.0 | 0.25 | 0.0 | 0.0611 | 0.1048 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 10.0 |
+| 50% | 0.0 | 0.3333 | 278.0 | 34.0 | 70.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 3.0 | 0.2647 | 0.0 | 0.5 | 0.0 | 0.1125 | 0.3333 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 26.0 |
+| 75% | 0.0 | 0.5246 | 530.0 | 72.0 | 133.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 1.0 | 5.0 | 0.3965 | 0.3418 | 0.85 | 0.18 | 0.1453 | 0.5246 | 0.0143 | 0.0 | 1.0 | 1.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 0.0 | 48.0 |
+| max | 0.0 | 1.0 | 15870.0 | 1988.0 | 3968.0 | 1.0 | 1.0 | 0.0 | 1.0 | 1.0 | 1.0 | 10.0 | 1.0 | 0.9087 | 1.0 | 0.74 | 0.3538 | 1.0 | 0.1818 | 0.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 1.0 | 133.0 |
 
 ## Missing Value Analysis
 
@@ -33,9 +33,9 @@
 
 - `constraint_count`: 0 IQR outliers
 - `estimated_complexity`: 0 IQR outliers
-- `prompt_length`: 0 IQR outliers
-- `word_count`: 0 IQR outliers
-- `estimated_input_tokens`: 0 IQR outliers
+- `prompt_length`: 2595 IQR outliers
+- `word_count`: 2615 IQR outliers
+- `estimated_input_tokens`: 2595 IQR outliers
 - `contains_code`: 0 IQR outliers
 - `contains_math`: 0 IQR outliers
 - `contains_json`: 0 IQR outliers
@@ -43,13 +43,13 @@
 - `contains_numbers`: 0 IQR outliers
 - `contains_question`: 0 IQR outliers
 - `reasoning_score`: 0 IQR outliers
-- `technical_complexity`: 203 IQR outliers
-- `reasoning_depth`: 0 IQR outliers
+- `technical_complexity`: 14 IQR outliers
+- `reasoning_depth`: 100 IQR outliers
 - `task_complexity`: 0 IQR outliers
-- `constraint_complexity`: 0 IQR outliers
-- `context_complexity`: 250 IQR outliers
-- `complexity_score`: 3 IQR outliers
-- `constraint_density`: 0 IQR outliers
+- `constraint_complexity`: 205 IQR outliers
+- `context_complexity`: 41 IQR outliers
+- `complexity_score`: 0 IQR outliers
+- `constraint_density`: 1220 IQR outliers
 - `presence_of_tables`: 0 IQR outliers
 - `sql_indicators`: 0 IQR outliers
 - `api_keywords`: 0 IQR outliers
@@ -59,32 +59,35 @@
 - `multi_turn_context`: 0 IQR outliers
 - `code_indicators`: 0 IQR outliers
 - `math_indicators`: 0 IQR outliers
+- `routing_score`: 41 IQR outliers
 
 ## Correlation Matrix
 
 - See `backend/app/ml/plots/correlation_heatmap.png`.
-- `prompt_length` vs `word_count`: 0.9788
-- `prompt_length` vs `estimated_input_tokens`: 0.9999
-- `word_count` vs `estimated_input_tokens`: 0.9787
-- `reasoning_score` vs `complexity_score`: 0.9857
+- `estimated_complexity` vs `reasoning_score`: 0.9922
+- `estimated_complexity` vs `complexity_score`: 1.0
+- `prompt_length` vs `word_count`: 0.9989
+- `prompt_length` vs `estimated_input_tokens`: 1.0
+- `word_count` vs `estimated_input_tokens`: 0.9989
+- `reasoning_score` vs `complexity_score`: 0.9922
 
 ## Feature Importance
 
-- `complexity_score`: 0.230544
-- `reasoning_score`: 0.145795
-- `prompt_length`: 0.091744
-- `reasoning_depth`: 0.090066
-- `task_complexity`: 0.087710
-- `context_complexity`: 0.069082
-- `word_count`: 0.066984
-- `estimated_input_tokens`: 0.065221
-- `estimated_complexity`: 0.046373
-- `technical_complexity`: 0.028267
-- `constraint_complexity`: 0.023262
-- `constraint_count`: 0.019154
-- `contains_math`: 0.011143
-- `contains_numbers`: 0.010258
-- `contains_question`: 0.008735
+- `routing_score`: 0.243664
+- `estimated_complexity`: 0.144517
+- `reasoning_score`: 0.135949
+- `complexity_score`: 0.131024
+- `context_complexity`: 0.058614
+- `task_complexity`: 0.056815
+- `reasoning_depth`: 0.053743
+- `word_count`: 0.039752
+- `technical_complexity`: 0.035005
+- `prompt_length`: 0.024559
+- `api_keywords`: 0.020927
+- `estimated_input_tokens`: 0.020827
+- `constraint_density`: 0.014214
+- `constraint_complexity`: 0.008814
+- `sql_indicators`: 0.003228
 
 ## Feature Distributions and Pairwise Relationships
 

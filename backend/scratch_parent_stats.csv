@@ -1,0 +1,999 @@
+Parent Category,Total,LOCAL,REMOTE,REMOTE %,Avg Length,Avg Complexity,Avg Reasoning
+Economic History,20,16,4,20.0,38.35,0.32462,3.1
+Urban Sociology,20,6,14,70.0,38.4,0.33931999999999995,3.2
+Opera Production,10,4,6,60.0,35.7,0.35515,3.5
+Statistics,10,3,7,70.0,33.6,0.36563,3.7
+Poaching,10,10,0,0.0,33.4,0.31893999999999995,3.0
+Stir-Frying,10,9,1,10.0,32.2,0.3181900000000001,3.0
+Genetics,10,7,3,30.0,32.6,0.33097,3.3
+Lifestyle Audits,10,2,8,80.0,36.5,0.36055,3.7
+Geology,10,7,3,30.0,31.2,0.33892,3.3
+Neuroscience,10,6,4,40.0,30.3,0.34404999999999997,3.4
+Marine Biology,10,5,5,50.0,33.9,0.35477,3.5
+Quantum Mechanics,10,1,9,90.0,36.1,0.39375,3.8
+Software Development,10,1,9,90.0,32.9,0.42087,4.2
+Cloud Computing,10,0,10,100.0,38.1,0.49467,5.0
+Cybersecurity,10,0,10,100.0,34.7,0.47503,4.9
+Artificial Intelligence,10,1,9,90.0,33.6,0.46848999999999996,4.6
+Machine Learning,10,1,9,90.0,34.4,0.42756,4.4
+Robotics,10,6,4,40.0,33.4,0.34323000000000004,3.4
+Blockchain,10,3,7,70.0,31.7,0.37607,3.8
+Virtual Reality,10,8,2,20.0,35.4,0.34371,3.3
+Augmented Reality,10,6,4,40.0,35.5,0.34805,3.4
+Internet of Things,10,0,10,100.0,38.0,0.40774,4.2
+Mathematics,10,2,8,80.0,31.7,0.33401000000000003,3.3
+Chemistry,10,8,2,20.0,31.0,0.33883,3.2
+Geometry,10,0,10,100.0,30.7,0.32879,3.1
+Algebra,10,0,10,100.0,34.2,0.31765,3.0
+Calculus,10,0,10,100.0,33.3,0.33560999999999996,3.1
+Number Theory,10,5,5,50.0,35.7,0.35499,3.5
+Topology,10,8,2,20.0,31.6,0.32114000000000004,3.0
+Operations Research,10,3,7,70.0,37.5,0.43695000000000006,4.4
+Game Theory,10,6,4,40.0,36.7,0.34875,3.4
+Combinatorics,10,4,6,60.0,34.2,0.40119999999999995,4.0
+Mechanical Engineering,10,6,4,40.0,35.2,0.34104,3.3
+Electrical Engineering,10,4,6,60.0,33.5,0.35833,3.6
+Civil Engineering,10,6,4,40.0,35.8,0.35081,3.4
+Chemical Engineering,10,2,8,80.0,35.3,0.36802999999999997,3.7
+Aerospace Engineering,10,6,4,40.0,36.5,0.33237,3.2
+Biomedical Engineering,10,6,4,40.0,34.5,0.33903,3.5
+Industrial Engineering,10,3,7,70.0,37.8,0.358,3.6
+Environmental Engineering,10,2,8,80.0,37.2,0.39921,3.9
+Nuclear Engineering,10,6,4,40.0,39.8,0.35827,3.6
+Marine Engineering,10,4,6,60.0,37.4,0.36682000000000003,3.6
+Software Architecture,10,0,10,100.0,33.4,0.50988,5.2
+Web Development,10,1,9,90.0,33.3,0.41462000000000004,4.2
+Mobile App Development,10,2,8,80.0,36.4,0.39177999999999996,3.9
+UI/UX Design,10,4,6,60.0,33.8,0.34903,3.4
+Game Development,10,4,6,60.0,36.4,0.36014,3.6
+Data Analysis,10,2,8,80.0,34.5,0.38237,4.0
+Big Data,10,2,8,80.0,35.2,0.39065999999999995,4.0
+DevOps,10,1,9,90.0,30.5,0.5277299999999999,5.2
+API Design,10,0,10,100.0,33.8,0.5182800000000001,5.1
+Open Source Software,10,5,5,50.0,34.8,0.40539000000000003,4.0
+Business Strategy,10,5,5,50.0,37.8,0.35031,3.4
+Business Management,10,4,6,60.0,36.9,0.36591,3.7
+Organizational Behavior,10,4,6,60.0,37.0,0.36126,3.5
+Consulting,10,2,8,80.0,34.5,0.37824,3.9
+Project Management,10,4,6,60.0,35.4,0.35486,3.5
+Startup Culture,10,8,2,20.0,35.2,0.31857,3.0
+Leadership,10,6,4,40.0,32.4,0.33583999999999997,3.3
+Human Resources,10,3,7,70.0,36.8,0.35658,3.7
+Business Negotiation,10,4,6,60.0,37.0,0.33787999999999996,3.3
+Corporate Social Responsibility,10,4,6,60.0,41.3,0.35980999999999996,3.5
+Finance,10,2,8,80.0,34.6,0.41517,4.2
+Investing,10,3,7,70.0,33.8,0.40207,4.0
+Personal Finance,10,2,8,80.0,35.8,0.37435,3.7
+Wealth Management,10,3,7,70.0,36.6,0.38872,3.9
+Accounting,10,4,6,60.0,31.9,0.37145,3.7
+Taxation (General),10,7,3,30.0,36.5,0.32966,3.3
+Financial Analysis,10,3,7,70.0,38.2,0.37574,3.7
+Venture Capital,10,0,10,100.0,37.0,0.38595999999999997,4.0
+Crowdfunding,10,5,5,50.0,33.7,0.34903000000000006,3.5
+Stock Market,10,2,8,80.0,37.1,0.38566,3.8
+Entrepreneurship,10,5,5,50.0,36.0,0.34552,3.3
+Small Business,10,8,2,20.0,36.6,0.32855,3.2
+Business Innovation,10,7,3,30.0,37.4,0.33747999999999995,3.3
+Business Growth,10,7,3,30.0,36.7,0.33774,3.3
+Product Development,10,6,4,40.0,34.7,0.33608,3.4
+Branding,10,6,4,40.0,34.5,0.33943,3.3
+Franchising,10,6,4,40.0,36.1,0.33492,3.4
+E-commerce,10,6,4,40.0,32.6,0.32235,3.0
+Business Incubation,10,5,5,50.0,37.8,0.33309,3.2
+Social Enterprise,10,8,2,20.0,39.0,0.33813000000000004,3.2
+Marketing,10,8,2,20.0,34.3,0.33133,3.2
+Digital Marketing,10,8,2,20.0,36.0,0.33286000000000004,3.2
+Content Marketing,10,7,3,30.0,36.6,0.33782,3.3
+Affiliate Marketing,10,6,4,40.0,36.9,0.34595000000000004,3.4
+Search Engine Optimization,10,5,5,50.0,38.4,0.34226999999999996,3.2
+Social Media Strategy,10,5,5,50.0,38.6,0.34395999999999993,3.4
+Influencer Marketing,10,4,6,60.0,36.6,0.35512,3.6
+Public Relations,10,0,10,100.0,36.9,0.33596,3.4
+Market Research,10,8,2,20.0,37.4,0.33335000000000004,3.2
+Brand Strategy,10,7,3,30.0,37.9,0.3277,3.1
+Economics (General),10,4,6,60.0,35.1,0.32667999999999997,3.2
+Microeconomics,10,7,3,30.0,36.1,0.31637,3.0
+Macroeconomics,10,4,6,60.0,34.1,0.32077999999999995,3.1
+Development Economics,10,6,4,40.0,38.3,0.34339,3.4
+Behavioral Economics,10,3,7,70.0,35.6,0.34621,3.4
+Environmental Economics,10,3,7,70.0,39.0,0.35739,3.6
+Labor Economics,10,6,4,40.0,39.8,0.32892,3.2
+International Trade,10,5,5,50.0,36.6,0.36433,3.7
+Game Theory in Economics,10,7,3,30.0,40.3,0.32126,3.1
+Project Planning,10,2,8,80.0,35.4,0.39516999999999997,4.0
+Agile Methodologies,10,5,5,50.0,35.3,0.34935000000000005,3.4
+Scrum Framework,10,5,5,50.0,33.9,0.34192,3.3
+Lean Startup,10,7,3,30.0,36.0,0.34770999999999996,3.4
+Kanban,10,4,6,60.0,31.8,0.40327999999999997,4.0
+Risk Management,10,0,10,100.0,38.1,0.43023999999999996,4.3
+Stakeholder Engagement,10,3,7,70.0,37.9,0.38981,3.7
+Change Management,10,1,9,90.0,38.5,0.39563000000000004,3.9
+Innovation Management,10,5,5,50.0,36.7,0.34191000000000005,3.4
+Strategic Planning,10,3,7,70.0,37.4,0.38408000000000003,3.8
+Product Management,10,6,4,40.0,35.3,0.33857000000000004,3.4
+Roadmapping,10,5,5,50.0,31.1,0.3538,3.5
+User Research,10,4,6,60.0,36.4,0.35830999999999996,3.6
+Usability Testing,10,4,6,60.0,35.1,0.36856999999999995,3.6
+Requirement Gathering,10,6,4,40.0,36.5,0.34421,3.4
+Product-Led Growth,10,9,1,10.0,37.3,0.32608999999999994,3.1
+User Story Mapping,10,8,2,20.0,34.3,0.3306,3.2
+Go-to-Market Strategies,10,0,10,100.0,38.9,0.40135999999999994,4.0
+Competitive Analysis,10,5,5,50.0,38.4,0.35568999999999995,3.5
+Product Analytics,10,7,3,30.0,37.8,0.34726,3.4
+Education (General),10,6,4,40.0,36.4,0.34902,3.4
+Early Childhood Education,10,5,5,50.0,41.6,0.3458,3.5
+Adult Education,10,8,2,20.0,35.8,0.34098,3.2
+Special Education,10,5,5,50.0,37.8,0.35811000000000004,3.5
+Online Learning,10,7,3,30.0,35.7,0.34631,3.3
+Homeschooling,10,4,6,60.0,35.4,0.37304,3.7
+Curriculum Development,10,4,6,60.0,38.3,0.37029,3.6
+STEM Education,10,6,4,40.0,36.9,0.33804,3.4
+EdTech,10,6,4,40.0,35.5,0.35087999999999997,3.4
+Peer Learning,10,5,5,50.0,37.4,0.35176,3.4
+Pedagogy,10,6,4,40.0,36.1,0.3461,3.3
+Instructional Design,10,7,3,30.0,36.0,0.34739,3.3
+Assessment Methods,10,1,9,90.0,36.3,0.39845,3.9
+Learning Theories,10,8,2,20.0,34.7,0.33708,3.2
+Classroom Management,10,3,7,70.0,37.8,0.34591,3.4
+Differentiated Instruction,10,2,8,80.0,39.5,0.39282999999999996,3.8
+Project-Based Learning,10,5,5,50.0,36.6,0.3704200000000001,3.5
+Experiential Learning,10,7,3,30.0,36.1,0.34392,3.3
+Flipped Classroom,10,4,6,60.0,36.4,0.3638,3.5
+Educational Psychology,10,6,4,40.0,35.7,0.34855,3.4
+Learning Strategies,10,4,6,60.0,35.4,0.36707,3.6
+Memory Techniques,10,6,4,40.0,33.9,0.33689,3.3
+Speed Reading,10,6,4,40.0,35.5,0.34176999999999996,3.4
+Mind Mapping,10,2,8,80.0,33.9,0.38509,3.8
+Note-Taking Systems,10,5,5,50.0,33.1,0.3464,3.3
+Metacognition,10,4,6,60.0,33.7,0.3701,3.7
+Self-Directed Learning,10,6,4,40.0,36.5,0.35555000000000003,3.3
+Critical Thinking,10,6,4,40.0,35.5,0.33996999999999994,3.4
+Gamification,10,5,5,50.0,33.8,0.35109,3.5
+Self-Evaluation,10,5,5,50.0,33.9,0.3419,3.4
+Career Development,10,7,3,30.0,35.9,0.35141999999999995,3.4
+Job Hunting,10,9,1,10.0,35.8,0.32509,3.1
+Resume Building,10,8,2,20.0,36.0,0.33765999999999996,3.2
+Interview Skills,10,4,6,60.0,37.8,0.34818999999999994,3.6
+Networking,10,0,10,100.0,32.1,0.47168,4.8
+Professional Etiquette,10,10,0,0.0,36.3,0.32648,3.0
+Mentoring,10,8,2,20.0,32.7,0.33772,3.2
+Work-Life Balance,10,6,4,40.0,36.6,0.33082,3.2
+Salary Negotiation,10,3,7,70.0,37.6,0.36129,3.6
+Freelancing,10,6,4,40.0,33.3,0.33604,3.3
+Personal Development,10,7,3,30.0,34.3,0.3408399999999999,3.2
+Goal Setting,10,4,6,60.0,34.7,0.3539,3.5
+Habits and Routines,10,5,5,50.0,37.2,0.33676999999999996,3.3
+Time Management,10,4,6,60.0,33.8,0.33214,3.2
+Motivation,10,8,2,20.0,32.5,0.32206,3.0
+Emotional Intelligence,10,8,2,20.0,34.1,0.32605999999999996,3.0
+Conflict Resolution,10,2,8,80.0,35.8,0.33274,3.1
+Confidence Building,10,8,2,20.0,35.9,0.32477000000000006,3.0
+Self-Reflection,10,8,2,20.0,33.6,0.34098,3.2
+Decision-Making,10,1,9,90.0,33.4,0.36479000000000006,3.5
+Health and Wellness,10,5,5,50.0,35.0,0.34374000000000005,3.5
+Physical Fitness,10,7,3,30.0,33.9,0.325,3.1
+Mental Health,10,3,7,70.0,36.3,0.37301999999999996,3.7
+Sleep Science,10,7,3,30.0,36.2,0.31877,3.1
+Stress Management,10,6,4,40.0,35.8,0.31744,3.0
+Holistic Health,10,7,3,30.0,35.5,0.33826,3.2
+Preventive Medicine,10,4,6,60.0,37.3,0.36445999999999995,3.5
+Immunology (Basics),10,2,8,80.0,33.7,0.35873,3.8
+Nutrition,10,2,8,80.0,31.5,0.33202999999999994,3.2
+Healthy Aging,10,6,4,40.0,36.5,0.32044999999999996,3.1
+Psychology (General),10,3,7,70.0,35.6,0.37653,3.7
+Behavioral Psychology,10,2,8,80.0,37.6,0.34987,3.5
+Cognitive Psychology,10,2,8,80.0,35.6,0.38954999999999995,3.8
+Social Psychology,10,9,1,10.0,36.6,0.32493000000000005,3.1
+Developmental Psychology,10,4,6,60.0,37.0,0.35015,3.7
+Positive Psychology,10,8,2,20.0,33.5,0.3313499999999999,3.1
+Clinical Psychology,10,6,4,40.0,35.4,0.32913,3.3
+Forensic Psychology,10,2,8,80.0,36.0,0.37840999999999997,3.8
+Industrial-Organizational Psychology,10,4,6,60.0,39.4,0.35888000000000003,3.6
+Neuropsychology,10,4,6,60.0,33.3,0.36011000000000004,3.7
+Cognitive Science,10,1,9,90.0,34.3,0.40003,4.1
+Linguistics,10,6,4,40.0,30.6,0.3446,3.4
+Phonetics,10,9,1,10.0,32.8,0.3305,3.1
+Psycholinguistics,10,2,8,80.0,33.6,0.36241,3.8
+Computational Linguistics,10,1,9,90.0,35.5,0.41273,4.2
+Semantics,10,4,6,60.0,33.3,0.35999000000000003,3.5
+Pragmatics,10,5,5,50.0,32.9,0.33885000000000004,3.5
+Language Acquisition,10,7,3,30.0,36.9,0.33070000000000005,3.3
+Bilingualism,10,9,1,10.0,33.8,0.31835,3.1
+Artificial Languages,10,5,5,50.0,34.0,0.35197,3.6
+Philosophy (General),10,7,3,30.0,30.4,0.32408000000000003,3.2
+Ethics (Non-Religious),10,4,6,60.0,34.7,0.36121,3.5
+Metaphysics (Non-Religious),10,6,4,40.0,31.1,0.34074,3.4
+Epistemology,10,7,3,30.0,31.5,0.32827,3.2
+Logic,10,6,4,40.0,32.1,0.32367,3.2
+Philosophy of Mind,10,8,2,20.0,36.1,0.33281,3.2
+Philosophy of Language,10,5,5,50.0,35.6,0.33693000000000006,3.5
+Philosophy of Science,10,7,3,30.0,37.4,0.33477000000000007,3.3
+Existentialism (Secular),10,0,10,100.0,32.6,0.40414000000000005,4.2
+Aesthetics,10,4,6,60.0,32.7,0.35581000000000007,3.5
+Ethical Dilemmas (Secular),10,0,10,100.0,37.0,0.43632,4.3
+Bioethics (Secular),10,2,8,80.0,37.0,0.40255,4.0
+Animal Ethics (Secular),10,7,3,30.0,39.2,0.34522,3.3
+Digital Ethics,10,5,5,50.0,38.0,0.37773,3.7
+Corporate Ethics,10,6,4,40.0,39.0,0.34452,3.3
+Professional Ethics,10,4,6,60.0,36.5,0.3680899999999999,3.5
+Environmental Ethics,10,3,7,70.0,36.2,0.36127000000000004,3.6
+Media Ethics,10,4,6,60.0,36.5,0.34102,3.4
+Academic Integrity,10,5,5,50.0,35.9,0.33016,3.3
+Moral Psychology,10,5,5,50.0,35.9,0.35593,3.5
+Sociology (General),10,5,5,50.0,35.7,0.33077999999999996,3.3
+Social Stratification,10,8,2,20.0,37.1,0.3154,3.1
+Rural Sociology,10,6,4,40.0,40.6,0.31267000000000006,3.1
+Sociology of Family,10,8,2,20.0,40.5,0.3264600000000001,3.1
+Sociology of Education,10,4,6,60.0,41.3,0.32393,3.2
+Culture and Society,10,6,4,40.0,35.7,0.33446000000000004,3.3
+Demography,10,8,2,20.0,35.2,0.32292,3.1
+Criminology,10,2,8,80.0,34.5,0.39083999999999997,3.9
+Social Movements (Non-Political Focus),10,7,3,30.0,39.1,0.33355999999999997,3.2
+Anthropology (General),10,8,2,20.0,35.6,0.31711,3.1
+Cultural Anthropology,10,6,4,40.0,36.7,0.32123,3.2
+Biological Anthropology,10,7,3,30.0,34.5,0.33082999999999996,3.2
+Linguistic Anthropology,10,9,1,10.0,35.4,0.32158,3.1
+Archaeology (General),10,7,3,30.0,35.6,0.3379,3.3
+Ethnography,10,8,2,20.0,34.1,0.31192000000000003,3.0
+Folklore Studies,10,5,5,50.0,33.5,0.33653999999999995,3.5
+Museum Studies,10,6,4,40.0,37.5,0.33681,3.3
+Visual Anthropology,10,6,4,40.0,37.3,0.33316,3.4
+Ethnomusicology,10,7,3,30.0,36.0,0.33826,3.3
+History (General),10,7,3,30.0,36.2,0.32104,3.1
+Ancient Civilizations,10,7,3,30.0,32.7,0.32111,3.0
+Medieval Studies,10,7,3,30.0,36.2,0.32619000000000004,3.1
+Renaissance Studies,10,6,4,40.0,34.4,0.3222,3.1
+Modern History,10,7,3,30.0,37.9,0.32875999999999994,3.2
+Maritime History,10,7,3,30.0,37.0,0.33105,3.2
+Social History,10,7,3,30.0,36.6,0.32925,3.2
+Cultural History,10,9,1,10.0,35.0,0.31995000000000007,3.1
+History of Science,10,8,2,20.0,39.9,0.32779,3.2
+Archaeology (Methods),10,9,1,10.0,34.8,0.32658,3.1
+Prehistoric Archaeology,10,8,2,20.0,32.8,0.33233999999999997,3.2
+Underwater Archaeology,10,6,4,40.0,37.7,0.33016,3.3
+Experimental Archaeology,10,6,4,40.0,38.0,0.34102999999999994,3.3
+Archaeobotany,10,10,0,0.0,35.3,0.31640999999999997,3.0
+Archaeozoology,10,10,0,0.0,34.6,0.32057,3.0
+Bioarchaeology,10,9,1,10.0,33.2,0.31459000000000004,3.1
+Geoarchaeology,10,7,3,30.0,33.9,0.34514999999999996,3.3
+Archaeological Field Techniques,10,7,3,30.0,36.6,0.32222999999999996,3.1
+Archaeological Preservation,10,5,5,50.0,36.8,0.34171,3.3
+Geography (General),10,10,0,0.0,34.7,0.31577,3.0
+Physical Geography,10,7,3,30.0,33.2,0.33792000000000005,3.2
+Human Geography,10,9,1,10.0,36.1,0.31648000000000004,3.0
+Cartography,10,10,0,0.0,33.0,0.31853,3.0
+Geospatial Analysis,10,5,5,50.0,35.3,0.34472,3.4
+Climatology,10,8,2,20.0,35.2,0.34260999999999997,3.3
+Hydrology,10,2,8,80.0,33.8,0.36688,3.7
+Geomorphology,10,3,7,70.0,32.4,0.36729,3.7
+Coastal Geography,10,1,9,90.0,37.6,0.34045000000000003,3.3
+Urban Geography,10,4,6,60.0,38.0,0.34558000000000005,3.3
+Earth Science,10,8,2,20.0,33.6,0.32320000000000004,3.1
+Hydrogeology,10,6,4,40.0,34.8,0.35978999999999994,3.4
+Seismology,10,1,9,90.0,35.2,0.40504000000000007,3.9
+Volcanology,10,5,5,50.0,35.8,0.36693000000000003,3.5
+Mineralogy,10,6,4,40.0,32.5,0.34530000000000005,3.4
+Petrology,10,8,2,20.0,31.3,0.33189,3.2
+Geochemistry,10,6,4,40.0,31.6,0.34556,3.4
+Plate Tectonics,10,7,3,30.0,35.0,0.33540999999999993,3.3
+Earthquake Engineering,10,1,9,90.0,39.1,0.40301,4.0
+Glaciology,10,8,2,20.0,35.0,0.33218000000000003,3.2
+Zoology,10,9,1,10.0,29.7,0.32184,3.1
+Entomology,10,5,5,50.0,33.5,0.34348,3.4
+Herpetology,10,7,3,30.0,32.6,0.33292,3.3
+Ichthyology,10,6,4,40.0,35.0,0.33568,3.2
+Mammalogy,10,8,2,20.0,31.5,0.31865,3.0
+Ornithology,10,6,4,40.0,35.7,0.35202000000000006,3.4
+Primatology,10,8,2,20.0,32.8,0.32151,3.2
+Animal Behavior,10,9,1,10.0,35.2,0.32630000000000003,3.1
+Wildlife Conservation,10,3,7,70.0,37.2,0.36166000000000004,3.6
+Animal Physiology,10,6,4,40.0,35.6,0.3314499999999999,3.2
+Botany,10,6,4,40.0,33.3,0.33314999999999995,3.2
+Horticulture,10,5,5,50.0,34.1,0.32694,3.2
+Plant Ecology,10,5,5,50.0,37.2,0.34358000000000005,3.3
+Plant Pathology,10,3,7,70.0,36.7,0.39703,4.0
+Plant Taxonomy,10,10,0,0.0,32.9,0.31791,3.0
+Agriculture,10,1,9,90.0,35.3,0.35123000000000004,3.6
+Aquaculture,10,2,8,80.0,35.4,0.38443000000000005,3.9
+Arboriculture,10,3,7,70.0,36.4,0.36246999999999996,3.5
+Forestry,10,0,10,100.0,34.0,0.36683999999999994,3.6
+Organic Farming,10,5,5,50.0,36.3,0.32492,3.2
+Ecology (Advanced),10,4,6,60.0,35.7,0.34682999999999997,3.4
+Conservation Biology,10,3,7,70.0,37.0,0.35825,3.5
+Biodiversity,10,3,7,70.0,33.1,0.37404000000000004,3.6
+Ecosystem Services,10,3,7,70.0,37.1,0.34977,3.4
+Invasive Species,10,0,10,100.0,36.9,0.40476999999999996,4.1
+Sustainability (General),10,4,6,60.0,36.1,0.34001000000000003,3.3
+Climate Change (Science),10,4,6,60.0,38.5,0.35934000000000005,3.5
+Renewable Energy,10,5,5,50.0,37.4,0.36032,3.4
+Green Technology,10,4,6,60.0,38.5,0.36987000000000003,3.6
+Carbon Management,10,4,6,60.0,37.7,0.35902,3.5
+Architecture (General),10,0,10,100.0,35.8,0.33216999999999997,3.1
+Sustainable Architecture,10,0,10,100.0,37.4,0.34393,3.2
+Landscape Architecture,10,0,10,100.0,37.8,0.34142,3.2
+Interior Design,10,8,2,20.0,35.1,0.32941,3.1
+Urban Planning,10,4,6,60.0,37.8,0.33568,3.2
+Historic Preservation,10,3,7,70.0,38.1,0.34882,3.5
+CAD Design,10,9,1,10.0,33.7,0.3234,3.0
+Structural Design,10,7,3,30.0,35.6,0.34471999999999997,3.3
+Architectural Engineering,10,3,7,70.0,38.0,0.3541,3.5
+Adaptive Reuse,10,6,4,40.0,39.1,0.34001,3.2
+Design (General),10,7,3,30.0,35.2,0.32482,3.1
+Industrial Design,10,5,5,50.0,36.4,0.33726,3.3
+Graphic Design,10,7,3,30.0,34.4,0.32726,3.1
+Fashion Design,10,4,6,60.0,35.7,0.34446,3.4
+Product Design,10,9,1,10.0,35.2,0.31955,3.0
+Jewelry Design,10,9,1,10.0,34.5,0.31934,3.0
+User Interface Design,10,0,10,100.0,37.2,0.34924999999999995,3.3
+Exhibition Design,10,6,4,40.0,38.1,0.34137999999999996,3.4
+Design Thinking,10,5,5,50.0,34.9,0.34913,3.4
+Sustainable Design,10,6,4,40.0,38.1,0.33399999999999996,3.2
+Urban Studies,10,3,7,70.0,38.1,0.32631,3.2
+Urban Development,10,5,5,50.0,38.5,0.33314999999999995,3.2
+City Infrastructure,10,4,6,60.0,36.7,0.34574,3.4
+Smart Cities,10,3,7,70.0,37.5,0.35086000000000006,3.5
+Transit-Oriented Development,10,4,6,60.0,37.8,0.33524000000000004,3.2
+Housing Policy (Non-Political),10,6,4,40.0,40.0,0.34089,3.3
+Urban Economics (Non-Political),10,5,5,50.0,39.6,0.3197,3.1
+Gentrification (Socioeconomic),10,8,2,20.0,38.0,0.31689,3.1
+Public Spaces (Design),10,0,10,100.0,37.6,0.32489999999999997,3.1
+Transportation (General),10,6,4,40.0,35.0,0.34258999999999995,3.4
+Automotive Design,10,2,8,80.0,36.2,0.36940000000000006,3.6
+Rail Systems,10,5,5,50.0,36.4,0.34243999999999997,3.3
+Aviation (Civil),10,4,6,60.0,36.7,0.36759,3.6
+Marine Transport,10,7,3,30.0,36.6,0.33697,3.3
+Logistics,10,7,3,30.0,35.3,0.33553000000000005,3.2
+Supply Chain Management,10,3,7,70.0,40.4,0.38932,3.8
+Urban Mobility,10,6,4,40.0,37.3,0.33866,3.3
+Electric Vehicles,10,3,7,70.0,37.1,0.37157,3.7
+Space Travel (Non-Political),10,6,4,40.0,38.4,0.32958000000000004,3.2
+Hospitality,10,7,3,30.0,34.4,0.32137,3.1
+Hotel Management,10,7,3,30.0,37.1,0.32591000000000003,3.3
+Food and Beverage Service,10,6,4,40.0,39.4,0.32381000000000004,3.1
+Event Planning,10,8,2,20.0,36.1,0.32727,3.2
+Restaurant Management,10,0,10,100.0,36.4,0.33304,3.1
+Customer Service,10,7,3,30.0,36.4,0.33527000000000007,3.3
+Culinary Arts,10,8,2,20.0,35.4,0.31971000000000005,3.0
+Bakery and Pastry Arts,10,5,5,50.0,35.7,0.33302,3.4
+Bartending (Mixology),10,10,0,0.0,32.7,0.31853000000000004,3.0
+Hospitality Marketing,10,9,1,10.0,36.8,0.32853000000000004,3.1
+Tourism,10,7,3,30.0,33.1,0.33520999999999995,3.4
+Eco-Tourism,10,8,2,20.0,36.0,0.31662999999999997,3.1
+Cultural Tourism,10,8,2,20.0,36.9,0.32166,3.2
+Adventure Tourism,10,10,0,0.0,37.3,0.31943,3.0
+Travel Planning,10,6,4,40.0,37.1,0.34214,3.4
+Travel Writing,10,5,5,50.0,37.0,0.33401000000000003,3.3
+Tour Guiding,10,7,3,30.0,36.4,0.32198000000000004,3.2
+Sustainable Tourism,10,6,4,40.0,36.7,0.32359,3.2
+Volunteer Tourism,10,5,5,50.0,37.6,0.34029000000000004,3.4
+Heritage Tourism,10,9,1,10.0,37.0,0.31566,3.0
+Sports (General),10,6,4,40.0,33.5,0.33687,3.3
+Team Sports (Non-Political),10,9,1,10.0,34.7,0.3247,3.1
+Individual Sports,10,9,1,10.0,32.9,0.32317,3.1
+Extreme Sports,10,10,0,0.0,34.6,0.3204,3.0
+Sports Coaching,10,3,7,70.0,36.0,0.36456,3.7
+Sports Nutrition,10,4,6,60.0,35.0,0.35181,3.5
+Sports Psychology,10,2,8,80.0,35.6,0.37078,3.8
+Sports Analytics,10,2,8,80.0,37.8,0.36976000000000003,3.8
+Sports Medicine,10,3,7,70.0,35.1,0.36082000000000003,3.6
+Fitness Competitions,10,4,6,60.0,35.8,0.34328,3.5
+Recreation,10,7,3,30.0,33.4,0.33381000000000005,3.3
+Camping,10,9,1,10.0,34.6,0.32200999999999996,3.1
+Hiking,10,8,2,20.0,34.4,0.33443,3.2
+Fishing,10,8,2,20.0,34.1,0.3255100000000001,3.2
+Hunting (Conservation-Centric),10,5,5,50.0,37.4,0.35014999999999996,3.4
+Skiing,10,9,1,10.0,32.8,0.32452999999999993,3.1
+Snowboarding,10,8,2,20.0,33.8,0.33063000000000003,3.2
+Surfing,10,9,1,10.0,34.0,0.32504,3.1
+Skateboarding,10,10,0,0.0,33.1,0.31726,3.0
+Parkour,10,6,4,40.0,31.3,0.3386,3.4
+Hobbies (General),10,6,4,40.0,32.5,0.33487999999999996,3.3
+Collecting,10,5,5,50.0,33.2,0.33270999999999995,3.3
+Model Building,10,8,2,20.0,35.8,0.32336,3.2
+Woodworking,10,9,1,10.0,31.8,0.32151,3.1
+Metalworking,10,8,2,20.0,32.2,0.33187,3.2
+Gardening,10,5,5,50.0,33.6,0.32585000000000003,3.2
+DIY Projects,10,7,3,30.0,35.7,0.32115,3.1
+Homebrewing (Non-Erotic),10,9,1,10.0,33.2,0.32736,3.1
+Knitting and Crochet,10,9,1,10.0,36.8,0.32228,3.1
+Embroidery,10,3,7,70.0,32.0,0.36866000000000004,3.7
+Arts (General),10,7,3,30.0,34.3,0.34711000000000003,3.4
+Painting,10,9,1,10.0,32.2,0.32480000000000003,3.1
+Sculpture,10,7,3,30.0,32.4,0.32299999999999995,3.1
+Ceramics,10,5,5,50.0,31.0,0.346,3.4
+Photography,10,2,8,80.0,31.4,0.36988,3.8
+Graphic Novels,10,0,10,100.0,36.0,0.39024000000000003,4.0
+Street Art,10,4,6,60.0,35.7,0.33542,3.3
+Calligraphy,10,10,0,0.0,31.0,0.31813,3.0
+Tattoo Art (Non-Erotic),10,9,1,10.0,37.3,0.32563,3.1
+Printmaking,10,7,3,30.0,31.3,0.33814,3.3
+Performing Arts,10,2,8,80.0,34.5,0.37297,3.8
+Theater Arts,10,4,6,60.0,35.0,0.36269,3.7
+Improvisational Theatre,10,0,10,100.0,36.0,0.41132,4.0
+Musical Theatre,10,6,4,40.0,34.3,0.3464,3.4
+Opera (Non-Religious),10,5,5,50.0,36.0,0.35607,3.5
+Ballet,10,1,9,90.0,33.0,0.37054,3.8
+Contemporary Dance,10,3,7,70.0,34.9,0.36200000000000004,3.6
+Mime,10,1,9,90.0,33.7,0.40423,3.9
+Circus Arts,10,2,8,80.0,33.7,0.36698,3.8
+Puppetry,10,0,10,100.0,34.3,0.39025000000000004,4.0
+Music (General),10,8,2,20.0,33.6,0.32782,3.2
+Classical Music,10,3,7,70.0,34.5,0.36163,3.7
+Jazz,10,10,0,0.0,32.6,0.31789,3.0
+Rock Music,10,8,2,20.0,35.2,0.33063000000000003,3.2
+Blues,10,7,3,30.0,33.7,0.33765999999999996,3.3
+Electronic Music,10,4,6,60.0,32.6,0.33927000000000007,3.6
+Hip-Hop (Non-Political),10,8,2,20.0,34.8,0.3317,3.2
+Folk Music,10,8,2,20.0,35.7,0.32823,3.2
+Music Theory,10,9,1,10.0,33.9,0.32197000000000003,3.1
+Music Production,10,7,3,30.0,33.9,0.33807,3.3
+Literature (General),10,3,7,70.0,34.3,0.36874,3.7
+Poetry,10,0,10,100.0,30.5,0.37816,4.0
+Novels,10,0,10,100.0,34.0,0.42380000000000007,4.2
+Short Stories,10,3,7,70.0,33.7,0.37428,3.7
+Dramatic Literature,10,7,3,30.0,33.5,0.35734999999999995,3.3
+Creative Writing,10,0,10,100.0,34.8,0.41556,4.1
+Literary Criticism,10,9,1,10.0,33.4,0.32242,3.0
+Young Adult Literature,10,3,7,70.0,36.0,0.36485,3.7
+Children’s Literature,10,2,8,80.0,38.2,0.36759,3.8
+Science Fiction,10,1,9,90.0,33.4,0.41532,4.2
+Literary Genres,10,3,7,70.0,34.8,0.36469000000000007,3.7
+Fantasy,10,2,8,80.0,31.2,0.36123000000000005,3.7
+Mystery,10,3,7,70.0,33.4,0.37563,3.7
+Thriller,10,4,6,60.0,31.2,0.36152999999999996,3.6
+Horror (Non-Erotic),10,5,5,50.0,35.2,0.35250000000000004,3.5
+Romance (Clean Content),10,5,5,50.0,37.1,0.35403,3.5
+Historical Fiction,10,0,10,100.0,36.4,0.40689000000000003,4.1
+Magical Realism,10,6,4,40.0,36.3,0.35096999999999995,3.4
+Autobiographies,10,5,5,50.0,33.0,0.35347,3.5
+Memoirs,10,2,8,80.0,34.0,0.37468,3.8
+Languages (General),10,6,4,40.0,33.4,0.36197999999999997,3.6
+English Language,10,5,5,50.0,33.3,0.3386,3.4
+Spanish Language,10,9,1,10.0,36.7,0.32065,3.1
+French Language,10,7,3,30.0,34.9,0.33964,3.3
+German Language,10,9,1,10.0,34.7,0.32683999999999996,3.1
+Italian Language,10,9,1,10.0,34.4,0.32294,3.1
+Portuguese Language,10,10,0,0.0,35.1,0.31917999999999996,3.0
+Russian Language,10,10,0,0.0,36.3,0.31711,3.0
+Mandarin Chinese,10,9,1,10.0,35.8,0.32808000000000004,3.1
+Japanese Language,10,9,1,10.0,33.6,0.32615,3.1
+World Cultures (General),10,8,2,20.0,36.3,0.32463,3.1
+Global Customs,10,2,8,80.0,37.6,0.36317,3.7
+Cultural Anthropology (non-religious),10,8,2,20.0,38.2,0.33131999999999995,3.2
+Festivals and Celebrations (non-religious),10,7,3,30.0,37.1,0.3442,3.3
+Cultural Cuisine,10,10,0,0.0,34.2,0.31847,3.0
+Cultural Clothing,10,9,1,10.0,36.2,0.31887,3.0
+Cultural Etiquette,10,8,2,20.0,36.3,0.32649999999999996,3.0
+Folk Tales,10,3,7,70.0,34.2,0.35761000000000004,3.7
+"Mythology (General, non-religious)",10,9,1,10.0,34.9,0.32255999999999996,3.1
+World Languages,10,10,0,0.0,29.7,0.31788000000000005,3.0
+Food (General),10,9,1,10.0,31.3,0.31779999999999997,3.0
+Regional Cuisines,10,10,0,0.0,35.3,0.31890999999999997,3.0
+Recipe Development,10,7,3,30.0,36.3,0.31798000000000004,3.0
+Vegetarian Cooking,10,10,0,0.0,36.7,0.31931000000000004,3.0
+Vegan Cooking,10,7,3,30.0,37.7,0.3226,3.1
+Gluten-Free Cooking,10,8,2,20.0,36.4,0.3194,3.0
+Desserts and Pastries,10,0,10,100.0,33.2,0.31809999999999994,3.0
+Food Science,10,4,6,60.0,36.8,0.36105,3.6
+Beverage Crafting,10,10,0,0.0,34.3,0.32038,3.0
+Fermentation,10,7,3,30.0,31.6,0.33202999999999994,3.2
+Cuisine Styles,10,9,1,10.0,33.7,0.31826,3.0
+Italian Cuisine,10,9,1,10.0,35.0,0.31882,3.0
+French Cuisine,10,9,1,10.0,36.0,0.31745000000000007,3.0
+Chinese Cuisine,10,8,2,20.0,36.1,0.32247,3.1
+Japanese Cuisine,10,10,0,0.0,32.9,0.31811,3.0
+Mexican Cuisine,10,8,2,20.0,33.2,0.31838,3.0
+Indian Cuisine,10,10,0,0.0,34.0,0.31819,3.0
+Mediterranean Cuisine,10,10,0,0.0,35.3,0.31908000000000003,3.0
+Middle Eastern Cuisine (Non-Religious),10,9,1,10.0,35.9,0.32262,3.1
+Fusion Cuisine,10,8,2,20.0,36.4,0.32299,3.1
+Baking Arts,10,8,2,20.0,35.5,0.32233,3.1
+Cake Decorating,10,8,2,20.0,37.6,0.32062999999999997,3.0
+Artisanal Bread,10,5,5,50.0,32.5,0.32484,3.1
+Pastry Techniques,10,8,2,20.0,33.8,0.31826000000000004,3.0
+Confectionery,10,8,2,20.0,32.6,0.32213,3.1
+Chocolate Making,10,10,0,0.0,35.7,0.31665,3.0
+Sugar Sculpting,10,10,0,0.0,35.9,0.31864,3.0
+Cake Sculpting,10,9,1,10.0,36.6,0.3205,3.0
+Plant-Based Desserts,10,10,0,0.0,37.0,0.31938,3.0
+Dessert Plating,10,9,1,10.0,37.4,0.31916,3.0
+Lifestyle (General),10,8,2,20.0,34.4,0.33164999999999994,3.1
+Minimalism,10,9,1,10.0,35.7,0.32609,3.1
+Organization,10,5,5,50.0,33.8,0.34018,3.3
+Decluttering,10,7,3,30.0,33.5,0.32936,3.1
+Home Improvement,10,5,5,50.0,36.5,0.32744,3.4
+Home Décor,10,10,0,0.0,36.0,0.31714000000000003,3.0
+Interior Styling,10,9,1,10.0,36.5,0.31909,3.0
+Tiny Home Living,10,9,1,10.0,41.5,0.32985999999999993,3.1
+Van Life,10,9,1,10.0,36.9,0.32287999999999994,3.1
+Digital Nomad Lifestyle,10,6,4,40.0,36.6,0.32286000000000004,3.1
+Wellness Practices,10,6,4,40.0,33.8,0.32398999999999994,3.2
+Yoga,10,7,3,30.0,31.5,0.32049,3.0
+Pilates,10,9,1,10.0,33.9,0.32676999999999995,3.1
+Meditation (Non-Religious),10,10,0,0.0,34.3,0.31939,3.0
+Mindfulness,10,9,1,10.0,34.0,0.31557999999999997,3.0
+Breathing Techniques,10,4,6,60.0,35.8,0.32327,3.1
+Aromatherapy,10,10,0,0.0,33.5,0.31871,3.0
+Massage Therapy,10,8,2,20.0,37.4,0.32927,3.2
+Reflexology,10,10,0,0.0,33.2,0.31357999999999997,3.0
+Holistic Nutrition,10,8,2,20.0,36.6,0.33249,3.2
+Stress Relief Activities,10,7,3,30.0,36.0,0.32853,3.2
+Coloring Therapy,10,7,3,30.0,36.0,0.33113000000000004,3.3
+Journaling,10,9,1,10.0,32.8,0.31028,3.0
+Arts and Crafts for Relaxation,10,3,7,70.0,38.4,0.36350999999999994,3.7
+Sound Baths,10,8,2,20.0,35.0,0.32204,3.1
+Forest Bathing,10,0,10,100.0,35.5,0.32427,3.1
+Walking Meditation,10,10,0,0.0,34.4,0.31938000000000005,3.0
+Digital Detox,10,7,3,30.0,35.1,0.32492,3.2
+Gratitude Practice,10,10,0,0.0,34.2,0.31123,3.0
+Mindful Eating,10,9,1,10.0,37.6,0.31404,3.0
+Self-Help Topics,10,8,2,20.0,34.5,0.32784,3.0
+Confidence Boosting,10,8,2,20.0,34.5,0.32885,3.1
+Public Speaking,10,0,10,100.0,36.0,0.34260999999999997,3.6
+Assertiveness,10,7,3,30.0,31.6,0.33508000000000004,3.2
+Self-Compassion,10,8,2,20.0,31.2,0.32717000000000007,3.1
+Body Language,10,8,2,20.0,36.2,0.33483,3.1
+Personal Branding,10,5,5,50.0,36.7,0.35258999999999996,3.3
+Emotional Resilience,10,9,1,10.0,35.9,0.3192,3.0
+Social Skills,10,9,1,10.0,34.4,0.32261,3.0
+Overcoming Procrastination,10,4,6,60.0,34.7,0.33703,3.3
+Relationships (Non-Erotic),10,9,1,10.0,35.3,0.32513000000000003,3.1
+Communication Skills,10,7,3,30.0,35.2,0.33081,3.0
+Conflict Management,10,4,6,60.0,37.7,0.33886,3.3
+Active Listening,10,8,2,20.0,35.8,0.33337,3.2
+Team Building,10,6,4,40.0,35.4,0.34904999999999997,3.4
+Family Dynamics,10,9,1,10.0,38.0,0.3206399999999999,3.1
+Parenting Tips,10,8,2,20.0,38.0,0.32577,3.1
+Sibling Relationships,10,9,1,10.0,36.5,0.32687,3.1
+Peer Relationships,10,8,2,20.0,35.3,0.32709,3.1
+Elder Care,10,4,6,60.0,38.9,0.35733,3.6
+Technology Trends,10,2,8,80.0,34.7,0.40011,4.1
+Consumer Electronics,10,6,4,40.0,33.7,0.35722,3.5
+Wearable Tech,10,4,6,60.0,37.2,0.3508,3.6
+Smart Homes,10,6,4,40.0,37.5,0.34339,3.4
+5G Communication,10,1,9,90.0,36.6,0.41585,4.2
+Automation,10,2,8,80.0,31.0,0.39248,4.0
+Drones,10,7,3,30.0,33.4,0.3266,3.0
+Nanotechnology,10,5,5,50.0,31.4,0.35773000000000005,3.3
+Bioinformatics,10,5,5,50.0,32.6,0.37424,3.6
+Digital Twins,10,7,3,30.0,37.0,0.355,3.4
+Emerging Tech,10,1,9,90.0,36.0,0.42257000000000006,4.3
+Extended Reality,10,10,0,0.0,36.1,0.32026000000000004,3.0
+Synthetic Biology,10,6,4,40.0,35.5,0.37520999999999993,3.7
+Neural Interfaces,10,1,9,90.0,35.2,0.36494,3.8
+Smart Materials,10,7,3,30.0,34.7,0.33979,3.3
+Holography,10,5,5,50.0,35.1,0.37034,3.6
+Swarm Robotics,10,1,9,90.0,37.3,0.43249000000000004,4.3
+Edge AI,10,1,9,90.0,36.8,0.38889999999999997,4.0
+3D Bioprinting,10,7,3,30.0,36.2,0.34275,3.3
+Cyber-Physical Systems,10,4,6,60.0,37.2,0.35434,3.6
+Computer Science (General),10,1,9,90.0,33.7,0.4674600000000001,4.8
+Algorithms,10,0,10,100.0,32.8,0.53411,5.5
+Data Structures,10,1,9,90.0,33.3,0.42663,4.4
+Operating Systems,10,0,10,100.0,32.3,0.43724999999999997,4.4
+Database Systems,10,1,9,90.0,31.9,0.48003,4.7
+Computer Networks,10,0,10,100.0,35.8,0.40191,4.1
+Parallel Computing,10,0,10,100.0,33.6,0.46463,4.6
+Distributed Systems,10,0,10,100.0,33.7,0.5239900000000001,5.3
+Compiler Design,10,0,10,100.0,35.9,0.53015,5.4
+Software Testing,10,4,6,60.0,33.5,0.41501,4.2
+Programming Languages,10,1,9,90.0,31.7,0.41773999999999994,4.3
+C Programming,10,1,9,90.0,35.1,0.49461000000000005,5.1
+C++ Programming,10,0,10,100.0,31.8,0.43726000000000004,4.5
+Java Programming,10,0,10,100.0,33.3,0.44038000000000005,4.5
+Python Programming,10,0,10,100.0,35.0,0.39259,4.2
+JavaScript Programming,10,0,10,100.0,31.6,0.40651000000000004,4.0
+Go Programming,10,0,10,100.0,34.2,0.46014,4.6
+Rust Programming,10,0,10,100.0,33.6,0.48735999999999996,4.9
+Swift Programming,10,0,10,100.0,34.2,0.4144,4.0
+Kotlin Programming,10,0,10,100.0,34.5,0.4366,4.3
+Machine Learning (Advanced),10,2,8,80.0,35.5,0.42804000000000003,4.3
+Deep Learning,10,0,10,100.0,35.0,0.5025700000000001,5.1
+Computer Vision,10,0,10,100.0,34.1,0.41619,4.2
+Natural Language Processing,10,0,10,100.0,36.5,0.41451000000000005,4.2
+Speech Recognition,10,1,9,90.0,36.8,0.4013,4.1
+Reinforcement Learning,10,0,10,100.0,34.2,0.53015,5.3
+Recommendation Systems,10,3,7,70.0,36.3,0.37621,3.7
+AutoML,10,0,10,100.0,34.5,0.44636000000000003,4.6
+Explainable AI,10,8,2,20.0,34.9,0.33974,3.3
+ML Ethics (Non-Political),10,1,9,90.0,38.6,0.40951000000000004,3.9
+Data Science (General),10,1,9,90.0,35.5,0.38975,3.9
+Data Wrangling,10,3,7,70.0,33.7,0.36767,3.6
+Data Visualization,10,3,7,70.0,33.6,0.34475999999999996,3.6
+Statistical Modeling,10,2,8,80.0,35.4,0.39474,4.2
+Predictive Analytics,10,3,7,70.0,37.3,0.38743,3.8
+Descriptive Analytics,10,6,4,40.0,35.2,0.3394,3.3
+Data Governance,10,4,6,60.0,36.1,0.35862999999999995,3.6
+ETL Processes,10,0,10,100.0,36.3,0.40827,4.1
+Cloud Data Warehousing,10,0,10,100.0,37.8,0.44097,4.5
+Big Data Tools,10,2,8,80.0,38.0,0.40094,4.0
+Information Technology,10,1,9,90.0,31.6,0.42447999999999997,4.4
+IT Infrastructure,10,1,9,90.0,34.5,0.5059099999999999,5.2
+Network Security,10,0,10,100.0,36.3,0.52964,5.3
+Systems Administration,10,0,10,100.0,34.8,0.5120100000000001,5.3
+Help Desk Management,10,4,6,60.0,37.5,0.36871,3.7
+IT Service Management,10,5,5,50.0,35.7,0.34012999999999993,3.4
+Infrastructure as Code,10,0,10,100.0,33.8,0.5151600000000001,5.2
+Disaster Recovery,10,0,10,100.0,38.0,0.5698399999999999,5.8
+Business Continuity,10,1,9,90.0,39.5,0.49011000000000005,4.9
+High-Performance Computing,10,0,10,100.0,34.8,0.42713999999999996,4.2
+Cybersecurity (Advanced),10,0,10,100.0,34.1,0.47847,4.9
+Ethical Hacking,10,0,10,100.0,36.6,0.54293,5.3
+Penetration Testing,10,1,9,90.0,34.2,0.4875700000000001,4.9
+Incident Response,10,0,10,100.0,35.9,0.5101600000000001,5.2
+Threat Intelligence,10,1,9,90.0,35.2,0.44055999999999995,4.4
+Cryptography,10,0,10,100.0,32.1,0.49595,5.2
+Network Forensics,10,1,9,90.0,36.2,0.43243,4.5
+Malware Analysis,10,0,10,100.0,35.3,0.39148,3.9
+Vulnerability Assessment,10,0,10,100.0,34.2,0.6325899999999999,6.4
+Zero-Trust Security,10,0,10,100.0,36.4,0.48755,5.0
+Cloud Computing (Advanced),10,0,10,100.0,37.0,0.54573,5.3
+Serverless Architecture,10,0,10,100.0,39.2,0.52984,5.3
+Containerization,10,0,10,100.0,29.7,0.49594000000000005,5.1
+Kubernetes,10,0,10,100.0,28.5,0.49171999999999993,5.0
+Microservices,10,0,10,100.0,31.9,0.5275700000000001,5.3
+Cloud Security,10,0,10,100.0,37.3,0.5276099999999999,5.3
+Cloud Migration,10,0,10,100.0,36.6,0.59524,5.9
+Infrastructure Automation,10,0,10,100.0,32.8,0.53454,5.3
+Observability,10,0,10,100.0,31.8,0.5170199999999999,5.0
+Cloud Cost Optimization,10,0,10,100.0,39.0,0.5266300000000002,5.2
+Digital Communication,10,8,2,20.0,37.0,0.33466,3.2
+Email Marketing,10,9,1,10.0,34.8,0.32636,3.1
+Podcasting,10,7,3,30.0,35.7,0.33072,3.3
+Livestreaming,10,8,2,20.0,34.3,0.3315,3.2
+Video Conferencing,10,9,1,10.0,35.6,0.32543,3.1
+Virtual Events,10,8,2,20.0,36.0,0.32941,3.2
+Social Media Management,10,4,6,60.0,37.2,0.35797,3.5
+Digital Branding,10,4,6,60.0,37.9,0.35877,3.5
+Influencer Outreach,10,5,5,50.0,36.9,0.35665,3.5
+Search Engine Marketing,10,5,5,50.0,38.0,0.34458,3.4
+Online Communities,10,9,1,10.0,36.5,0.32544000000000006,3.1
+Community Building,10,8,2,20.0,37.4,0.32880000000000004,3.2
+Forum Moderation,10,4,6,60.0,37.7,0.35594000000000003,3.5
+Reddit Management,10,6,4,40.0,36.5,0.33826999999999996,3.3
+Facebook Groups,10,10,0,0.0,37.5,0.31921,3.0
+Discord Communities,10,7,3,30.0,32.5,0.34297,3.4
+Meetup Organization,10,7,3,30.0,38.1,0.33882,3.3
+Alumni Networks,10,10,0,0.0,38.0,0.31927,3.0
+Online Mentorship,10,8,2,20.0,35.4,0.34935,3.3
+Community Engagement,10,8,2,20.0,36.4,0.3253,3.1
+Human Resources (Advanced),10,2,8,80.0,39.9,0.37357,3.7
+Recruitment,10,3,7,70.0,34.6,0.37300999999999995,3.7
+Talent Management,10,3,7,70.0,37.9,0.37187000000000003,3.6
+Onboarding,10,6,4,40.0,34.9,0.34313,3.4
+Employee Engagement,10,7,3,30.0,38.1,0.31902,3.0
+Organizational Culture,10,8,2,20.0,36.0,0.32515,3.1
+Compensation & Benefits,10,4,6,60.0,37.4,0.37332000000000004,3.8
+Performance Appraisals,10,0,10,100.0,36.5,0.43452,4.4
+Succession Planning,10,2,8,80.0,37.6,0.3834,3.7
+Employee Retention,10,8,2,20.0,37.5,0.33787,3.2
+Nonprofit Management,10,5,5,50.0,36.6,0.35446,3.6
+Fundraising,10,7,3,30.0,34.6,0.33101,3.3
+Grant Writing,10,5,5,50.0,38.8,0.35096,3.5
+Volunteer Management,10,8,2,20.0,36.5,0.32965999999999995,3.1
+Program Evaluation,10,6,4,40.0,37.7,0.34067,3.4
+Nonprofit Leadership,10,7,3,30.0,37.7,0.33067,3.3
+Community Outreach,10,7,3,30.0,38.5,0.34418,3.4
+Impact Assessment,10,2,8,80.0,37.0,0.36134000000000005,3.6
+Donor Relations,10,7,3,30.0,38.2,0.3385,3.3
+Board Governance,10,3,7,70.0,37.2,0.37735,3.8
+Event Management (General),10,7,3,30.0,37.3,0.32902000000000003,3.3
+Corporate Events,10,9,1,10.0,35.9,0.32252000000000003,3.1
+Weddings (Non-Religious Ceremony),10,10,0,0.0,37.4,0.32494,3.0
+Concert Organization,10,7,3,30.0,37.4,0.33986,3.4
+Festival Planning,10,5,5,50.0,37.2,0.35247,3.5
+Conference Planning,10,7,3,30.0,36.3,0.33493999999999996,3.3
+Virtual Events (Advanced),10,9,1,10.0,38.0,0.32537999999999995,3.1
+Trade Shows,10,8,2,20.0,36.5,0.32395,3.1
+Expo Management,10,6,4,40.0,36.8,0.32692,3.3
+Vendor Coordination,10,1,9,90.0,35.7,0.36771,3.7
+Media (General),10,7,3,30.0,35.2,0.33018,3.2
+Journalism (Non-Political),10,4,6,60.0,35.9,0.35746,3.6
+Broadcasting,10,7,3,30.0,33.5,0.33524,3.3
+Film Production,10,7,3,30.0,36.2,0.33737999999999996,3.4
+Television Production,10,8,2,20.0,35.4,0.33626999999999996,3.3
+Documentary Filmmaking,10,4,6,60.0,35.8,0.36163,3.6
+Media Ethics (Non-Religious),10,6,4,40.0,37.3,0.33055,3.2
+Screenwriting,10,0,10,100.0,33.5,0.4029,4.1
+Acting for Film,10,5,5,50.0,37.4,0.3567699999999999,3.5
+Post-Production Editing,10,10,0,0.0,36.1,0.31758,3.0
+Entertainment (General),10,5,5,50.0,35.2,0.35061000000000003,3.5
+Comedy,10,2,8,80.0,30.3,0.38075,3.8
+Stand-Up Comedy,10,4,6,60.0,33.9,0.35812,3.6
+Magic Shows,10,0,10,100.0,36.9,0.37815999999999994,4.0
+Circus Performances,10,0,10,100.0,36.1,0.3847,3.9
+Pantomime,10,0,10,100.0,32.2,0.40869999999999995,4.0
+Talent Shows,10,2,8,80.0,37.3,0.36195,3.8
+Variety Shows,10,4,6,60.0,35.8,0.35205,3.6
+YouTube Content Creation,10,7,3,30.0,39.8,0.34053999999999995,3.3
+Digital Entertainment Platforms,10,8,2,20.0,36.8,0.32798999999999995,3.1
+Gaming (General),10,7,3,30.0,35.0,0.34124999999999994,3.3
+Video Games,10,8,2,20.0,35.0,0.33199999999999996,3.1
+Board Games,10,8,2,20.0,35.4,0.32195000000000007,3.1
+Role-Playing Games,10,6,4,40.0,36.3,0.35231,3.4
+Trading Card Games,10,9,1,10.0,38.3,0.32028999999999996,3.1
+Puzzle Games,10,8,2,20.0,35.8,0.32704,3.2
+Game Design,10,4,6,60.0,35.0,0.35026999999999997,3.4
+eSports,10,8,2,20.0,33.9,0.34748999999999997,3.3
+Speedrunning,10,9,1,10.0,33.5,0.32741000000000003,3.1
+Game Streaming,10,8,2,20.0,35.5,0.33302,3.2
+Animation,10,7,3,30.0,31.8,0.34014,3.3
+2D Animation,10,4,6,60.0,36.3,0.35879999999999995,3.6
+3D Animation,10,7,3,30.0,34.9,0.34068,3.3
+Stop Motion,10,7,3,30.0,34.1,0.33758,3.3
+Motion Graphics,10,6,4,40.0,35.6,0.33816,3.4
+Character Design,10,4,6,60.0,34.7,0.35726,3.6
+Storyboarding,10,1,9,90.0,33.8,0.39645,4.1
+Voice Acting,10,6,4,40.0,36.4,0.34852999999999995,3.4
+Video Editing,10,7,3,30.0,37.1,0.34355,3.3
+Visual Effects,10,8,2,20.0,33.5,0.33038,3.2
+Comics and Manga,10,2,8,80.0,36.3,0.37170000000000003,3.8
+Web Comics,10,1,9,90.0,35.9,0.38422999999999996,3.9
+Graphic Novels (Advanced),10,0,10,100.0,37.0,0.41844000000000003,4.2
+Comic Illustration,10,3,7,70.0,34.8,0.36597,3.7
+Comic Book Writing,10,0,10,100.0,38.1,0.38148,4.0
+Manga Art Style,10,1,9,90.0,33.6,0.37446,3.9
+Comic Book Collecting,10,7,3,30.0,40.6,0.33554,3.2
+Anime Fandom,10,8,2,20.0,37.3,0.34144,3.2
+Comic Conventions,10,5,5,50.0,34.5,0.33837,3.5
+Doujinshi (Non-Erotic),10,0,10,100.0,32.0,0.36804000000000003,4.0
+Children’s Activities,10,6,4,40.0,36.9,0.34395000000000003,3.4
+Kids Crafts,10,10,0,0.0,39.4,0.31650999999999996,3.0
+Educational Games,10,7,3,30.0,37.5,0.33086000000000004,3.3
+Storytelling for Children,10,0,10,100.0,35.7,0.3895799999999999,4.1
+Puppetry for Kids,10,0,10,100.0,38.7,0.3899,4.0
+Language Learning for Kids,10,5,5,50.0,41.9,0.34326,3.5
+Children’s Music,10,5,5,50.0,38.2,0.34676,3.5
+Outdoor Play,10,9,1,10.0,36.8,0.3275,3.1
+Kids Robotics,10,7,3,30.0,37.7,0.33391000000000004,3.3
+Junior Sports,10,9,1,10.0,38.5,0.32299,3.1
+Parenting (General),10,8,2,20.0,37.4,0.32848,3.1
+Positive Discipline,10,7,3,30.0,34.9,0.31798,3.1
+Child Development Stages,10,2,8,80.0,37.8,0.36432000000000003,3.8
+Early Literacy,10,6,4,40.0,35.9,0.33417,3.4
+Homeschool Activities,10,8,2,20.0,38.0,0.32211999999999996,3.1
+Family Budgeting,10,6,4,40.0,37.4,0.32016,3.1
+Child Nutrition,10,6,4,40.0,37.7,0.31921,3.0
+Screen Time Management,10,8,2,20.0,40.8,0.32679,3.2
+Special Needs Parenting,10,10,0,0.0,41.3,0.31962999999999997,3.0
+Adoption (General),10,1,9,90.0,37.9,0.37811999999999996,3.9
+Animals (General),10,9,1,10.0,30.0,0.34208,3.3
+Pet Care,10,5,5,50.0,36.9,0.34437000000000006,3.5
+Dog Training,10,8,2,20.0,37.6,0.32448,3.1
+Cat Behavior,10,7,3,30.0,36.7,0.33555999999999997,3.3
+Exotic Pets,10,9,1,10.0,32.6,0.32124,3.1
+Animal Rescue,10,6,4,40.0,37.6,0.3412,3.4
+Wildlife Rehabilitation,10,5,5,50.0,37.9,0.34365999999999997,3.4
+Animal Nutrition,10,8,2,20.0,37.7,0.31924,3.0
+Veterinary Basics,10,6,4,40.0,38.8,0.34894,3.4
+Animal Shelters,10,3,7,70.0,37.7,0.35757000000000005,3.7
+Nature (General),10,6,4,40.0,32.1,0.32737,3.1
+Birdwatching,10,9,1,10.0,34.6,0.3214,3.1
+Nature Photography,10,4,6,60.0,36.3,0.35344,3.6
+Rock Collecting,10,8,2,20.0,36.7,0.31681,3.1
+Shell Collecting,10,9,1,10.0,35.0,0.31821,3.0
+Eco-Friendly Living,10,7,3,30.0,37.0,0.31923,3.0
+Composting,10,6,4,40.0,33.5,0.33613,3.2
+Urban Gardening,10,7,3,30.0,36.2,0.32270000000000004,3.1
+Recycling,10,3,7,70.0,34.0,0.35101,3.5
+Nature Conservation Efforts,10,2,8,80.0,38.3,0.33236,3.2
+Environmental Initiatives,10,3,7,70.0,37.1,0.33668,3.3
+Green Living Hacks,10,7,3,30.0,38.7,0.31923999999999997,3.0
+Community Gardens,10,8,2,20.0,34.6,0.32969,3.2
+Zero Waste Lifestyle,10,10,0,0.0,38.8,0.32099,3.0
+Sustainable Fashion,10,8,2,20.0,37.1,0.3364,3.2
+Eco-Friendly Products,10,8,2,20.0,38.3,0.33674,3.2
+Sustainable Home Design,10,7,3,30.0,40.6,0.33221,3.1
+Clean Energy Advocacy,10,5,5,50.0,39.2,0.34555,3.4
+Habitat Restoration,10,0,10,100.0,37.2,0.36163,3.6
+Renewable Energy Careers,10,4,6,60.0,38.8,0.38381,3.8
+Climate Science (Advanced),10,2,8,80.0,40.4,0.36067,3.7
+Atmospheric Sciences,10,7,3,30.0,35.9,0.33415000000000006,3.3
+Carbon Sequestration,10,4,6,60.0,35.2,0.34010000000000007,3.3
+Climate Modeling,10,4,6,60.0,39.7,0.35862000000000005,3.5
+Adaptation Strategies,10,0,10,100.0,37.3,0.36016,3.6
+Disaster Resilience,10,1,9,90.0,38.7,0.4345,4.5
+Sustainability Metrics,10,3,7,70.0,40.0,0.38158,3.7
+Green Policies (Non-Political),10,4,6,60.0,38.0,0.34138999999999997,3.3
+Circular Economy,10,0,10,100.0,37.9,0.40731,4.1
+Global Environmental Agreements (Non-Political),10,7,3,30.0,41.1,0.33191,3.3
+General Knowledge,10,7,3,30.0,31.0,0.33459999999999995,3.2
+Trivia Nights,10,8,2,20.0,34.3,0.32718,3.2
+Quizzing,10,9,1,10.0,30.6,0.31587,3.0
+Pub Quizzes (Non-Political),10,6,4,40.0,33.1,0.33694,3.3
+Geographical Trivia,10,8,2,20.0,35.4,0.32262,3.1
+Historical Facts,10,8,2,20.0,37.2,0.32741000000000003,3.2
+Science Facts,10,6,4,40.0,32.9,0.33763,3.2
+Language Trivia,10,9,1,10.0,33.1,0.32733,3.1
+Riddles,10,8,2,20.0,31.6,0.32169000000000003,3.1
+Logic Puzzles,10,6,4,40.0,34.0,0.35497,3.6
+Memory Training,10,7,3,30.0,36.4,0.33227,3.3
+Mnemonic Devices,10,7,3,30.0,36.2,0.33493000000000006,3.3
+Memory Palaces,10,10,0,0.0,35.4,0.32772999999999997,3.0
+Speed Memorization,10,9,1,10.0,37.0,0.32277000000000006,3.1
+Competitive Memorizing,10,8,2,20.0,36.7,0.32954000000000006,3.2
+Exam Techniques,10,7,3,30.0,36.8,0.3398,3.3
+Neuroplasticity,10,9,1,10.0,33.2,0.31876,3.1
+Cognitive Exercises,10,7,3,30.0,33.8,0.32998,3.2
+Brain-Boosting Foods,10,5,5,50.0,32.5,0.31718999999999997,3.0
+Brain Training Apps,10,7,3,30.0,37.3,0.32928999999999997,3.2
+Library Science,10,4,6,60.0,35.8,0.33648,3.3
+Archival Science,10,8,2,20.0,35.9,0.31576,3.0
+Cataloging and Classification,10,6,4,40.0,34.3,0.32703000000000004,3.1
+Library Management,10,3,7,70.0,37.1,0.35145000000000004,3.6
+Digital Libraries,10,7,3,30.0,37.0,0.34236999999999995,3.3
+Information Literacy,10,7,3,30.0,36.0,0.33548,3.3
+Bibliometrics,10,3,7,70.0,34.5,0.35466000000000003,3.7
+Preservation of Materials,10,4,6,60.0,39.3,0.36484,3.5
+Metadata Management,10,4,6,60.0,37.1,0.3523,3.5
+Open Access Publishing,10,4,6,60.0,38.5,0.35585,3.6
+Museology (General),10,5,5,50.0,36.7,0.33126,3.2
+Exhibit Design,10,7,3,30.0,35.9,0.32910999999999996,3.3
+Museum Education,10,8,2,20.0,37.8,0.33509,3.2
+Artifact Curation,10,4,6,60.0,37.7,0.33670999999999995,3.3
+Digital Exhibits,10,3,7,70.0,36.5,0.34697,3.7
+Heritage Management,10,8,2,20.0,38.3,0.33232,3.2
+Conservation Techniques,10,2,8,80.0,36.7,0.34207,3.4
+Museum Marketing,10,7,3,30.0,37.7,0.33973000000000003,3.3
+Visitor Experience,10,5,5,50.0,37.0,0.34513999999999995,3.5
+Museum Technology,10,7,3,30.0,37.6,0.33393,3.3
+Aviation (General),10,5,5,50.0,38.0,0.35158000000000006,3.5
+Pilot Training,10,7,3,30.0,38.1,0.32954999999999995,3.3
+Air Traffic Control,10,5,5,50.0,39.5,0.34444,3.5
+Aircraft Maintenance,10,6,4,40.0,37.0,0.34547999999999995,3.4
+Airport Management,10,2,8,80.0,38.8,0.39415000000000006,4.1
+Flight Safety,10,5,5,50.0,39.6,0.37664,3.7
+Aerospace Technology,10,7,3,30.0,36.0,0.33229,3.2
+UAV (Drone) Operation,10,3,7,70.0,39.3,0.37439999999999996,3.6
+Aviation History,10,6,4,40.0,37.4,0.34291,3.5
+Aero Design Competitions,10,5,5,50.0,39.4,0.36301000000000005,3.6
+Space Exploration,10,8,2,20.0,37.9,0.3181,3.1
+Astronaut Training,10,7,3,30.0,39.1,0.33628,3.3
+Spacecraft Design,10,2,8,80.0,38.9,0.36445000000000005,3.7
+Rocket Propulsion,10,4,6,60.0,36.5,0.35775,3.6
+Space Robotics,10,4,6,60.0,37.8,0.34833,3.4
+Planetary Science,10,5,5,50.0,36.0,0.34944000000000003,3.5
+Astrobiology,10,3,7,70.0,33.2,0.34063,3.3
+Lunar Exploration,10,5,5,50.0,39.2,0.32786,3.2
+Mars Missions,10,6,4,40.0,37.7,0.32755999999999996,3.1
+Space Colonization Concepts,10,6,4,40.0,39.4,0.32872,3.1
+Cosmology (Non-Religious),10,9,1,10.0,37.6,0.31853,3.0
+Dark Matter,10,8,2,20.0,35.8,0.32004,3.0
+Dark Energy,10,8,2,20.0,37.4,0.31931,3.0
+Cosmic Microwave Background,10,10,0,0.0,37.7,0.31559,3.0
+Exoplanets,10,8,2,20.0,32.7,0.31886000000000003,3.0
+Stellar Evolution,10,10,0,0.0,36.1,0.31923,3.0
+Galaxy Formation,10,6,4,40.0,38.8,0.33569,3.4
+Black Holes,10,7,3,30.0,37.1,0.33614,3.3
+Neutron Stars,10,6,4,40.0,34.8,0.32625,3.2
+Gravitational Waves,10,4,6,60.0,34.9,0.35393,3.6
+Art History (General),10,9,1,10.0,35.8,0.33283,3.2
+Renaissance Art,10,8,2,20.0,33.2,0.33705,3.2
+Baroque Art,10,5,5,50.0,36.4,0.34198999999999996,3.4
+Impressionism,10,10,0,0.0,34.7,0.31882,3.0
+Modernism,10,4,6,60.0,33.3,0.34368000000000004,3.4
+Postmodernism,10,6,4,40.0,30.2,0.36341999999999997,3.6
+Surrealism,10,3,7,70.0,32.2,0.37871,3.8
+Pop Art,10,5,5,50.0,37.6,0.37394999999999995,3.7
+Street Art History,10,6,4,40.0,39.8,0.32277,3.1
+Contemporary Art Movements,10,7,3,30.0,36.6,0.33022,3.2
+Fashion (General),10,9,1,10.0,34.3,0.32122,3.1
+Textile Science,10,7,3,30.0,36.8,0.33543,3.3
+Fashion History,10,9,1,10.0,39.5,0.32028,3.1
+Fashion Styling,10,10,0,0.0,35.6,0.3238,3.0
+Fashion Marketing,10,8,2,20.0,37.7,0.33343999999999996,3.2
+Eco-Fashion,10,8,2,20.0,35.3,0.33294999999999997,3.2
+Costume Design,10,10,0,0.0,35.5,0.32763,3.0
+Fashion Journalism,10,8,2,20.0,36.4,0.33330999999999994,3.3
+Fashion Entrepreneurship,10,8,2,20.0,38.3,0.33129,3.2
+Trend Forecasting,10,6,4,40.0,37.7,0.34706000000000004,3.4
+Etiquette (General),10,7,3,30.0,36.4,0.33276,3.2
+Business Etiquette,10,7,3,30.0,36.6,0.33435999999999994,3.2
+Social Etiquette,10,9,1,10.0,36.6,0.32116,3.0
+Dining Etiquette,10,7,3,30.0,36.9,0.31909,3.0
+Cross-Cultural Etiquette,10,10,0,0.0,36.3,0.32159,3.0
+Online Etiquette,10,6,4,40.0,37.8,0.34211,3.4
+Etiquette for Children,10,9,1,10.0,37.1,0.3236,3.1
+Etiquette for Seniors,10,6,4,40.0,38.5,0.33731,3.2
+Professional Image,10,9,1,10.0,36.1,0.32709,3.0
+Hospitality Etiquette,10,5,5,50.0,40.1,0.33623000000000003,3.3
+Communication (General),10,6,4,40.0,36.6,0.33987,3.2
+Interpersonal Communication,10,7,3,30.0,35.6,0.34245000000000003,3.2
+Written Communication,10,6,4,40.0,35.5,0.35325,3.5
+Verbal Communication,10,5,5,50.0,35.6,0.34232,3.5
+Nonverbal Communication,10,8,2,20.0,34.6,0.33523000000000003,3.0
+Cross-Cultural Communication,10,7,3,30.0,38.7,0.3365,3.2
+Conflict Resolution (Advanced),10,2,8,80.0,37.4,0.32916999999999996,3.2
+Media Communication,10,6,4,40.0,35.1,0.32662,3.2
+Technical Writing,10,8,2,20.0,36.0,0.34988,3.4
+Public Speaking (Advanced),10,0,10,100.0,38.3,0.34093999999999997,3.5
+Publishing,10,5,5,50.0,32.6,0.35424,3.6
+Self-Publishing,10,8,2,20.0,32.3,0.32686,3.2
+Traditional Publishing,10,4,6,60.0,35.9,0.35838000000000003,3.6
+Literary Agents,10,3,7,70.0,35.7,0.36924,3.7
+Editing and Proofreading,10,7,3,30.0,33.2,0.33064000000000004,3.2
+Book Cover Design,10,4,6,60.0,39.3,0.34943,3.6
+Ebook Formatting,10,8,2,20.0,35.3,0.32471,3.1
+Audiobook Production,10,7,3,30.0,34.9,0.34465,3.3
+Book Marketing,10,9,1,10.0,37.7,0.32041000000000003,3.0
+Author Branding,10,8,2,20.0,37.6,0.32349,3.0
+Freelancing (General),10,6,4,40.0,32.4,0.33653,3.3
+Gig Economy,10,6,4,40.0,34.7,0.33631,3.3
+Freelance Writing,10,8,2,20.0,35.7,0.34168,3.2
+Graphic Design Freelancing,10,7,3,30.0,36.2,0.33426999999999996,3.3
+Web Development Freelancing,10,2,8,80.0,34.0,0.38085,3.9
+Consulting Freelancing,10,4,6,60.0,36.9,0.38926000000000005,4.0
+Virtual Assistance,10,8,2,20.0,35.1,0.33019,3.2
+Remote Work,10,5,5,50.0,35.5,0.35666000000000003,3.6
+Upwork Strategies,10,7,3,30.0,38.0,0.33808000000000005,3.2
+Fiverr Strategies,10,8,2,20.0,38.5,0.33868,3.2
+Personal Finance (Advanced),10,3,7,70.0,38.0,0.40911,4.2
+Budgeting and Saving,10,4,6,60.0,38.1,0.34676,3.4
+Debt Management,10,4,6,60.0,38.3,0.33665,3.3
+Retirement Planning,10,2,8,80.0,38.4,0.40038,4.0
+Insurance Basics,10,2,8,80.0,37.8,0.37903,3.8
+Estate Planning,10,4,6,60.0,36.1,0.35018,3.4
+Cryptocurrency (Non-Political),10,4,6,60.0,33.4,0.3575499999999999,3.6
+Real Estate Investing,10,2,8,80.0,40.8,0.41265999999999997,4.2
+Peer-to-Peer Lending,10,0,10,100.0,38.3,0.37571000000000004,3.8
+Financial Literacy for Teens,10,4,6,60.0,38.0,0.3295,3.2
+Collecting (Advanced),10,4,6,60.0,35.4,0.35468,3.5
+Coin Collecting,10,8,2,20.0,36.9,0.32237,3.2
+Stamp Collecting,10,9,1,10.0,35.9,0.31423999999999996,3.1
+Antique Furniture,10,1,9,90.0,36.4,0.33208000000000004,3.2
+Vintage Clothing,10,8,2,20.0,37.1,0.32769,3.1
+Classic Cars,10,0,10,100.0,36.8,0.32676999999999995,3.2
+Wine Collecting,10,8,2,20.0,37.4,0.33345,3.2
+Action Figures,10,8,2,20.0,34.9,0.34503,3.2
+Comic Book Collecting (Detailed),10,8,2,20.0,41.0,0.34048,3.2
+Trading Cards (Sports),10,7,3,30.0,37.4,0.32192999999999994,3.2
+Crafts (General),10,9,1,10.0,31.3,0.3249699999999999,3.1
+Paper Crafts,10,9,1,10.0,34.2,0.31818,3.0
+Origami,10,9,1,10.0,33.1,0.31452,3.0
+Scrapbooking,10,9,1,10.0,33.8,0.31608,3.0
+Decoupage,10,10,0,0.0,32.9,0.31856999999999996,3.0
+Dollmaking,10,9,1,10.0,31.6,0.31811,3.0
+Macramé,10,10,0,0.0,30.8,0.31621,3.0
+Latch Hooking,10,9,1,10.0,40.6,0.32564000000000004,3.1
+Calligraphy (Advanced),10,10,0,0.0,35.0,0.31916999999999995,3.0
+Glass Painting,10,9,1,10.0,36.4,0.32224,3.1
+Performing Arts (Advanced),10,1,9,90.0,36.3,0.37637,3.9
+Voice Acting (Advanced),10,5,5,50.0,38.0,0.34592,3.4
+Stage Acting,10,5,5,50.0,34.8,0.36155,3.5
+Stage Directing,10,4,6,60.0,36.3,0.36034,3.6
+Stage Lighting,10,8,2,20.0,36.8,0.33152,3.2
+Stage Makeup,10,6,4,40.0,38.0,0.3516,3.4
+Sound Design,10,7,3,30.0,35.9,0.32223,3.1
+Stage Management,10,6,4,40.0,35.8,0.33343999999999996,3.3
+Physics,10,8,2,20.0,31.5,0.32494999999999996,3.1
+Performance Theory,10,0,10,100.0,36.3,0.38394999999999996,3.9
+Wellness (Advanced),10,7,3,30.0,34.7,0.33271999999999996,3.2
+Stress Physiology,10,3,7,70.0,35.9,0.34917000000000004,3.5
+Chronic Illness Management,10,5,5,50.0,38.1,0.35102,3.5
+Anti-Inflammatory Diets,10,7,3,30.0,34.6,0.3225,3.1
+Ayurvedic Principles (Non-Religious),10,7,3,30.0,32.7,0.32643999999999995,3.1
+Biofeedback,10,4,6,60.0,33.8,0.34500000000000003,3.4
+Hydrotherapy,10,7,3,30.0,34.1,0.33497,3.3
+Herbal Supplements (General),10,8,2,20.0,34.5,0.32151,3.1
+Meditation Retreats (Non-Religious),10,8,2,20.0,37.3,0.32683000000000006,3.1
+Mind-Body Connection,10,5,5,50.0,35.3,0.34363000000000005,3.4
+Cooking Techniques,10,7,3,30.0,32.8,0.31811999999999996,3.0
+Sous Vide,10,10,0,0.0,35.5,0.31849,3.0
+Grilling and Smoking,10,9,1,10.0,37.6,0.32256,3.1
+Astronomy,10,9,1,10.0,34.1,0.31892000000000004,3.0
+Biology,10,6,4,40.0,30.2,0.33812999999999993,3.3
+Braising,10,7,3,30.0,34.0,0.32715,3.3
+Slow Cooking,10,10,0,0.0,37.0,0.3184600000000001,3.0
+Pressure Cooking,10,6,4,40.0,38.6,0.32642000000000004,3.2
+Canning and Preserving,10,9,1,10.0,36.3,0.32228,3.1
+Pickling,10,8,2,20.0,34.3,0.32888,3.2
+Personal Organization,10,6,4,40.0,34.5,0.34431,3.2
+Productivity Apps,10,6,4,40.0,32.7,0.34146,3.3
+Bullet Journaling,10,7,3,30.0,34.9,0.30472,3.0
+Digital Planning,10,6,4,40.0,34.2,0.32817,3.2
+Workspace Organization,10,6,4,40.0,37.4,0.32938,3.2
+Minimalist Wardrobe,10,10,0,0.0,36.5,0.32112999999999997,3.0
+Time Blocking,10,1,9,90.0,33.2,0.3368399999999999,3.3
+Habit Tracking,10,8,2,20.0,35.4,0.31928,3.0
+Goal Reviews,10,0,10,100.0,36.7,0.43604999999999994,4.2
+Ecology,10,4,6,60.0,32.8,0.34239,3.3

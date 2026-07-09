@@ -53,6 +53,9 @@ export function useChat({ onToast, onSuccess }) {
         confidence: response.prediction_confidence ?? response.confidence,
         prediction_probability: response.prediction_probability,
         prediction_confidence: response.prediction_confidence ?? response.confidence,
+        routing_confidence: response.routing_confidence || 'Low',
+        local_score: response.local_score,
+        remote_score: response.remote_score,
         model_version: response.model_version,
         routing_method: response.routing_method,
         // Routing engine output

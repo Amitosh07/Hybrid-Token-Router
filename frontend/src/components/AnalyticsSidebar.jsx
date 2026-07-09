@@ -9,7 +9,6 @@ import LoadingSpinner from './LoadingSpinner.jsx';
 import {
   formatModel,
   formatMs,
-  formatPercent,
 } from '../services/formatters.js';
 
 export default function AnalyticsSidebar({ analytics, isLoading }) {
@@ -31,8 +30,8 @@ export default function AnalyticsSidebar({ analytics, isLoading }) {
     },
     {
       icon: FiTarget,
-      label: 'Confidence',
-      value: formatPercent(analytics?.confidence),
+      label: 'Routing Confidence',
+      value: analytics?.routing_confidence || '--',
       tone: 'success',
     },
     {

@@ -25,6 +25,9 @@ class ChatResponse(BaseModel):
     prompt_id: str = ""
     prediction_probability: float = 0
     prediction_confidence: float = 0
+    routing_confidence: str = "Low"
+    local_score: float | None = None
+    remote_score: float | None = None
     model_version: str = ""
     routing_method: str = ""
 
@@ -38,6 +41,9 @@ class PredictResponse(BaseModel):
     selected_provider: str
     prediction_probability: float
     prediction_confidence: float
+    routing_confidence: str
+    local_score: float | None = None
+    remote_score: float | None = None
     model_version: str
     routing_method: str
     feature_contributions: list[dict] = Field(default_factory=list)
@@ -55,6 +61,7 @@ class StatsResponse(BaseModel):
     average_latency_ms: float
     average_confidence: float
     average_prediction_confidence: float
+    current_routing_confidence: str = "Low"
     routing_distribution: dict[str, int] = Field(default_factory=dict)
     # estimated_cost_saved removed: see ChatResponse note above.
     router_version: str

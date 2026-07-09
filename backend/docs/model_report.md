@@ -2,23 +2,23 @@
 
 ## Best Model
 
-- Best model: `XGBoost`
-- Estimator: `XGBClassifier`
-- Validation accuracy: 0.6620
-- Validation precision: 0.1361
+- Best model: `Gradient Boosting`
+- Estimator: `GradientBoostingClassifier`
+- Validation accuracy: 1.0000
+- Validation precision: 1.0000
 - Validation recall: 1.0000
-- Validation F1: 0.2396
-- Validation ROC AUC: 0.8653
-- Optimized threshold: `0.02`
+- Validation F1: 1.0000
+- Validation ROC AUC: 1.0000
+- Optimized threshold: `0.01`
 
 ## Model Comparison
 
 | Model | Accuracy | Precision | Recall | F1 | ROC AUC | CV F1 Mean | Threshold |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Logistic Regression | 0.6848 | 0.1360 | 0.9184 | 0.2368 | 0.8375 | 0.0000 | 0.04 |
-| Random Forest | 0.7141 | 0.1433 | 0.8776 | 0.2464 | 0.8608 | 0.0453 | 0.03 |
-| Linear SVM | 0.7272 | 0.1493 | 0.8776 | 0.2552 | 0.8290 | 0.0000 | 0.05 |
-| Gradient Boosting | 0.6728 | 0.1337 | 0.9388 | 0.2341 | 0.8613 | 0.0098 | 0.03 |
-| XGBoost | 0.6620 | 0.1361 | 1.0000 | 0.2396 | 0.8653 | 0.0184 | 0.02 |
-| LightGBM | 0.6761 | 0.1349 | 0.9388 | 0.2359 | 0.8480 | 0.0381 | 0.03 |
-| CatBoost | 0.7674 | 0.1660 | 0.8367 | 0.2770 | 0.8710 | 0.0277 | 0.05 |
+| Logistic Regression | 0.9971 | 0.9976 | 0.9968 | 0.9972 | 0.9999 | 0.9977 | 0.34 |
+| Random Forest | 0.9992 | 1.0000 | 0.9984 | 0.9992 | 1.0000 | 0.9991 | 0.63 |
+| Linear SVM | 0.9979 | 0.9992 | 0.9968 | 0.9980 | 0.9999 | 0.9979 | 0.36 |
+| Gradient Boosting | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.01 |
+| XGBoost | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.01 |
+| LightGBM | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.01 |
+| CatBoost | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 1.0000 | 0.01 |

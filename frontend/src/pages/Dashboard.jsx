@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fi';
 import MetricCard from '../components/MetricCard.jsx';
 import StatsSkeleton from '../components/StatsSkeleton.jsx';
-import { formatMs, formatNumber, formatPercent } from '../services/formatters.js';
+import { formatMs, formatNumber } from '../services/formatters.js';
 
 export default function Dashboard({ stats, onRefresh }) {
   const data = stats.stats;
@@ -33,9 +33,9 @@ export default function Dashboard({ stats, onRefresh }) {
     },
     {
       icon: FiTarget,
-      label: 'Prediction Confidence',
-      value: formatPercent(data.average_prediction_confidence ?? data.average_confidence ?? 0),
-      sublabel: 'Average confidence from live routing decisions',
+      label: 'Routing Confidence',
+      value: data.current_routing_confidence || 'Low',
+      sublabel: 'Distance from the calibrated routing boundary',
       tone: 'success',
     },
     {
@@ -86,13 +86,6 @@ export default function Dashboard({ stats, onRefresh }) {
       value: formatMs(data.average_latency_ms ?? 0),
       sublabel: 'Mean end-to-end response latency',
       tone: 'accent',
-    },
-    {
-      icon: FiTarget,
-      label: 'Average Confidence',
-      value: formatPercent(data.average_confidence ?? 0),
-      sublabel: 'Mean router confidence across all requests',
-      tone: 'success',
     },
   ];
 
